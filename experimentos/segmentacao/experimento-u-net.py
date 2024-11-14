@@ -338,6 +338,7 @@ best_epoch = 0
 
 # Start training...
 for epoch in range(max_epochs):
+    
     print('Epoch %d starting...' % (epoch+1))
     
     lr_scheduler.step()
@@ -348,3 +349,95 @@ for epoch in range(max_epochs):
     
     n_correct = 0
     n_false = 0
+    
+    for i_batch, sample_batched in enumerate(train_loader):
+    
+    
+        image = sample_batched['image'].to(device)
+        gt = sample_batched['gt'].to(device)
+    
+        optimizer.zero_grad()
+        output, total_loss = model.eval_net_with_loss(model, image, gt, class_weights, device)
+        total_loss.backward()
+        optimizer.step()
+        
+        mean_loss += total_loss.cpu().detach().numpy()
+        
+        # Measure accuracy
+        
+        gt = np.squeeze(sample_batched['gt'].cpu().numpy())
+        
+        label_out = torch.nn.functional.softmax(output, dim = 1)
+        label_out = label_out.cpu().detach().numpy()
+        label_out = np.squeeze(label_out)
+        
+        labels = np.argmax(label_out, axis=0)
+        valid_mask = gt != -1
+        curr_correct = np.sum(gt[valid_mask] == labels[valid_mask])
+        curr_false = np.sum(valid_mask) - curr_correct
+        n_correct += curr_correct
+        n_false += curr_false
+        
+    mean_loss /= len(train_loader)
+    train_acc = n_correct / (n_correct + n_false)
+        
+    print('Train loss: %f, train acc: %f' % (mean_loss, train_acc))
+    # Armazenar a perda e a precisão de treinamento
+    train_losses.append(mean_loss)
+    train_accuracies.append(train_acc)    
+    
+    n_correct = 0
+    n_false = 0
+    
+    
+    for i_batch, sample_batched in enumerate(val_loader):
+    
+    
+        image = sample_batched['image'].to(device)
+        image_np = np.squeeze(sample_batched['image_original'].cpu().numpy())
+        gt = np.squeeze(sample_batched['gt'].cpu().numpy())
+        
+    
+        label_out = model(image)
+        label_out = torch.nn.functional.softmax(label_out, dim = 1)
+        label_out = label_out.cpu().detach().numpy()
+        label_out = np.squeeze(label_out)
+        
+        labels = np.argmax(label_out, axis=0)
+        
+        if plot_val:
+            
+            color_label = np.zeros((resolution_input[1], resolution_input[0], 3))
+            
+            for key, val in id_to_class.items():
+                color_label[labels == key] = class_to_color[val]
+                
+            plt.figure()
+            plt.imshow((image_np/255) * 0.5 + (color_label/255) * 0.5)
+            plt.show()
+            
+            plt.figure()
+            plt.imshow(color_label.astype(np.uint8))
+            plt.show()
+        
+        valid_mask = gt != -1
+        curr_correct = np.sum(gt[valid_mask] == labels[valid_mask])
+        curr_false = np.sum(valid_mask) - curr_correct
+        n_correct += curr_correct
+        n_false += curr_false    
+        
+    total_acc = n_correct / (n_correct + n_false)
+    val_accuracies.append(total_acc)
+    
+    if best_val_acc < total_acc:
+        best_val_acc = total_acc
+        if epoch > 7:
+            torch.save(model.state_dict(), model_file_name)
+            print('Nova melhor conta de validação. Salvo... %f', epoch)
+        best_epoch = epoch
+
+    if (epoch - best_epoch) > patience:
+        print(f"Terminando o treinamento, melhor conta de validação {best_val_acc:.6f}")
+        break
+    
+    print('Validação Acc: %f -- Melhor Avaliação Acc: %f -- epoch %d.' % (total_acc, best_val_acc, best_epoch))
