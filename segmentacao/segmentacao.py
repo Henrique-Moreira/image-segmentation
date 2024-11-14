@@ -3,9 +3,11 @@ import json
 from PIL import Image, ImageDraw
 
 # Diretórios
-base_dir = "C:/git/image-segmentation/Dataset/nematode-detection-labels"
+base_dir = "C:/git/image-segmentation/Dataset/mamoeiro"
 subdirs = ["Train", "Test", "Val"]
-output_base_dir = "C:/git/image-segmentation/Dataset/nematode-detection-labels/Segmentadas"
+output_base_dir = "C:/git/image-segmentation/Dataset/mamoeiro/Segmentadas"
+extensao_imagem = ".JPG"
+extensao_JSON = ".json"
 
 def carregar_imagem(caminho_imagem):
     """Carrega a imagem original."""
@@ -27,7 +29,7 @@ def criar_imagem_segmentada(imagem_original, dados_json, output_path, label, ind
         pontos = [(int(x), int(y)) for x, y in pontos]
         draw.polygon(pontos, fill=(255, 255, 255)) 
         nome_imagem = filename.split(".")[0]
-        imagem_segmentada.save(os.path.join(output_path, f"{nome_imagem}_{label}_{index}.png"))
+        imagem_segmentada.save(os.path.join(output_path, f"{nome_imagem}_{label}_{index}{extensao_imagem}"))
 
 def processar_pasta(subdir):
     input_dir = os.path.join(base_dir, subdir)
@@ -37,14 +39,14 @@ def processar_pasta(subdir):
         os.makedirs(output_dir)
 
     for filename in os.listdir(input_dir):
-        if filename.endswith(".png"):
+        if filename.endswith(extensao_imagem):
             caminho_imagem = os.path.join(input_dir, filename)
-            caminho_json = os.path.join(input_dir, filename.replace(".png", ".json"))
+            caminho_json = os.path.join(input_dir, filename.replace(extensao_imagem, extensao_JSON))
 
             if os.path.exists(caminho_json):
                 imagem_original = carregar_imagem(caminho_imagem)
                 dados_json = carregar_dados_json(caminho_json)
-                criar_imagem_segmentada(imagem_original, dados_json, output_dir, filename.replace(".png", ""), 0, filename)
+                criar_imagem_segmentada(imagem_original, dados_json, output_dir, filename.replace(extensao_imagem, ""), 0, filename)
 
 def main():
     for subdir in subdirs:
