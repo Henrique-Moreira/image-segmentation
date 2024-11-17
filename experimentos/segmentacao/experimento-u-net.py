@@ -158,6 +158,9 @@ class UNetVgg(torch.nn.Module):
     
 # End class
 
+# Variável que define se as figuras são exibidas no console ou salvas em um arquivo
+plt_show = False
+
 # Configuração do dispositivo CUDA
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 cuda_available = torch.cuda.is_available()
@@ -187,7 +190,18 @@ if not os.path.exists(img_folder_test):
     os.makedirs(img_folder_test)
 if not os.path.exists(save_dir):
     os.makedirs(save_dir)
-
+    
+## Imagens Segmentadas
+img_folder_train_segmentadas = directory + r'\\segmentadas\\train\\'
+img_folder_val_segmentadas = directory + r'\\segmentadas\\val\\'
+img_folder_test_segmentadas = directory + r'\\segmentadas\\test\\'
+if not os.path.exists(img_folder_train_segmentadas):
+    os.makedirs(img_folder_train_segmentadas)
+if not os.path.exists(img_folder_val_segmentadas):
+    os.makedirs(img_folder_val_segmentadas)
+if not os.path.exists(img_folder_test_segmentadas):
+    os.makedirs(img_folder_test_segmentadas)
+    
 # Local onde o Modelo será salvo
 model_file_name = save_dir + 'model_segmentadas_unet.pth'
 
@@ -292,11 +306,11 @@ train_accuracies = []
 val_accuracies = []
 
 # Inicia o treinamento
-train_dataset = SegmentationDataset(img_folder_train, img_folder_train, True, class_to_id, resolution_input, True)
+train_dataset = SegmentationDataset(img_folder_train, img_folder_train, True, class_to_id, resolution_input, True, None)
 print(f"Número de amostras no dataset de treinamento: {len(train_dataset)}")
 print(f"Arquivos no dataset de treinamento: {os.listdir(img_folder_train)}")
 
-val_dataset = SegmentationDataset(img_folder_val, img_folder_val, False, class_to_id, resolution_input)
+val_dataset = SegmentationDataset(img_folder_val, img_folder_val, False, class_to_id, resolution_input, False, None)
 print(f"Número de amostras no dataset de validação: {len(val_dataset)}")
 print(f"Arquivos no dataset de validação: {os.listdir(img_folder_val)}")
 
@@ -315,11 +329,15 @@ if plot_train:
         
         plt.figure()
         plt.imshow((image_np / 255) * 0.5 + (color_label / 255) * 0.5)
-        plt.show()
+        # print(f"Imagem de Treinamento {i_batch}")
+        plt.savefig(img_folder_train_segmentadas + "IMG_" + str(i_batch) + ".png")
+        if plt_show: plt.show()
         
         plt.figure()
         plt.imshow(color_label.astype(np.uint8))
-        plt.show()
+        # print(f"Imagem de Treinamento {i_batch} - Segmentada")
+        plt.savefig(img_folder_train_segmentadas + "GT_" + str(i_batch) + ".png")
+        if plt_show: plt.show()
 
 model = UNetVgg(nClasses).to(device)
 
@@ -414,11 +432,15 @@ for epoch in range(max_epochs):
                 
             plt.figure()
             plt.imshow((image_np/255) * 0.5 + (color_label/255) * 0.5)
-            plt.show()
+            # print(f"Imagem de Validação {i_batch}")
+            plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + ".png")
+            if plt_show: plt.show()
             
             plt.figure()
             plt.imshow(color_label.astype(np.uint8))
-            plt.show()
+            # print(f"Imagem de Validação {i_batch} - Segmentada")
+            plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + ".png")
+            if plt_show: plt.show()
         
         valid_mask = gt != -1
         curr_correct = np.sum(gt[valid_mask] == labels[valid_mask])
@@ -441,3 +463,101 @@ for epoch in range(max_epochs):
         break
     
     print('Validação Acc: %f -- Melhor Avaliação Acc: %f -- epoch %d.' % (total_acc, best_val_acc, best_epoch))
+
+
+# Plotar os gráficos de perda e precisão
+"""
+    Inicialização das listas: train_losses, train_accuracies e val_accuracies são listas para armazenar a perda e a precisão de treinamento e validação em cada época.
+    
+    Armazenamento dos valores: Durante o loop de treinamento, a perda e a precisão são calculadas e armazenadas nas listas correspondentes.
+    Plotagem dos gráficos: Após o loop de treinamento, os gráficos de perda e precisão são plotados usando matplotlib.
+
+    Este código deve ser adicionado ao final do seu loop de treinamento no notebook para visualizar os resultados do treinamento ao longo das épocas.
+"""
+
+plt.figure(figsize=(12, 5))
+
+plt.subplot(1, 2, 1)
+plt.plot(range(1, len(train_losses) + 1), train_losses, label='Perda de Treinamento')
+plt.xlabel('Época')
+plt.ylabel('Perda')
+plt.title('Perda de Treinamento ao longo das Épocas')
+plt.legend()
+
+plt.subplot(1, 2, 2)
+plt.plot(range(1, len(train_accuracies) + 1), train_accuracies, label='Precisão de Treinamento')
+plt.plot(range(1, len(val_accuracies) + 1), val_accuracies, label='Precisão de Validação')
+plt.xlabel('Época')
+plt.ylabel('Precisão')
+plt.title('Precisão de Treinamento e Validação ao longo das Épocas')
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+## Salve o gráfico em um diretorio de resultados "save_dir"
+plt.savefig(save_dir + 'result_model_segmentadas_unet_loss_accuracy.png')
+
+# Realiza Inferência de dados: Processo de usar um modelo treinado para fazer previsões sobre novos dados.
+
+## Configurações do treinamento
+resolution_input = (640, 480)  # Tamanho de entrada
+patience = 30
+plot_val = True
+plot_train = True
+max_epochs = 100
+class_weights = [1, 1, 1, 1]
+nClasses = 4
+
+## Mapeamento de classes e cores
+class_to_color = {'Doenca': (255, 0, 0), 'Folha': (0, 255, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255)}
+class_to_id = {'Doenca': 0, 'Folha': 1, 'Solo': 2, 'Saudavel': 3}
+id_to_class = {v: k for k, v in class_to_id.items()}
+
+mean = [0.485, 0.456, 0.406]
+std = [0.229, 0.224, 0.225]
+
+model = UNetVgg(nClasses)
+model.load_state_dict(torch.load(model_file_name))
+model.eval()
+print("Modelo carregado e pronto para uso.")
+model.to(device)
+
+img_list = glob.glob(osp.join(img_folder_val, '*.png'))
+
+for img_path in img_list:
+
+        img_np = cv2.imread(img_path, cv2.IMREAD_IGNORE_ORIENTATION + cv2.IMREAD_COLOR)
+        img_np = cv2.resize(img_np, (resolution_input[0], resolution_input[1]))[..., ::-1]
+        img_np = np.ascontiguousarray(img_np)
+        
+        img_pt = np.copy(img_np).astype(np.float32) / 255.0
+        for i in range(3):
+            img_pt[..., i] -= mean[i]
+            img_pt[..., i] /= std[i]
+            
+        img_pt = img_pt.transpose(2,0,1)
+            
+        img_pt = torch.from_numpy(img_pt[None, ...]).to(device)
+        
+        label_out = model(img_pt)
+        label_out = torch.nn.functional.softmax(label_out, dim = 1)
+        label_out = label_out.cpu().detach().numpy()
+        label_out = np.squeeze(label_out)
+        
+        labels = np.argmax(label_out, axis=0)
+        
+        color_label = np.zeros((resolution_input[1], resolution_input[0], 3))
+            
+        for key, val in id_to_class.items():
+            color_label[labels == key] = class_to_color[val]
+            
+        plt.figure()
+        plt.imshow((img_np/255) * 0.5 + (color_label/255) * 0.5)
+        plt.savefig(img_folder_test_segmentadas + "IMG_" + ".png")
+        if plt_show: plt.show()
+        
+        plt.figure()
+        plt.imshow(color_label.astype(np.uint8))
+        plt.savefig(img_folder_test_segmentadas + "GT_" + ".png")
+        if plt_show: plt.show()
+
