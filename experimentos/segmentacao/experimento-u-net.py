@@ -433,13 +433,13 @@ for epoch in range(max_epochs):
             plt.figure()
             plt.imshow((image_np/255) * 0.5 + (color_label/255) * 0.5)
             # print(f"Imagem de Validação {i_batch}")
-            plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + ".png")
+            plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
             if plt_show: plt.show()
             
             plt.figure()
             plt.imshow(color_label.astype(np.uint8))
             # print(f"Imagem de Validação {i_batch} - Segmentada")
-            plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + ".png")
+            plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + "_epoch_" + str(epoch) +  ".png")
             if plt_show: plt.show()
         
         valid_mask = gt != -1
