@@ -1,9 +1,8 @@
 /src/.ipynb_checkpoints
 /.vscode
-/Dataset/mamoeiro/Test
-/Dataset/mamoeiro/Train
-/Dataset/mamoeiro/Val
-/Dataset/mamoeiro/augumented
-/Dataset/mamoeiro/masks
-/Dataset/mamoeiro/segmentadas
+/Dataset/base
+/Dataset/augumented
+/Dataset/masks
+/Dataset/segmentadas
 
+data_augumentation.py
