@@ -1,6 +1,7 @@
 import os
 import json
 from PIL import Image, ImageDraw
+import base64
 
 # Diretórios
 base_dir = "C:/git/image-segmentation/Dataset/mamoeiro"
@@ -33,6 +34,7 @@ def criar_imagem_segmentada(imagem_original, dados_json, output_path, label, ind
         imagem_segmentada.save(os.path.join(output_path, f"{nome_imagem}_{label}_{index}{extensao_imagem}"))
         
         # Adiciona a nova anotação
+        
         novas_anotacoes.append({
             "label": label,
             "points": pontos,
@@ -41,10 +43,23 @@ def criar_imagem_segmentada(imagem_original, dados_json, output_path, label, ind
             "flags": shape.get("flags", {})
         })
 
-    # Salva as novas anotações em um novo arquivo JSON
-    novo_json_path = os.path.join(output_path, f"{nome_imagem}_{label}_{index}{extensao_JSON}")
-    with open(novo_json_path, "w") as novo_json_file:
-        json.dump({"shapes": novas_anotacoes}, novo_json_file, indent=4)
+        # Codifica a imagem em base64
+        with open(os.path.join(output_path, f"{nome_imagem}_{label}_{index}{extensao_imagem}"), "rb") as image_file:
+            image_data = base64.b64encode(image_file.read()).decode('utf-8')
+
+        # Salva as novas anotações em um novo arquivo JSON
+        novo_json_path = os.path.join(output_path, f"{nome_imagem}_{label}_{index}{extensao_JSON}")
+        novo_json_conteudo = {
+            "version": "4.6.0",
+            "flags": {},
+            "shapes": novas_anotacoes,
+            "imagePath": f"{nome_imagem}_{label}_{index}{extensao_imagem}",
+            "imageData": image_data,
+            "imageHeight": imagem_original.height,
+            "imageWidth": imagem_original.width
+        }
+        with open(novo_json_path, "w") as novo_json_file:
+            json.dump(novo_json_conteudo, novo_json_file, indent=4)
 
 def processar_pasta(subdir):
     input_dir = os.path.join(base_dir, subdir)
