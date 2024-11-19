@@ -3,4 +3,8 @@
 /Dataset/mamoeiro/Test
 /Dataset/mamoeiro/Train
 /Dataset/mamoeiro/Val
-/dataset
+/Dataset/mamoeiro/augumented
+/Dataset/mamoeiro/masks
+/Dataset/mamoeiro/segmentadas
+/Dataset
+
