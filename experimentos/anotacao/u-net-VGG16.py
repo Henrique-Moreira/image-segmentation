@@ -1,7 +1,3 @@
-# %% [markdown]
-# # Importações
-
-# %%
 import os
 import numpy as np
 from torch.utils.data import Dataset, DataLoader
@@ -13,12 +9,6 @@ import glob
 import torchvision
 import matplotlib.pyplot as plt
 
-
-# %% [markdown]
-# # Definição da classe UNetVgg
-
-# %%
-# Definição da classe UNetVgg
 from torchvision.models import VGG16_Weights
 
 class UNetVgg(torch.nn.Module):
@@ -168,14 +158,8 @@ class UNetVgg(torch.nn.Module):
         return (base_vgg_weight, base_vgg_bias, core_weight, core_bias)
     
 # End class
-
-# %% [markdown]
-# # Declarações Variavies e outras configurações
-
-# %%
-# Variável que define se as figuras são exibidas no console ou salvas em um arquivo
 plt_show = False
-plt_savefig = False
+plt_savefig = True
 
 # Configuração do dispositivo CUDA
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -190,7 +174,7 @@ if cuda_available:
     print(f'VRAM Total: {vram_total:.2f} GB')
 
 # Caminho do diretório Dataset
-directory = os.path.abspath(os.path.join(os.getcwd(), '..\\..')) + r'\dataset'
+directory = r'C:\git\image-segmentation\dataset'
 print(f'Diretório do Projeto {directory}.')
 if not os.path.exists(directory):
     os.makedirs(directory)
@@ -235,12 +219,6 @@ class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 25
 class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2}
 id_to_class = {v: k for k, v in class_to_id.items()}
 
-
-# %% [markdown]
-# # Segmentação
-
-# %%
-# Definição do Dataset
 class SegmentationDataset(Dataset):
     """Segmentation dataset loader."""
 
@@ -320,12 +298,6 @@ class SegmentationDataset(Dataset):
             sample = self.transform(sample)
 
         return sample
-
-# %% [markdown]
-# # Treinamento do modelo
-
-# %%
-# Inicializar listas para armazenar a perda e a precisão
 train_losses = []
 train_accuracies = []
 val_accuracies = []
@@ -354,15 +326,18 @@ if plot_train:
         
         plt.figure()
         plt.imshow((image_np / 255) * 0.5 + (color_label / 255) * 0.5)
-        # print(f"Imagem de Treinamento {i_batch}")
-        plt.savefig(img_folder_train_segmentadas + "IMG_" + str(i_batch) + ".png")
-        if plt_show: plt.show()
-        
+        if plt_savefig: 
+            plt.savefig(img_folder_train_segmentadas + "TRAIN_IMG_" + str(i_batch) + ".png")
+        if plt_show: 
+            plt.show()
+        plt.close('all')        
         plt.figure()
         plt.imshow(color_label.astype(np.uint8))
-        # print(f"Imagem de Treinamento {i_batch} - Segmentada")
-        plt.savefig(img_folder_train_segmentadas + "GT_" + str(i_batch) + ".png")
-        if plt_show: plt.show()
+        if plt_savefig: 
+            plt.savefig(img_folder_train_segmentadas + "TRAIN_GT_" + str(i_batch) + ".png")
+        if plt_show: 
+            plt.show()
+        plt.close('all')
 
 model = UNetVgg(nClasses).to(device)
 
@@ -457,13 +432,19 @@ for epoch in range(max_epochs):
                 
             plt.figure()
             plt.imshow((image_np/255) * 0.5 + (color_label/255) * 0.5)
-            if plt_savefig: plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
-            if plt_show: plt.show()
+            if plt_savefig: 
+                plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
+            if plt_show: 
+                plt.show()
+            plt.close()
             
             plt.figure()
             plt.imshow(color_label.astype(np.uint8))
-            if plt_savefig: plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + "_epoch_" + str(epoch) +  ".png")
-            if plt_show: plt.show()
+            if plt_savefig: 
+                plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + "_epoch_" + str(epoch) +  ".png")
+            if plt_show: 
+                plt.show()
+            plt.close()
         
         valid_mask = gt != -1
         curr_correct = np.sum(gt[valid_mask] == labels[valid_mask])
@@ -487,21 +468,6 @@ for epoch in range(max_epochs):
     
     print('Validação Acc: %f -- Melhor Avaliação Acc: %f -- epoch %d.' % (total_acc, best_val_acc, best_epoch))
 
-
-# %% [markdown]
-# # Plotar os gráficos de perda e precisão
-
-# %%
-# Plotar os gráficos de perda e precisão
-"""
-    Inicialização das listas: train_losses, train_accuracies e val_accuracies são listas para armazenar a perda e a precisão de treinamento e validação em cada época.
-    
-    Armazenamento dos valores: Durante o loop de treinamento, a perda e a precisão são calculadas e armazenadas nas listas correspondentes.
-    Plotagem dos gráficos: Após o loop de treinamento, os gráficos de perda e precisão são plotados usando matplotlib.
-
-    Este código deve ser adicionado ao final do seu loop de treinamento no notebook para visualizar os resultados do treinamento ao longo das épocas.
-"""
-
 plt.figure(figsize=(12, 5))
 
 plt.subplot(1, 2, 1)
@@ -522,14 +488,21 @@ plt.legend()
 plt.tight_layout()
 plt.savefig(save_dir + 'result_model_segmentadas_unet_loss_accuracy.png')
 plt.show()
-## Salve o gráfico em um diretorio de resultados "save_dir"
+plt.close('all')
 
+resolution_input = (640, 480)  # Tamanho de entrada
+patience = 30
+plot_val = True
+plot_train = True
+max_epochs = 300
+class_weights = [1, 1, 1]
+nClasses = 3
 
+# Mapeamento de classes e cores
+class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255)}
+class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2}
+id_to_class = {v: k for k, v in class_to_id.items()}
 
-# %% [markdown]
-# # Inferência de dados
-
-# %%
 ## Configurações do treinamento
 mean = [0.485, 0.456, 0.406]
 std = [0.229, 0.224, 0.225]
@@ -575,15 +548,17 @@ for img_path in img_list:
     
     plt.figure()
     plt.imshow((img_np / 255) * 0.5 + (color_label / 255) * 0.5)
-    if plt_savefig: plt.savefig(final_image + "IMG_" + ".png")
-    plt.show()
+    plt.savefig(final_image + "RESULT_INFERENCIA_IMG_" + ".png")
+    if plt_show:
+        plt.show()
     plt.close('all')
 
     plt.figure()
     plt.imshow(color_label.astype(np.uint8))
-    if plt_savefig: plt.savefig(final_image + "GT_" + ".png")
-    plt.show()
-    plt.close('all')        
+    plt.savefig(final_image + "RESULT_INFERENCIA_GT_" + ".png")
+    if plt_show:
+        plt.show()
+    plt.close('all')
 
 
 
