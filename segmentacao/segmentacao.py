@@ -4,9 +4,9 @@ from PIL import Image, ImageDraw
 import base64
 
 # Diretórios
-base_dir = "C:/git/image-segmentation/Dataset/mamoeiro"
+base_dir = "C:/git/image-segmentation/dataset/base"
 subdirs = ["Train", "Test", "Val"]
-output_base_dir = "C:/git/image-segmentation/Dataset/mamoeiro/Segmentadas"
+output_base_dir = "C:/git/image-segmentation/dataset/segmentadas"
 extensao_imagem = ".JPG"
 extensao_JSON = ".json"
 
