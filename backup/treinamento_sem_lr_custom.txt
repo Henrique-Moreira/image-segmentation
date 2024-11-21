@@ -1,0 +1,157 @@
+import csv
+import time
+import os
+
+# Diretório para salvar os resultados
+results_dir = "E:/Mestrado/Materias/2024-02-Sistemas para Processamento Multimidia/seminario/image-segmentation/results/data"
+os.makedirs(results_dir, exist_ok=True)
+
+def train_model_with_early_stopping(model, train_loader, val_loader, criterion, optimizer, metrics, num_epochs, device, patience, model_name, results_dir):
+    since = time.time()
+    best_model_wts = model.state_dict()
+    best_loss = float('inf')
+    patience_counter = 0
+    epochs_run = 0  # Variável para contar as épocas realizadas
+
+    # Variáveis para armazenar tempos de execução
+    training_time = 0
+
+    for epoch in range(num_epochs):
+        print(f'Epoch {epoch + 1}/{num_epochs}')
+        print('-' * 10)
+        
+        epochs_run += 1  # Registrar a execução da época
+
+        epoch_start = time.time()  # Marcar o início da época
+
+        for phase in ['train', 'val']:
+            if phase == 'train':
+                model.train()
+                data_loader = train_loader
+            else:
+                model.eval()
+                data_loader = val_loader
+
+            running_loss = 0.0
+            running_metrics = {key: 0 for key in metrics.keys()}
+            
+            for inputs, masks in tqdm(data_loader):
+                inputs, masks = inputs.to(device), masks.to(device)
+                optimizer.zero_grad()
+
+                with torch.set_grad_enabled(phase == 'train'):
+                    outputs = model(inputs)
+                    loss = criterion(outputs, masks)
+                    _, preds = torch.max(outputs, 1)
+
+                    if phase == 'train':
+                        loss.backward()
+                        optimizer.step()
+
+                running_loss += loss.item() * inputs.size(0)
+
+                for metric_name, metric in metrics.items():
+                    if metric_name in ['Dice', 'AJI']:
+                        value = metric(preds, masks)
+                    else:  # Para métricas torchmetrics
+                        value = metric(preds, masks).item()
+                    running_metrics[metric_name] += value * inputs.size(0)
+
+            epoch_loss = running_loss / len(data_loader.dataset)
+            epoch_metrics = {key: value / len(data_loader.dataset) for key, value in running_metrics.items()}
+
+            print(f'{phase} Loss: {epoch_loss:.4f}')
+            for metric_name in metrics:
+                print(f'{phase} {metric_name}: {epoch_metrics[metric_name]:.4f}')
+
+            if phase == 'val':
+                if epoch_loss < best_loss:
+                    best_loss = epoch_loss
+                    best_model_wts = model.state_dict()
+                    patience_counter = 0
+                else:
+                    patience_counter += 1
+
+        epoch_end = time.time()  # Marcar o fim da época
+        epoch_time = epoch_end - epoch_start
+        training_time += epoch_time  # Acumular tempos totais
+        print(f'Epoch time: {epoch_time:.2f} seconds')
+
+        print(f'Patience counter: {patience_counter}')
+
+        if patience_counter >= patience:
+            print("Early stopping triggered.")
+            break
+
+    time_elapsed = time.time() - since
+    print(f'Training complete in {time_elapsed // 60:.0f}m {time_elapsed % 60:.0f}s')
+    print(f'Best val loss: {best_loss:.4f}')
+    print(f'Total epochs run: {epochs_run}')
+
+    # Restaurar o melhor modelo
+    model.load_state_dict(best_model_wts)
+
+    # Salvar o modelo treinado
+    model_path = os.path.join(results_dir, f'{model_name}_best.pth')
+    torch.save(model.state_dict(), model_path)
+
+    # Coletar as métricas finais
+    final_metrics = epoch_metrics
+    final_metrics['best_loss'] = best_loss
+    final_metrics['training_time'] = time_elapsed
+    final_metrics['epochs_run'] = epochs_run
+
+    # Salvar todas as métricas para CSV
+    csv_path = os.path.join(results_dir, 'results.csv')
+    write_metrics_to_csv(csv_path, model_name, final_metrics)
+
+    return model
+
+def write_metrics_to_csv(csv_path, model_name, metrics):
+    headers = ['nome', 'f1-score', 'indice jaccard', 'precision', 'dice', 'aji', 'best_loss', 'training_time', 'epochs_run']
+    row = [
+        model_name,
+        metrics['F1'],
+        metrics['Jaccard'],
+        metrics['Precision'],
+        metrics['Dice'],
+        metrics['AJI'],
+        metrics['best_loss'],
+        metrics['training_time'],
+        metrics['epochs_run']
+    ]
+
+    file_exists = os.path.isfile(csv_path)
+
+    with open(csv_path, mode='a', newline='') as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(headers)  # Escrever cabeçalhos se o arquivo não existe
+        writer.writerow(row)  # Salvar linha de métricas
+
+# Definir um otimizador para cada modelo
+optimizers = {
+    model_name: torch.optim.Adam(model.parameters(), lr=learning_rate) 
+    for model_name, model in models.items()
+}
+
+# Executar o Treinamento dos Modelos
+for model_name, model in models.items():
+    print("*********************************************************************")
+    print(f"Treinando {model_name} com early stopping.")
+    trained_model = train_model_with_early_stopping(
+        model=model,
+        train_loader=train_loader,
+        val_loader=val_loader,
+        criterion=criterion,
+        optimizer=optimizers[model_name],
+        metrics=metrics,
+        num_epochs=num_epochs,
+        device=device,
+        patience=patience,
+        model_name=model_name,
+        results_dir=results_dir
+    )
+    print(f'{model_name} treinado e salvo com sucesso.')
+
+print("Treinamento completo de todos os modelos com early stopping.")
