@@ -6,7 +6,7 @@ import base64
 # Diretórios
 base_dir = "C:/git/image-segmentation/dataset/base"
 subdirs = ["Train", "Test", "Val"]
-output_base_dir = "C:/git/image-segmentation/dataset/segmentadas"
+output_base_dir = "C:/git/image-segmentation/dataset/base"
 extensao_imagem = ".JPG"
 extensao_JSON = ".json"
 
