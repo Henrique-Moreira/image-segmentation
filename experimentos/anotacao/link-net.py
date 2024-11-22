@@ -55,6 +55,14 @@ if not os.path.exists(img_folder_test_segmentadas):
 model_file_name = save_dir + 'model_linknet.pth'
 
 # Configurações do treinamento
+#Width x Height 
+#resolution = (640, 480)
+#resolution = (800, 448)
+#resolution = (1600, 896)
+#resolution = (2400, 1344)
+#resolution = (3200, 1792)
+#resolution = (4000, 2240)
+
 resolution_input = (640, 480)  # Tamanho de entrada
 assert resolution_input[0] % 32 == 0 and resolution_input[1] % 32 == 0, "A resolução de entrada deve ser divisível por 32."
 dummy_input = torch.randn(1, 3, 480, 640).to(device) # Gerar uma entrada aleatória (dummy_input) com tamanho (1, 3, 480, 640)
@@ -429,14 +437,14 @@ plt.title('Precisão de Treinamento e Validação ao longo das Épocas')
 plt.legend()
 
 plt.tight_layout()
-plt.show()
 plt.savefig(save_dir + 'GraficoProcisaoTreinamentoValidacao.png')
 plt.close()
 
 
 # # Inferência de dados
 model = LinkNet(num_classes)
-model.load_state_dict(torch.load(model_file_name))
+#model.load_state_dict(torch.load(model_file_name))
+model.load_state_dict(torch.load(model_file_name, weights_only=True))
 model.eval()
 print("Modelo carregado e pronto para uso.")
 model.to(device)
