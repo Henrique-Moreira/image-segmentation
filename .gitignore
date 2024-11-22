@@ -6,5 +6,4 @@
 /Dataset/segmentadas
 data_augumentation.py
 /Dataset
-/experimentos/anotacao/*.py
-experimentos/anotacao/u-net-VGG16.py
+

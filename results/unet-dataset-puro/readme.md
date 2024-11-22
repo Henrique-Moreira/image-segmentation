@@ -14,3 +14,14 @@ O arquivo `u-net-VGG16.py` contém o código para configurar, treinar e avaliar 
 ## Resultados Obtidos
 
 Durante o treinamento, o modelo imprime a perda e a acurácia de treinamento e validação para cada época. Abaixo estão alguns dos resultados obtidos durante a execução do treinamento:
+
+## Resulttados após execução.
+Epoch 266 starting...
+Train loss: 0.313497, train acc: 0.845227
+Validação Acc: 0.826479 -- Melhor Avaliação Acc: 0.826481 -- epoch 236.
+Epoch 267 starting...
+Train loss: 0.313483, train acc: 0.844028
+Validação Acc: 0.826481 -- Melhor Avaliação Acc: 0.826481 -- epoch 236.
+Epoch 268 starting...
+Train loss: 0.315446, train acc: 0.844245
+Terminando o treinamento, melhor conta de validação 0.826481
