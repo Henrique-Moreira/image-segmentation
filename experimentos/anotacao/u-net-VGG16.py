@@ -211,13 +211,12 @@ patience = 30
 plot_val = True
 plot_train = True
 max_epochs = 300
-class_weights = [1, 1, 1]
-nClasses = 3
 
 # Mapeamento de classes e cores
-class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255)}
-class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2}
-id_to_class = {v: k for k, v in class_to_id.items()}
+class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folhas': (0, 255, 0)}
+class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
+num_classes = len(class_to_id)
+class_weights = [1, 1, 1, 1]
 
 class SegmentationDataset(Dataset):
     """Segmentation dataset loader."""
@@ -326,26 +325,21 @@ if plot_train:
         
         plt.figure()
         plt.imshow((image_np / 255) * 0.5 + (color_label / 255) * 0.5)
-        if plt_savefig: 
-            plt.savefig(img_folder_train_segmentadas + "TRAIN_IMG_" + str(i_batch) + ".png")
-        if plt_show: 
-            plt.show()
-        plt.close('all')        
+        plt.savefig(img_folder_train_segmentadas + "IMG_" + str(i_batch) + "_max_epochs_" + str(max_epochs) + ".png")
+        plt.close('all')
+        
         plt.figure()
         plt.imshow(color_label.astype(np.uint8))
-        if plt_savefig: 
-            plt.savefig(img_folder_train_segmentadas + "TRAIN_GT_" + str(i_batch) + ".png")
-        if plt_show: 
-            plt.show()
-        plt.close('all')
+        plt.savefig(img_folder_train_segmentadas + "GT_" + str(i_batch) + "_max_epochs_" + str(max_epochs) +  ".png")
+        plt.close('all')   
 
 model = UNetVgg(nClasses).to(device)
 
 core_lr = 0.02
 base_vgg_weight, base_vgg_bias, core_weight, core_bias = UNetVgg.get_params_by_kind(model, 7)
 
-optimizer = torch.optim.SGD([{'params': base_vgg_bias, 'lr': 0.000001}, 
-                             {'params': base_vgg_weight, 'lr': 0.000001},
+optimizer = torch.optim.SGD([{'params': base_vgg_bias, 'lr': 0.00001}, 
+                             {'params': base_vgg_weight, 'lr': 0.00001},
                              {'params': core_bias, 'lr': core_lr},
                              {'params': core_weight, 'lr': core_lr, 'weight_decay': 0.0005}], momentum=0.9)
 

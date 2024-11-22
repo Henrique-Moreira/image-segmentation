@@ -153,13 +153,14 @@ patience = 30
 plot_val = True
 plot_train = True
 max_epochs = 300
-class_weights = [1, 1, 1]
-nClasses = 3
 
 # Mapeamento de classes e cores
-class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255)}
-class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2}
+class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folhas': (0, 255, 0)}
+class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
+num_classes = len(class_to_id)
+class_weights = [1, 1, 1, 1]
 id_to_class = {v: k for k, v in class_to_id.items()}
+
 
 class SegmentationDataset(Dataset):
     """Segmentation dataset loader."""
@@ -270,19 +271,13 @@ if plot_train:
         
         plt.figure()
         plt.imshow((image_np / 255) * 0.5 + (color_label / 255) * 0.5)
-        if plt_savefig: 
-            plt.savefig(img_folder_train_segmentadas + "TRAIN_IMG_" + str(i_batch) + ".png")
-        if plt_show: 
-            plt.show()
+        plt.savefig(img_folder_train_segmentadas + "IMG_" + str(i_batch) + "_max_epochs_" + str(max_epochs) + ".png")
         plt.close('all')
         
         plt.figure()
         plt.imshow(color_label.astype(np.uint8))
-        if plt_savefig: 
-            plt.savefig(img_folder_train_segmentadas + "TRAIN_GT_" + str(i_batch) + ".png")
-        if plt_show: 
-            plt.show()
-        plt.close('all')
+        plt.savefig(img_folder_train_segmentadas + "GT_" + str(i_batch) + "_max_epochs_" + str(max_epochs) +  ".png")
+        plt.close('all')   
 
 model = PSPNet(nClasses).to(device)
 
@@ -370,18 +365,12 @@ for epoch in range(max_epochs):
                 
             plt.figure()
             plt.imshow((image_np/255) * 0.5 + (color_label/255) * 0.5)
-            if plt_savefig: 
-                plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
-            if plt_show: 
-                plt.show()
+            plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
             plt.close('all')
             
             plt.figure()
             plt.imshow(color_label.astype(np.uint8))
-            if plt_savefig: 
-                plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + "_epoch_" + str(epoch) +  ".png")
-            if plt_show: 
-                plt.show()
+            plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + "_epoch_" + str(epoch) +  ".png")
             plt.close('all')
         
         valid_mask = gt != -1
@@ -426,29 +415,13 @@ plt.legend()
 
 plt.tight_layout()
 plt.savefig(save_dir + 'result_model_segmentadas_unet_loss_accuracy.png')
-plt.show()
 plt.close('all')
-
-# Configurações do treinamento
-resolution_input = (640, 480)  # Tamanho de entrada
-patience = 30
-plot_val = True
-plot_train = True
-max_epochs = 300
-class_weights = [1, 1, 1]
-nClasses = 3
-
-# Mapeamento de classes e cores
-class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255)}
-class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2}
-id_to_class = {v: k for k, v in class_to_id.items()}
 
 ## Configurações do treinamento
 mean = [0.485, 0.456, 0.406]
 std = [0.229, 0.224, 0.225]
 
 model = PSPNet(nClasses)
-#model.load_state_dict(torch.load(model_file_name))
 model.load_state_dict(torch.load(model_file_name, weights_only=True))
 model.eval()
 print("Modelo carregado e pronto para uso.")
@@ -488,14 +461,10 @@ for img_path in img_list:
     
     plt.figure()
     plt.imshow((img_np / 255) * 0.5 + (color_label / 255) * 0.5)
-    plt.savefig(final_image + "RESULT_INFERENCIA_IMG_" + ".png")
-    if plt_show:
-        plt.show()
+    plt.savefig(img_folder_test_segmentadas + "RESULT_INFERENCIA_IMG_" + ".png")
     plt.close('all')
 
     plt.figure()
     plt.imshow(color_label.astype(np.uint8))
-    plt.savefig(final_image + "RESULT_INFERENCIA_GT_" + ".png")
-    if plt_show:
-        plt.show()
+    plt.savefig(img_folder_test_segmentadas + "RESULT_INFERENCIA_GT_" + ".png")
     plt.close('all')

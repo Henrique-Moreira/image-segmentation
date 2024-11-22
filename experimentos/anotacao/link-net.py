@@ -65,21 +65,23 @@ model_file_name = save_dir + 'model_linknet.pth'
 
 resolution_input = (640, 480)  # Tamanho de entrada
 assert resolution_input[0] % 32 == 0 and resolution_input[1] % 32 == 0, "A resolução de entrada deve ser divisível por 32."
-dummy_input = torch.randn(1, 3, 480, 640).to(device) # Gerar uma entrada aleatória (dummy_input) com tamanho (1, 3, 480, 640)
-labels = np.zeros((480, 640))  # Exemplo de inicialização
-color_label = np.zeros((480, 640, 3))  # Exemplo de inicialização
+dummy_input = torch.randn(1, 3, 480, 640).to(device) 
+# Inicialize labels e color_label com as dimensões corretas
+labels = np.zeros((120, 160))  # Ajuste as dimensões para corresponder à saída do modelo
+color_label = np.zeros((120, 160, 3))  # Ajuste as dimensões para corresponder à saída do modelo
 
 patience = 30
 plot_val = False
 plot_train = True
 max_epochs = 300
-class_weights = [1.0, 2.0, 3.0] 
-class_weights = torch.tensor(class_weights).to(device)  
-num_classes = 3
 
 # Mapeamento de classes e cores
-class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255)}
-class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2}
+class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folhas': (0, 255, 0)}
+class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
+num_classes = len(class_to_id)
+class_weights = [1.0, 2.0, 3.0, 4.0]
+class_weights = torch.tensor(class_weights).to(device)  
+
 id_to_class = {v: k for k, v in class_to_id.items()}
 mean = [0.485, 0.456, 0.406]
 std = [0.229, 0.224, 0.225]
@@ -118,8 +120,8 @@ class SegmentationDataset(Dataset):
         
         
         # Mean and std are needed because we start from a pre trained net
-        self.mean = [0.485, 0.456, 0.406]
-        self.std = [0.229, 0.224, 0.225]
+        self.mean = mean
+        self.std = std
 
     def __len__(self):
         return self.total_samples
@@ -171,7 +173,7 @@ class SegmentationDataset(Dataset):
                 label_np = np.fliplr(label_np)
                 img_np = np.ascontiguousarray(img_np)
                 label_np = np.ascontiguousarray(label_np)
-        
+                
         # Normalização da imagem
         img_pt = img_np.astype(np.float32) / 255.0
         for i in range(3):
@@ -295,27 +297,24 @@ if plot_train:
 
     for i_batch, sample_batched in enumerate(train_loader):
     
-            image_np = np.squeeze(sample_batched['image_original'].cpu().numpy())
-            gt = np.squeeze(sample_batched['gt'].cpu().numpy())
-                
-            color_label = np.zeros((resolution_input[1], resolution_input[0], 3))
+        image_np = np.squeeze(sample_batched['image_original'].cpu().numpy())
+        gt = np.squeeze(sample_batched['gt'].cpu().numpy())
             
-            for key, val in id_to_class.items():
-                color_label[gt == key] = class_to_color[val]
-                
-            plt.figure()
-            plt.imshow((image_np/255) * 0.5 + (color_label/255) * 0.5)
-            plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
-            plt.show()
-            plt.close('all')
+        color_label = np.zeros((resolution_input[1], resolution_input[0], 3))
+        
+        for key, val in id_to_class.items():
+            color_label[gt == key] = class_to_color[val]
             
-            plt.figure()
-            plt.imshow(color_label.astype(np.uint8))
-            plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + "_epoch_" + str(epoch) +  ".png")
-            plt.show()
-            plt.close('all')            
+        plt.figure()
+        plt.imshow((image_np/255) * 0.5 + (color_label/255) * 0.5)
+        plt.savefig(img_folder_train_segmentadas + "IMG_" + str(i_batch) + "_max_epochs_" + str(max_epochs) + ".png")
+        plt.close('all')
+        
+        plt.figure()
+        plt.imshow(color_label.astype(np.uint8))
+        plt.savefig(img_folder_train_segmentadas + "GT_" + str(i_batch) + "_max_epochs_" + str(max_epochs) +  ".png")
+        plt.close('all')            
 
-num_classes = 3  # Exemplo de número de classes
 model = LinkNet(num_classes).to(device)
 
 # Passar a entrada pelo modelo
@@ -334,8 +333,8 @@ core_lr = 0.02
 
 # Otimizador SGD com diferentes taxas de aprendizado para vieses e pesos
 optimizer = torch.optim.SGD([
-    {'params': base_vgg_bias, 'lr': 0.000001}, 
-    {'params': base_vgg_weight, 'lr': 0.000001},
+    {'params': base_vgg_bias, 'lr': 0.00001}, 
+    {'params': base_vgg_weight, 'lr': 0.00001},
     {'params': core_bias, 'lr': core_lr},
     {'params': core_weight, 'lr': core_lr}
 ])
@@ -349,7 +348,6 @@ best_epoch = 0
 n_correct = 0
 n_false = 0
 val_accuracies = []
-patience = 10
 
 # Start training...
 for epoch in range(max_epochs):
@@ -443,14 +441,16 @@ plt.close()
 
 # # Inferência de dados
 model = LinkNet(num_classes)
-#model.load_state_dict(torch.load(model_file_name))
-model.load_state_dict(torch.load(model_file_name, weights_only=True))
+model.load_state_dict(torch.load(model_file_name), weights_only=True)
 model.eval()
-print("Modelo carregado e pronto para uso.")
 model.to(device)
+print("Modelo carregado e pronto para uso.")
 
 img_list = glob.glob(osp.join(img_folder_val, '*.JPG'))
 
+# Inicialize labels e color_label com as dimensões corretas
+labels = np.zeros((480, 640))  # Ajuste as dimensões para corresponder à saída do modelo
+color_label = np.zeros((480, 640, 3))  # Ajuste as dimensões para corresponder à saída do modelo
   
 for img_path in img_list:
     img_np = cv2.imread(img_path, cv2.IMREAD_IGNORE_ORIENTATION + cv2.IMREAD_COLOR)
@@ -461,18 +461,18 @@ for img_path in img_list:
     for i in range(3):
         img_pt[..., i] -= mean[i]
         img_pt[..., i] /= std[i]
-
-    img_pt = img_pt.transpose(2, 0, 1)
+        
+    img_pt = img_pt.transpose(2,0,1)
+        
     img_pt = torch.from_numpy(img_pt[None, ...]).to(device)
-
+    
     label_out = model(img_pt)
-    label_out = torch.nn.functional.softmax(label_out, dim=1)
+    label_out = torch.nn.functional.softmax(label_out, dim = 1)
     label_out = label_out.cpu().detach().numpy()
     label_out = np.squeeze(label_out)
-
-    labels = np.argmax(label_out, axis=0)
-
-    color_label = np.zeros((resolution_input[1], resolution_input[0], 3))
+    
+    labels = np.zeros((resolution_input[1], resolution_input[0]))
+    color_label = np.zeros((resolution_input[1], resolution_input[0], 3))     
 
     for key, val in id_to_class.items():
         color_label[labels == key] = class_to_color[val]
@@ -484,13 +484,9 @@ for img_path in img_list:
     plt.figure()
     plt.imshow((img_np / 255) * 0.5 + (color_label / 255) * 0.5)
     plt.savefig(final_image + "RESULT_INFERENCIA_IMG_" + ".png")
-    plt.show()
     plt.close('all')
 
     plt.figure()
     plt.imshow(color_label.astype(np.uint8))
     plt.savefig(final_image + "RESULT_INFERENCIA_GT_" + ".png")
-    plt.show()
     plt.close('all')    
-
-
