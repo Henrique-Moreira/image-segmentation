@@ -259,7 +259,8 @@ print(f"Arquivos no dataset de validação: {os.listdir(img_folder_val)}")
 train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=True)
 val_loader = DataLoader(val_dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
 
-if plot_train:
+## Se plot_val for verdadeiro e epoch for divisivel por 100, salva as imagens segmentadas
+if plot_val:
     for i_batch, sample_batched in enumerate(train_loader):
         image_np = np.squeeze(sample_batched['image_original'].cpu().numpy())
         gt = np.squeeze(sample_batched['gt'].cpu().numpy())
@@ -279,7 +280,7 @@ if plot_train:
         plt.savefig(img_folder_train_segmentadas + "GT_" + str(i_batch) + "_max_epochs_" + str(max_epochs) +  ".png")
         plt.close('all')   
 
-model = PSPNet(nClasses).to(device)
+model = PSPNet(num_classes).to(device)
 
 optimizer = torch.optim.SGD(model.parameters(), 1e-2, .9, 1e-4)
 lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 30, gamma=0.2)
@@ -356,7 +357,8 @@ for epoch in range(max_epochs):
         
         labels = np.argmax(label_out, axis=0)
         
-        if plot_val:
+        # Salvar imagens segmentadas
+        if plot_val and epoch % 100 == 0:
             
             color_label = np.zeros((resolution_input[1], resolution_input[0], 3))
             
@@ -421,7 +423,7 @@ plt.close('all')
 mean = [0.485, 0.456, 0.406]
 std = [0.229, 0.224, 0.225]
 
-model = PSPNet(nClasses)
+model = PSPNet(num_classes)
 model.load_state_dict(torch.load(model_file_name, weights_only=True))
 model.eval()
 print("Modelo carregado e pronto para uso.")

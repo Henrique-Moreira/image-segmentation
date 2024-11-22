@@ -66,12 +66,9 @@ model_file_name = save_dir + 'model_linknet.pth'
 resolution_input = (640, 480)  # Tamanho de entrada
 assert resolution_input[0] % 32 == 0 and resolution_input[1] % 32 == 0, "A resolução de entrada deve ser divisível por 32."
 dummy_input = torch.randn(1, 3, 480, 640).to(device) 
-# Inicialize labels e color_label com as dimensões corretas
-labels = np.zeros((120, 160))  # Ajuste as dimensões para corresponder à saída do modelo
-color_label = np.zeros((120, 160, 3))  # Ajuste as dimensões para corresponder à saída do modelo
 
 patience = 30
-plot_val = False
+plot_val = True
 plot_train = True
 max_epochs = 300
 
@@ -85,6 +82,13 @@ class_weights = torch.tensor(class_weights).to(device)
 id_to_class = {v: k for k, v in class_to_id.items()}
 mean = [0.485, 0.456, 0.406]
 std = [0.229, 0.224, 0.225]
+
+# Inicialize labels e color_label com as dimensões corretas
+#labels = np.zeros((120, 160))  # Ajuste as dimensões para corresponder à saída do modelo
+#color_label = np.zeros((120, 160, 3))  # Ajuste as dimensões para corresponder à saída do modelo
+
+labels = np.zeros((480, 640))  # Ajuste as dimensões para corresponder à saída do modelo
+color_label = np.zeros((480, 640, 3))  # Ajuste as dimensões para corresponder à saída do modelo
 
 # # Clase para Segmentação de Dataset
 # 
@@ -357,33 +361,94 @@ for epoch in range(max_epochs):
     lr_scheduler.step()
     model.train()
     mean_loss = 0
+    
+    n_correct = 0
+    n_false = 0    
         
     # Dentro do loop de treinamento
     for i_batch, sample_batched in enumerate(train_loader):
         image = sample_batched['image'].to(device)
         gt = sample_batched['gt'].to(device)
-
+    
         optimizer.zero_grad()
         output, total_loss = model.eval_net_with_loss(image, gt, class_weights, device)
         total_loss.backward()
         optimizer.step()
-
+    
         mean_loss += total_loss.cpu().detach().numpy()
-
-        # Redimensionar o alvo para o tamanho da saída
-        gt_resized = F.interpolate(gt.unsqueeze(1).float(), size=(output.shape[2], output.shape[3]), mode='nearest').squeeze(1).long()
-
-        # Medir precisão
-        gt_resized_np = np.squeeze(gt_resized.cpu().numpy())
+    
+        # Measure accuracy
+        gt = np.squeeze(sample_batched['gt'].cpu().numpy())
+        
         label_out = torch.nn.functional.softmax(output, dim=1)
         label_out = label_out.cpu().detach().numpy()
         label_out = np.squeeze(label_out)
+        
         labels = np.argmax(label_out, axis=0)
-        valid_mask = gt_resized_np != -1
-        curr_correct = np.sum(gt_resized_np[valid_mask] == labels[valid_mask])
-        curr_false = np.sum(valid_mask) - curr_correct
+        valid_mask = gt != -1
+    
+        # Redimensionar gt e valid_mask para ter as mesmas dimensões que a saída do modelo
+        output_shape = labels.shape
+        valid_mask_resized = cv2.resize(valid_mask.astype(np.uint8), (output_shape[1], output_shape[0]), interpolation=cv2.INTER_NEAREST).astype(bool)
+        gt_resized = cv2.resize(gt, (output_shape[1], output_shape[0]), interpolation=cv2.INTER_NEAREST)
+        
+        curr_correct = np.sum(gt_resized[valid_mask_resized] == labels[valid_mask_resized])
+        curr_false = np.sum(valid_mask_resized) - curr_correct
+        
         n_correct += curr_correct
-        n_false += curr_false    
+        n_false += curr_false
+    
+    mean_loss /= len(train_loader)
+    train_acc = n_correct / (n_correct + n_false)
+    
+    print('Train loss: %f, train acc: %f' % (mean_loss, train_acc))
+    # Armazenar a perda e a precisão de treinamento
+    train_losses.append(mean_loss)
+    train_accuracies.append(train_acc)    
+    
+    n_correct = 0
+    n_false = 0
+
+    for i_batch, sample_batched in enumerate(val_loader):
+        image = sample_batched['image'].to(device)
+        image_np = np.squeeze(sample_batched['image_original'].cpu().numpy())
+        gt = np.squeeze(sample_batched['gt'].cpu().numpy())
+
+        label_out = model(image)
+        label_out = torch.nn.functional.softmax(label_out, dim=1)
+        label_out = label_out.cpu().detach().numpy()
+        label_out = np.squeeze(label_out)
+
+        labels = np.argmax(label_out, axis=0)
+
+        ## Se plot_val for verdadeiro e epoch for divisivel por 100, salva as imagens segmentadas
+        if plot_val and epoch % 10 == 0:
+            labels = np.zeros((resolution_input[1], resolution_input[0]))
+            color_label = np.zeros((resolution_input[1], resolution_input[0], 3))                 
+
+            for key, val in id_to_class.items():
+                color_label[labels == key] = class_to_color[val]
+                
+            plt.figure()
+            plt.imshow((image_np / 255) * 0.5 + (color_label / 255) * 0.5)
+            plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
+            plt.close()
+            plt.figure()
+            plt.imshow(color_label.astype(np.uint8))
+            plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
+            plt.close()
+
+        valid_mask = gt != -1
+        # Redimensionar gt e valid_mask para ter as mesmas dimensões que a saída do modelo
+        output_shape = labels.shape
+        valid_mask_resized = cv2.resize(valid_mask.astype(np.uint8), (output_shape[1], output_shape[0]), interpolation=cv2.INTER_NEAREST).astype(bool)
+        gt_resized = cv2.resize(gt, (output_shape[1], output_shape[0]), interpolation=cv2.INTER_NEAREST)
+
+        curr_correct = np.sum(gt_resized[valid_mask_resized] == labels[valid_mask_resized])
+        curr_false = np.sum(valid_mask_resized) - curr_correct
+
+        n_correct += curr_correct
+        n_false += curr_false
 
     total_acc = n_correct / (n_correct + n_false)
     val_accuracies.append(total_acc)
@@ -392,11 +457,11 @@ for epoch in range(max_epochs):
         best_val_acc = total_acc
         if epoch > 7:
             torch.save(model.state_dict(), model_file_name)
-            print('Nova melhor conta de validação. Salvo... %f' % epoch)
+            print('Nova melhor conta de validação. Salvo... %f', epoch)
         best_epoch = epoch
 
     if (epoch - best_epoch) > patience:
-        print("Terminando o treinamento, melhor conta de validação %f" % best_val_acc)
+        print(f"Terminando o treinamento, melhor conta de validação {best_val_acc:.6f}")
         break
 
     print('Validação Acc: %f -- Melhor Avaliação Acc: %f -- epoch %d.' % (total_acc, best_val_acc, best_epoch))
@@ -441,7 +506,7 @@ plt.close()
 
 # # Inferência de dados
 model = LinkNet(num_classes)
-model.load_state_dict(torch.load(model_file_name), weights_only=True)
+model.load_state_dict(torch.load(model_file_name))
 model.eval()
 model.to(device)
 print("Modelo carregado e pronto para uso.")
