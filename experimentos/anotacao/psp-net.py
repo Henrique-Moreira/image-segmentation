@@ -8,7 +8,13 @@ import os.path as osp
 import glob
 import torchvision
 import matplotlib.pyplot as plt
+import logging
 
+# Configuração do logger
+log_dir = r'C:\git\image-segmentation\results\psp-dataset-segmentadas'
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+logging.basicConfig(filename=osp.join(log_dir, 'training.log'), level=logging.INFO, format='%(asctime)s - %(message)s')
 
 class PSPDec(torch.nn.Module):
 	def __init__(self, in_dim, reduction_dim, setting):
@@ -100,30 +106,30 @@ class PSPNet(torch.nn.Module):
 
 		return (out, loss)
 
-plt_show = False
-plt_savefig = False
+plot_val = True
+plot_train = True
 
 # Configuração do dispositivo CUDA
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 cuda_available = torch.cuda.is_available()
-print(f'CUDA disponível: {cuda_available}')
+logging.info('CUDA disponível: %s', cuda_available)
 
 if cuda_available:
     gpu_name = torch.cuda.get_device_name(0)
     vram_total = torch.cuda.get_device_properties(0).total_memory / (1024 ** 3)  # Convertendo para GB
     vram_available = torch.cuda.memory_reserved(0) / (1024 ** 3)  # Convertendo para GB
-    print(f'Nome da GPU: {gpu_name}')
-    print(f'VRAM Total: {vram_total:.2f} GB')
+    logging.info('Nome da GPU: %s', gpu_name)
+    logging.info('VRAM Total: %.2f GB', vram_total)
 
 # Caminho do diretório Dataset
 directory = r'C:\git\image-segmentation\dataset'
-print(f'Diretório do Projeto {directory}.')
+logging.info('Diretório do Projeto %s', directory)
 if not os.path.exists(directory):
     os.makedirs(directory)
-img_folder_val = directory + r'\\base\\Val'
-img_folder_train = directory + r'\\base\\Train'
-img_folder_test = directory + r'\\base\\Test'
-save_dir = directory + r'\\result_PSPNET\\'
+img_folder_val = directory + r'\\base_segmentadas\\Val'
+img_folder_train = directory + r'\\base_segmentadas\\Train'
+img_folder_test = directory + r'\\base_segmentadas\\Test'
+save_dir = directory + r'\\result_PSPNET_Segmentadas\\'
 if not os.path.exists(img_folder_val):
     os.makedirs(img_folder_val)
 if not os.path.exists(img_folder_train):
@@ -145,20 +151,25 @@ if not os.path.exists(img_folder_test_segmentadas):
     os.makedirs(img_folder_test_segmentadas)
     
 # Local onde o Modelo será salvo
-model_file_name = save_dir + 'model_PSPNET.pth'
+model_file_name = save_dir + 'model_PSPNET_segmentadas.pth'
+logging.info('Modelo será salvo em: %s', model_file_name)
 
 # Configurações do treinamento
 resolution_input = (640, 480)  # Tamanho de entrada
+logging.info('Resolução de entrada: %s', resolution_input)
 patience = 30
-plot_val = True
-plot_train = True
+logging.info('Patience: %s', patience)
 max_epochs = 300
+logging.info('Número máximo de épocas: %s', max_epochs)
 
 # Mapeamento de classes e cores
 class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folhas': (0, 255, 0)}
+logging.info('Mapeamento de classes para cores: %s', class_to_color)
 class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
+logging.info('Mapeamento de classes para IDs: %s', class_to_id)
 num_classes = len(class_to_id)
 class_weights = [1, 1, 1, 1]
+logging.info('Pesos de classes: %s', class_weights)
 id_to_class = {v: k for k, v in class_to_id.items()}
 
 
@@ -249,12 +260,12 @@ val_accuracies = []
 
 # Inicia o treinamento
 train_dataset = SegmentationDataset(img_folder_train, img_folder_train, True, class_to_id, resolution_input, True, None)
-print(f"Número de amostras no dataset de treinamento: {len(train_dataset)}")
-print(f"Arquivos no dataset de treinamento: {os.listdir(img_folder_train)}")
+logging.info('Número de amostras no dataset de treinamento: %s', len(train_dataset))
+logging.info('Arquivos no dataset de treinamento: %s', os.listdir(img_folder_train))
 
 val_dataset = SegmentationDataset(img_folder_val, img_folder_val, False, class_to_id, resolution_input, False, None)
-print(f"Número de amostras no dataset de validação: {len(val_dataset)}")
-print(f"Arquivos no dataset de validação: {os.listdir(img_folder_val)}")
+logging.info('Número de amostras no dataset de validação: %s', len(val_dataset))
+logging.info('Arquivos no dataset de validação: %s', os.listdir(img_folder_val))
 
 train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=True)
 val_loader = DataLoader(val_dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
@@ -273,11 +284,13 @@ if plot_val:
         plt.figure()
         plt.imshow((image_np / 255) * 0.5 + (color_label / 255) * 0.5)
         plt.savefig(img_folder_train_segmentadas + "IMG_" + str(i_batch) + "_max_epochs_" + str(max_epochs) + ".png")
+        logging.info('Imagem salva em: %s', img_folder_train_segmentadas + "IMG_" + str(i_batch) + "_max_epochs_" + str(max_epochs) + ".png")
         plt.close('all')
         
         plt.figure()
         plt.imshow(color_label.astype(np.uint8))
         plt.savefig(img_folder_train_segmentadas + "GT_" + str(i_batch) + "_max_epochs_" + str(max_epochs) +  ".png")
+        logging.info('Imagem salva em: %s', img_folder_train_segmentadas + "GT_" + str(i_batch) + "_max_epochs_" + str(max_epochs) +  ".png")
         plt.close('all')   
 
 model = PSPNet(num_classes).to(device)
@@ -292,6 +305,7 @@ best_epoch = 0
 for epoch in range(max_epochs):
     
     print('Epoch %d starting...' % (epoch+1))
+    logging.info('Epoch %d starting...', epoch+1)
     
     lr_scheduler.step()
     
@@ -334,6 +348,7 @@ for epoch in range(max_epochs):
     train_acc = n_correct / (n_correct + n_false)
         
     print('Train loss: %f, train acc: %f' % (mean_loss, train_acc))
+    logging.info('Train loss: %f, train acc: %f', mean_loss, train_acc)
     # Armazenar a perda e a precisão de treinamento
     train_losses.append(mean_loss)
     train_accuracies.append(train_acc)    
@@ -368,11 +383,13 @@ for epoch in range(max_epochs):
             plt.figure()
             plt.imshow((image_np/255) * 0.5 + (color_label/255) * 0.5)
             plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
+            logging.info('Imagem salva em: %s', img_folder_val_segmentadas + "IMG_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
             plt.close('all')
             
             plt.figure()
             plt.imshow(color_label.astype(np.uint8))
             plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + "_epoch_" + str(epoch) +  ".png")
+            logging.info('Imagem salva em: %s', img_folder_val_segmentadas + "GT_" + str(i_batch) + "_epoch_" + str(epoch) +  ".png")
             plt.close('all')
         
         valid_mask = gt != -1
@@ -389,13 +406,16 @@ for epoch in range(max_epochs):
         if epoch > 7:
             torch.save(model.state_dict(), model_file_name)
             print('Nova melhor conta de validação. Salvo... %f', epoch)
+            logging.info('Nova melhor conta de validação. Salvo... %f', epoch)
         best_epoch = epoch
 
     if (epoch - best_epoch) > patience:
         print(f"Terminando o treinamento, melhor conta de validação {best_val_acc:.6f}")
+        logging.info("Terminando o treinamento, melhor conta de validação %f", best_val_acc)
         break
     
     print('Validação Acc: %f -- Melhor Avaliação Acc: %f -- epoch %d.' % (total_acc, best_val_acc, best_epoch))
+    logging.info('Validação Acc: %f -- Melhor Avaliação Acc: %f -- epoch %d.', total_acc, best_val_acc, best_epoch)
 
 
 plt.figure(figsize=(12, 5))
@@ -416,7 +436,8 @@ plt.title('Precisão de Treinamento e Validação ao longo das Épocas')
 plt.legend()
 
 plt.tight_layout()
-plt.savefig(save_dir + 'result_model_segmentadas_unet_loss_accuracy.png')
+plt.savefig(save_dir + 'result_model_segmentadas_pspnet_loss_accuracy.png')
+logging.info('Imagem salva em: %s', save_dir + 'result_model_segmentadas_unet_loss_accuracy.png')
 plt.close('all')
 
 ## Configurações do treinamento
@@ -427,10 +448,11 @@ model = PSPNet(num_classes)
 model.load_state_dict(torch.load(model_file_name, weights_only=True))
 model.eval()
 print("Modelo carregado e pronto para uso.")
+logging.info('Modelo carregado e pronto para uso.')
 model.to(device)
 
 img_list = glob.glob(osp.join(img_folder_val, '*.JPG'))
-print(f"Imagens de teste: {len(img_list)}")
+logging.info('Imagens de teste: %s', len(img_list))
 
 for img_path in img_list:
     img_np = cv2.imread(img_path, cv2.IMREAD_IGNORE_ORIENTATION + cv2.IMREAD_COLOR)
@@ -464,9 +486,11 @@ for img_path in img_list:
     plt.figure()
     plt.imshow((img_np / 255) * 0.5 + (color_label / 255) * 0.5)
     plt.savefig(img_folder_test_segmentadas + "RESULT_INFERENCIA_IMG_" + ".png")
+    logging.info('Imagem salva em: %s', img_folder_test_segmentadas + "RESULT_INFERENCIA_IMG_" + ".png")
     plt.close('all')
 
     plt.figure()
     plt.imshow(color_label.astype(np.uint8))
     plt.savefig(img_folder_test_segmentadas + "RESULT_INFERENCIA_GT_" + ".png")
+    logging.info('Imagem salva em: %s', img_folder_test_segmentadas + "RESULT_INFERENCIA_GT_" + ".png")
     plt.close('all')
