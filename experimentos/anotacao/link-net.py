@@ -9,11 +9,21 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
-import torchvision
-from PIL import Image
-from torch.utils.data import DataLoader, Dataset
 import torch.nn as nn
 import torchvision.models as models
+import logging
+
+from PIL import Image
+from torch.utils.data import DataLoader, Dataset
+
+from datetime import datetime
+
+# Configuração do logger
+log_dir = r'C:\git\image-segmentation\results\psp-dataset-base'
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+filenamelog = 'psp-dataset-base-' + datetime.now().strftime('%Y%m%d-%H%M%S') + '.log'
+logging.basicConfig(filename=osp.join(log_dir, filenamelog), level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # Train
 matplotlib.use('agg')
@@ -21,16 +31,18 @@ matplotlib.use('agg')
 # # Declaração de Variáveis
 # CUDA:
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+logging.info(f"Dispositivo: {device}")
 
 # Caminho do diretório Dataset:
 directory = r'C:\git\image-segmentation\dataset'
-print(f'Diretório do Projeto {directory}.')
+logging.info(f'Diretório do Projeto {directory}.')
+
 if not os.path.exists(directory):
     os.makedirs(directory)
 img_folder_val = directory + r'\\base\\Val'
 img_folder_train = directory + r'\\base\\Train'
 img_folder_test = directory + r'\\base\\Test'
-save_dir = directory + r'\\result_linknet\\'
+save_dir = directory + r'\\result_linknet_base\\'
 if not os.path.exists(img_folder_val):
     os.makedirs(img_folder_val)
 if not os.path.exists(img_folder_train):
@@ -57,38 +69,42 @@ model_file_name = save_dir + 'model_linknet.pth'
 # Configurações do treinamento
 #Width x Height 
 #resolution = (640, 480)
-#resolution = (800, 448)
+# resolution_input = (800, 448)
 #resolution = (1600, 896)
 #resolution = (2400, 1344)
 #resolution = (3200, 1792)
 #resolution = (4000, 2240)
 
-resolution_input = (640, 480)  # Tamanho de entrada
+# Inicialize labels e color_label com as dimensões corretas
+labels = np.zeros((448, 800))  # Ajuste as dimensões para corresponder à saída do modelo
+color_label = np.zeros((448, 800, 3))  # Ajuste as dimensões para corresponder à saída do modelo
+
+resolution_input = (800, 448)  # Tamanho de entrada
+logging.info(f'Resolução de Entrada: {resolution_input}.')
 assert resolution_input[0] % 32 == 0 and resolution_input[1] % 32 == 0, "A resolução de entrada deve ser divisível por 32."
-dummy_input = torch.randn(1, 3, 480, 640).to(device) 
+dummy_input = torch.randn(1, 3, 448, 800).to(device) 
 
 patience = 30
+logging.info(f'Patience: {patience}.')
 plot_val = True
 plot_train = True
 max_epochs = 300
+logging.info(f'Número Máximo de Épocas: {max_epochs}.')
 
 # Mapeamento de classes e cores
 class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folhas': (0, 255, 0)}
+logging.info(f'Mapeamento de Classes e Cores: {class_to_color}.')
 class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
+logging.info(f'Mapeamento de Classes e IDs: {class_to_id}.')
 num_classes = len(class_to_id)
 class_weights = [1.0, 2.0, 3.0, 4.0]
+logging.info(f'Pesos de Classes: {class_weights}.')
 class_weights = torch.tensor(class_weights).to(device)  
 
 id_to_class = {v: k for k, v in class_to_id.items()}
 mean = [0.485, 0.456, 0.406]
 std = [0.229, 0.224, 0.225]
 
-# Inicialize labels e color_label com as dimensões corretas
-#labels = np.zeros((120, 160))  # Ajuste as dimensões para corresponder à saída do modelo
-#color_label = np.zeros((120, 160, 3))  # Ajuste as dimensões para corresponder à saída do modelo
-
-labels = np.zeros((480, 640))  # Ajuste as dimensões para corresponder à saída do modelo
-color_label = np.zeros((480, 640, 3))  # Ajuste as dimensões para corresponder à saída do modelo
 
 # # Clase para Segmentação de Dataset
 # 
@@ -240,9 +256,9 @@ class LinkNet(nn.Module):
         assert output.shape[2:] == gt_resized.shape[1:], \
             f"Dimension mismatch: Output size {output.shape[2:]} and target size {gt_resized.shape[1:]}"
 
-        # print(f"Tamanho da entrada: {image.shape}")
-        # print(f"Tamanho da saída: {output.shape}")
-        # print(f"Tamanho do alvo redimensionado: {gt_resized.shape}")
+        # logging.info(f"Tamanho da entrada: {image.shape}")
+        # logging.info(f"Tamanho da saída: {output.shape}")
+        # logging.info(f"Tamanho do alvo redimensionado: {gt_resized.shape}")
 
         # Ajustar para que a função de perda ignore regiões com -1
         loss_fn = nn.CrossEntropyLoss(weight=class_weights, ignore_index=-1)
@@ -287,13 +303,13 @@ val_accuracies = []
 
 # Inicia o treinamento
 train_dataset = SegmentationDataset(img_folder_train, img_folder_train, True, class_to_id, resolution_input, True)
-print(f"Número de amostras no dataset de treinamento: {len(train_dataset)}")
-print(f"Arquivos no dataset de treinamento: {os.listdir(img_folder_train)}")
+logging.info(f"Número de amostras no dataset de treinamento: {len(train_dataset)}")
+logging.info(f"Arquivos no dataset de treinamento: {os.listdir(img_folder_train)}")
 train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=True)
 
 val_dataset = SegmentationDataset(img_folder_val, img_folder_val, False, class_to_id, resolution_input)
-print(f"Número de amostras no dataset de validação: {len(val_dataset)}")
-print(f"Arquivos no dataset de validação: {os.listdir(img_folder_val)}")
+logging.info(f"Número de amostras no dataset de validação: {len(val_dataset)}")
+logging.info(f"Arquivos no dataset de validação: {os.listdir(img_folder_val)}")
 val_loader = DataLoader(val_dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
 
 
@@ -325,7 +341,7 @@ model = LinkNet(num_classes).to(device)
 dummy_output = model(dummy_input)
 
 # Verificar o tamanho da saída
-print(f"Input shape: {dummy_input.shape}, Output shape: {dummy_output.shape}")
+logging.info(f"Input shape: {dummy_input.shape}, Output shape: {dummy_output.shape}")
 
 
 # Essa função itera sobre os parâmetros do modelo e os separa em pesos e vieses (bias), distinguindo entre camadas convolucionais (base do VGG) e outras partes do modelo (núcleo/core).
@@ -356,7 +372,7 @@ val_accuracies = []
 # Start training...
 for epoch in range(max_epochs):
     
-    print('Epoch %d starting...' % (epoch+1))
+    logging.info(f'Epoch %d starting...' % (epoch+1))
     
     lr_scheduler.step()
     model.train()
@@ -401,7 +417,7 @@ for epoch in range(max_epochs):
     mean_loss /= len(train_loader)
     train_acc = n_correct / (n_correct + n_false)
     
-    print('Train loss: %f, train acc: %f' % (mean_loss, train_acc))
+    logging.info(f'Train loss: %f, train acc: %f' % (mean_loss, train_acc))
     # Armazenar a perda e a precisão de treinamento
     train_losses.append(mean_loss)
     train_accuracies.append(train_acc)    
@@ -432,10 +448,13 @@ for epoch in range(max_epochs):
             plt.figure()
             plt.imshow((image_np / 255) * 0.5 + (color_label / 255) * 0.5)
             plt.savefig(img_folder_val_segmentadas + "IMG_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
+            logging.info(f'Imagem salva: {img_folder_val_segmentadas}IMG_' + str(i_batch) + '_epoch_' + str(epoch) + '.png')
             plt.close()
+            
             plt.figure()
             plt.imshow(color_label.astype(np.uint8))
             plt.savefig(img_folder_val_segmentadas + "GT_" + str(i_batch) + "_epoch_" + str(epoch) + ".png")
+            logging.info(f'Imagem salva: {img_folder_val_segmentadas}GT_' + str(i_batch) + '_epoch_' + str(epoch) + '.png')
             plt.close()
 
         valid_mask = gt != -1
@@ -457,14 +476,14 @@ for epoch in range(max_epochs):
         best_val_acc = total_acc
         if epoch > 7:
             torch.save(model.state_dict(), model_file_name)
-            print('Nova melhor conta de validação. Salvo... %f', epoch)
+            logging.info('Nova melhor conta de validação. Salvo... %f', epoch)
         best_epoch = epoch
 
     if (epoch - best_epoch) > patience:
-        print(f"Terminando o treinamento, melhor conta de validação {best_val_acc:.6f}")
+        logging.info(f"Terminando o treinamento, melhor conta de validação {best_val_acc:.6f}")
         break
 
-    print('Validação Acc: %f -- Melhor Avaliação Acc: %f -- epoch %d.' % (total_acc, best_val_acc, best_epoch))
+    logging.info(f'Validação Acc: %f -- Melhor Avaliação Acc: %f -- epoch %d.' % (total_acc, best_val_acc, best_epoch))
 
 
 # # Plotar os gráficos de perda e precisão
@@ -500,7 +519,8 @@ plt.title('Precisão de Treinamento e Validação ao longo das Épocas')
 plt.legend()
 
 plt.tight_layout()
-plt.savefig(save_dir + 'GraficoProcisaoTreinamentoValidacao.png')
+plt.savefig(save_dir + 'result_model_segmentadas_linknet_loss_accuracy.png')
+logging.info(f"Gráficos salvos: {save_dir + 'result_model_segmentadas_linknet_loss_accuracy.png'}")
 plt.close()
 
 
@@ -509,14 +529,10 @@ model = LinkNet(num_classes)
 model.load_state_dict(torch.load(model_file_name))
 model.eval()
 model.to(device)
-print("Modelo carregado e pronto para uso.")
+logging.info(f"Modelo carregado e pronto para uso.")
 
 img_list = glob.glob(osp.join(img_folder_val, '*.JPG'))
-
-# Inicialize labels e color_label com as dimensões corretas
-labels = np.zeros((480, 640))  # Ajuste as dimensões para corresponder à saída do modelo
-color_label = np.zeros((480, 640, 3))  # Ajuste as dimensões para corresponder à saída do modelo
-  
+ 
 for img_path in img_list:
     img_np = cv2.imread(img_path, cv2.IMREAD_IGNORE_ORIENTATION + cv2.IMREAD_COLOR)
     img_np = cv2.resize(img_np, (resolution_input[0], resolution_input[1]))[..., ::-1]
@@ -549,9 +565,11 @@ for img_path in img_list:
     plt.figure()
     plt.imshow((img_np / 255) * 0.5 + (color_label / 255) * 0.5)
     plt.savefig(final_image + "RESULT_INFERENCIA_IMG_" + ".png")
+    logging.info(f"Imagem salva: {final_image + 'RESULT_INFERENCIA_IMG_' + '.png'}")
     plt.close('all')
 
     plt.figure()
     plt.imshow(color_label.astype(np.uint8))
     plt.savefig(final_image + "RESULT_INFERENCIA_GT_" + ".png")
+    logging.info(f"Imagem salva: {final_image + 'RESULT_INFERENCIA_GT_' + '.png'}")
     plt.close('all')    

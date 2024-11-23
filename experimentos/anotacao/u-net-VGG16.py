@@ -10,14 +10,15 @@ import torchvision
 import matplotlib.pyplot as plt
 import logging
 
+from datetime import datetime
 from torchvision.models import VGG16_Weights
 
 # Configuração do logger
 log_dir = r'C:\git\image-segmentation\results\unet-dataset-base'
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
-logging.basicConfig(filename=osp.join(log_dir, 'training.log'), level=logging.INFO, format='%(asctime)s - %(message)s')
-
+filenamelog = 'psp-dataset-base-' + datetime.now().strftime('%Y%m%d-%H%M%S') + '.log'
+logging.basicConfig(filename=osp.join(log_dir, filenamelog), level=logging.INFO, format='%(asctime)s - %(message)s')
 
 class UNetVgg(torch.nn.Module):
     """

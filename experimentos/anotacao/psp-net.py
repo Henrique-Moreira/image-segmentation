@@ -9,12 +9,14 @@ import glob
 import torchvision
 import matplotlib.pyplot as plt
 import logging
+from datetime import datetime
 
 # Configuração do logger
 log_dir = r'C:\git\image-segmentation\results\psp-dataset-base'
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
-logging.basicConfig(filename=osp.join(log_dir, 'training.log'), level=logging.INFO, format='%(asctime)s - %(message)s')
+filenamelog = 'psp-dataset-base-' + datetime.now().strftime('%Y%m%d-%H%M%S') + '.log'
+logging.basicConfig(filename=osp.join(log_dir, filenamelog), level=logging.INFO, format='%(asctime)s - %(message)s')
 
 class PSPDec(torch.nn.Module):
 	def __init__(self, in_dim, reduction_dim, setting):
@@ -106,7 +108,7 @@ class PSPNet(torch.nn.Module):
 
 		return (out, loss)
 
-plot_val = True
+plot_val = False
 plot_train = True
 
 # Configuração do dispositivo CUDA
@@ -355,7 +357,6 @@ for epoch in range(max_epochs):
     
     n_correct = 0
     n_false = 0
-    
     
     for i_batch, sample_batched in enumerate(val_loader):
     

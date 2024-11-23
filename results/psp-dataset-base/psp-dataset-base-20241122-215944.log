@@ -1,0 +1,179 @@
+2024-11-22 21:59:44,201 - CUDA disponível: True
+2024-11-22 21:59:44,201 - Nome da GPU: NVIDIA GeForce RTX 4070
+2024-11-22 21:59:44,201 - VRAM Total: 11.99 GB
+2024-11-22 21:59:44,201 - Diretório do Projeto C:\git\image-segmentation\dataset
+2024-11-22 21:59:44,201 - Modelo será salvo em: C:\git\image-segmentation\dataset\\result_PSPNET_base\\model_PSPNET_segmentadas.pth
+2024-11-22 21:59:44,201 - Resolução de entrada: (640, 480)
+2024-11-22 21:59:44,201 - Patience: 30
+2024-11-22 21:59:44,201 - Número máximo de épocas: 300
+2024-11-22 21:59:44,201 - Mapeamento de classes para cores: {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folhas': (0, 255, 0)}
+2024-11-22 21:59:44,201 - Mapeamento de classes para IDs: {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
+2024-11-22 21:59:44,201 - Pesos de classes: [1, 2, 3, 4]
+2024-11-22 21:59:44,201 - Número de amostras no dataset de treinamento: 20
+2024-11-22 21:59:44,201 - Arquivos no dataset de treinamento: ['DJI_0026.JPG', 'DJI_0026.json', 'DJI_0064.JPG', 'DJI_0064.json', 'DJI_0089.JPG', 'DJI_0089.json', 'DJI_0105.JPG', 'DJI_0105.json', 'DJI_0122.JPG', 'DJI_0122.json', 'DJI_0160.JPG', 'DJI_0160.json', 'DJI_0161.JPG', 'DJI_0161.json', 'DJI_0165.JPG', 'DJI_0165.json', 'DJI_0211.JPG', 'DJI_0211.json', 'DJI_0214.JPG', 'DJI_0214.json', 'DJI_0217.JPG', 'DJI_0217.json', 'DJI_0233.JPG', 'DJI_0233.json', 'DJI_0234.JPG', 'DJI_0234.json', 'DJI_0237.JPG', 'DJI_0237.json', 'DJI_0252.JPG', 'DJI_0252.json', 'DJI_0402.JPG', 'DJI_0402.json', 'DJI_0432.JPG', 'DJI_0432.json', 'DJI_0433.JPG', 'DJI_0433.json', 'DJI_0435.JPG', 'DJI_0435.json', 'DJI_0444.JPG', 'DJI_0444.json']
+2024-11-22 21:59:44,201 - Número de amostras no dataset de validação: 10
+2024-11-22 21:59:44,201 - Arquivos no dataset de validação: ['DJI_0052.JPG', 'DJI_0052.json', 'DJI_0085.JPG', 'DJI_0085.json', 'DJI_0107.JPG', 'DJI_0107.json', 'DJI_0124.JPG', 'DJI_0124.json', 'DJI_0163.JPG', 'DJI_0163.json', 'DJI_0212.JPG', 'DJI_0212.json', 'DJI_0215.JPG', 'DJI_0215.json', 'DJI_0236.JPG', 'DJI_0236.json', 'DJI_0251.JPG', 'DJI_0251.json', 'DJI_0434.JPG', 'DJI_0434.json']
+2024-11-22 21:59:44,684 - Epoch 1 starting...
+2024-11-22 21:59:49,335 - Train loss: 0.753276, train acc: 0.668313
+2024-11-22 21:59:50,621 - Validação Acc: 0.663565 -- Melhor Avaliação Acc: 0.663565 -- epoch 0.
+2024-11-22 21:59:50,621 - Epoch 2 starting...
+2024-11-22 21:59:55,019 - Train loss: 0.532171, train acc: 0.750030
+2024-11-22 21:59:56,311 - Validação Acc: 0.807236 -- Melhor Avaliação Acc: 0.807236 -- epoch 1.
+2024-11-22 21:59:56,311 - Epoch 3 starting...
+2024-11-22 22:00:00,751 - Train loss: 0.489282, train acc: 0.805018
+2024-11-22 22:00:02,074 - Validação Acc: 0.797870 -- Melhor Avaliação Acc: 0.807236 -- epoch 1.
+2024-11-22 22:00:02,074 - Epoch 4 starting...
+2024-11-22 22:00:06,524 - Train loss: 0.438015, train acc: 0.816919
+2024-11-22 22:00:07,839 - Validação Acc: 0.837759 -- Melhor Avaliação Acc: 0.837759 -- epoch 3.
+2024-11-22 22:00:07,839 - Epoch 5 starting...
+2024-11-22 22:00:12,304 - Train loss: 0.512854, train acc: 0.845063
+2024-11-22 22:00:13,621 - Validação Acc: 0.789449 -- Melhor Avaliação Acc: 0.837759 -- epoch 3.
+2024-11-22 22:00:13,621 - Epoch 6 starting...
+2024-11-22 22:00:18,028 - Train loss: 0.258100, train acc: 0.877854
+2024-11-22 22:00:19,343 - Validação Acc: 0.855588 -- Melhor Avaliação Acc: 0.855588 -- epoch 5.
+2024-11-22 22:00:19,343 - Epoch 7 starting...
+2024-11-22 22:00:23,735 - Train loss: 0.183450, train acc: 0.917036
+2024-11-22 22:00:25,041 - Validação Acc: 0.907615 -- Melhor Avaliação Acc: 0.907615 -- epoch 6.
+2024-11-22 22:00:25,041 - Epoch 8 starting...
+2024-11-22 22:00:29,522 - Train loss: 0.094604, train acc: 0.951114
+2024-11-22 22:00:30,822 - Validação Acc: 0.915070 -- Melhor Avaliação Acc: 0.915070 -- epoch 7.
+2024-11-22 22:00:30,822 - Epoch 9 starting...
+2024-11-22 22:00:35,256 - Train loss: 0.065626, train acc: 0.967909
+2024-11-22 22:00:36,575 - Validação Acc: 0.914400 -- Melhor Avaliação Acc: 0.915070 -- epoch 7.
+2024-11-22 22:00:36,575 - Epoch 10 starting...
+2024-11-22 22:00:40,976 - Train loss: 0.053006, train acc: 0.978638
+2024-11-22 22:00:42,481 - Nova melhor conta de validação. Salvo... 9.000000
+2024-11-22 22:00:42,481 - Validação Acc: 0.918832 -- Melhor Avaliação Acc: 0.918832 -- epoch 9.
+2024-11-22 22:00:42,481 - Epoch 11 starting...
+2024-11-22 22:00:46,891 - Train loss: 0.035220, train acc: 0.986082
+2024-11-22 22:00:48,157 - Validação Acc: 0.912298 -- Melhor Avaliação Acc: 0.918832 -- epoch 9.
+2024-11-22 22:00:48,157 - Epoch 12 starting...
+2024-11-22 22:00:52,574 - Train loss: 0.026482, train acc: 0.988362
+2024-11-22 22:00:53,841 - Validação Acc: 0.918627 -- Melhor Avaliação Acc: 0.918832 -- epoch 9.
+2024-11-22 22:00:53,841 - Epoch 13 starting...
+2024-11-22 22:00:58,303 - Train loss: 0.022990, train acc: 0.990858
+2024-11-22 22:00:59,558 - Validação Acc: 0.917788 -- Melhor Avaliação Acc: 0.918832 -- epoch 9.
+2024-11-22 22:00:59,558 - Epoch 14 starting...
+2024-11-22 22:01:03,991 - Train loss: 0.016054, train acc: 0.993408
+2024-11-22 22:01:05,520 - Nova melhor conta de validação. Salvo... 13.000000
+2024-11-22 22:01:05,520 - Validação Acc: 0.919491 -- Melhor Avaliação Acc: 0.919491 -- epoch 13.
+2024-11-22 22:01:05,521 - Epoch 15 starting...
+2024-11-22 22:01:09,973 - Train loss: 0.015428, train acc: 0.993177
+2024-11-22 22:01:11,460 - Nova melhor conta de validação. Salvo... 14.000000
+2024-11-22 22:01:11,461 - Validação Acc: 0.921525 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:01:11,461 - Epoch 16 starting...
+2024-11-22 22:01:15,893 - Train loss: 0.012863, train acc: 0.994871
+2024-11-22 22:01:17,176 - Validação Acc: 0.920423 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:01:17,176 - Epoch 17 starting...
+2024-11-22 22:01:21,627 - Train loss: 0.010621, train acc: 0.995466
+2024-11-22 22:01:22,895 - Validação Acc: 0.920426 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:01:22,896 - Epoch 18 starting...
+2024-11-22 22:01:27,327 - Train loss: 0.010510, train acc: 0.995844
+2024-11-22 22:01:28,578 - Validação Acc: 0.919871 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:01:28,578 - Epoch 19 starting...
+2024-11-22 22:01:32,994 - Train loss: 0.009062, train acc: 0.996438
+2024-11-22 22:01:34,214 - Validação Acc: 0.920023 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:01:34,214 - Epoch 20 starting...
+2024-11-22 22:01:38,586 - Train loss: 0.008461, train acc: 0.996543
+2024-11-22 22:01:39,829 - Validação Acc: 0.919730 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:01:39,829 - Epoch 21 starting...
+2024-11-22 22:01:44,296 - Train loss: 0.007786, train acc: 0.996997
+2024-11-22 22:01:45,546 - Validação Acc: 0.919338 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:01:45,546 - Epoch 22 starting...
+2024-11-22 22:01:49,946 - Train loss: 0.006999, train acc: 0.997174
+2024-11-22 22:01:51,176 - Validação Acc: 0.919180 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:01:51,177 - Epoch 23 starting...
+2024-11-22 22:01:55,587 - Train loss: 0.007010, train acc: 0.997300
+2024-11-22 22:01:56,863 - Validação Acc: 0.919082 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:01:56,863 - Epoch 24 starting...
+2024-11-22 22:02:01,252 - Train loss: 0.006520, train acc: 0.997423
+2024-11-22 22:02:02,548 - Validação Acc: 0.918656 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:02,548 - Epoch 25 starting...
+2024-11-22 22:02:07,036 - Train loss: 0.005961, train acc: 0.997617
+2024-11-22 22:02:08,366 - Validação Acc: 0.918672 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:08,366 - Epoch 26 starting...
+2024-11-22 22:02:12,820 - Train loss: 0.005691, train acc: 0.997861
+2024-11-22 22:02:14,116 - Validação Acc: 0.918672 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:14,116 - Epoch 27 starting...
+2024-11-22 22:02:18,577 - Train loss: 0.005582, train acc: 0.997813
+2024-11-22 22:02:19,885 - Validação Acc: 0.918917 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:19,885 - Epoch 28 starting...
+2024-11-22 22:02:24,282 - Train loss: 0.005261, train acc: 0.997943
+2024-11-22 22:02:25,533 - Validação Acc: 0.918963 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:25,533 - Epoch 29 starting...
+2024-11-22 22:02:30,004 - Train loss: 0.004952, train acc: 0.998088
+2024-11-22 22:02:31,317 - Validação Acc: 0.918916 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:31,317 - Epoch 30 starting...
+2024-11-22 22:02:35,760 - Train loss: 0.005042, train acc: 0.997962
+2024-11-22 22:02:37,051 - Validação Acc: 0.918841 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:37,051 - Epoch 31 starting...
+2024-11-22 22:02:41,498 - Train loss: 0.004758, train acc: 0.998141
+2024-11-22 22:02:42,752 - Validação Acc: 0.918791 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:42,752 - Epoch 32 starting...
+2024-11-22 22:02:47,160 - Train loss: 0.004638, train acc: 0.998220
+2024-11-22 22:02:48,419 - Validação Acc: 0.918701 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:48,419 - Epoch 33 starting...
+2024-11-22 22:02:52,853 - Train loss: 0.004637, train acc: 0.998247
+2024-11-22 22:02:54,120 - Validação Acc: 0.918725 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:54,120 - Epoch 34 starting...
+2024-11-22 22:02:58,561 - Train loss: 0.004469, train acc: 0.998328
+2024-11-22 22:02:59,853 - Validação Acc: 0.918835 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:02:59,853 - Epoch 35 starting...
+2024-11-22 22:03:04,229 - Train loss: 0.004592, train acc: 0.998268
+2024-11-22 22:03:05,504 - Validação Acc: 0.918758 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:03:05,504 - Epoch 36 starting...
+2024-11-22 22:03:09,930 - Train loss: 0.004558, train acc: 0.998295
+2024-11-22 22:03:11,221 - Validação Acc: 0.918555 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:03:11,221 - Epoch 37 starting...
+2024-11-22 22:03:15,655 - Train loss: 0.004575, train acc: 0.998245
+2024-11-22 22:03:16,921 - Validação Acc: 0.918760 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:03:16,921 - Epoch 38 starting...
+2024-11-22 22:03:21,307 - Train loss: 0.004527, train acc: 0.998246
+2024-11-22 22:03:22,622 - Validação Acc: 0.918785 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:03:22,622 - Epoch 39 starting...
+2024-11-22 22:03:27,003 - Train loss: 0.004528, train acc: 0.998257
+2024-11-22 22:03:28,289 - Validação Acc: 0.918622 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:03:28,289 - Epoch 40 starting...
+2024-11-22 22:03:32,726 - Train loss: 0.004394, train acc: 0.998356
+2024-11-22 22:03:33,990 - Validação Acc: 0.918633 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:03:33,990 - Epoch 41 starting...
+2024-11-22 22:03:38,442 - Train loss: 0.004436, train acc: 0.998313
+2024-11-22 22:03:39,775 - Validação Acc: 0.918662 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:03:39,775 - Epoch 42 starting...
+2024-11-22 22:03:44,208 - Train loss: 0.004342, train acc: 0.998326
+2024-11-22 22:03:45,512 - Validação Acc: 0.918806 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:03:45,512 - Epoch 43 starting...
+2024-11-22 22:03:50,009 - Train loss: 0.004331, train acc: 0.998369
+2024-11-22 22:03:51,274 - Validação Acc: 0.918495 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:03:51,274 - Epoch 44 starting...
+2024-11-22 22:03:55,718 - Train loss: 0.004174, train acc: 0.998421
+2024-11-22 22:03:56,991 - Validação Acc: 0.918610 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:03:56,991 - Epoch 45 starting...
+2024-11-22 22:04:01,365 - Train loss: 0.004279, train acc: 0.998355
+2024-11-22 22:04:02,678 - Validação Acc: 0.918735 -- Melhor Avaliação Acc: 0.921525 -- epoch 14.
+2024-11-22 22:04:02,678 - Epoch 46 starting...
+2024-11-22 22:04:07,110 - Train loss: 0.004093, train acc: 0.998465
+2024-11-22 22:04:08,410 - Terminando o treinamento, melhor conta de validação 0.921525
+2024-11-22 22:04:08,788 - Imagem salva em: C:\git\image-segmentation\dataset\\result_PSPNET_base\\result_model_segmentadas_unet_loss_accuracy.png
+2024-11-22 22:04:09,359 - Modelo carregado e pronto para uso.
+2024-11-22 22:04:09,395 - Imagens de teste: 10
+2024-11-22 22:04:09,654 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:04:09,732 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 22:04:09,993 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:04:10,083 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 22:04:10,343 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:04:10,410 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 22:04:10,679 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:04:10,760 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 22:04:11,048 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:04:11,108 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 22:04:11,406 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:04:11,470 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 22:04:11,766 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:04:11,844 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 22:04:12,138 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:04:12,208 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 22:04:12,505 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:04:12,577 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 22:04:12,856 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:04:12,926 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
