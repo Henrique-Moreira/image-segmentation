@@ -216,7 +216,8 @@ model_file_name = save_dir + 'model_u-net-VGG16-IMAGENET1K_V1.pth'
 logging.info(f'Modelo será salvo em: {model_file_name}')
 
 # Configurações do treinamento
-resolution_input = (640, 480)  # Tamanho de entrada
+# resolution_input = (640, 480)  # Tamanho de entrada
+resolution_input = (800, 448)  # Tamanho de entrada
 patience = 30
 max_epochs = 300
 logging.info(f'Patience: {patience}, Max Epochs: {max_epochs}, Resolução de Entrada: {resolution_input}')
