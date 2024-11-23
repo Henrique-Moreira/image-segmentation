@@ -19,7 +19,7 @@ from torch.utils.data import DataLoader, Dataset
 from datetime import datetime
 
 # Configuração do logger
-log_dir = r'C:\git\image-segmentation\results\psp-dataset-base'
+log_dir = r'C:\git\image-segmentation\results\psp-dataset-segmentadas'
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
 filenamelog = 'psp-dataset-base-' + datetime.now().strftime('%Y%m%d-%H%M%S') + '.log'
@@ -39,10 +39,10 @@ logging.info(f'Diretório do Projeto {directory}.')
 
 if not os.path.exists(directory):
     os.makedirs(directory)
-img_folder_val = directory + r'\\base\\Val'
-img_folder_train = directory + r'\\base\\Train'
-img_folder_test = directory + r'\\base\\Test'
-save_dir = directory + r'\\result_linknet_base\\'
+img_folder_val = directory + r'\\base_segmentadas\\Val'
+img_folder_train = directory + r'\\base_segmentadas\\Train'
+img_folder_test = directory + r'\\base_segmentadas\\Test'
+save_dir = directory + r'\\result_linknet_base_segmentadas\\'
 if not os.path.exists(img_folder_val):
     os.makedirs(img_folder_val)
 if not os.path.exists(img_folder_train):
@@ -64,7 +64,7 @@ if not os.path.exists(img_folder_test_segmentadas):
     os.makedirs(img_folder_test_segmentadas)
 
 # Local onde o Modelo será salvo
-model_file_name = save_dir + 'model_linknet.pth'
+model_file_name = save_dir + 'model_linknet_segmentadas.pth'
 
 # Configurações do treinamento
 #Width x Height 

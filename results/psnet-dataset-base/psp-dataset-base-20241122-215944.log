@@ -154,7 +154,7 @@
 2024-11-22 22:04:02,678 - Epoch 46 starting...
 2024-11-22 22:04:07,110 - Train loss: 0.004093, train acc: 0.998465
 2024-11-22 22:04:08,410 - Terminando o treinamento, melhor conta de validação 0.921525
-2024-11-22 22:04:08,788 - Imagem salva em: C:\git\image-segmentation\dataset\\result_PSPNET_base\\result_model_segmentadas_unet_loss_accuracy.png
+2024-11-22 22:04:08,788 - Imagem salva em: C:\git\image-segmentation\dataset\\result_PSPNET_base\\result_model_segmentadas_pspnet_loss_accuracy.png
 2024-11-22 22:04:09,359 - Modelo carregado e pronto para uso.
 2024-11-22 22:04:09,395 - Imagens de teste: 10
 2024-11-22 22:04:09,654 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png

@@ -1,0 +1,1469 @@
+2024-11-22 22:11:37,277 - Dispositivo: cuda:0
+2024-11-22 22:11:37,277 - Diretório do Projeto C:\git\image-segmentation\dataset.
+2024-11-22 22:11:37,277 - Resolução de Entrada: (800, 448).
+2024-11-22 22:11:37,357 - Patience: 30.
+2024-11-22 22:11:37,357 - Número Máximo de Épocas: 300.
+2024-11-22 22:11:37,357 - Mapeamento de Classes e Cores: {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folhas': (0, 255, 0)}.
+2024-11-22 22:11:37,357 - Mapeamento de Classes e IDs: {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}.
+2024-11-22 22:11:37,357 - Pesos de Classes: [1.0, 2.0, 3.0, 4.0].
+2024-11-22 22:11:37,357 - Número de amostras no dataset de treinamento: 20
+2024-11-22 22:11:37,357 - Arquivos no dataset de treinamento: ['DJI_0026.JPG', 'DJI_0026.json', 'DJI_0064.JPG', 'DJI_0064.json', 'DJI_0089.JPG', 'DJI_0089.json', 'DJI_0105.JPG', 'DJI_0105.json', 'DJI_0122.JPG', 'DJI_0122.json', 'DJI_0160.JPG', 'DJI_0160.json', 'DJI_0161.JPG', 'DJI_0161.json', 'DJI_0165.JPG', 'DJI_0165.json', 'DJI_0211.JPG', 'DJI_0211.json', 'DJI_0214.JPG', 'DJI_0214.json', 'DJI_0217.JPG', 'DJI_0217.json', 'DJI_0233.JPG', 'DJI_0233.json', 'DJI_0234.JPG', 'DJI_0234.json', 'DJI_0237.JPG', 'DJI_0237.json', 'DJI_0252.JPG', 'DJI_0252.json', 'DJI_0402.JPG', 'DJI_0402.json', 'DJI_0432.JPG', 'DJI_0432.json', 'DJI_0433.JPG', 'DJI_0433.json', 'DJI_0435.JPG', 'DJI_0435.json', 'DJI_0444.JPG', 'DJI_0444.json']
+2024-11-22 22:11:37,357 - Número de amostras no dataset de validação: 10
+2024-11-22 22:11:37,357 - Arquivos no dataset de validação: ['DJI_0052.JPG', 'DJI_0052.json', 'DJI_0085.JPG', 'DJI_0085.json', 'DJI_0107.JPG', 'DJI_0107.json', 'DJI_0124.JPG', 'DJI_0124.json', 'DJI_0163.JPG', 'DJI_0163.json', 'DJI_0212.JPG', 'DJI_0212.json', 'DJI_0215.JPG', 'DJI_0215.json', 'DJI_0236.JPG', 'DJI_0236.json', 'DJI_0251.JPG', 'DJI_0251.json', 'DJI_0434.JPG', 'DJI_0434.json']
+2024-11-22 22:11:42,552 - Input shape: torch.Size([1, 3, 448, 800]), Output shape: torch.Size([1, 4, 112, 200])
+2024-11-22 22:11:42,552 - Epoch 1 starting...
+2024-11-22 22:11:44,487 - Train loss: 1.352060, train acc: 0.303517
+2024-11-22 22:11:44,686 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_0.png
+2024-11-22 22:11:44,736 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_0.png
+2024-11-22 22:11:44,945 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_0.png
+2024-11-22 22:11:45,000 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_0.png
+2024-11-22 22:11:45,196 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_0.png
+2024-11-22 22:11:45,240 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_0.png
+2024-11-22 22:11:45,435 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_0.png
+2024-11-22 22:11:45,470 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_0.png
+2024-11-22 22:11:45,670 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_0.png
+2024-11-22 22:11:45,728 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_0.png
+2024-11-22 22:11:45,934 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_0.png
+2024-11-22 22:11:45,997 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_0.png
+2024-11-22 22:11:46,202 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_0.png
+2024-11-22 22:11:46,250 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_0.png
+2024-11-22 22:11:46,445 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_0.png
+2024-11-22 22:11:46,493 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_0.png
+2024-11-22 22:11:46,707 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_0.png
+2024-11-22 22:11:46,759 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_0.png
+2024-11-22 22:11:46,956 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_0.png
+2024-11-22 22:11:47,003 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_0.png
+2024-11-22 22:11:47,003 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.174188 -- epoch 0.
+2024-11-22 22:11:47,003 - Epoch 2 starting...
+2024-11-22 22:11:49,772 - Train loss: 1.322317, train acc: 0.303953
+2024-11-22 22:11:50,736 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:11:50,736 - Epoch 3 starting...
+2024-11-22 22:11:53,061 - Train loss: 1.292513, train acc: 0.303965
+2024-11-22 22:11:54,044 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:11:54,044 - Epoch 4 starting...
+2024-11-22 22:11:57,184 - Train loss: 1.264972, train acc: 0.303706
+2024-11-22 22:11:58,334 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:11:58,334 - Epoch 5 starting...
+2024-11-22 22:12:01,521 - Train loss: 1.240670, train acc: 0.303797
+2024-11-22 22:12:02,603 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:12:02,603 - Epoch 6 starting...
+2024-11-22 22:12:04,689 - Train loss: 1.219230, train acc: 0.303500
+2024-11-22 22:12:05,705 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:12:05,705 - Epoch 7 starting...
+2024-11-22 22:12:08,161 - Train loss: 1.199914, train acc: 0.303518
+2024-11-22 22:12:09,255 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:12:09,255 - Epoch 8 starting...
+2024-11-22 22:12:12,487 - Train loss: 1.182559, train acc: 0.303913
+2024-11-22 22:12:13,704 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:12:13,704 - Epoch 9 starting...
+2024-11-22 22:12:15,877 - Train loss: 1.166891, train acc: 0.303928
+2024-11-22 22:12:16,911 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:12:16,911 - Epoch 10 starting...
+2024-11-22 22:12:19,040 - Train loss: 1.152753, train acc: 0.303917
+2024-11-22 22:12:20,069 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:12:20,069 - Epoch 11 starting...
+2024-11-22 22:12:22,519 - Train loss: 1.139717, train acc: 0.303808
+2024-11-22 22:12:22,757 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_10.png
+2024-11-22 22:12:22,807 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_10.png
+2024-11-22 22:12:23,040 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_10.png
+2024-11-22 22:12:23,091 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_10.png
+2024-11-22 22:12:23,307 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_10.png
+2024-11-22 22:12:23,358 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_10.png
+2024-11-22 22:12:23,579 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_10.png
+2024-11-22 22:12:23,624 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_10.png
+2024-11-22 22:12:23,826 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_10.png
+2024-11-22 22:12:23,874 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_10.png
+2024-11-22 22:12:24,107 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_10.png
+2024-11-22 22:12:24,159 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_10.png
+2024-11-22 22:12:24,424 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_10.png
+2024-11-22 22:12:24,457 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_10.png
+2024-11-22 22:12:24,691 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_10.png
+2024-11-22 22:12:24,742 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_10.png
+2024-11-22 22:12:25,092 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_10.png
+2024-11-22 22:12:25,141 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_10.png
+2024-11-22 22:12:25,360 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_10.png
+2024-11-22 22:12:25,409 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_10.png
+2024-11-22 22:12:25,409 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:12:25,409 - Epoch 12 starting...
+2024-11-22 22:12:28,575 - Train loss: 1.127868, train acc: 0.303798
+2024-11-22 22:12:29,577 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:12:29,577 - Epoch 13 starting...
+2024-11-22 22:12:32,129 - Train loss: 1.116968, train acc: 0.303689
+2024-11-22 22:12:33,017 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:12:33,017 - Epoch 14 starting...
+2024-11-22 22:12:34,953 - Train loss: 1.106798, train acc: 0.304054
+2024-11-22 22:12:35,875 - Validação Acc: 0.264398 -- Melhor Avaliação Acc: 0.264398 -- epoch 1.
+2024-11-22 22:12:35,875 - Epoch 15 starting...
+2024-11-22 22:12:37,720 - Train loss: 1.097514, train acc: 0.303799
+2024-11-22 22:12:38,628 - Nova melhor conta de validação. Salvo... 14.000000
+2024-11-22 22:12:38,628 - Validação Acc: 0.264404 -- Melhor Avaliação Acc: 0.264404 -- epoch 14.
+2024-11-22 22:12:38,628 - Epoch 16 starting...
+2024-11-22 22:12:40,581 - Train loss: 1.088597, train acc: 0.303907
+2024-11-22 22:12:41,575 - Nova melhor conta de validação. Salvo... 15.000000
+2024-11-22 22:12:41,575 - Validação Acc: 0.264433 -- Melhor Avaliação Acc: 0.264433 -- epoch 15.
+2024-11-22 22:12:41,575 - Epoch 17 starting...
+2024-11-22 22:12:43,980 - Train loss: 1.080577, train acc: 0.303991
+2024-11-22 22:12:44,924 - Nova melhor conta de validação. Salvo... 16.000000
+2024-11-22 22:12:44,924 - Validação Acc: 0.264475 -- Melhor Avaliação Acc: 0.264475 -- epoch 16.
+2024-11-22 22:12:44,924 - Epoch 18 starting...
+2024-11-22 22:12:47,078 - Train loss: 1.072892, train acc: 0.304108
+2024-11-22 22:12:48,166 - Nova melhor conta de validação. Salvo... 17.000000
+2024-11-22 22:12:48,166 - Validação Acc: 0.264559 -- Melhor Avaliação Acc: 0.264559 -- epoch 17.
+2024-11-22 22:12:48,167 - Epoch 19 starting...
+2024-11-22 22:12:51,121 - Train loss: 1.065688, train acc: 0.304548
+2024-11-22 22:12:52,298 - Nova melhor conta de validação. Salvo... 18.000000
+2024-11-22 22:12:52,298 - Validação Acc: 0.264893 -- Melhor Avaliação Acc: 0.264893 -- epoch 18.
+2024-11-22 22:12:52,298 - Epoch 20 starting...
+2024-11-22 22:12:55,093 - Train loss: 1.058988, train acc: 0.305020
+2024-11-22 22:12:56,091 - Nova melhor conta de validação. Salvo... 19.000000
+2024-11-22 22:12:56,091 - Validação Acc: 0.265954 -- Melhor Avaliação Acc: 0.265954 -- epoch 19.
+2024-11-22 22:12:56,091 - Epoch 21 starting...
+2024-11-22 22:12:58,294 - Train loss: 1.052545, train acc: 0.310917
+2024-11-22 22:12:58,534 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_20.png
+2024-11-22 22:12:58,594 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_20.png
+2024-11-22 22:12:58,817 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_20.png
+2024-11-22 22:12:58,860 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_20.png
+2024-11-22 22:12:59,094 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_20.png
+2024-11-22 22:12:59,149 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_20.png
+2024-11-22 22:12:59,372 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_20.png
+2024-11-22 22:12:59,430 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_20.png
+2024-11-22 22:12:59,648 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_20.png
+2024-11-22 22:12:59,704 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_20.png
+2024-11-22 22:12:59,931 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_20.png
+2024-11-22 22:12:59,990 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_20.png
+2024-11-22 22:13:00,205 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_20.png
+2024-11-22 22:13:00,260 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_20.png
+2024-11-22 22:13:00,499 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_20.png
+2024-11-22 22:13:00,544 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_20.png
+2024-11-22 22:13:00,787 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_20.png
+2024-11-22 22:13:00,828 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_20.png
+2024-11-22 22:13:01,064 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_20.png
+2024-11-22 22:13:01,120 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_20.png
+2024-11-22 22:13:01,124 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.265954 -- epoch 19.
+2024-11-22 22:13:01,124 - Epoch 22 starting...
+2024-11-22 22:13:04,056 - Train loss: 1.046421, train acc: 0.309792
+2024-11-22 22:13:05,094 - Nova melhor conta de validação. Salvo... 21.000000
+2024-11-22 22:13:05,094 - Validação Acc: 0.280655 -- Melhor Avaliação Acc: 0.280655 -- epoch 21.
+2024-11-22 22:13:05,094 - Epoch 23 starting...
+2024-11-22 22:13:07,231 - Train loss: 1.040658, train acc: 0.323337
+2024-11-22 22:13:08,291 - Nova melhor conta de validação. Salvo... 22.000000
+2024-11-22 22:13:08,291 - Validação Acc: 0.304324 -- Melhor Avaliação Acc: 0.304324 -- epoch 22.
+2024-11-22 22:13:08,291 - Epoch 24 starting...
+2024-11-22 22:13:10,850 - Train loss: 1.035191, train acc: 0.347298
+2024-11-22 22:13:11,928 - Nova melhor conta de validação. Salvo... 23.000000
+2024-11-22 22:13:11,928 - Validação Acc: 0.326801 -- Melhor Avaliação Acc: 0.326801 -- epoch 23.
+2024-11-22 22:13:11,928 - Epoch 25 starting...
+2024-11-22 22:13:15,071 - Train loss: 1.029885, train acc: 0.385276
+2024-11-22 22:13:16,308 - Nova melhor conta de validação. Salvo... 24.000000
+2024-11-22 22:13:16,308 - Validação Acc: 0.341704 -- Melhor Avaliação Acc: 0.341704 -- epoch 24.
+2024-11-22 22:13:16,308 - Epoch 26 starting...
+2024-11-22 22:13:19,262 - Train loss: 1.024638, train acc: 0.385595
+2024-11-22 22:13:20,393 - Nova melhor conta de validação. Salvo... 25.000000
+2024-11-22 22:13:20,393 - Validação Acc: 0.357180 -- Melhor Avaliação Acc: 0.357180 -- epoch 25.
+2024-11-22 22:13:20,394 - Epoch 27 starting...
+2024-11-22 22:13:23,747 - Train loss: 1.019658, train acc: 0.414501
+2024-11-22 22:13:24,808 - Nova melhor conta de validação. Salvo... 26.000000
+2024-11-22 22:13:24,808 - Validação Acc: 0.366883 -- Melhor Avaliação Acc: 0.366883 -- epoch 26.
+2024-11-22 22:13:24,808 - Epoch 28 starting...
+2024-11-22 22:13:27,175 - Train loss: 1.015030, train acc: 0.410711
+2024-11-22 22:13:28,229 - Nova melhor conta de validação. Salvo... 27.000000
+2024-11-22 22:13:28,229 - Validação Acc: 0.379567 -- Melhor Avaliação Acc: 0.379567 -- epoch 27.
+2024-11-22 22:13:28,229 - Epoch 29 starting...
+2024-11-22 22:13:30,652 - Train loss: 1.010390, train acc: 0.408094
+2024-11-22 22:13:31,622 - Nova melhor conta de validação. Salvo... 28.000000
+2024-11-22 22:13:31,623 - Validação Acc: 0.395121 -- Melhor Avaliação Acc: 0.395121 -- epoch 28.
+2024-11-22 22:13:31,623 - Epoch 30 starting...
+2024-11-22 22:13:33,873 - Train loss: 1.006984, train acc: 0.430525
+2024-11-22 22:13:34,964 - Nova melhor conta de validação. Salvo... 29.000000
+2024-11-22 22:13:34,964 - Validação Acc: 0.397232 -- Melhor Avaliação Acc: 0.397232 -- epoch 29.
+2024-11-22 22:13:34,964 - Epoch 31 starting...
+2024-11-22 22:13:37,810 - Train loss: 1.005985, train acc: 0.433559
+2024-11-22 22:13:38,058 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_30.png
+2024-11-22 22:13:38,115 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_30.png
+2024-11-22 22:13:38,349 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_30.png
+2024-11-22 22:13:38,407 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_30.png
+2024-11-22 22:13:38,636 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_30.png
+2024-11-22 22:13:38,693 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_30.png
+2024-11-22 22:13:38,913 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_30.png
+2024-11-22 22:13:38,971 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_30.png
+2024-11-22 22:13:39,203 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_30.png
+2024-11-22 22:13:39,263 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_30.png
+2024-11-22 22:13:39,496 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_30.png
+2024-11-22 22:13:39,553 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_30.png
+2024-11-22 22:13:39,984 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_30.png
+2024-11-22 22:13:40,032 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_30.png
+2024-11-22 22:13:40,248 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_30.png
+2024-11-22 22:13:40,403 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_30.png
+2024-11-22 22:13:40,619 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_30.png
+2024-11-22 22:13:40,680 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_30.png
+2024-11-22 22:13:40,886 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_30.png
+2024-11-22 22:13:40,940 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_30.png
+2024-11-22 22:13:40,940 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.397232 -- epoch 29.
+2024-11-22 22:13:40,940 - Epoch 32 starting...
+2024-11-22 22:13:43,156 - Train loss: 1.005253, train acc: 0.432013
+2024-11-22 22:13:44,258 - Nova melhor conta de validação. Salvo... 31.000000
+2024-11-22 22:13:44,258 - Validação Acc: 0.401991 -- Melhor Avaliação Acc: 0.401991 -- epoch 31.
+2024-11-22 22:13:44,258 - Epoch 33 starting...
+2024-11-22 22:13:47,065 - Train loss: 1.004288, train acc: 0.432455
+2024-11-22 22:13:48,335 - Nova melhor conta de validação. Salvo... 32.000000
+2024-11-22 22:13:48,335 - Validação Acc: 0.404388 -- Melhor Avaliação Acc: 0.404388 -- epoch 32.
+2024-11-22 22:13:48,335 - Epoch 34 starting...
+2024-11-22 22:13:51,668 - Train loss: 1.003599, train acc: 0.434978
+2024-11-22 22:13:52,945 - Nova melhor conta de validação. Salvo... 33.000000
+2024-11-22 22:13:52,946 - Validação Acc: 0.406762 -- Melhor Avaliação Acc: 0.406762 -- epoch 33.
+2024-11-22 22:13:52,946 - Epoch 35 starting...
+2024-11-22 22:13:55,048 - Train loss: 1.002677, train acc: 0.437736
+2024-11-22 22:13:56,062 - Nova melhor conta de validação. Salvo... 34.000000
+2024-11-22 22:13:56,062 - Validação Acc: 0.409022 -- Melhor Avaliação Acc: 0.409022 -- epoch 34.
+2024-11-22 22:13:56,062 - Epoch 36 starting...
+2024-11-22 22:13:58,224 - Train loss: 1.001827, train acc: 0.441518
+2024-11-22 22:13:59,275 - Nova melhor conta de validação. Salvo... 35.000000
+2024-11-22 22:13:59,275 - Validação Acc: 0.411115 -- Melhor Avaliação Acc: 0.411115 -- epoch 35.
+2024-11-22 22:13:59,275 - Epoch 37 starting...
+2024-11-22 22:14:01,207 - Train loss: 1.001063, train acc: 0.439121
+2024-11-22 22:14:02,074 - Nova melhor conta de validação. Salvo... 36.000000
+2024-11-22 22:14:02,074 - Validação Acc: 0.413435 -- Melhor Avaliação Acc: 0.413435 -- epoch 36.
+2024-11-22 22:14:02,074 - Epoch 38 starting...
+2024-11-22 22:14:03,974 - Train loss: 1.000277, train acc: 0.444309
+2024-11-22 22:14:04,947 - Nova melhor conta de validação. Salvo... 37.000000
+2024-11-22 22:14:04,947 - Validação Acc: 0.415576 -- Melhor Avaliação Acc: 0.415576 -- epoch 37.
+2024-11-22 22:14:04,948 - Epoch 39 starting...
+2024-11-22 22:14:07,339 - Train loss: 0.999393, train acc: 0.446613
+2024-11-22 22:14:08,352 - Nova melhor conta de validação. Salvo... 38.000000
+2024-11-22 22:14:08,352 - Validação Acc: 0.417800 -- Melhor Avaliação Acc: 0.417800 -- epoch 38.
+2024-11-22 22:14:08,352 - Epoch 40 starting...
+2024-11-22 22:14:11,214 - Train loss: 0.998524, train acc: 0.447397
+2024-11-22 22:14:12,235 - Nova melhor conta de validação. Salvo... 39.000000
+2024-11-22 22:14:12,235 - Validação Acc: 0.420198 -- Melhor Avaliação Acc: 0.420198 -- epoch 39.
+2024-11-22 22:14:12,235 - Epoch 41 starting...
+2024-11-22 22:14:14,293 - Train loss: 0.997797, train acc: 0.449136
+2024-11-22 22:14:14,537 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_40.png
+2024-11-22 22:14:14,595 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_40.png
+2024-11-22 22:14:14,800 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_40.png
+2024-11-22 22:14:14,863 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_40.png
+2024-11-22 22:14:15,088 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_40.png
+2024-11-22 22:14:15,145 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_40.png
+2024-11-22 22:14:15,353 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_40.png
+2024-11-22 22:14:15,417 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_40.png
+2024-11-22 22:14:15,637 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_40.png
+2024-11-22 22:14:15,696 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_40.png
+2024-11-22 22:14:15,903 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_40.png
+2024-11-22 22:14:15,973 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_40.png
+2024-11-22 22:14:16,166 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_40.png
+2024-11-22 22:14:16,224 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_40.png
+2024-11-22 22:14:16,440 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_40.png
+2024-11-22 22:14:16,493 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_40.png
+2024-11-22 22:14:16,712 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_40.png
+2024-11-22 22:14:16,775 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_40.png
+2024-11-22 22:14:16,992 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_40.png
+2024-11-22 22:14:17,051 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_40.png
+2024-11-22 22:14:17,055 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.420198 -- epoch 39.
+2024-11-22 22:14:17,055 - Epoch 42 starting...
+2024-11-22 22:14:19,942 - Train loss: 0.996926, train acc: 0.458194
+2024-11-22 22:14:21,117 - Nova melhor conta de validação. Salvo... 41.000000
+2024-11-22 22:14:21,117 - Validação Acc: 0.424348 -- Melhor Avaliação Acc: 0.424348 -- epoch 41.
+2024-11-22 22:14:21,117 - Epoch 43 starting...
+2024-11-22 22:14:23,168 - Train loss: 0.996241, train acc: 0.458156
+2024-11-22 22:14:24,211 - Nova melhor conta de validação. Salvo... 42.000000
+2024-11-22 22:14:24,211 - Validação Acc: 0.426507 -- Melhor Avaliação Acc: 0.426507 -- epoch 42.
+2024-11-22 22:14:24,211 - Epoch 44 starting...
+2024-11-22 22:14:26,241 - Train loss: 0.995345, train acc: 0.458079
+2024-11-22 22:14:27,170 - Nova melhor conta de validação. Salvo... 43.000000
+2024-11-22 22:14:27,170 - Validação Acc: 0.428893 -- Melhor Avaliação Acc: 0.428893 -- epoch 43.
+2024-11-22 22:14:27,170 - Epoch 45 starting...
+2024-11-22 22:14:29,102 - Train loss: 0.994655, train acc: 0.460439
+2024-11-22 22:14:30,178 - Nova melhor conta de validação. Salvo... 44.000000
+2024-11-22 22:14:30,178 - Validação Acc: 0.430938 -- Melhor Avaliação Acc: 0.430938 -- epoch 44.
+2024-11-22 22:14:30,178 - Epoch 46 starting...
+2024-11-22 22:14:32,256 - Train loss: 0.993874, train acc: 0.456965
+2024-11-22 22:14:33,311 - Nova melhor conta de validação. Salvo... 45.000000
+2024-11-22 22:14:33,311 - Validação Acc: 0.433467 -- Melhor Avaliação Acc: 0.433467 -- epoch 45.
+2024-11-22 22:14:33,311 - Epoch 47 starting...
+2024-11-22 22:14:36,156 - Train loss: 0.993175, train acc: 0.462683
+2024-11-22 22:14:37,231 - Nova melhor conta de validação. Salvo... 46.000000
+2024-11-22 22:14:37,232 - Validação Acc: 0.435852 -- Melhor Avaliação Acc: 0.435852 -- epoch 46.
+2024-11-22 22:14:37,232 - Epoch 48 starting...
+2024-11-22 22:14:40,107 - Train loss: 0.992400, train acc: 0.466914
+2024-11-22 22:14:41,188 - Nova melhor conta de validação. Salvo... 47.000000
+2024-11-22 22:14:41,188 - Validação Acc: 0.437999 -- Melhor Avaliação Acc: 0.437999 -- epoch 47.
+2024-11-22 22:14:41,188 - Epoch 49 starting...
+2024-11-22 22:14:44,109 - Train loss: 0.991507, train acc: 0.465772
+2024-11-22 22:14:45,164 - Nova melhor conta de validação. Salvo... 48.000000
+2024-11-22 22:14:45,164 - Validação Acc: 0.440319 -- Melhor Avaliação Acc: 0.440319 -- epoch 48.
+2024-11-22 22:14:45,164 - Epoch 50 starting...
+2024-11-22 22:14:48,026 - Train loss: 0.990724, train acc: 0.470543
+2024-11-22 22:14:49,134 - Nova melhor conta de validação. Salvo... 49.000000
+2024-11-22 22:14:49,134 - Validação Acc: 0.442806 -- Melhor Avaliação Acc: 0.442806 -- epoch 49.
+2024-11-22 22:14:49,134 - Epoch 51 starting...
+2024-11-22 22:14:52,025 - Train loss: 0.990058, train acc: 0.472309
+2024-11-22 22:14:52,265 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_50.png
+2024-11-22 22:14:52,325 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_50.png
+2024-11-22 22:14:52,542 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_50.png
+2024-11-22 22:14:52,601 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_50.png
+2024-11-22 22:14:52,822 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_50.png
+2024-11-22 22:14:52,880 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_50.png
+2024-11-22 22:14:53,091 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_50.png
+2024-11-22 22:14:53,160 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_50.png
+2024-11-22 22:14:53,364 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_50.png
+2024-11-22 22:14:53,414 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_50.png
+2024-11-22 22:14:53,623 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_50.png
+2024-11-22 22:14:53,676 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_50.png
+2024-11-22 22:14:53,895 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_50.png
+2024-11-22 22:14:53,952 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_50.png
+2024-11-22 22:14:54,166 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_50.png
+2024-11-22 22:14:54,322 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_50.png
+2024-11-22 22:14:54,529 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_50.png
+2024-11-22 22:14:54,581 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_50.png
+2024-11-22 22:14:54,799 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_50.png
+2024-11-22 22:14:54,855 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_50.png
+2024-11-22 22:14:54,859 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.442806 -- epoch 49.
+2024-11-22 22:14:54,859 - Epoch 52 starting...
+2024-11-22 22:14:57,670 - Train loss: 0.989453, train acc: 0.472927
+2024-11-22 22:14:58,757 - Nova melhor conta de validação. Salvo... 51.000000
+2024-11-22 22:14:58,757 - Validação Acc: 0.447911 -- Melhor Avaliação Acc: 0.447911 -- epoch 51.
+2024-11-22 22:14:58,757 - Epoch 53 starting...
+2024-11-22 22:15:01,572 - Train loss: 0.988419, train acc: 0.476481
+2024-11-22 22:15:02,665 - Nova melhor conta de validação. Salvo... 52.000000
+2024-11-22 22:15:02,665 - Validação Acc: 0.450451 -- Melhor Avaliação Acc: 0.450451 -- epoch 52.
+2024-11-22 22:15:02,665 - Epoch 54 starting...
+2024-11-22 22:15:05,577 - Train loss: 0.987907, train acc: 0.478704
+2024-11-22 22:15:06,619 - Nova melhor conta de validação. Salvo... 53.000000
+2024-11-22 22:15:06,619 - Validação Acc: 0.453027 -- Melhor Avaliação Acc: 0.453027 -- epoch 53.
+2024-11-22 22:15:06,619 - Epoch 55 starting...
+2024-11-22 22:15:09,472 - Train loss: 0.987261, train acc: 0.475221
+2024-11-22 22:15:10,557 - Nova melhor conta de validação. Salvo... 54.000000
+2024-11-22 22:15:10,557 - Validação Acc: 0.455956 -- Melhor Avaliação Acc: 0.455956 -- epoch 54.
+2024-11-22 22:15:10,557 - Epoch 56 starting...
+2024-11-22 22:15:13,428 - Train loss: 0.986495, train acc: 0.482213
+2024-11-22 22:15:14,505 - Nova melhor conta de validação. Salvo... 55.000000
+2024-11-22 22:15:14,505 - Validação Acc: 0.458401 -- Melhor Avaliação Acc: 0.458401 -- epoch 55.
+2024-11-22 22:15:14,505 - Epoch 57 starting...
+2024-11-22 22:15:17,296 - Train loss: 0.985752, train acc: 0.481927
+2024-11-22 22:15:18,339 - Nova melhor conta de validação. Salvo... 56.000000
+2024-11-22 22:15:18,339 - Validação Acc: 0.461132 -- Melhor Avaliação Acc: 0.461132 -- epoch 56.
+2024-11-22 22:15:18,339 - Epoch 58 starting...
+2024-11-22 22:15:21,117 - Train loss: 0.985024, train acc: 0.484264
+2024-11-22 22:15:22,169 - Nova melhor conta de validação. Salvo... 57.000000
+2024-11-22 22:15:22,169 - Validação Acc: 0.464006 -- Melhor Avaliação Acc: 0.464006 -- epoch 57.
+2024-11-22 22:15:22,169 - Epoch 59 starting...
+2024-11-22 22:15:25,004 - Train loss: 0.984477, train acc: 0.488632
+2024-11-22 22:15:26,102 - Nova melhor conta de validação. Salvo... 58.000000
+2024-11-22 22:15:26,102 - Validação Acc: 0.466833 -- Melhor Avaliação Acc: 0.466833 -- epoch 58.
+2024-11-22 22:15:26,102 - Epoch 60 starting...
+2024-11-22 22:15:28,941 - Train loss: 0.983641, train acc: 0.490876
+2024-11-22 22:15:30,049 - Nova melhor conta de validação. Salvo... 59.000000
+2024-11-22 22:15:30,049 - Validação Acc: 0.467346 -- Melhor Avaliação Acc: 0.467346 -- epoch 59.
+2024-11-22 22:15:30,049 - Epoch 61 starting...
+2024-11-22 22:15:32,902 - Train loss: 0.983616, train acc: 0.491422
+2024-11-22 22:15:33,139 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_60.png
+2024-11-22 22:15:33,196 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_60.png
+2024-11-22 22:15:33,421 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_60.png
+2024-11-22 22:15:33,470 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_60.png
+2024-11-22 22:15:33,696 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_60.png
+2024-11-22 22:15:33,740 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_60.png
+2024-11-22 22:15:33,961 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_60.png
+2024-11-22 22:15:34,024 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_60.png
+2024-11-22 22:15:34,241 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_60.png
+2024-11-22 22:15:34,298 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_60.png
+2024-11-22 22:15:34,524 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_60.png
+2024-11-22 22:15:34,576 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_60.png
+2024-11-22 22:15:34,789 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_60.png
+2024-11-22 22:15:34,848 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_60.png
+2024-11-22 22:15:35,071 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_60.png
+2024-11-22 22:15:35,124 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_60.png
+2024-11-22 22:15:35,335 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_60.png
+2024-11-22 22:15:35,394 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_60.png
+2024-11-22 22:15:35,617 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_60.png
+2024-11-22 22:15:35,664 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_60.png
+2024-11-22 22:15:35,664 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.467346 -- epoch 59.
+2024-11-22 22:15:35,664 - Epoch 62 starting...
+2024-11-22 22:15:38,558 - Train loss: 0.983455, train acc: 0.490455
+2024-11-22 22:15:39,671 - Nova melhor conta de validação. Salvo... 61.000000
+2024-11-22 22:15:39,671 - Validação Acc: 0.468515 -- Melhor Avaliação Acc: 0.468515 -- epoch 61.
+2024-11-22 22:15:39,671 - Epoch 63 starting...
+2024-11-22 22:15:42,566 - Train loss: 0.983292, train acc: 0.492144
+2024-11-22 22:15:43,715 - Nova melhor conta de validação. Salvo... 62.000000
+2024-11-22 22:15:43,715 - Validação Acc: 0.469266 -- Melhor Avaliação Acc: 0.469266 -- epoch 62.
+2024-11-22 22:15:43,715 - Epoch 64 starting...
+2024-11-22 22:15:46,615 - Train loss: 0.983177, train acc: 0.492218
+2024-11-22 22:15:47,702 - Nova melhor conta de validação. Salvo... 63.000000
+2024-11-22 22:15:47,702 - Validação Acc: 0.469875 -- Melhor Avaliação Acc: 0.469875 -- epoch 63.
+2024-11-22 22:15:47,702 - Epoch 65 starting...
+2024-11-22 22:15:50,634 - Train loss: 0.983102, train acc: 0.492669
+2024-11-22 22:15:51,663 - Nova melhor conta de validação. Salvo... 64.000000
+2024-11-22 22:15:51,663 - Validação Acc: 0.470501 -- Melhor Avaliação Acc: 0.470501 -- epoch 64.
+2024-11-22 22:15:51,663 - Epoch 66 starting...
+2024-11-22 22:15:54,565 - Train loss: 0.982774, train acc: 0.493550
+2024-11-22 22:15:55,658 - Nova melhor conta de validação. Salvo... 65.000000
+2024-11-22 22:15:55,658 - Validação Acc: 0.471020 -- Melhor Avaliação Acc: 0.471020 -- epoch 65.
+2024-11-22 22:15:55,658 - Epoch 67 starting...
+2024-11-22 22:15:58,529 - Train loss: 0.982601, train acc: 0.492969
+2024-11-22 22:15:59,610 - Nova melhor conta de validação. Salvo... 66.000000
+2024-11-22 22:15:59,610 - Validação Acc: 0.471592 -- Melhor Avaliação Acc: 0.471592 -- epoch 66.
+2024-11-22 22:15:59,610 - Epoch 68 starting...
+2024-11-22 22:16:02,518 - Train loss: 0.982617, train acc: 0.493846
+2024-11-22 22:16:03,566 - Nova melhor conta de validação. Salvo... 67.000000
+2024-11-22 22:16:03,566 - Validação Acc: 0.472195 -- Melhor Avaliação Acc: 0.472195 -- epoch 67.
+2024-11-22 22:16:03,566 - Epoch 69 starting...
+2024-11-22 22:16:06,466 - Train loss: 0.982479, train acc: 0.494607
+2024-11-22 22:16:07,524 - Nova melhor conta de validação. Salvo... 68.000000
+2024-11-22 22:16:07,524 - Validação Acc: 0.472672 -- Melhor Avaliação Acc: 0.472672 -- epoch 68.
+2024-11-22 22:16:07,524 - Epoch 70 starting...
+2024-11-22 22:16:10,415 - Train loss: 0.982333, train acc: 0.493838
+2024-11-22 22:16:11,498 - Nova melhor conta de validação. Salvo... 69.000000
+2024-11-22 22:16:11,498 - Validação Acc: 0.473274 -- Melhor Avaliação Acc: 0.473274 -- epoch 69.
+2024-11-22 22:16:11,498 - Epoch 71 starting...
+2024-11-22 22:16:14,392 - Train loss: 0.982204, train acc: 0.494443
+2024-11-22 22:16:14,619 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_70.png
+2024-11-22 22:16:14,678 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_70.png
+2024-11-22 22:16:14,890 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_70.png
+2024-11-22 22:16:14,937 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_70.png
+2024-11-22 22:16:15,150 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_70.png
+2024-11-22 22:16:15,199 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_70.png
+2024-11-22 22:16:15,425 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_70.png
+2024-11-22 22:16:15,477 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_70.png
+2024-11-22 22:16:15,695 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_70.png
+2024-11-22 22:16:15,743 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_70.png
+2024-11-22 22:16:16,059 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_70.png
+2024-11-22 22:16:16,106 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_70.png
+2024-11-22 22:16:16,327 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_70.png
+2024-11-22 22:16:16,374 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_70.png
+2024-11-22 22:16:16,599 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_70.png
+2024-11-22 22:16:16,643 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_70.png
+2024-11-22 22:16:16,873 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_70.png
+2024-11-22 22:16:16,928 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_70.png
+2024-11-22 22:16:17,149 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_70.png
+2024-11-22 22:16:17,196 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_70.png
+2024-11-22 22:16:17,196 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.473274 -- epoch 69.
+2024-11-22 22:16:17,196 - Epoch 72 starting...
+2024-11-22 22:16:20,069 - Train loss: 0.982100, train acc: 0.495455
+2024-11-22 22:16:21,181 - Nova melhor conta de validação. Salvo... 71.000000
+2024-11-22 22:16:21,181 - Validação Acc: 0.474604 -- Melhor Avaliação Acc: 0.474604 -- epoch 71.
+2024-11-22 22:16:21,181 - Epoch 73 starting...
+2024-11-22 22:16:24,045 - Train loss: 0.981788, train acc: 0.498242
+2024-11-22 22:16:25,143 - Nova melhor conta de validação. Salvo... 72.000000
+2024-11-22 22:16:25,143 - Validação Acc: 0.475218 -- Melhor Avaliação Acc: 0.475218 -- epoch 72.
+2024-11-22 22:16:25,143 - Epoch 74 starting...
+2024-11-22 22:16:28,033 - Train loss: 0.981822, train acc: 0.497132
+2024-11-22 22:16:29,165 - Nova melhor conta de validação. Salvo... 73.000000
+2024-11-22 22:16:29,165 - Validação Acc: 0.475809 -- Melhor Avaliação Acc: 0.475809 -- epoch 73.
+2024-11-22 22:16:29,165 - Epoch 75 starting...
+2024-11-22 22:16:32,107 - Train loss: 0.981581, train acc: 0.498543
+2024-11-22 22:16:33,220 - Nova melhor conta de validação. Salvo... 74.000000
+2024-11-22 22:16:33,220 - Validação Acc: 0.476381 -- Melhor Avaliação Acc: 0.476381 -- epoch 74.
+2024-11-22 22:16:33,220 - Epoch 76 starting...
+2024-11-22 22:16:36,098 - Train loss: 0.981390, train acc: 0.499541
+2024-11-22 22:16:37,186 - Nova melhor conta de validação. Salvo... 75.000000
+2024-11-22 22:16:37,186 - Validação Acc: 0.477001 -- Melhor Avaliação Acc: 0.477001 -- epoch 75.
+2024-11-22 22:16:37,186 - Epoch 77 starting...
+2024-11-22 22:16:40,070 - Train loss: 0.981371, train acc: 0.499422
+2024-11-22 22:16:41,160 - Nova melhor conta de validação. Salvo... 76.000000
+2024-11-22 22:16:41,160 - Validação Acc: 0.477502 -- Melhor Avaliação Acc: 0.477502 -- epoch 76.
+2024-11-22 22:16:41,160 - Epoch 78 starting...
+2024-11-22 22:16:44,066 - Train loss: 0.981310, train acc: 0.498259
+2024-11-22 22:16:45,151 - Nova melhor conta de validação. Salvo... 77.000000
+2024-11-22 22:16:45,151 - Validação Acc: 0.478164 -- Melhor Avaliação Acc: 0.478164 -- epoch 77.
+2024-11-22 22:16:45,151 - Epoch 79 starting...
+2024-11-22 22:16:48,044 - Train loss: 0.981049, train acc: 0.498343
+2024-11-22 22:16:49,163 - Nova melhor conta de validação. Salvo... 78.000000
+2024-11-22 22:16:49,163 - Validação Acc: 0.478874 -- Melhor Avaliação Acc: 0.478874 -- epoch 78.
+2024-11-22 22:16:49,163 - Epoch 80 starting...
+2024-11-22 22:16:52,083 - Train loss: 0.980944, train acc: 0.498823
+2024-11-22 22:16:53,150 - Nova melhor conta de validação. Salvo... 79.000000
+2024-11-22 22:16:53,150 - Validação Acc: 0.479363 -- Melhor Avaliação Acc: 0.479363 -- epoch 79.
+2024-11-22 22:16:53,150 - Epoch 81 starting...
+2024-11-22 22:16:56,065 - Train loss: 0.980807, train acc: 0.500927
+2024-11-22 22:16:56,303 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_80.png
+2024-11-22 22:16:56,366 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_80.png
+2024-11-22 22:16:56,597 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_80.png
+2024-11-22 22:16:56,656 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_80.png
+2024-11-22 22:16:56,878 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_80.png
+2024-11-22 22:16:56,929 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_80.png
+2024-11-22 22:16:57,153 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_80.png
+2024-11-22 22:16:57,212 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_80.png
+2024-11-22 22:16:57,433 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_80.png
+2024-11-22 22:16:57,492 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_80.png
+2024-11-22 22:16:57,693 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_80.png
+2024-11-22 22:16:57,756 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_80.png
+2024-11-22 22:16:57,979 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_80.png
+2024-11-22 22:16:58,046 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_80.png
+2024-11-22 22:16:58,247 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_80.png
+2024-11-22 22:16:58,310 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_80.png
+2024-11-22 22:16:58,530 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_80.png
+2024-11-22 22:16:58,582 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_80.png
+2024-11-22 22:16:58,814 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_80.png
+2024-11-22 22:16:58,863 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_80.png
+2024-11-22 22:16:58,867 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.479363 -- epoch 79.
+2024-11-22 22:16:58,867 - Epoch 82 starting...
+2024-11-22 22:17:01,719 - Train loss: 0.980646, train acc: 0.500849
+2024-11-22 22:17:02,819 - Nova melhor conta de validação. Salvo... 81.000000
+2024-11-22 22:17:02,819 - Validação Acc: 0.480758 -- Melhor Avaliação Acc: 0.480758 -- epoch 81.
+2024-11-22 22:17:02,819 - Epoch 83 starting...
+2024-11-22 22:17:05,702 - Train loss: 0.980432, train acc: 0.502389
+2024-11-22 22:17:06,841 - Nova melhor conta de validação. Salvo... 82.000000
+2024-11-22 22:17:06,841 - Validação Acc: 0.481259 -- Melhor Avaliação Acc: 0.481259 -- epoch 82.
+2024-11-22 22:17:06,841 - Epoch 84 starting...
+2024-11-22 22:17:09,707 - Train loss: 0.980256, train acc: 0.502462
+2024-11-22 22:17:10,812 - Nova melhor conta de validação. Salvo... 83.000000
+2024-11-22 22:17:10,812 - Validação Acc: 0.481921 -- Melhor Avaliação Acc: 0.481921 -- epoch 83.
+2024-11-22 22:17:10,812 - Epoch 85 starting...
+2024-11-22 22:17:13,678 - Train loss: 0.980209, train acc: 0.502335
+2024-11-22 22:17:14,734 - Nova melhor conta de validação. Salvo... 84.000000
+2024-11-22 22:17:14,734 - Validação Acc: 0.482571 -- Melhor Avaliação Acc: 0.482571 -- epoch 84.
+2024-11-22 22:17:14,734 - Epoch 86 starting...
+2024-11-22 22:17:17,607 - Train loss: 0.980102, train acc: 0.502839
+2024-11-22 22:17:18,730 - Nova melhor conta de validação. Salvo... 85.000000
+2024-11-22 22:17:18,730 - Validação Acc: 0.483239 -- Melhor Avaliação Acc: 0.483239 -- epoch 85.
+2024-11-22 22:17:18,730 - Epoch 87 starting...
+2024-11-22 22:17:21,677 - Train loss: 0.979865, train acc: 0.504904
+2024-11-22 22:17:22,805 - Nova melhor conta de validação. Salvo... 86.000000
+2024-11-22 22:17:22,805 - Validação Acc: 0.483752 -- Melhor Avaliação Acc: 0.483752 -- epoch 86.
+2024-11-22 22:17:22,805 - Epoch 88 starting...
+2024-11-22 22:17:25,684 - Train loss: 0.979860, train acc: 0.505253
+2024-11-22 22:17:26,813 - Nova melhor conta de validação. Salvo... 87.000000
+2024-11-22 22:17:26,813 - Validação Acc: 0.484396 -- Melhor Avaliação Acc: 0.484396 -- epoch 87.
+2024-11-22 22:17:26,813 - Epoch 89 starting...
+2024-11-22 22:17:29,735 - Train loss: 0.979704, train acc: 0.504633
+2024-11-22 22:17:30,838 - Nova melhor conta de validação. Salvo... 88.000000
+2024-11-22 22:17:30,838 - Validação Acc: 0.485094 -- Melhor Avaliação Acc: 0.485094 -- epoch 88.
+2024-11-22 22:17:30,838 - Epoch 90 starting...
+2024-11-22 22:17:33,714 - Train loss: 0.979570, train acc: 0.505921
+2024-11-22 22:17:34,806 - Nova melhor conta de validação. Salvo... 89.000000
+2024-11-22 22:17:34,806 - Validação Acc: 0.485207 -- Melhor Avaliação Acc: 0.485207 -- epoch 89.
+2024-11-22 22:17:34,806 - Epoch 91 starting...
+2024-11-22 22:17:37,664 - Train loss: 0.979568, train acc: 0.504624
+2024-11-22 22:17:37,924 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_90.png
+2024-11-22 22:17:37,970 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_90.png
+2024-11-22 22:17:38,198 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_90.png
+2024-11-22 22:17:38,247 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_90.png
+2024-11-22 22:17:38,468 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_90.png
+2024-11-22 22:17:38,516 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_90.png
+2024-11-22 22:17:38,758 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_90.png
+2024-11-22 22:17:38,809 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_90.png
+2024-11-22 22:17:39,130 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_90.png
+2024-11-22 22:17:39,177 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_90.png
+2024-11-22 22:17:39,387 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_90.png
+2024-11-22 22:17:39,442 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_90.png
+2024-11-22 22:17:39,651 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_90.png
+2024-11-22 22:17:39,718 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_90.png
+2024-11-22 22:17:39,928 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_90.png
+2024-11-22 22:17:39,987 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_90.png
+2024-11-22 22:17:40,213 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_90.png
+2024-11-22 22:17:40,266 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_90.png
+2024-11-22 22:17:40,486 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_90.png
+2024-11-22 22:17:40,549 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_90.png
+2024-11-22 22:17:40,549 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.485207 -- epoch 89.
+2024-11-22 22:17:40,549 - Epoch 92 starting...
+2024-11-22 22:17:43,460 - Train loss: 0.979525, train acc: 0.506622
+2024-11-22 22:17:44,592 - Nova melhor conta de validação. Salvo... 91.000000
+2024-11-22 22:17:44,592 - Validação Acc: 0.485398 -- Melhor Avaliação Acc: 0.485398 -- epoch 91.
+2024-11-22 22:17:44,592 - Epoch 93 starting...
+2024-11-22 22:17:47,508 - Train loss: 0.979536, train acc: 0.503696
+2024-11-22 22:17:48,648 - Nova melhor conta de validação. Salvo... 92.000000
+2024-11-22 22:17:48,648 - Validação Acc: 0.485440 -- Melhor Avaliação Acc: 0.485440 -- epoch 92.
+2024-11-22 22:17:48,648 - Epoch 94 starting...
+2024-11-22 22:17:51,609 - Train loss: 0.979416, train acc: 0.505800
+2024-11-22 22:17:52,710 - Nova melhor conta de validação. Salvo... 93.000000
+2024-11-22 22:17:52,710 - Validação Acc: 0.485666 -- Melhor Avaliação Acc: 0.485666 -- epoch 93.
+2024-11-22 22:17:52,710 - Epoch 95 starting...
+2024-11-22 22:17:55,638 - Train loss: 0.979415, train acc: 0.504959
+2024-11-22 22:17:56,758 - Nova melhor conta de validação. Salvo... 94.000000
+2024-11-22 22:17:56,758 - Validação Acc: 0.485804 -- Melhor Avaliação Acc: 0.485804 -- epoch 94.
+2024-11-22 22:17:56,758 - Epoch 96 starting...
+2024-11-22 22:17:59,654 - Train loss: 0.979406, train acc: 0.506476
+2024-11-22 22:18:00,773 - Nova melhor conta de validação. Salvo... 95.000000
+2024-11-22 22:18:00,773 - Validação Acc: 0.486036 -- Melhor Avaliação Acc: 0.486036 -- epoch 95.
+2024-11-22 22:18:00,773 - Epoch 97 starting...
+2024-11-22 22:18:03,649 - Train loss: 0.979387, train acc: 0.506177
+2024-11-22 22:18:04,776 - Nova melhor conta de validação. Salvo... 96.000000
+2024-11-22 22:18:04,778 - Validação Acc: 0.486143 -- Melhor Avaliação Acc: 0.486143 -- epoch 96.
+2024-11-22 22:18:04,778 - Epoch 98 starting...
+2024-11-22 22:18:07,659 - Train loss: 0.979341, train acc: 0.504118
+2024-11-22 22:18:08,756 - Nova melhor conta de validação. Salvo... 97.000000
+2024-11-22 22:18:08,756 - Validação Acc: 0.486287 -- Melhor Avaliação Acc: 0.486287 -- epoch 97.
+2024-11-22 22:18:08,756 - Epoch 99 starting...
+2024-11-22 22:18:11,609 - Train loss: 0.979314, train acc: 0.507662
+2024-11-22 22:18:12,718 - Nova melhor conta de validação. Salvo... 98.000000
+2024-11-22 22:18:12,718 - Validação Acc: 0.486466 -- Melhor Avaliação Acc: 0.486466 -- epoch 98.
+2024-11-22 22:18:12,718 - Epoch 100 starting...
+2024-11-22 22:18:15,579 - Train loss: 0.979414, train acc: 0.505619
+2024-11-22 22:18:16,662 - Nova melhor conta de validação. Salvo... 99.000000
+2024-11-22 22:18:16,663 - Validação Acc: 0.486489 -- Melhor Avaliação Acc: 0.486489 -- epoch 99.
+2024-11-22 22:18:16,663 - Epoch 101 starting...
+2024-11-22 22:18:19,546 - Train loss: 0.979228, train acc: 0.506857
+2024-11-22 22:18:19,772 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_100.png
+2024-11-22 22:18:19,831 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_100.png
+2024-11-22 22:18:20,053 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_100.png
+2024-11-22 22:18:20,105 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_100.png
+2024-11-22 22:18:20,326 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_100.png
+2024-11-22 22:18:20,380 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_100.png
+2024-11-22 22:18:20,598 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_100.png
+2024-11-22 22:18:20,632 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_100.png
+2024-11-22 22:18:20,857 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_100.png
+2024-11-22 22:18:20,916 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_100.png
+2024-11-22 22:18:21,122 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_100.png
+2024-11-22 22:18:21,185 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_100.png
+2024-11-22 22:18:21,411 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_100.png
+2024-11-22 22:18:21,458 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_100.png
+2024-11-22 22:18:21,659 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_100.png
+2024-11-22 22:18:21,722 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_100.png
+2024-11-22 22:18:21,944 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_100.png
+2024-11-22 22:18:21,991 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_100.png
+2024-11-22 22:18:22,213 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_100.png
+2024-11-22 22:18:22,276 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_100.png
+2024-11-22 22:18:22,276 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.486489 -- epoch 99.
+2024-11-22 22:18:22,276 - Epoch 102 starting...
+2024-11-22 22:18:25,153 - Train loss: 0.979233, train acc: 0.505471
+2024-11-22 22:18:26,208 - Nova melhor conta de validação. Salvo... 101.000000
+2024-11-22 22:18:26,208 - Validação Acc: 0.486776 -- Melhor Avaliação Acc: 0.486776 -- epoch 101.
+2024-11-22 22:18:26,208 - Epoch 103 starting...
+2024-11-22 22:18:29,088 - Train loss: 0.979300, train acc: 0.505391
+2024-11-22 22:18:30,181 - Nova melhor conta de validação. Salvo... 102.000000
+2024-11-22 22:18:30,181 - Validação Acc: 0.486913 -- Melhor Avaliação Acc: 0.486913 -- epoch 102.
+2024-11-22 22:18:30,181 - Epoch 104 starting...
+2024-11-22 22:18:33,059 - Train loss: 0.979231, train acc: 0.505730
+2024-11-22 22:18:34,161 - Nova melhor conta de validação. Salvo... 103.000000
+2024-11-22 22:18:34,161 - Validação Acc: 0.487044 -- Melhor Avaliação Acc: 0.487044 -- epoch 103.
+2024-11-22 22:18:34,161 - Epoch 105 starting...
+2024-11-22 22:18:37,044 - Train loss: 0.979075, train acc: 0.506534
+2024-11-22 22:18:38,128 - Nova melhor conta de validação. Salvo... 104.000000
+2024-11-22 22:18:38,128 - Validação Acc: 0.487169 -- Melhor Avaliação Acc: 0.487169 -- epoch 104.
+2024-11-22 22:18:38,128 - Epoch 106 starting...
+2024-11-22 22:18:40,921 - Train loss: 0.979181, train acc: 0.506900
+2024-11-22 22:18:41,981 - Nova melhor conta de validação. Salvo... 105.000000
+2024-11-22 22:18:41,981 - Validação Acc: 0.487378 -- Melhor Avaliação Acc: 0.487378 -- epoch 105.
+2024-11-22 22:18:41,981 - Epoch 107 starting...
+2024-11-22 22:18:44,899 - Train loss: 0.979079, train acc: 0.508151
+2024-11-22 22:18:45,996 - Nova melhor conta de validação. Salvo... 106.000000
+2024-11-22 22:18:45,996 - Validação Acc: 0.487497 -- Melhor Avaliação Acc: 0.487497 -- epoch 106.
+2024-11-22 22:18:45,996 - Epoch 108 starting...
+2024-11-22 22:18:48,892 - Train loss: 0.979202, train acc: 0.507380
+2024-11-22 22:18:50,031 - Nova melhor conta de validação. Salvo... 107.000000
+2024-11-22 22:18:50,031 - Validação Acc: 0.487646 -- Melhor Avaliação Acc: 0.487646 -- epoch 107.
+2024-11-22 22:18:50,031 - Epoch 109 starting...
+2024-11-22 22:18:52,955 - Train loss: 0.979048, train acc: 0.507291
+2024-11-22 22:18:54,082 - Nova melhor conta de validação. Salvo... 108.000000
+2024-11-22 22:18:54,082 - Validação Acc: 0.487718 -- Melhor Avaliação Acc: 0.487718 -- epoch 108.
+2024-11-22 22:18:54,082 - Epoch 110 starting...
+2024-11-22 22:18:56,944 - Train loss: 0.979006, train acc: 0.506906
+2024-11-22 22:18:58,031 - Nova melhor conta de validação. Salvo... 109.000000
+2024-11-22 22:18:58,031 - Validação Acc: 0.487873 -- Melhor Avaliação Acc: 0.487873 -- epoch 109.
+2024-11-22 22:18:58,031 - Epoch 111 starting...
+2024-11-22 22:19:00,917 - Train loss: 0.979074, train acc: 0.506864
+2024-11-22 22:19:01,172 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_110.png
+2024-11-22 22:19:01,223 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_110.png
+2024-11-22 22:19:01,432 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_110.png
+2024-11-22 22:19:01,586 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_110.png
+2024-11-22 22:19:01,807 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_110.png
+2024-11-22 22:19:01,854 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_110.png
+2024-11-22 22:19:02,078 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_110.png
+2024-11-22 22:19:02,139 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_110.png
+2024-11-22 22:19:02,360 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_110.png
+2024-11-22 22:19:02,419 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_110.png
+2024-11-22 22:19:02,610 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_110.png
+2024-11-22 22:19:02,674 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_110.png
+2024-11-22 22:19:02,895 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_110.png
+2024-11-22 22:19:02,958 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_110.png
+2024-11-22 22:19:03,187 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_110.png
+2024-11-22 22:19:03,243 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_110.png
+2024-11-22 22:19:03,464 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_110.png
+2024-11-22 22:19:03,527 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_110.png
+2024-11-22 22:19:03,733 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_110.png
+2024-11-22 22:19:03,788 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_110.png
+2024-11-22 22:19:03,796 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.487873 -- epoch 109.
+2024-11-22 22:19:03,796 - Epoch 112 starting...
+2024-11-22 22:19:06,647 - Train loss: 0.978996, train acc: 0.507979
+2024-11-22 22:19:07,708 - Nova melhor conta de validação. Salvo... 111.000000
+2024-11-22 22:19:07,710 - Validação Acc: 0.488147 -- Melhor Avaliação Acc: 0.488147 -- epoch 111.
+2024-11-22 22:19:07,710 - Epoch 113 starting...
+2024-11-22 22:19:10,615 - Train loss: 0.978948, train acc: 0.507208
+2024-11-22 22:19:11,729 - Nova melhor conta de validação. Salvo... 112.000000
+2024-11-22 22:19:11,729 - Validação Acc: 0.488302 -- Melhor Avaliação Acc: 0.488302 -- epoch 112.
+2024-11-22 22:19:11,729 - Epoch 114 starting...
+2024-11-22 22:19:14,629 - Train loss: 0.978909, train acc: 0.507074
+2024-11-22 22:19:15,724 - Nova melhor conta de validação. Salvo... 113.000000
+2024-11-22 22:19:15,724 - Validação Acc: 0.488451 -- Melhor Avaliação Acc: 0.488451 -- epoch 113.
+2024-11-22 22:19:15,724 - Epoch 115 starting...
+2024-11-22 22:19:18,664 - Train loss: 0.978986, train acc: 0.507481
+2024-11-22 22:19:19,675 - Nova melhor conta de validação. Salvo... 114.000000
+2024-11-22 22:19:19,675 - Validação Acc: 0.488595 -- Melhor Avaliação Acc: 0.488595 -- epoch 114.
+2024-11-22 22:19:19,675 - Epoch 116 starting...
+2024-11-22 22:19:22,585 - Train loss: 0.978800, train acc: 0.508219
+2024-11-22 22:19:23,660 - Nova melhor conta de validação. Salvo... 115.000000
+2024-11-22 22:19:23,660 - Validação Acc: 0.488827 -- Melhor Avaliação Acc: 0.488827 -- epoch 115.
+2024-11-22 22:19:23,660 - Epoch 117 starting...
+2024-11-22 22:19:26,580 - Train loss: 0.978763, train acc: 0.508067
+2024-11-22 22:19:27,711 - Nova melhor conta de validação. Salvo... 116.000000
+2024-11-22 22:19:27,711 - Validação Acc: 0.489000 -- Melhor Avaliação Acc: 0.489000 -- epoch 116.
+2024-11-22 22:19:27,711 - Epoch 118 starting...
+2024-11-22 22:19:30,583 - Train loss: 0.978953, train acc: 0.506869
+2024-11-22 22:19:31,701 - Nova melhor conta de validação. Salvo... 117.000000
+2024-11-22 22:19:31,701 - Validação Acc: 0.489155 -- Melhor Avaliação Acc: 0.489155 -- epoch 117.
+2024-11-22 22:19:31,701 - Epoch 119 starting...
+2024-11-22 22:19:34,631 - Train loss: 0.978822, train acc: 0.507488
+2024-11-22 22:19:35,744 - Nova melhor conta de validação. Salvo... 118.000000
+2024-11-22 22:19:35,744 - Validação Acc: 0.489215 -- Melhor Avaliação Acc: 0.489215 -- epoch 118.
+2024-11-22 22:19:35,744 - Epoch 120 starting...
+2024-11-22 22:19:38,644 - Train loss: 0.978649, train acc: 0.508690
+2024-11-22 22:19:39,762 - Nova melhor conta de validação. Salvo... 119.000000
+2024-11-22 22:19:39,762 - Validação Acc: 0.489257 -- Melhor Avaliação Acc: 0.489257 -- epoch 119.
+2024-11-22 22:19:39,762 - Epoch 121 starting...
+2024-11-22 22:19:42,689 - Train loss: 0.978872, train acc: 0.507005
+2024-11-22 22:19:42,885 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_120.png
+2024-11-22 22:19:42,949 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_120.png
+2024-11-22 22:19:43,172 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_120.png
+2024-11-22 22:19:43,229 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_120.png
+2024-11-22 22:19:43,450 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_120.png
+2024-11-22 22:19:43,499 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_120.png
+2024-11-22 22:19:43,721 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_120.png
+2024-11-22 22:19:43,768 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_120.png
+2024-11-22 22:19:43,998 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_120.png
+2024-11-22 22:19:44,053 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_120.png
+2024-11-22 22:19:44,274 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_120.png
+2024-11-22 22:19:44,333 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_120.png
+2024-11-22 22:19:44,555 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_120.png
+2024-11-22 22:19:44,605 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_120.png
+2024-11-22 22:19:44,824 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_120.png
+2024-11-22 22:19:44,880 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_120.png
+2024-11-22 22:19:45,094 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_120.png
+2024-11-22 22:19:45,158 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_120.png
+2024-11-22 22:19:45,363 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_120.png
+2024-11-22 22:19:45,426 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_120.png
+2024-11-22 22:19:45,426 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.489257 -- epoch 119.
+2024-11-22 22:19:45,426 - Epoch 122 starting...
+2024-11-22 22:19:48,300 - Train loss: 0.978818, train acc: 0.507617
+2024-11-22 22:19:49,412 - Nova melhor conta de validação. Salvo... 121.000000
+2024-11-22 22:19:49,412 - Validação Acc: 0.489274 -- Melhor Avaliação Acc: 0.489274 -- epoch 121.
+2024-11-22 22:19:49,412 - Epoch 123 starting...
+2024-11-22 22:19:52,293 - Train loss: 0.978776, train acc: 0.508375
+2024-11-22 22:19:53,374 - Nova melhor conta de validação. Salvo... 122.000000
+2024-11-22 22:19:53,374 - Validação Acc: 0.489316 -- Melhor Avaliação Acc: 0.489316 -- epoch 122.
+2024-11-22 22:19:53,374 - Epoch 124 starting...
+2024-11-22 22:19:56,233 - Train loss: 0.978718, train acc: 0.508672
+2024-11-22 22:19:57,335 - Nova melhor conta de validação. Salvo... 123.000000
+2024-11-22 22:19:57,335 - Validação Acc: 0.489340 -- Melhor Avaliação Acc: 0.489340 -- epoch 123.
+2024-11-22 22:19:57,335 - Epoch 125 starting...
+2024-11-22 22:20:00,240 - Train loss: 0.978788, train acc: 0.509049
+2024-11-22 22:20:01,314 - Nova melhor conta de validação. Salvo... 124.000000
+2024-11-22 22:20:01,314 - Validação Acc: 0.489346 -- Melhor Avaliação Acc: 0.489346 -- epoch 124.
+2024-11-22 22:20:01,314 - Epoch 126 starting...
+2024-11-22 22:20:04,244 - Train loss: 0.978686, train acc: 0.508231
+2024-11-22 22:20:05,359 - Nova melhor conta de validação. Salvo... 125.000000
+2024-11-22 22:20:05,359 - Validação Acc: 0.489423 -- Melhor Avaliação Acc: 0.489423 -- epoch 125.
+2024-11-22 22:20:05,359 - Epoch 127 starting...
+2024-11-22 22:20:08,296 - Train loss: 0.978582, train acc: 0.509820
+2024-11-22 22:20:09,372 - Nova melhor conta de validação. Salvo... 126.000000
+2024-11-22 22:20:09,372 - Validação Acc: 0.489489 -- Melhor Avaliação Acc: 0.489489 -- epoch 126.
+2024-11-22 22:20:09,372 - Epoch 128 starting...
+2024-11-22 22:20:12,291 - Train loss: 0.978827, train acc: 0.508394
+2024-11-22 22:20:13,362 - Nova melhor conta de validação. Salvo... 127.000000
+2024-11-22 22:20:13,362 - Validação Acc: 0.489495 -- Melhor Avaliação Acc: 0.489495 -- epoch 127.
+2024-11-22 22:20:13,362 - Epoch 129 starting...
+2024-11-22 22:20:16,250 - Train loss: 0.978667, train acc: 0.510177
+2024-11-22 22:20:17,292 - Nova melhor conta de validação. Salvo... 128.000000
+2024-11-22 22:20:17,292 - Validação Acc: 0.489501 -- Melhor Avaliação Acc: 0.489501 -- epoch 128.
+2024-11-22 22:20:17,292 - Epoch 130 starting...
+2024-11-22 22:20:20,164 - Train loss: 0.978703, train acc: 0.509799
+2024-11-22 22:20:21,263 - Nova melhor conta de validação. Salvo... 129.000000
+2024-11-22 22:20:21,263 - Validação Acc: 0.489525 -- Melhor Avaliação Acc: 0.489525 -- epoch 129.
+2024-11-22 22:20:21,263 - Epoch 131 starting...
+2024-11-22 22:20:24,162 - Train loss: 0.978697, train acc: 0.507362
+2024-11-22 22:20:24,382 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_130.png
+2024-11-22 22:20:24,434 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_130.png
+2024-11-22 22:20:24,657 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_130.png
+2024-11-22 22:20:24,828 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_130.png
+2024-11-22 22:20:25,038 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_130.png
+2024-11-22 22:20:25,081 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_130.png
+2024-11-22 22:20:25,310 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_130.png
+2024-11-22 22:20:25,367 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_130.png
+2024-11-22 22:20:25,572 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_130.png
+2024-11-22 22:20:25,630 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_130.png
+2024-11-22 22:20:25,853 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_130.png
+2024-11-22 22:20:25,910 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_130.png
+2024-11-22 22:20:26,137 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_130.png
+2024-11-22 22:20:26,192 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_130.png
+2024-11-22 22:20:26,406 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_130.png
+2024-11-22 22:20:26,462 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_130.png
+2024-11-22 22:20:26,670 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_130.png
+2024-11-22 22:20:26,725 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_130.png
+2024-11-22 22:20:26,952 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_130.png
+2024-11-22 22:20:27,010 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_130.png
+2024-11-22 22:20:27,014 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.489525 -- epoch 129.
+2024-11-22 22:20:27,014 - Epoch 132 starting...
+2024-11-22 22:20:29,858 - Train loss: 0.978721, train acc: 0.507823
+2024-11-22 22:20:30,910 - Validação Acc: 0.489525 -- Melhor Avaliação Acc: 0.489525 -- epoch 129.
+2024-11-22 22:20:30,910 - Epoch 133 starting...
+2024-11-22 22:20:33,861 - Train loss: 0.978701, train acc: 0.507003
+2024-11-22 22:20:34,900 - Nova melhor conta de validação. Salvo... 132.000000
+2024-11-22 22:20:34,900 - Validação Acc: 0.489579 -- Melhor Avaliação Acc: 0.489579 -- epoch 132.
+2024-11-22 22:20:34,900 - Epoch 134 starting...
+2024-11-22 22:20:37,732 - Train loss: 0.978742, train acc: 0.508600
+2024-11-22 22:20:38,853 - Nova melhor conta de validação. Salvo... 133.000000
+2024-11-22 22:20:38,853 - Validação Acc: 0.489590 -- Melhor Avaliação Acc: 0.489590 -- epoch 133.
+2024-11-22 22:20:38,853 - Epoch 135 starting...
+2024-11-22 22:20:41,721 - Train loss: 0.978712, train acc: 0.507759
+2024-11-22 22:20:42,779 - Nova melhor conta de validação. Salvo... 134.000000
+2024-11-22 22:20:42,779 - Validação Acc: 0.489644 -- Melhor Avaliação Acc: 0.489644 -- epoch 134.
+2024-11-22 22:20:42,779 - Epoch 136 starting...
+2024-11-22 22:20:45,658 - Train loss: 0.978765, train acc: 0.509309
+2024-11-22 22:20:46,718 - Nova melhor conta de validação. Salvo... 135.000000
+2024-11-22 22:20:46,718 - Validação Acc: 0.489674 -- Melhor Avaliação Acc: 0.489674 -- epoch 135.
+2024-11-22 22:20:46,718 - Epoch 137 starting...
+2024-11-22 22:20:49,525 - Train loss: 0.978710, train acc: 0.507213
+2024-11-22 22:20:50,592 - Nova melhor conta de validação. Salvo... 136.000000
+2024-11-22 22:20:50,592 - Validação Acc: 0.489704 -- Melhor Avaliação Acc: 0.489704 -- epoch 136.
+2024-11-22 22:20:50,592 - Epoch 138 starting...
+2024-11-22 22:20:53,403 - Train loss: 0.978695, train acc: 0.509243
+2024-11-22 22:20:54,458 - Nova melhor conta de validação. Salvo... 137.000000
+2024-11-22 22:20:54,458 - Validação Acc: 0.489716 -- Melhor Avaliação Acc: 0.489716 -- epoch 137.
+2024-11-22 22:20:54,458 - Epoch 139 starting...
+2024-11-22 22:20:57,229 - Train loss: 0.978821, train acc: 0.507164
+2024-11-22 22:20:58,247 - Nova melhor conta de validação. Salvo... 138.000000
+2024-11-22 22:20:58,247 - Validação Acc: 0.489769 -- Melhor Avaliação Acc: 0.489769 -- epoch 138.
+2024-11-22 22:20:58,247 - Epoch 140 starting...
+2024-11-22 22:21:01,231 - Train loss: 0.978645, train acc: 0.507568
+2024-11-22 22:21:02,329 - Validação Acc: 0.489769 -- Melhor Avaliação Acc: 0.489769 -- epoch 138.
+2024-11-22 22:21:02,329 - Epoch 141 starting...
+2024-11-22 22:21:05,210 - Train loss: 0.978485, train acc: 0.509799
+2024-11-22 22:21:05,429 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_140.png
+2024-11-22 22:21:05,488 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_140.png
+2024-11-22 22:21:05,719 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_140.png
+2024-11-22 22:21:05,777 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_140.png
+2024-11-22 22:21:05,996 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_140.png
+2024-11-22 22:21:06,055 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_140.png
+2024-11-22 22:21:06,277 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_140.png
+2024-11-22 22:21:06,328 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_140.png
+2024-11-22 22:21:06,534 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_140.png
+2024-11-22 22:21:06,599 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_140.png
+2024-11-22 22:21:06,811 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_140.png
+2024-11-22 22:21:06,862 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_140.png
+2024-11-22 22:21:07,079 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_140.png
+2024-11-22 22:21:07,140 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_140.png
+2024-11-22 22:21:07,344 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_140.png
+2024-11-22 22:21:07,403 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_140.png
+2024-11-22 22:21:07,632 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_140.png
+2024-11-22 22:21:07,685 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_140.png
+2024-11-22 22:21:07,890 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_140.png
+2024-11-22 22:21:07,949 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_140.png
+2024-11-22 22:21:07,951 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.489769 -- epoch 138.
+2024-11-22 22:21:07,951 - Epoch 142 starting...
+2024-11-22 22:21:10,800 - Train loss: 0.978697, train acc: 0.508945
+2024-11-22 22:21:11,859 - Nova melhor conta de validação. Salvo... 141.000000
+2024-11-22 22:21:11,859 - Validação Acc: 0.489865 -- Melhor Avaliação Acc: 0.489865 -- epoch 141.
+2024-11-22 22:21:11,859 - Epoch 143 starting...
+2024-11-22 22:21:14,825 - Train loss: 0.978740, train acc: 0.507941
+2024-11-22 22:21:15,921 - Nova melhor conta de validação. Salvo... 142.000000
+2024-11-22 22:21:15,921 - Validação Acc: 0.489883 -- Melhor Avaliação Acc: 0.489883 -- epoch 142.
+2024-11-22 22:21:15,921 - Epoch 144 starting...
+2024-11-22 22:21:18,786 - Train loss: 0.978547, train acc: 0.507921
+2024-11-22 22:21:19,824 - Nova melhor conta de validação. Salvo... 143.000000
+2024-11-22 22:21:19,824 - Validação Acc: 0.489918 -- Melhor Avaliação Acc: 0.489918 -- epoch 143.
+2024-11-22 22:21:19,824 - Epoch 145 starting...
+2024-11-22 22:21:22,677 - Train loss: 0.978616, train acc: 0.508074
+2024-11-22 22:21:23,765 - Nova melhor conta de validação. Salvo... 144.000000
+2024-11-22 22:21:23,765 - Validação Acc: 0.489930 -- Melhor Avaliação Acc: 0.489930 -- epoch 144.
+2024-11-22 22:21:23,765 - Epoch 146 starting...
+2024-11-22 22:21:26,628 - Train loss: 0.978669, train acc: 0.508358
+2024-11-22 22:21:27,726 - Nova melhor conta de validação. Salvo... 145.000000
+2024-11-22 22:21:27,726 - Validação Acc: 0.489954 -- Melhor Avaliação Acc: 0.489954 -- epoch 145.
+2024-11-22 22:21:27,726 - Epoch 147 starting...
+2024-11-22 22:21:30,639 - Train loss: 0.978680, train acc: 0.506963
+2024-11-22 22:21:31,683 - Validação Acc: 0.489942 -- Melhor Avaliação Acc: 0.489954 -- epoch 145.
+2024-11-22 22:21:31,683 - Epoch 148 starting...
+2024-11-22 22:21:34,548 - Train loss: 0.978568, train acc: 0.508225
+2024-11-22 22:21:35,627 - Nova melhor conta de validação. Salvo... 147.000000
+2024-11-22 22:21:35,627 - Validação Acc: 0.490014 -- Melhor Avaliação Acc: 0.490014 -- epoch 147.
+2024-11-22 22:21:35,627 - Epoch 149 starting...
+2024-11-22 22:21:38,504 - Train loss: 0.978493, train acc: 0.508647
+2024-11-22 22:21:39,586 - Nova melhor conta de validação. Salvo... 148.000000
+2024-11-22 22:21:39,586 - Validação Acc: 0.490038 -- Melhor Avaliação Acc: 0.490038 -- epoch 148.
+2024-11-22 22:21:39,586 - Epoch 150 starting...
+2024-11-22 22:21:42,479 - Train loss: 0.978623, train acc: 0.508564
+2024-11-22 22:21:43,514 - Nova melhor conta de validação. Salvo... 149.000000
+2024-11-22 22:21:43,514 - Validação Acc: 0.490044 -- Melhor Avaliação Acc: 0.490044 -- epoch 149.
+2024-11-22 22:21:43,516 - Epoch 151 starting...
+2024-11-22 22:21:46,420 - Train loss: 0.978731, train acc: 0.508677
+2024-11-22 22:21:46,644 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_150.png
+2024-11-22 22:21:46,794 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_150.png
+2024-11-22 22:21:47,013 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_150.png
+2024-11-22 22:21:47,061 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_150.png
+2024-11-22 22:21:47,286 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_150.png
+2024-11-22 22:21:47,344 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_150.png
+2024-11-22 22:21:47,549 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_150.png
+2024-11-22 22:21:47,605 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_150.png
+2024-11-22 22:21:47,823 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_150.png
+2024-11-22 22:21:47,880 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_150.png
+2024-11-22 22:21:48,093 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_150.png
+2024-11-22 22:21:48,144 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_150.png
+2024-11-22 22:21:48,364 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_150.png
+2024-11-22 22:21:48,401 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_150.png
+2024-11-22 22:21:48,636 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_150.png
+2024-11-22 22:21:48,694 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_150.png
+2024-11-22 22:21:48,909 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_150.png
+2024-11-22 22:21:48,966 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_150.png
+2024-11-22 22:21:49,187 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_150.png
+2024-11-22 22:21:49,244 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_150.png
+2024-11-22 22:21:49,246 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490044 -- epoch 149.
+2024-11-22 22:21:49,246 - Epoch 152 starting...
+2024-11-22 22:21:52,072 - Train loss: 0.978661, train acc: 0.507675
+2024-11-22 22:21:53,107 - Validação Acc: 0.490038 -- Melhor Avaliação Acc: 0.490044 -- epoch 149.
+2024-11-22 22:21:53,107 - Epoch 153 starting...
+2024-11-22 22:21:55,907 - Train loss: 0.978616, train acc: 0.509373
+2024-11-22 22:21:57,012 - Validação Acc: 0.490032 -- Melhor Avaliação Acc: 0.490044 -- epoch 149.
+2024-11-22 22:21:57,012 - Epoch 154 starting...
+2024-11-22 22:21:59,841 - Train loss: 0.978670, train acc: 0.506843
+2024-11-22 22:22:00,911 - Nova melhor conta de validação. Salvo... 153.000000
+2024-11-22 22:22:00,911 - Validação Acc: 0.490050 -- Melhor Avaliação Acc: 0.490050 -- epoch 153.
+2024-11-22 22:22:00,911 - Epoch 155 starting...
+2024-11-22 22:22:03,733 - Train loss: 0.978658, train acc: 0.508360
+2024-11-22 22:22:04,811 - Validação Acc: 0.490044 -- Melhor Avaliação Acc: 0.490050 -- epoch 153.
+2024-11-22 22:22:04,811 - Epoch 156 starting...
+2024-11-22 22:22:07,706 - Train loss: 0.978668, train acc: 0.506992
+2024-11-22 22:22:08,840 - Validação Acc: 0.490050 -- Melhor Avaliação Acc: 0.490050 -- epoch 153.
+2024-11-22 22:22:08,849 - Epoch 157 starting...
+2024-11-22 22:22:11,739 - Train loss: 0.978589, train acc: 0.509366
+2024-11-22 22:22:12,828 - Validação Acc: 0.490050 -- Melhor Avaliação Acc: 0.490050 -- epoch 153.
+2024-11-22 22:22:12,828 - Epoch 158 starting...
+2024-11-22 22:22:15,695 - Train loss: 0.978598, train acc: 0.509477
+2024-11-22 22:22:16,703 - Validação Acc: 0.490050 -- Melhor Avaliação Acc: 0.490050 -- epoch 153.
+2024-11-22 22:22:16,703 - Epoch 159 starting...
+2024-11-22 22:22:19,564 - Train loss: 0.978674, train acc: 0.507229
+2024-11-22 22:22:20,656 - Validação Acc: 0.490050 -- Melhor Avaliação Acc: 0.490050 -- epoch 153.
+2024-11-22 22:22:20,656 - Epoch 160 starting...
+2024-11-22 22:22:23,536 - Train loss: 0.978624, train acc: 0.507608
+2024-11-22 22:22:24,593 - Nova melhor conta de validação. Salvo... 159.000000
+2024-11-22 22:22:24,593 - Validação Acc: 0.490068 -- Melhor Avaliação Acc: 0.490068 -- epoch 159.
+2024-11-22 22:22:24,593 - Epoch 161 starting...
+2024-11-22 22:22:27,447 - Train loss: 0.978502, train acc: 0.509338
+2024-11-22 22:22:27,670 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_160.png
+2024-11-22 22:22:27,721 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_160.png
+2024-11-22 22:22:27,931 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_160.png
+2024-11-22 22:22:27,987 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_160.png
+2024-11-22 22:22:28,197 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_160.png
+2024-11-22 22:22:28,260 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_160.png
+2024-11-22 22:22:28,479 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_160.png
+2024-11-22 22:22:28,539 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_160.png
+2024-11-22 22:22:28,750 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_160.png
+2024-11-22 22:22:28,801 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_160.png
+2024-11-22 22:22:29,023 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_160.png
+2024-11-22 22:22:29,081 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_160.png
+2024-11-22 22:22:29,293 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_160.png
+2024-11-22 22:22:29,355 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_160.png
+2024-11-22 22:22:29,564 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_160.png
+2024-11-22 22:22:29,615 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_160.png
+2024-11-22 22:22:29,833 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_160.png
+2024-11-22 22:22:29,887 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_160.png
+2024-11-22 22:22:30,097 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_160.png
+2024-11-22 22:22:30,249 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_160.png
+2024-11-22 22:22:30,251 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490068 -- epoch 159.
+2024-11-22 22:22:30,251 - Epoch 162 starting...
+2024-11-22 22:22:32,992 - Train loss: 0.978561, train acc: 0.507990
+2024-11-22 22:22:34,051 - Nova melhor conta de validação. Salvo... 161.000000
+2024-11-22 22:22:34,051 - Validação Acc: 0.490085 -- Melhor Avaliação Acc: 0.490085 -- epoch 161.
+2024-11-22 22:22:34,051 - Epoch 163 starting...
+2024-11-22 22:22:36,937 - Train loss: 0.978572, train acc: 0.509677
+2024-11-22 22:22:38,067 - Validação Acc: 0.490085 -- Melhor Avaliação Acc: 0.490085 -- epoch 161.
+2024-11-22 22:22:38,067 - Epoch 164 starting...
+2024-11-22 22:22:40,948 - Train loss: 0.978615, train acc: 0.507533
+2024-11-22 22:22:42,065 - Validação Acc: 0.490085 -- Melhor Avaliação Acc: 0.490085 -- epoch 161.
+2024-11-22 22:22:42,065 - Epoch 165 starting...
+2024-11-22 22:22:44,902 - Train loss: 0.978540, train acc: 0.509470
+2024-11-22 22:22:46,026 - Validação Acc: 0.490085 -- Melhor Avaliação Acc: 0.490085 -- epoch 161.
+2024-11-22 22:22:46,026 - Epoch 166 starting...
+2024-11-22 22:22:48,895 - Train loss: 0.978796, train acc: 0.508869
+2024-11-22 22:22:49,952 - Nova melhor conta de validação. Salvo... 165.000000
+2024-11-22 22:22:49,952 - Validação Acc: 0.490091 -- Melhor Avaliação Acc: 0.490091 -- epoch 165.
+2024-11-22 22:22:49,952 - Epoch 167 starting...
+2024-11-22 22:22:52,915 - Train loss: 0.978611, train acc: 0.508373
+2024-11-22 22:22:54,016 - Validação Acc: 0.490091 -- Melhor Avaliação Acc: 0.490091 -- epoch 165.
+2024-11-22 22:22:54,016 - Epoch 168 starting...
+2024-11-22 22:22:56,889 - Train loss: 0.978641, train acc: 0.507597
+2024-11-22 22:22:57,977 - Validação Acc: 0.490079 -- Melhor Avaliação Acc: 0.490091 -- epoch 165.
+2024-11-22 22:22:57,977 - Epoch 169 starting...
+2024-11-22 22:23:00,832 - Train loss: 0.978521, train acc: 0.509949
+2024-11-22 22:23:01,879 - Validação Acc: 0.490074 -- Melhor Avaliação Acc: 0.490091 -- epoch 165.
+2024-11-22 22:23:01,879 - Epoch 170 starting...
+2024-11-22 22:23:04,720 - Train loss: 0.978653, train acc: 0.508368
+2024-11-22 22:23:05,735 - Nova melhor conta de validação. Salvo... 169.000000
+2024-11-22 22:23:05,735 - Validação Acc: 0.490097 -- Melhor Avaliação Acc: 0.490097 -- epoch 169.
+2024-11-22 22:23:05,735 - Epoch 171 starting...
+2024-11-22 22:23:08,543 - Train loss: 0.978701, train acc: 0.507846
+2024-11-22 22:23:08,792 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_170.png
+2024-11-22 22:23:08,851 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_170.png
+2024-11-22 22:23:09,072 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_170.png
+2024-11-22 22:23:09,122 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_170.png
+2024-11-22 22:23:09,335 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_170.png
+2024-11-22 22:23:09,384 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_170.png
+2024-11-22 22:23:09,610 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_170.png
+2024-11-22 22:23:09,673 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_170.png
+2024-11-22 22:23:09,887 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_170.png
+2024-11-22 22:23:09,942 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_170.png
+2024-11-22 22:23:10,145 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_170.png
+2024-11-22 22:23:10,209 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_170.png
+2024-11-22 22:23:10,440 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_170.png
+2024-11-22 22:23:10,493 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_170.png
+2024-11-22 22:23:10,716 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_170.png
+2024-11-22 22:23:10,775 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_170.png
+2024-11-22 22:23:10,987 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_170.png
+2024-11-22 22:23:11,046 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_170.png
+2024-11-22 22:23:11,252 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_170.png
+2024-11-22 22:23:11,304 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_170.png
+2024-11-22 22:23:11,304 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490097 -- epoch 169.
+2024-11-22 22:23:11,304 - Epoch 172 starting...
+2024-11-22 22:23:14,131 - Train loss: 0.978673, train acc: 0.508518
+2024-11-22 22:23:15,237 - Nova melhor conta de validação. Salvo... 171.000000
+2024-11-22 22:23:15,237 - Validação Acc: 0.490127 -- Melhor Avaliação Acc: 0.490127 -- epoch 171.
+2024-11-22 22:23:15,237 - Epoch 173 starting...
+2024-11-22 22:23:18,152 - Train loss: 0.978604, train acc: 0.509451
+2024-11-22 22:23:19,208 - Nova melhor conta de validação. Salvo... 172.000000
+2024-11-22 22:23:19,208 - Validação Acc: 0.490133 -- Melhor Avaliação Acc: 0.490133 -- epoch 172.
+2024-11-22 22:23:19,208 - Epoch 174 starting...
+2024-11-22 22:23:21,998 - Train loss: 0.978555, train acc: 0.507937
+2024-11-22 22:23:23,096 - Validação Acc: 0.490133 -- Melhor Avaliação Acc: 0.490133 -- epoch 172.
+2024-11-22 22:23:23,096 - Epoch 175 starting...
+2024-11-22 22:23:25,908 - Train loss: 0.978588, train acc: 0.508872
+2024-11-22 22:23:26,950 - Nova melhor conta de validação. Salvo... 174.000000
+2024-11-22 22:23:26,950 - Validação Acc: 0.490151 -- Melhor Avaliação Acc: 0.490151 -- epoch 174.
+2024-11-22 22:23:26,950 - Epoch 176 starting...
+2024-11-22 22:23:29,738 - Train loss: 0.978593, train acc: 0.507506
+2024-11-22 22:23:30,828 - Nova melhor conta de validação. Salvo... 175.000000
+2024-11-22 22:23:30,828 - Validação Acc: 0.490157 -- Melhor Avaliação Acc: 0.490157 -- epoch 175.
+2024-11-22 22:23:30,828 - Epoch 177 starting...
+2024-11-22 22:23:33,711 - Train loss: 0.978634, train acc: 0.509492
+2024-11-22 22:23:34,754 - Nova melhor conta de validação. Salvo... 176.000000
+2024-11-22 22:23:34,754 - Validação Acc: 0.490169 -- Melhor Avaliação Acc: 0.490169 -- epoch 176.
+2024-11-22 22:23:34,754 - Epoch 178 starting...
+2024-11-22 22:23:37,630 - Train loss: 0.978650, train acc: 0.509216
+2024-11-22 22:23:38,655 - Validação Acc: 0.490169 -- Melhor Avaliação Acc: 0.490169 -- epoch 176.
+2024-11-22 22:23:38,655 - Epoch 179 starting...
+2024-11-22 22:23:41,515 - Train loss: 0.978628, train acc: 0.507327
+2024-11-22 22:23:42,559 - Nova melhor conta de validação. Salvo... 178.000000
+2024-11-22 22:23:42,559 - Validação Acc: 0.490175 -- Melhor Avaliação Acc: 0.490175 -- epoch 178.
+2024-11-22 22:23:42,559 - Epoch 180 starting...
+2024-11-22 22:23:45,346 - Train loss: 0.978629, train acc: 0.509594
+2024-11-22 22:23:46,499 - Validação Acc: 0.490175 -- Melhor Avaliação Acc: 0.490175 -- epoch 178.
+2024-11-22 22:23:46,499 - Epoch 181 starting...
+2024-11-22 22:23:49,329 - Train loss: 0.978427, train acc: 0.510302
+2024-11-22 22:23:49,568 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_180.png
+2024-11-22 22:23:49,625 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_180.png
+2024-11-22 22:23:49,839 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_180.png
+2024-11-22 22:23:49,893 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_180.png
+2024-11-22 22:23:50,110 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_180.png
+2024-11-22 22:23:50,157 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_180.png
+2024-11-22 22:23:50,376 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_180.png
+2024-11-22 22:23:50,435 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_180.png
+2024-11-22 22:23:50,663 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_180.png
+2024-11-22 22:23:50,718 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_180.png
+2024-11-22 22:23:50,935 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_180.png
+2024-11-22 22:23:50,993 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_180.png
+2024-11-22 22:23:51,202 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_180.png
+2024-11-22 22:23:51,261 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_180.png
+2024-11-22 22:23:51,474 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_180.png
+2024-11-22 22:23:51,526 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_180.png
+2024-11-22 22:23:51,844 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_180.png
+2024-11-22 22:23:51,904 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_180.png
+2024-11-22 22:23:52,117 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_180.png
+2024-11-22 22:23:52,169 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_180.png
+2024-11-22 22:23:52,173 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490175 -- epoch 178.
+2024-11-22 22:23:52,173 - Epoch 182 starting...
+2024-11-22 22:23:54,921 - Train loss: 0.978689, train acc: 0.509145
+2024-11-22 22:23:55,955 - Nova melhor conta de validação. Salvo... 181.000000
+2024-11-22 22:23:55,955 - Validação Acc: 0.490181 -- Melhor Avaliação Acc: 0.490181 -- epoch 181.
+2024-11-22 22:23:55,955 - Epoch 183 starting...
+2024-11-22 22:23:58,775 - Train loss: 0.978580, train acc: 0.509232
+2024-11-22 22:23:59,844 - Nova melhor conta de validação. Salvo... 182.000000
+2024-11-22 22:23:59,844 - Validação Acc: 0.490187 -- Melhor Avaliação Acc: 0.490187 -- epoch 182.
+2024-11-22 22:23:59,844 - Epoch 184 starting...
+2024-11-22 22:24:02,699 - Train loss: 0.978683, train acc: 0.508103
+2024-11-22 22:24:03,786 - Validação Acc: 0.490181 -- Melhor Avaliação Acc: 0.490187 -- epoch 182.
+2024-11-22 22:24:03,786 - Epoch 185 starting...
+2024-11-22 22:24:06,598 - Train loss: 0.978523, train acc: 0.508100
+2024-11-22 22:24:07,662 - Nova melhor conta de validação. Salvo... 184.000000
+2024-11-22 22:24:07,662 - Validação Acc: 0.490193 -- Melhor Avaliação Acc: 0.490193 -- epoch 184.
+2024-11-22 22:24:07,662 - Epoch 186 starting...
+2024-11-22 22:24:10,538 - Train loss: 0.978684, train acc: 0.507489
+2024-11-22 22:24:11,585 - Validação Acc: 0.490181 -- Melhor Avaliação Acc: 0.490193 -- epoch 184.
+2024-11-22 22:24:11,585 - Epoch 187 starting...
+2024-11-22 22:24:14,437 - Train loss: 0.978669, train acc: 0.508317
+2024-11-22 22:24:15,442 - Validação Acc: 0.490181 -- Melhor Avaliação Acc: 0.490193 -- epoch 184.
+2024-11-22 22:24:15,443 - Epoch 188 starting...
+2024-11-22 22:24:18,262 - Train loss: 0.978469, train acc: 0.509967
+2024-11-22 22:24:19,329 - Validação Acc: 0.490181 -- Melhor Avaliação Acc: 0.490193 -- epoch 184.
+2024-11-22 22:24:19,329 - Epoch 189 starting...
+2024-11-22 22:24:22,160 - Train loss: 0.978666, train acc: 0.507366
+2024-11-22 22:24:23,208 - Validação Acc: 0.490187 -- Melhor Avaliação Acc: 0.490193 -- epoch 184.
+2024-11-22 22:24:23,208 - Epoch 190 starting...
+2024-11-22 22:24:26,029 - Train loss: 0.978644, train acc: 0.509413
+2024-11-22 22:24:27,077 - Validação Acc: 0.490187 -- Melhor Avaliação Acc: 0.490193 -- epoch 184.
+2024-11-22 22:24:27,077 - Epoch 191 starting...
+2024-11-22 22:24:29,897 - Train loss: 0.978525, train acc: 0.507746
+2024-11-22 22:24:30,148 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_190.png
+2024-11-22 22:24:30,203 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_190.png
+2024-11-22 22:24:30,416 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_190.png
+2024-11-22 22:24:30,475 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_190.png
+2024-11-22 22:24:30,697 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_190.png
+2024-11-22 22:24:30,757 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_190.png
+2024-11-22 22:24:30,967 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_190.png
+2024-11-22 22:24:31,026 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_190.png
+2024-11-22 22:24:31,250 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_190.png
+2024-11-22 22:24:31,300 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_190.png
+2024-11-22 22:24:31,518 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_190.png
+2024-11-22 22:24:31,569 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_190.png
+2024-11-22 22:24:31,775 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_190.png
+2024-11-22 22:24:31,828 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_190.png
+2024-11-22 22:24:32,052 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_190.png
+2024-11-22 22:24:32,111 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_190.png
+2024-11-22 22:24:32,327 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_190.png
+2024-11-22 22:24:32,376 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_190.png
+2024-11-22 22:24:32,602 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_190.png
+2024-11-22 22:24:32,661 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_190.png
+2024-11-22 22:24:32,664 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490193 -- epoch 184.
+2024-11-22 22:24:32,664 - Epoch 192 starting...
+2024-11-22 22:24:35,480 - Train loss: 0.978700, train acc: 0.507729
+2024-11-22 22:24:36,574 - Validação Acc: 0.490193 -- Melhor Avaliação Acc: 0.490193 -- epoch 184.
+2024-11-22 22:24:36,574 - Epoch 193 starting...
+2024-11-22 22:24:39,443 - Train loss: 0.978402, train acc: 0.508860
+2024-11-22 22:24:40,600 - Nova melhor conta de validação. Salvo... 192.000000
+2024-11-22 22:24:40,600 - Validação Acc: 0.490229 -- Melhor Avaliação Acc: 0.490229 -- epoch 192.
+2024-11-22 22:24:40,600 - Epoch 194 starting...
+2024-11-22 22:24:43,401 - Train loss: 0.978613, train acc: 0.509420
+2024-11-22 22:24:44,439 - Validação Acc: 0.490229 -- Melhor Avaliação Acc: 0.490229 -- epoch 192.
+2024-11-22 22:24:44,439 - Epoch 195 starting...
+2024-11-22 22:24:47,349 - Train loss: 0.978595, train acc: 0.508593
+2024-11-22 22:24:48,450 - Validação Acc: 0.490229 -- Melhor Avaliação Acc: 0.490229 -- epoch 192.
+2024-11-22 22:24:48,450 - Epoch 196 starting...
+2024-11-22 22:24:51,289 - Train loss: 0.978484, train acc: 0.508349
+2024-11-22 22:24:52,409 - Nova melhor conta de validação. Salvo... 195.000000
+2024-11-22 22:24:52,409 - Validação Acc: 0.490235 -- Melhor Avaliação Acc: 0.490235 -- epoch 195.
+2024-11-22 22:24:52,409 - Epoch 197 starting...
+2024-11-22 22:24:55,222 - Train loss: 0.978722, train acc: 0.507378
+2024-11-22 22:24:56,313 - Validação Acc: 0.490235 -- Melhor Avaliação Acc: 0.490235 -- epoch 195.
+2024-11-22 22:24:56,313 - Epoch 198 starting...
+2024-11-22 22:24:59,088 - Train loss: 0.978643, train acc: 0.508339
+2024-11-22 22:25:00,135 - Validação Acc: 0.490235 -- Melhor Avaliação Acc: 0.490235 -- epoch 195.
+2024-11-22 22:25:00,135 - Epoch 199 starting...
+2024-11-22 22:25:02,966 - Train loss: 0.978496, train acc: 0.508993
+2024-11-22 22:25:04,002 - Validação Acc: 0.490235 -- Melhor Avaliação Acc: 0.490235 -- epoch 195.
+2024-11-22 22:25:04,002 - Epoch 200 starting...
+2024-11-22 22:25:06,858 - Train loss: 0.978682, train acc: 0.509282
+2024-11-22 22:25:07,959 - Validação Acc: 0.490235 -- Melhor Avaliação Acc: 0.490235 -- epoch 195.
+2024-11-22 22:25:07,959 - Epoch 201 starting...
+2024-11-22 22:25:10,821 - Train loss: 0.978663, train acc: 0.509583
+2024-11-22 22:25:11,066 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_200.png
+2024-11-22 22:25:11,111 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_200.png
+2024-11-22 22:25:11,339 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_200.png
+2024-11-22 22:25:11,396 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_200.png
+2024-11-22 22:25:11,602 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_200.png
+2024-11-22 22:25:11,649 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_200.png
+2024-11-22 22:25:11,864 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_200.png
+2024-11-22 22:25:11,916 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_200.png
+2024-11-22 22:25:12,130 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_200.png
+2024-11-22 22:25:12,189 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_200.png
+2024-11-22 22:25:12,403 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_200.png
+2024-11-22 22:25:12,454 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_200.png
+2024-11-22 22:25:12,671 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_200.png
+2024-11-22 22:25:12,728 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_200.png
+2024-11-22 22:25:13,018 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_200.png
+2024-11-22 22:25:13,077 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_200.png
+2024-11-22 22:25:13,284 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_200.png
+2024-11-22 22:25:13,333 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_200.png
+2024-11-22 22:25:13,546 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_200.png
+2024-11-22 22:25:13,604 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_200.png
+2024-11-22 22:25:13,606 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490235 -- epoch 195.
+2024-11-22 22:25:13,606 - Epoch 202 starting...
+2024-11-22 22:25:16,477 - Train loss: 0.978594, train acc: 0.508632
+2024-11-22 22:25:17,538 - Nova melhor conta de validação. Salvo... 201.000000
+2024-11-22 22:25:17,538 - Validação Acc: 0.490241 -- Melhor Avaliação Acc: 0.490241 -- epoch 201.
+2024-11-22 22:25:17,538 - Epoch 203 starting...
+2024-11-22 22:25:20,418 - Train loss: 0.978590, train acc: 0.508332
+2024-11-22 22:25:21,514 - Nova melhor conta de validação. Salvo... 202.000000
+2024-11-22 22:25:21,515 - Validação Acc: 0.490246 -- Melhor Avaliação Acc: 0.490246 -- epoch 202.
+2024-11-22 22:25:21,515 - Epoch 204 starting...
+2024-11-22 22:25:24,469 - Train loss: 0.978656, train acc: 0.508935
+2024-11-22 22:25:25,518 - Nova melhor conta de validação. Salvo... 203.000000
+2024-11-22 22:25:25,518 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:25:25,518 - Epoch 205 starting...
+2024-11-22 22:25:28,343 - Train loss: 0.978561, train acc: 0.510358
+2024-11-22 22:25:29,381 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:25:29,381 - Epoch 206 starting...
+2024-11-22 22:25:32,192 - Train loss: 0.978618, train acc: 0.508083
+2024-11-22 22:25:33,232 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:25:33,232 - Epoch 207 starting...
+2024-11-22 22:25:36,000 - Train loss: 0.978656, train acc: 0.507581
+2024-11-22 22:25:37,045 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:25:37,045 - Epoch 208 starting...
+2024-11-22 22:25:39,887 - Train loss: 0.978645, train acc: 0.507582
+2024-11-22 22:25:40,968 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:25:40,968 - Epoch 209 starting...
+2024-11-22 22:25:43,881 - Train loss: 0.978637, train acc: 0.508882
+2024-11-22 22:25:45,003 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:25:45,003 - Epoch 210 starting...
+2024-11-22 22:25:47,837 - Train loss: 0.978633, train acc: 0.509656
+2024-11-22 22:25:48,910 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:25:48,910 - Epoch 211 starting...
+2024-11-22 22:25:51,686 - Train loss: 0.978580, train acc: 0.509803
+2024-11-22 22:25:51,908 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_210.png
+2024-11-22 22:25:51,955 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_210.png
+2024-11-22 22:25:52,184 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_210.png
+2024-11-22 22:25:52,241 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_210.png
+2024-11-22 22:25:52,454 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_210.png
+2024-11-22 22:25:52,506 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_210.png
+2024-11-22 22:25:52,726 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_210.png
+2024-11-22 22:25:52,785 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_210.png
+2024-11-22 22:25:52,999 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_210.png
+2024-11-22 22:25:53,053 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_210.png
+2024-11-22 22:25:53,267 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_210.png
+2024-11-22 22:25:53,322 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_210.png
+2024-11-22 22:25:53,537 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_210.png
+2024-11-22 22:25:53,586 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_210.png
+2024-11-22 22:25:53,793 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_210.png
+2024-11-22 22:25:53,842 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_210.png
+2024-11-22 22:25:54,058 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_210.png
+2024-11-22 22:25:54,117 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_210.png
+2024-11-22 22:25:54,340 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_210.png
+2024-11-22 22:25:54,403 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_210.png
+2024-11-22 22:25:54,405 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:25:54,405 - Epoch 212 starting...
+2024-11-22 22:25:57,234 - Train loss: 0.978564, train acc: 0.509157
+2024-11-22 22:25:58,290 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:25:58,290 - Epoch 213 starting...
+2024-11-22 22:26:01,137 - Train loss: 0.978640, train acc: 0.508867
+2024-11-22 22:26:02,308 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:02,308 - Epoch 214 starting...
+2024-11-22 22:26:05,110 - Train loss: 0.978498, train acc: 0.508042
+2024-11-22 22:26:06,182 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:06,182 - Epoch 215 starting...
+2024-11-22 22:26:09,020 - Train loss: 0.978573, train acc: 0.508784
+2024-11-22 22:26:10,032 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:10,032 - Epoch 216 starting...
+2024-11-22 22:26:12,853 - Train loss: 0.978575, train acc: 0.507732
+2024-11-22 22:26:13,888 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:13,888 - Epoch 217 starting...
+2024-11-22 22:26:16,654 - Train loss: 0.978647, train acc: 0.508947
+2024-11-22 22:26:17,708 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:17,708 - Epoch 218 starting...
+2024-11-22 22:26:20,560 - Train loss: 0.978637, train acc: 0.509647
+2024-11-22 22:26:21,614 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:21,614 - Epoch 219 starting...
+2024-11-22 22:26:24,463 - Train loss: 0.978557, train acc: 0.508522
+2024-11-22 22:26:25,502 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:25,502 - Epoch 220 starting...
+2024-11-22 22:26:28,319 - Train loss: 0.978645, train acc: 0.509971
+2024-11-22 22:26:29,389 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:29,389 - Epoch 221 starting...
+2024-11-22 22:26:32,175 - Train loss: 0.978467, train acc: 0.508239
+2024-11-22 22:26:32,429 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_220.png
+2024-11-22 22:26:32,476 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_220.png
+2024-11-22 22:26:32,694 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_220.png
+2024-11-22 22:26:32,750 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_220.png
+2024-11-22 22:26:32,967 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_220.png
+2024-11-22 22:26:33,022 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_220.png
+2024-11-22 22:26:33,227 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_220.png
+2024-11-22 22:26:33,278 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_220.png
+2024-11-22 22:26:33,514 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_220.png
+2024-11-22 22:26:33,571 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_220.png
+2024-11-22 22:26:33,779 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_220.png
+2024-11-22 22:26:33,836 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_220.png
+2024-11-22 22:26:34,170 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_220.png
+2024-11-22 22:26:34,217 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_220.png
+2024-11-22 22:26:34,431 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_220.png
+2024-11-22 22:26:34,488 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_220.png
+2024-11-22 22:26:34,708 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_220.png
+2024-11-22 22:26:34,766 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_220.png
+2024-11-22 22:26:34,984 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_220.png
+2024-11-22 22:26:35,044 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_220.png
+2024-11-22 22:26:35,045 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:35,045 - Epoch 222 starting...
+2024-11-22 22:26:37,875 - Train loss: 0.978560, train acc: 0.509730
+2024-11-22 22:26:38,991 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:38,991 - Epoch 223 starting...
+2024-11-22 22:26:41,900 - Train loss: 0.978653, train acc: 0.508521
+2024-11-22 22:26:43,006 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:43,006 - Epoch 224 starting...
+2024-11-22 22:26:45,901 - Train loss: 0.978572, train acc: 0.508281
+2024-11-22 22:26:46,983 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:46,983 - Epoch 225 starting...
+2024-11-22 22:26:49,866 - Train loss: 0.978658, train acc: 0.507672
+2024-11-22 22:26:50,884 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:50,884 - Epoch 226 starting...
+2024-11-22 22:26:53,803 - Train loss: 0.978585, train acc: 0.507943
+2024-11-22 22:26:54,916 - Validação Acc: 0.490252 -- Melhor Avaliação Acc: 0.490252 -- epoch 203.
+2024-11-22 22:26:54,916 - Epoch 227 starting...
+2024-11-22 22:26:57,739 - Train loss: 0.978663, train acc: 0.507395
+2024-11-22 22:26:58,858 - Nova melhor conta de validação. Salvo... 226.000000
+2024-11-22 22:26:58,858 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:26:58,858 - Epoch 228 starting...
+2024-11-22 22:27:01,731 - Train loss: 0.978689, train acc: 0.508538
+2024-11-22 22:27:02,841 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:02,843 - Epoch 229 starting...
+2024-11-22 22:27:05,589 - Train loss: 0.978525, train acc: 0.510311
+2024-11-22 22:27:06,617 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:06,617 - Epoch 230 starting...
+2024-11-22 22:27:09,472 - Train loss: 0.978526, train acc: 0.509387
+2024-11-22 22:27:10,564 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:10,564 - Epoch 231 starting...
+2024-11-22 22:27:13,437 - Train loss: 0.978671, train acc: 0.508978
+2024-11-22 22:27:13,652 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_230.png
+2024-11-22 22:27:13,721 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_230.png
+2024-11-22 22:27:13,936 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_230.png
+2024-11-22 22:27:13,987 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_230.png
+2024-11-22 22:27:14,207 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_230.png
+2024-11-22 22:27:14,266 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_230.png
+2024-11-22 22:27:14,485 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_230.png
+2024-11-22 22:27:14,544 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_230.png
+2024-11-22 22:27:14,760 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_230.png
+2024-11-22 22:27:14,803 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_230.png
+2024-11-22 22:27:15,027 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_230.png
+2024-11-22 22:27:15,080 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_230.png
+2024-11-22 22:27:15,289 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_230.png
+2024-11-22 22:27:15,343 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_230.png
+2024-11-22 22:27:15,555 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_230.png
+2024-11-22 22:27:15,612 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_230.png
+2024-11-22 22:27:15,829 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_230.png
+2024-11-22 22:27:15,876 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_230.png
+2024-11-22 22:27:16,093 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_230.png
+2024-11-22 22:27:16,148 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_230.png
+2024-11-22 22:27:16,150 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:16,150 - Epoch 232 starting...
+2024-11-22 22:27:18,935 - Train loss: 0.978741, train acc: 0.508444
+2024-11-22 22:27:20,048 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:20,048 - Epoch 233 starting...
+2024-11-22 22:27:22,849 - Train loss: 0.978660, train acc: 0.509161
+2024-11-22 22:27:23,921 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:23,921 - Epoch 234 starting...
+2024-11-22 22:27:26,737 - Train loss: 0.978612, train acc: 0.509404
+2024-11-22 22:27:27,860 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:27,860 - Epoch 235 starting...
+2024-11-22 22:27:30,676 - Train loss: 0.978564, train acc: 0.508182
+2024-11-22 22:27:31,744 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:31,744 - Epoch 236 starting...
+2024-11-22 22:27:34,541 - Train loss: 0.978595, train acc: 0.509490
+2024-11-22 22:27:35,612 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:35,612 - Epoch 237 starting...
+2024-11-22 22:27:38,483 - Train loss: 0.978618, train acc: 0.509131
+2024-11-22 22:27:39,556 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:39,556 - Epoch 238 starting...
+2024-11-22 22:27:42,437 - Train loss: 0.978475, train acc: 0.509507
+2024-11-22 22:27:43,530 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:43,530 - Epoch 239 starting...
+2024-11-22 22:27:46,332 - Train loss: 0.978540, train acc: 0.509185
+2024-11-22 22:27:47,442 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:47,442 - Epoch 240 starting...
+2024-11-22 22:27:50,261 - Train loss: 0.978478, train acc: 0.509852
+2024-11-22 22:27:51,298 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:51,298 - Epoch 241 starting...
+2024-11-22 22:27:54,137 - Train loss: 0.978564, train acc: 0.510114
+2024-11-22 22:27:54,361 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_240.png
+2024-11-22 22:27:54,412 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_240.png
+2024-11-22 22:27:54,639 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_240.png
+2024-11-22 22:27:54,696 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_240.png
+2024-11-22 22:27:54,900 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_240.png
+2024-11-22 22:27:54,952 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_240.png
+2024-11-22 22:27:55,177 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_240.png
+2024-11-22 22:27:55,232 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_240.png
+2024-11-22 22:27:55,450 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_240.png
+2024-11-22 22:27:55,507 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_240.png
+2024-11-22 22:27:55,726 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_240.png
+2024-11-22 22:27:55,785 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_240.png
+2024-11-22 22:27:56,116 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_240.png
+2024-11-22 22:27:56,172 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_240.png
+2024-11-22 22:27:56,385 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_240.png
+2024-11-22 22:27:56,438 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_240.png
+2024-11-22 22:27:56,641 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_240.png
+2024-11-22 22:27:56,694 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_240.png
+2024-11-22 22:27:56,912 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_240.png
+2024-11-22 22:27:56,970 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_240.png
+2024-11-22 22:27:56,974 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:27:56,974 - Epoch 242 starting...
+2024-11-22 22:27:59,802 - Train loss: 0.978538, train acc: 0.507814
+2024-11-22 22:28:00,868 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:00,868 - Epoch 243 starting...
+2024-11-22 22:28:03,684 - Train loss: 0.978515, train acc: 0.509221
+2024-11-22 22:28:04,738 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:04,738 - Epoch 244 starting...
+2024-11-22 22:28:07,595 - Train loss: 0.978604, train acc: 0.508046
+2024-11-22 22:28:08,674 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:08,674 - Epoch 245 starting...
+2024-11-22 22:28:11,561 - Train loss: 0.978421, train acc: 0.510136
+2024-11-22 22:28:12,646 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:12,646 - Epoch 246 starting...
+2024-11-22 22:28:15,493 - Train loss: 0.978584, train acc: 0.509445
+2024-11-22 22:28:16,542 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:16,542 - Epoch 247 starting...
+2024-11-22 22:28:19,346 - Train loss: 0.978669, train acc: 0.508555
+2024-11-22 22:28:20,444 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:20,444 - Epoch 248 starting...
+2024-11-22 22:28:23,284 - Train loss: 0.978639, train acc: 0.510153
+2024-11-22 22:28:24,361 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:24,361 - Epoch 249 starting...
+2024-11-22 22:28:27,205 - Train loss: 0.978744, train acc: 0.508839
+2024-11-22 22:28:28,313 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:28,313 - Epoch 250 starting...
+2024-11-22 22:28:31,102 - Train loss: 0.978679, train acc: 0.509804
+2024-11-22 22:28:32,121 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:32,121 - Epoch 251 starting...
+2024-11-22 22:28:34,884 - Train loss: 0.978545, train acc: 0.509086
+2024-11-22 22:28:35,118 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_0_epoch_250.png
+2024-11-22 22:28:35,177 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_0_epoch_250.png
+2024-11-22 22:28:35,381 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_1_epoch_250.png
+2024-11-22 22:28:35,446 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_1_epoch_250.png
+2024-11-22 22:28:35,662 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_2_epoch_250.png
+2024-11-22 22:28:35,719 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_2_epoch_250.png
+2024-11-22 22:28:35,933 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_3_epoch_250.png
+2024-11-22 22:28:35,986 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_3_epoch_250.png
+2024-11-22 22:28:36,195 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_4_epoch_250.png
+2024-11-22 22:28:36,249 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_4_epoch_250.png
+2024-11-22 22:28:36,480 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_5_epoch_250.png
+2024-11-22 22:28:36,535 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_5_epoch_250.png
+2024-11-22 22:28:36,758 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_6_epoch_250.png
+2024-11-22 22:28:36,807 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_6_epoch_250.png
+2024-11-22 22:28:37,023 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_7_epoch_250.png
+2024-11-22 22:28:37,078 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_7_epoch_250.png
+2024-11-22 22:28:37,299 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_8_epoch_250.png
+2024-11-22 22:28:37,349 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_8_epoch_250.png
+2024-11-22 22:28:37,564 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\IMG_9_epoch_250.png
+2024-11-22 22:28:37,626 - Imagem salva: C:\git\image-segmentation\dataset\\segmentadas_linknet\\val\\GT_9_epoch_250.png
+2024-11-22 22:28:37,628 - Validação Acc: 0.174188 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:37,628 - Epoch 252 starting...
+2024-11-22 22:28:40,427 - Train loss: 0.978608, train acc: 0.509912
+2024-11-22 22:28:41,530 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:41,530 - Epoch 253 starting...
+2024-11-22 22:28:44,358 - Train loss: 0.978559, train acc: 0.508109
+2024-11-22 22:28:45,469 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:45,469 - Epoch 254 starting...
+2024-11-22 22:28:48,302 - Train loss: 0.978580, train acc: 0.508816
+2024-11-22 22:28:49,315 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:49,315 - Epoch 255 starting...
+2024-11-22 22:28:52,199 - Train loss: 0.978550, train acc: 0.509979
+2024-11-22 22:28:53,270 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:53,270 - Epoch 256 starting...
+2024-11-22 22:28:56,129 - Train loss: 0.978769, train acc: 0.507097
+2024-11-22 22:28:57,226 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:28:57,226 - Epoch 257 starting...
+2024-11-22 22:29:00,079 - Train loss: 0.978538, train acc: 0.509333
+2024-11-22 22:29:01,195 - Validação Acc: 0.490258 -- Melhor Avaliação Acc: 0.490258 -- epoch 226.
+2024-11-22 22:29:01,195 - Epoch 258 starting...
+2024-11-22 22:29:03,951 - Train loss: 0.978597, train acc: 0.509116
+2024-11-22 22:29:05,023 - Terminando o treinamento, melhor conta de validação 0.490258
+2024-11-22 22:29:05,172 - Gráficos salvos: C:\git\image-segmentation\dataset\\result_linknet_base\\result_model_segmentadas_linknet_loss_accuracy.png
+2024-11-22 22:29:05,186 - Modelo carregado e pronto para uso.
+2024-11-22 22:29:05,383 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0052RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:29:05,440 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0052RESULT_INFERENCIA_GT_.png
+2024-11-22 22:29:05,623 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0085RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:29:05,670 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0085RESULT_INFERENCIA_GT_.png
+2024-11-22 22:29:05,871 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0107RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:29:05,918 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0107RESULT_INFERENCIA_GT_.png
+2024-11-22 22:29:06,209 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0124RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:29:06,258 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0124RESULT_INFERENCIA_GT_.png
+2024-11-22 22:29:06,450 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0163RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:29:06,499 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0163RESULT_INFERENCIA_GT_.png
+2024-11-22 22:29:06,675 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0212RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:29:06,728 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0212RESULT_INFERENCIA_GT_.png
+2024-11-22 22:29:06,912 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0215RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:29:06,960 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0215RESULT_INFERENCIA_GT_.png
+2024-11-22 22:29:07,151 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0236RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:29:07,198 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0236RESULT_INFERENCIA_GT_.png
+2024-11-22 22:29:07,390 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0251RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:29:07,434 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0251RESULT_INFERENCIA_GT_.png
+2024-11-22 22:29:07,631 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0434RESULT_INFERENCIA_IMG_.png
+2024-11-22 22:29:07,676 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base\\DJI_0434RESULT_INFERENCIA_GT_.png
