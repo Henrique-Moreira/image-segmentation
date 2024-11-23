@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import logging
 
 # Configuração do logger
-log_dir = r'C:\git\image-segmentation\results\psp-dataset-segmentadas'
+log_dir = r'C:\git\image-segmentation\results\psp-dataset-base'
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
 logging.basicConfig(filename=osp.join(log_dir, 'training.log'), level=logging.INFO, format='%(asctime)s - %(message)s')
@@ -126,10 +126,10 @@ directory = r'C:\git\image-segmentation\dataset'
 logging.info('Diretório do Projeto %s', directory)
 if not os.path.exists(directory):
     os.makedirs(directory)
-img_folder_val = directory + r'\\base_segmentadas\\Val'
-img_folder_train = directory + r'\\base_segmentadas\\Train'
-img_folder_test = directory + r'\\base_segmentadas\\Test'
-save_dir = directory + r'\\result_PSPNET_Segmentadas\\'
+img_folder_val = directory + r'\\base\\Val'
+img_folder_train = directory + r'\\base\\Train'
+img_folder_test = directory + r'\\base\\Test'
+save_dir = directory + r'\\result_PSPNET_base\\'
 if not os.path.exists(img_folder_val):
     os.makedirs(img_folder_val)
 if not os.path.exists(img_folder_train):
@@ -168,7 +168,7 @@ logging.info('Mapeamento de classes para cores: %s', class_to_color)
 class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
 logging.info('Mapeamento de classes para IDs: %s', class_to_id)
 num_classes = len(class_to_id)
-class_weights = [1, 1, 1, 1]
+class_weights = [1, 2, 3, 4]
 logging.info('Pesos de classes: %s', class_weights)
 id_to_class = {v: k for k, v in class_to_id.items()}
 
