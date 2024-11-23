@@ -14,10 +14,10 @@ from datetime import datetime
 from torchvision.models import VGG16_Weights
 
 # Configuração do logger
-log_dir = r'C:\git\image-segmentation\results\unet-dataset-base'
+log_dir = r'C:\git\image-segmentation\results\unet-dataset-segmentado'
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
-filenamelog = 'psp-dataset-base-' + datetime.now().strftime('%Y%m%d-%H%M%S') + '.log'
+filenamelog = 'unet-dataset-segmentado-' + datetime.now().strftime('%Y%m%d-%H%M%S') + '.log'
 logging.basicConfig(filename=osp.join(log_dir, filenamelog), level=logging.INFO, format='%(asctime)s - %(message)s')
 
 class UNetVgg(torch.nn.Module):
@@ -167,7 +167,7 @@ class UNetVgg(torch.nn.Module):
         return (base_vgg_weight, base_vgg_bias, core_weight, core_bias)
     
 # End class
-plot_val = True
+plot_val = False
 plot_train = True
 
 # Configuração do dispositivo CUDA
@@ -187,10 +187,10 @@ directory = r'C:\git\image-segmentation\dataset'
 logging.info(f'Diretório do Projeto {directory}.')
 if not os.path.exists(directory):
     os.makedirs(directory)
-img_folder_val = directory + r'\\base\\Val'
-img_folder_train = directory + r'\\base\\Train'
-img_folder_test = directory + r'\\base\\Test'
-save_dir = directory + r'\\result_UnetVgg_base\\'
+img_folder_val = directory + r'\\base_segmentadas\\Val'
+img_folder_train = directory + r'\\base_segmentadas\\Train'
+img_folder_test = directory + r'\\base_segmentadas\\Test'
+save_dir = directory + r'\\result_UnetVgg_base_segmentadas\\'
 if not os.path.exists(img_folder_val):
     os.makedirs(img_folder_val)
 if not os.path.exists(img_folder_train):
@@ -227,7 +227,8 @@ class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
 logging.info(f'Mapeamento de classes para cores: {class_to_color}, Classes para ID: {class_to_id}')
 num_classes = len(class_to_id)
 id_to_class = {v: k for k, v in class_to_id.items()}
-class_weights = [1, 1, 1, 1]
+class_weights = [1, 2, 3, 4]
+logging.info(f'Pesos de classes: {class_weights}')
 
 ## Configurações do treinamento
 mean = [0.485, 0.456, 0.406]
@@ -326,30 +327,34 @@ val_dataset = SegmentationDataset(img_folder_val, img_folder_val, False, class_t
 logging.info(f"Número de amostras no dataset de validação: {len(val_dataset)}")
 logging.info(f"Arquivos no dataset de validação: {os.listdir(img_folder_val)}")
 
-train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=True)
-val_loader = DataLoader(val_dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
+train_loader = DataLoader(train_dataset, batch_size=10, shuffle=True, num_workers=0, drop_last=True)
+val_loader = DataLoader(val_dataset, batch_size=10, shuffle=True, num_workers=0, drop_last=False)
 
 if plot_train:
     for i_batch, sample_batched in enumerate(train_loader):
-        image_np = np.squeeze(sample_batched['image_original'].cpu().numpy())
-        gt = np.squeeze(sample_batched['gt'].cpu().numpy())
+        images_np = sample_batched['image_original'].cpu().numpy()
+        gts = sample_batched['gt'].cpu().numpy()
         
-        color_label = np.zeros((resolution_input[1], resolution_input[0], 3))
-        
-        for key, val in id_to_class.items():
-            color_label[gt == key] = class_to_color.get(val, [0, 0, 0])  # Provide a default color if key is missing
-        
-        plt.figure()
-        plt.imshow((image_np / 255) * 0.5 + (color_label / 255) * 0.5)
-        plt.savefig(img_folder_train_segmentadas + "IMG_" + str(i_batch) + "_max_epochs_" + str(max_epochs) + ".png")
-        plt.close('all')
-        logging.info(f"Salvando imagem de treinamento: {img_folder_train_segmentadas + 'IMG_' + str(i_batch) + '_max_epochs_' + str(max_epochs) + '.png'}")
-        
-        plt.figure()
-        plt.imshow(color_label.astype(np.uint8))
-        plt.savefig(img_folder_train_segmentadas + "GT_" + str(i_batch) + "_max_epochs_" + str(max_epochs) +  ".png")
-        plt.close('all')
-        logging.info(f"Salvando imagem de treinamento: {img_folder_train_segmentadas + 'GT_' + str(i_batch) + '_max_epochs_' + str(max_epochs) + '.png'}")
+        for i in range(images_np.shape[0]):  # Itera sobre cada imagem no batch
+            image_np = np.squeeze(images_np[i])
+            gt = np.squeeze(gts[i])
+            
+            color_label = np.zeros((gt.shape[0], gt.shape[1], 3), dtype=np.uint8)  # Supondo que gt tenha a forma (height, width)
+            
+            for key, val in class_to_color.items():
+                color_label[gt == key] = val  # Aplica a máscara booleana para cada imagem individualmente        
+                
+            plt.figure()
+            plt.imshow((image_np / 255) * 0.5 + (color_label / 255) * 0.5)
+            plt.savefig(img_folder_train_segmentadas + f"IMG_{i_batch}_{i}_max_epochs_{max_epochs}.png")
+            plt.close('all')
+            logging.info(f"Salvando imagem de treinamento: {img_folder_train_segmentadas + f'IMG_{i_batch}_{i}_max_epochs_{max_epochs}.png'}")
+            
+            plt.figure()
+            plt.imshow(color_label.astype(np.uint8))
+            plt.savefig(img_folder_train_segmentadas + f"GT_{i_batch}_{i}_max_epochs_{max_epochs}.png")
+            plt.close('all')
+            logging.info(f"Salvando imagem de treinamento: {img_folder_train_segmentadas + f'GT_{i_batch}_{i}_max_epochs_{max_epochs}.png'}")
 
 model = UNetVgg(num_classes).to(device)
 

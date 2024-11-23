@@ -19,10 +19,10 @@ from torch.utils.data import DataLoader, Dataset
 from datetime import datetime
 
 # Configuração do logger
-log_dir = r'C:\git\image-segmentation\results\psp-dataset-segmentadas'
+log_dir = r'C:\git\image-segmentation\results\linknet-dataset-segmentadas'
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
-filenamelog = 'psp-dataset-base-' + datetime.now().strftime('%Y%m%d-%H%M%S') + '.log'
+filenamelog = 'linknet-dataset-base-' + datetime.now().strftime('%Y%m%d-%H%M%S') + '.log'
 logging.basicConfig(filename=osp.join(log_dir, filenamelog), level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # Train
