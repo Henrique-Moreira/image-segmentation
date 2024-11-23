@@ -86,7 +86,7 @@ dummy_input = torch.randn(1, 3, 448, 800).to(device)
 
 patience = 30
 logging.info(f'Patience: {patience}.')
-plot_val = True
+plot_val = False
 plot_train = True
 max_epochs = 300
 logging.info(f'Número Máximo de Épocas: {max_epochs}.')
