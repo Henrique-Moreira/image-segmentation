@@ -14,95 +14,41 @@ from datetime import datetime
 from torchvision.models import VGG16_Weights
 
 # Configuração do logger
-log_dir = r'C:\git\image-segmentation\results\unet-dataset-segmentado'
+log_dir = r'C:\git\image-segmentation\results\unet-dataset-base-mixed'
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
-filenamelog = 'unet-dataset-segmentado-' + datetime.now().strftime('%Y%m%d-%H%M%S') + '.log'
+filenamelog = 'unet-dataset-base-mixed-' + datetime.now().strftime('%Y%m%d-%H%M%S') + '.log'
 logging.basicConfig(filename=osp.join(log_dir, filenamelog), level=logging.INFO, format='%(asctime)s - %(message)s')
 
 class UNetVgg(torch.nn.Module):
     """
-    BorderNetwork is a NN that aims to detected border and classify occlusion.
-    The architecture is a VGG without the last pool layer. After that we 
-    have two paths, one for regression and one for classification (occlusion).
+    UNetVgg é uma rede neural que visa detectar bordas e classificar oclusões.
+    A arquitetura é baseada na VGG16 sem a última camada de pooling. Após isso,
+    temos dois caminhos, um para regressão e outro para classificação (oclusão).
     """
     
     def __init__(self, nClasses):
         super(UNetVgg, self).__init__()
- 
-        vgg16pre = torchvision.models.vgg16(weights=VGG16_Weights.IMAGENET1K_V1)
-        self.vgg0 = torch.nn.Sequential(*list(vgg16pre.features.children())[:4])
-        self.vgg1 = torch.nn.Sequential(*list(vgg16pre.features.children())[4:9])
-        self.vgg2 = torch.nn.Sequential(*list(vgg16pre.features.children())[9:16])
-        self.vgg3 = torch.nn.Sequential(*list(vgg16pre.features.children())[16:23])
-        self.vgg4 = torch.nn.Sequential(*list(vgg16pre.features.children())[23:30])
+       
+        self.nClasses = nClasses
+        self.vgg = torchvision.models.vgg16(weights=VGG16_Weights.DEFAULT).features
         
+        # Adiciona camadas adicionais para a segmentação
+        self.conv1 = torch.nn.Conv2d(512, 4096, kernel_size=7)
+        self.conv2 = torch.nn.Conv2d(4096, 4096, kernel_size=1)
+        self.conv3 = torch.nn.Conv2d(4096, nClasses, kernel_size=1)
         
-        self.smooth0 = torch.nn.Sequential(
-                torch.nn.Conv2d(128, 64, kernel_size=(3,3), stride=1, padding=(1, 1)),
-                torch.nn.ReLU(True),
-                torch.nn.Conv2d(64, 64, kernel_size=(3,3), stride=1, padding=(1, 1)),
-                torch.nn.ReLU(True)
-                )
-        self.smooth1 = torch.nn.Sequential(
-                torch.nn.Conv2d(256, 64, kernel_size=(3,3), stride=1, padding=(1, 1)),
-                torch.nn.ReLU(True),
-                torch.nn.Conv2d(64, 64, kernel_size=(3,3), stride=1, padding=(1, 1)),
-                torch.nn.ReLU(True)
-                )
-        self.smooth2 = torch.nn.Sequential(
-                torch.nn.Conv2d(512, 128, kernel_size=(3,3), stride=1, padding=(1, 1)),
-                torch.nn.ReLU(True),
-                torch.nn.Conv2d(128, 128, kernel_size=(3,3), stride=1, padding=(1, 1)),
-                torch.nn.ReLU(True)
-                )
-        self.smooth3 = torch.nn.Sequential(
-                torch.nn.Conv2d(1024, 256, kernel_size=(3,3), stride=1, padding=(1, 1)),
-                torch.nn.ReLU(True),
-                torch.nn.Conv2d(256, 256, kernel_size=(3,3), stride=1, padding=(1, 1)),
-                torch.nn.ReLU(True)
-                )
+        self.upsample = torch.nn.Upsample(scale_factor=32, mode='bilinear', align_corners=True)
         
-        
-        self.final = torch.nn.Conv2d(64, nClasses, kernel_size=1, stride=1, padding=0)
-
     def forward(self, x):
-        """
-        Args:
-            x (torch.tensor): A tensor of size (batch, 3, H, W)
-        Returns:
-            reg_out (torch.tensor): A tensor with results of the regression (batch, 4).
-            cls_out (torch.tensor): A tensor with results of the classification (batch, 2).
-        """
-        
-        feat0 = self.vgg0(x)
-        feat1 = self.vgg1(feat0)
-        feat2 = self.vgg2(feat1)
-        feat3 = self.vgg3(feat2)
-        feat4 = self.vgg4(feat3)
-        
-        _,_,H,W = feat3.size()
-        up3 = torch.nn.functional.interpolate(feat4, size=(H,W), mode='bilinear', align_corners=False)
-        concat3 = torch.cat([feat3, up3], 1)
-        end3 = self.smooth3(concat3)
-        
-        _,_,H,W = feat2.size()
-        up2 = torch.nn.functional.interpolate(end3, size=(H,W), mode='bilinear', align_corners=False)
-        concat2 = torch.cat([feat2, up2], 1)
-        end2 = self.smooth2(concat2)
-        
-        _,_,H,W = feat1.size()
-        up1 = torch.nn.functional.interpolate(end2, size=(H,W), mode='bilinear', align_corners=False)
-        concat1 = torch.cat([feat1, up1], 1)
-        end1 = self.smooth1(concat1)
-        
-        _,_,H,W = feat0.size()
-        up0 = torch.nn.functional.interpolate(end1, size=(H,W), mode='bilinear', align_corners=False)
-        concat0 = torch.cat([feat0, up0], 1)
-        end0 = self.smooth0(concat0)
-        
-        return self.final(end0)
-    
+        x = self.vgg(x)
+        x = self.conv1(x)
+        x = torch.nn.functional.relu(x, inplace=True)
+        x = self.conv2(x)
+        x = torch.nn.functional.relu(x, inplace=True)
+        x = self.conv3(x)
+        x = self.upsample(x)
+        return x        
     
     @staticmethod
     def eval_net_with_loss(model, inp, gt, class_weights, device):
@@ -187,10 +133,10 @@ directory = r'C:\git\image-segmentation\dataset'
 logging.info(f'Diretório do Projeto {directory}.')
 if not os.path.exists(directory):
     os.makedirs(directory)
-img_folder_val = directory + r'\\base_segmentadas\\Val'
-img_folder_train = directory + r'\\base_segmentadas\\Train'
-img_folder_test = directory + r'\\base_segmentadas\\Test'
-save_dir = directory + r'\\result_UnetVgg_base_segmentadas\\'
+img_folder_val = directory + r'\\base_mixed\\Val'
+img_folder_train = directory + r'\\base_mixed\\Train'
+img_folder_test = directory + r'\\base_mixed\\Test'
+save_dir = directory + r'\\result_UnetVgg_base_mixed\\'
 if not os.path.exists(img_folder_val):
     os.makedirs(img_folder_val)
 if not os.path.exists(img_folder_train):
@@ -201,9 +147,9 @@ if not os.path.exists(save_dir):
     os.makedirs(save_dir)
     
 ## Imagens Segmentadas
-img_folder_train_segmentadas = directory + r'\\images_segmentadas\\train\\'
-img_folder_val_segmentadas = directory + r'\\images_segmentadas\\val\\'
-img_folder_test_segmentadas = directory + r'\\images_segmentadas\\test\\'
+img_folder_train_segmentadas = directory + r'\\images_base_mixed\\train\\'
+img_folder_val_segmentadas = directory + r'\\images_base_mixed\\val\\'
+img_folder_test_segmentadas = directory + r'\\images_base_mixed\\test\\'
 if not os.path.exists(img_folder_train_segmentadas):
     os.makedirs(img_folder_train_segmentadas)
 if not os.path.exists(img_folder_val_segmentadas):
@@ -212,7 +158,7 @@ if not os.path.exists(img_folder_test_segmentadas):
     os.makedirs(img_folder_test_segmentadas)
     
 # Local onde o Modelo será salvo
-model_file_name = save_dir + 'model_u-net-VGG16-IMAGENET1K_V1.pth'
+model_file_name = save_dir + 'model_u-net-VGG16-IMAGENET1K_V1_base_mixed.pth'
 logging.info(f'Modelo será salvo em: {model_file_name}')
 
 # Configurações do treinamento
@@ -370,10 +316,8 @@ optimizer = torch.optim.SGD([{'params': base_vgg_bias, 'lr': 0.00001},
 
 lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 30, gamma=0.2)
 
-# Treinamento e validação
 best_val_acc = -1
 best_epoch = 0
-val_accuracies = []
 
 # Start training...
 for epoch in range(max_epochs):
@@ -381,8 +325,10 @@ for epoch in range(max_epochs):
     logging.info(f'Epoch {epoch+1} starting...')
 
     lr_scheduler.step()
+    
     model.train()
-    mean_loss = 0
+    
+    mean_loss = 0.0
     
     n_correct = 0
     n_false = 0
@@ -429,6 +375,7 @@ for epoch in range(max_epochs):
     n_correct = 0
     n_false = 0
     
+    
     for i_batch, sample_batched in enumerate(val_loader):
     
     
@@ -471,7 +418,6 @@ for epoch in range(max_epochs):
         
     total_acc = n_correct / (n_correct + n_false)
     val_accuracies.append(total_acc)
-    print(f'Validation Acc: {total_acc} best_val_acc {best_val_acc} epoch {best_epoch}')
     
     if best_val_acc < total_acc:
         best_val_acc = total_acc
