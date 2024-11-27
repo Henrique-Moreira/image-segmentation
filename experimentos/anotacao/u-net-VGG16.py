@@ -211,12 +211,12 @@ patience = 30
 plot_val = True
 plot_train = True
 max_epochs = 300
-class_weights = [1, 1, 1]
-nClasses = 3
+class_weights = [1, 2, 3, 4]
+nClasses = 4
 
 # Mapeamento de classes e cores
-class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255)}
-class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2}
+class_to_color = {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folahs': (255, 255, 0)}
+class_to_id = {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
 id_to_class = {v: k for k, v in class_to_id.items()}
 
 class SegmentationDataset(Dataset):
