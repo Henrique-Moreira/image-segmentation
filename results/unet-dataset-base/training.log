@@ -1,0 +1,746 @@
+2024-11-22 16:09:00,667 - CUDA disponível: True
+2024-11-22 16:09:00,667 - Nome da GPU: NVIDIA GeForce RTX 4070
+2024-11-22 16:09:00,667 - VRAM Total: 11.99 GB
+2024-11-22 16:09:00,667 - Diretório do Projeto C:\git\image-segmentation\dataset.
+2024-11-22 16:09:00,667 - Modelo será salvo em: C:\git\image-segmentation\dataset\\result_UnetVgg_base\\model_u-net-VGG16-IMAGENET1K_V1.pth
+2024-11-22 16:09:00,667 - Patience: 30, Max Epochs: 300, Resolução de Entrada: (640, 480)
+2024-11-22 16:09:00,667 - Mapeamento de classes para cores: {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folhas': (0, 255, 0)}, Classes para ID: {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
+2024-11-22 16:09:00,667 - Mean: [0.485, 0.456, 0.406], Std: [0.229, 0.224, 0.225]
+2024-11-22 16:09:00,681 - Número de amostras no dataset de treinamento: 20
+2024-11-22 16:09:00,681 - Arquivos no dataset de treinamento: ['DJI_0026.JPG', 'DJI_0026.json', 'DJI_0064.JPG', 'DJI_0064.json', 'DJI_0089.JPG', 'DJI_0089.json', 'DJI_0105.JPG', 'DJI_0105.json', 'DJI_0122.JPG', 'DJI_0122.json', 'DJI_0160.JPG', 'DJI_0160.json', 'DJI_0161.JPG', 'DJI_0161.json', 'DJI_0165.JPG', 'DJI_0165.json', 'DJI_0211.JPG', 'DJI_0211.json', 'DJI_0214.JPG', 'DJI_0214.json', 'DJI_0217.JPG', 'DJI_0217.json', 'DJI_0233.JPG', 'DJI_0233.json', 'DJI_0234.JPG', 'DJI_0234.json', 'DJI_0237.JPG', 'DJI_0237.json', 'DJI_0252.JPG', 'DJI_0252.json', 'DJI_0402.JPG', 'DJI_0402.json', 'DJI_0432.JPG', 'DJI_0432.json', 'DJI_0433.JPG', 'DJI_0433.json', 'DJI_0435.JPG', 'DJI_0435.json', 'DJI_0444.JPG', 'DJI_0444.json']
+2024-11-22 16:09:00,681 - Número de amostras no dataset de validação: 10
+2024-11-22 16:09:00,681 - Arquivos no dataset de validação: ['DJI_0052.JPG', 'DJI_0052.json', 'DJI_0085.JPG', 'DJI_0085.json', 'DJI_0107.JPG', 'DJI_0107.json', 'DJI_0124.JPG', 'DJI_0124.json', 'DJI_0163.JPG', 'DJI_0163.json', 'DJI_0212.JPG', 'DJI_0212.json', 'DJI_0215.JPG', 'DJI_0215.json', 'DJI_0236.JPG', 'DJI_0236.json', 'DJI_0251.JPG', 'DJI_0251.json', 'DJI_0434.JPG', 'DJI_0434.json']
+2024-11-22 16:09:01,133 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_0_max_epochs_300.png
+2024-11-22 16:09:01,218 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_0_max_epochs_300.png
+2024-11-22 16:09:01,431 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_1_max_epochs_300.png
+2024-11-22 16:09:01,494 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_1_max_epochs_300.png
+2024-11-22 16:09:01,717 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_2_max_epochs_300.png
+2024-11-22 16:09:01,796 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_2_max_epochs_300.png
+2024-11-22 16:09:02,002 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_3_max_epochs_300.png
+2024-11-22 16:09:02,070 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_3_max_epochs_300.png
+2024-11-22 16:09:02,296 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_4_max_epochs_300.png
+2024-11-22 16:09:02,359 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_4_max_epochs_300.png
+2024-11-22 16:09:02,580 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_5_max_epochs_300.png
+2024-11-22 16:09:02,659 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_5_max_epochs_300.png
+2024-11-22 16:09:02,861 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_6_max_epochs_300.png
+2024-11-22 16:09:02,940 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_6_max_epochs_300.png
+2024-11-22 16:09:03,166 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_7_max_epochs_300.png
+2024-11-22 16:09:03,239 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_7_max_epochs_300.png
+2024-11-22 16:09:03,472 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_8_max_epochs_300.png
+2024-11-22 16:09:03,536 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_8_max_epochs_300.png
+2024-11-22 16:09:03,741 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_9_max_epochs_300.png
+2024-11-22 16:09:03,824 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_9_max_epochs_300.png
+2024-11-22 16:09:04,040 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_10_max_epochs_300.png
+2024-11-22 16:09:04,103 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_10_max_epochs_300.png
+2024-11-22 16:09:04,327 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_11_max_epochs_300.png
+2024-11-22 16:09:04,397 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_11_max_epochs_300.png
+2024-11-22 16:09:04,617 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_12_max_epochs_300.png
+2024-11-22 16:09:04,680 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_12_max_epochs_300.png
+2024-11-22 16:09:04,916 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_13_max_epochs_300.png
+2024-11-22 16:09:04,979 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_13_max_epochs_300.png
+2024-11-22 16:09:05,212 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_14_max_epochs_300.png
+2024-11-22 16:09:05,279 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_14_max_epochs_300.png
+2024-11-22 16:09:05,496 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_15_max_epochs_300.png
+2024-11-22 16:09:05,575 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_15_max_epochs_300.png
+2024-11-22 16:09:05,811 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_16_max_epochs_300.png
+2024-11-22 16:09:05,891 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_16_max_epochs_300.png
+2024-11-22 16:09:06,119 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_17_max_epochs_300.png
+2024-11-22 16:09:06,189 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_17_max_epochs_300.png
+2024-11-22 16:09:06,426 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_18_max_epochs_300.png
+2024-11-22 16:09:06,500 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_18_max_epochs_300.png
+2024-11-22 16:09:06,737 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\IMG_19_max_epochs_300.png
+2024-11-22 16:09:06,800 - Salvando imagem de treinamento: C:\git\image-segmentation\dataset\\images_segmentadas\\train\\GT_19_max_epochs_300.png
+2024-11-22 16:09:07,491 - Learning Rate do Core: 0.02
+2024-11-22 16:09:07,491 - Adding vgg0.0.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg0.0.bias to base vgg bias.
+2024-11-22 16:09:07,491 - Adding vgg0.2.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg0.2.bias to base vgg bias.
+2024-11-22 16:09:07,491 - Adding vgg1.1.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg1.1.bias to base vgg bias.
+2024-11-22 16:09:07,491 - Adding vgg1.3.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg1.3.bias to base vgg bias.
+2024-11-22 16:09:07,491 - Adding vgg2.1.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg2.1.bias to base vgg bias.
+2024-11-22 16:09:07,491 - Adding vgg2.3.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg2.3.bias to base vgg bias.
+2024-11-22 16:09:07,491 - Adding vgg2.5.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg2.5.bias to base vgg bias.
+2024-11-22 16:09:07,491 - Adding vgg3.1.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg3.1.bias to base vgg bias.
+2024-11-22 16:09:07,491 - Adding vgg3.3.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg3.3.bias to base vgg bias.
+2024-11-22 16:09:07,491 - Adding vgg3.5.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg3.5.bias to base vgg bias.
+2024-11-22 16:09:07,491 - Adding vgg4.1.weight to base vgg weight.
+2024-11-22 16:09:07,491 - Adding vgg4.1.bias to base vgg bias.
+2024-11-22 16:09:07,493 - Adding vgg4.3.weight to base vgg weight.
+2024-11-22 16:09:07,493 - Adding vgg4.3.bias to base vgg bias.
+2024-11-22 16:09:07,493 - Adding vgg4.5.weight to base vgg weight.
+2024-11-22 16:09:07,493 - Adding vgg4.5.bias to base vgg bias.
+2024-11-22 16:09:07,493 - Adding smooth0.0.weight to core weight.
+2024-11-22 16:09:07,493 - Adding smooth0.0.bias to core bias.
+2024-11-22 16:09:07,493 - Adding smooth0.2.weight to core weight.
+2024-11-22 16:09:07,493 - Adding smooth0.2.bias to core bias.
+2024-11-22 16:09:07,493 - Adding smooth1.0.weight to core weight.
+2024-11-22 16:09:07,493 - Adding smooth1.0.bias to core bias.
+2024-11-22 16:09:07,493 - Adding smooth1.2.weight to core weight.
+2024-11-22 16:09:07,493 - Adding smooth1.2.bias to core bias.
+2024-11-22 16:09:07,493 - Adding smooth2.0.weight to core weight.
+2024-11-22 16:09:07,493 - Adding smooth2.0.bias to core bias.
+2024-11-22 16:09:07,493 - Adding smooth2.2.weight to core weight.
+2024-11-22 16:09:07,493 - Adding smooth2.2.bias to core bias.
+2024-11-22 16:09:07,493 - Adding smooth3.0.weight to core weight.
+2024-11-22 16:09:07,493 - Adding smooth3.0.bias to core bias.
+2024-11-22 16:09:07,493 - Adding smooth3.2.weight to core weight.
+2024-11-22 16:09:07,493 - Adding smooth3.2.bias to core bias.
+2024-11-22 16:09:07,493 - Adding final.weight to core weight.
+2024-11-22 16:09:07,493 - Adding final.bias to core bias.
+2024-11-22 16:09:07,493 - Epoch 1 starting...
+2024-11-22 16:09:10,813 - Train loss: 1.0597560405731201, train acc: 0.5201375468749219
+2024-11-22 16:09:11,049 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_0.png
+2024-11-22 16:09:11,128 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_0.png
+2024-11-22 16:09:11,720 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_0.png
+2024-11-22 16:09:11,803 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_0.png
+2024-11-22 16:09:12,057 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_0.png
+2024-11-22 16:09:12,144 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_0.png
+2024-11-22 16:09:13,080 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_0.png
+2024-11-22 16:09:13,220 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_0.png
+2024-11-22 16:09:13,509 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_0.png
+2024-11-22 16:09:13,589 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_0.png
+2024-11-22 16:09:13,855 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_0.png
+2024-11-22 16:09:13,920 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_0.png
+2024-11-22 16:09:14,173 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_0.png
+2024-11-22 16:09:14,252 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_0.png
+2024-11-22 16:09:14,499 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_0.png
+2024-11-22 16:09:14,562 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_0.png
+2024-11-22 16:09:14,826 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_0.png
+2024-11-22 16:09:14,892 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_0.png
+2024-11-22 16:09:15,142 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_0.png
+2024-11-22 16:09:15,205 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_0.png
+2024-11-22 16:09:15,205 - Validação Acc: 0.77476927902756 -- Melhor Avaliação Acc: 0.77476927902756 -- epoch 0
+2024-11-22 16:09:15,205 - Epoch 2 starting...
+2024-11-22 16:09:18,419 - Train loss: 0.6961873173713684, train acc: 0.7162031514383093
+2024-11-22 16:09:19,579 - Validação Acc: 0.6621450367424855 -- Melhor Avaliação Acc: 0.77476927902756 -- epoch 0
+2024-11-22 16:09:19,579 - Epoch 3 starting...
+2024-11-22 16:09:22,935 - Train loss: 0.6123663187026978, train acc: 0.7002211646264431
+2024-11-22 16:09:24,127 - Validação Acc: 0.7788622718948256 -- Melhor Avaliação Acc: 0.7788622718948256 -- epoch 2
+2024-11-22 16:09:24,127 - Epoch 4 starting...
+2024-11-22 16:09:27,305 - Train loss: 0.5679264664649963, train acc: 0.7411899930887413
+2024-11-22 16:09:28,420 - Validação Acc: 0.790653834705824 -- Melhor Avaliação Acc: 0.790653834705824 -- epoch 3
+2024-11-22 16:09:28,420 - Epoch 5 starting...
+2024-11-22 16:09:31,636 - Train loss: 0.8732403516769409, train acc: 0.5557034624340805
+2024-11-22 16:09:32,739 - Validação Acc: 0.6541930105875375 -- Melhor Avaliação Acc: 0.790653834705824 -- epoch 3
+2024-11-22 16:09:32,739 - Epoch 6 starting...
+2024-11-22 16:09:35,905 - Train loss: 0.7252780795097351, train acc: 0.6798439303430346
+2024-11-22 16:09:37,032 - Validação Acc: 0.7523806470368802 -- Melhor Avaliação Acc: 0.790653834705824 -- epoch 3
+2024-11-22 16:09:37,032 - Epoch 7 starting...
+2024-11-22 16:09:40,201 - Train loss: 0.6076227426528931, train acc: 0.7145721900428742
+2024-11-22 16:09:41,330 - Validação Acc: 0.7813054164675483 -- Melhor Avaliação Acc: 0.790653834705824 -- epoch 3
+2024-11-22 16:09:41,330 - Epoch 8 starting...
+2024-11-22 16:09:44,455 - Train loss: 0.5908194780349731, train acc: 0.7399418793362496
+2024-11-22 16:09:45,705 - Validação Acc: 0.7758602238819873 -- Melhor Avaliação Acc: 0.790653834705824 -- epoch 3
+2024-11-22 16:09:45,705 - Epoch 9 starting...
+2024-11-22 16:09:48,837 - Train loss: 0.6065505743026733, train acc: 0.7666072937584965
+2024-11-22 16:09:49,981 - Validação Acc: 0.7603617015100358 -- Melhor Avaliação Acc: 0.790653834705824 -- epoch 3
+2024-11-22 16:09:49,981 - Epoch 10 starting...
+2024-11-22 16:09:53,147 - Train loss: 0.5310864448547363, train acc: 0.7510329385937164
+2024-11-22 16:09:54,381 - Nova melhor conta de validação. Salvo... 9
+2024-11-22 16:09:54,381 - Validação Acc: 0.7908622320350455 -- Melhor Avaliação Acc: 0.7908622320350455 -- epoch 9
+2024-11-22 16:09:54,381 - Epoch 11 starting...
+2024-11-22 16:09:57,624 - Train loss: 0.5856724381446838, train acc: 0.7727017673386393
+2024-11-22 16:09:57,878 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_10.png
+2024-11-22 16:09:57,953 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_10.png
+2024-11-22 16:09:58,195 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_10.png
+2024-11-22 16:09:58,268 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_10.png
+2024-11-22 16:09:58,517 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_10.png
+2024-11-22 16:09:58,597 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_10.png
+2024-11-22 16:09:58,843 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_10.png
+2024-11-22 16:09:58,913 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_10.png
+2024-11-22 16:09:59,169 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_10.png
+2024-11-22 16:09:59,240 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_10.png
+2024-11-22 16:09:59,482 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_10.png
+2024-11-22 16:09:59,553 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_10.png
+2024-11-22 16:09:59,823 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_10.png
+2024-11-22 16:09:59,903 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_10.png
+2024-11-22 16:10:00,180 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_10.png
+2024-11-22 16:10:00,259 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_10.png
+2024-11-22 16:10:00,533 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_10.png
+2024-11-22 16:10:00,603 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_10.png
+2024-11-22 16:10:00,880 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_10.png
+2024-11-22 16:10:00,950 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_10.png
+2024-11-22 16:10:00,950 - Validação Acc: 0.7847593530757669 -- Melhor Avaliação Acc: 0.7908622320350455 -- epoch 9
+2024-11-22 16:10:00,950 - Epoch 12 starting...
+2024-11-22 16:10:04,288 - Train loss: 0.5567899942398071, train acc: 0.746782481883219
+2024-11-22 16:10:05,433 - Validação Acc: 0.7825545006674347 -- Melhor Avaliação Acc: 0.7908622320350455 -- epoch 9
+2024-11-22 16:10:05,433 - Epoch 13 starting...
+2024-11-22 16:10:08,602 - Train loss: 0.529462456703186, train acc: 0.7708912306149411
+2024-11-22 16:10:09,788 - Nova melhor conta de validação. Salvo... 12
+2024-11-22 16:10:09,788 - Validação Acc: 0.791779440238708 -- Melhor Avaliação Acc: 0.791779440238708 -- epoch 12
+2024-11-22 16:10:09,788 - Epoch 14 starting...
+2024-11-22 16:10:12,960 - Train loss: 0.5120468139648438, train acc: 0.7848274500672973
+2024-11-22 16:10:14,075 - Validação Acc: 0.758396441041536 -- Melhor Avaliação Acc: 0.791779440238708 -- epoch 12
+2024-11-22 16:10:14,075 - Epoch 15 starting...
+2024-11-22 16:10:17,289 - Train loss: 0.5177659392356873, train acc: 0.7792075684261353
+2024-11-22 16:10:18,442 - Validação Acc: 0.7912911579309482 -- Melhor Avaliação Acc: 0.791779440238708 -- epoch 12
+2024-11-22 16:10:18,442 - Epoch 16 starting...
+2024-11-22 16:10:21,691 - Train loss: 0.4703318178653717, train acc: 0.7842206767728879
+2024-11-22 16:10:22,809 - Validação Acc: 0.7914505970518494 -- Melhor Avaliação Acc: 0.791779440238708 -- epoch 12
+2024-11-22 16:10:22,809 - Epoch 17 starting...
+2024-11-22 16:10:26,023 - Train loss: 0.48280373215675354, train acc: 0.7750999458447769
+2024-11-22 16:10:27,153 - Validação Acc: 0.7900853995791327 -- Melhor Avaliação Acc: 0.791779440238708 -- epoch 12
+2024-11-22 16:10:27,153 - Epoch 18 starting...
+2024-11-22 16:10:30,273 - Train loss: 0.4942092299461365, train acc: 0.7566267318094649
+2024-11-22 16:10:31,481 - Nova melhor conta de validação. Salvo... 17
+2024-11-22 16:10:31,481 - Validação Acc: 0.793656315977143 -- Melhor Avaliação Acc: 0.793656315977143 -- epoch 17
+2024-11-22 16:10:31,481 - Epoch 19 starting...
+2024-11-22 16:10:34,697 - Train loss: 0.46345600485801697, train acc: 0.7821894754509003
+2024-11-22 16:10:35,779 - Validação Acc: 0.7807439134765484 -- Melhor Avaliação Acc: 0.793656315977143 -- epoch 17
+2024-11-22 16:10:35,795 - Epoch 20 starting...
+2024-11-22 16:10:38,899 - Train loss: 0.4703327715396881, train acc: 0.7873469397516077
+2024-11-22 16:10:40,043 - Nova melhor conta de validação. Salvo... 19
+2024-11-22 16:10:40,043 - Validação Acc: 0.7961956439325832 -- Melhor Avaliação Acc: 0.7961956439325832 -- epoch 19
+2024-11-22 16:10:40,058 - Epoch 21 starting...
+2024-11-22 16:10:43,233 - Train loss: 0.4479312002658844, train acc: 0.7693739712736
+2024-11-22 16:10:43,476 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_20.png
+2024-11-22 16:10:43,541 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_20.png
+2024-11-22 16:10:43,802 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_20.png
+2024-11-22 16:10:43,874 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_20.png
+2024-11-22 16:10:44,122 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_20.png
+2024-11-22 16:10:44,309 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_20.png
+2024-11-22 16:10:44,543 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_20.png
+2024-11-22 16:10:44,621 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_20.png
+2024-11-22 16:10:44,859 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_20.png
+2024-11-22 16:10:44,937 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_20.png
+2024-11-22 16:10:45,214 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_20.png
+2024-11-22 16:10:45,291 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_20.png
+2024-11-22 16:10:45,533 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_20.png
+2024-11-22 16:10:45,627 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_20.png
+2024-11-22 16:10:45,877 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_20.png
+2024-11-22 16:10:45,972 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_20.png
+2024-11-22 16:10:46,254 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_20.png
+2024-11-22 16:10:46,317 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_20.png
+2024-11-22 16:10:46,606 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_20.png
+2024-11-22 16:10:46,678 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_20.png
+2024-11-22 16:10:46,678 - Validação Acc: 0.7777864910872232 -- Melhor Avaliação Acc: 0.7961956439325832 -- epoch 19
+2024-11-22 16:10:46,678 - Epoch 22 starting...
+2024-11-22 16:10:50,142 - Train loss: 0.4652305543422699, train acc: 0.7888037609074076
+2024-11-22 16:10:51,320 - Validação Acc: 0.7920463274628253 -- Melhor Avaliação Acc: 0.7961956439325832 -- epoch 19
+2024-11-22 16:10:51,320 - Epoch 23 starting...
+2024-11-22 16:10:54,531 - Train loss: 0.4602801203727722, train acc: 0.7892924840768208
+2024-11-22 16:10:55,725 - Nova melhor conta de validação. Salvo... 22
+2024-11-22 16:10:55,725 - Validação Acc: 0.8017205560785948 -- Melhor Avaliação Acc: 0.8017205560785948 -- epoch 22
+2024-11-22 16:10:55,725 - Epoch 24 starting...
+2024-11-22 16:10:58,908 - Train loss: 0.4590721130371094, train acc: 0.7829390828744488
+2024-11-22 16:11:00,006 - Validação Acc: 0.7883852933008274 -- Melhor Avaliação Acc: 0.8017205560785948 -- epoch 22
+2024-11-22 16:11:00,006 - Epoch 25 starting...
+2024-11-22 16:11:03,205 - Train loss: 0.43204957246780396, train acc: 0.791811321550496
+2024-11-22 16:11:04,366 - Nova melhor conta de validação. Salvo... 24
+2024-11-22 16:11:04,366 - Validação Acc: 0.8036203945165074 -- Melhor Avaliação Acc: 0.8036203945165074 -- epoch 24
+2024-11-22 16:11:04,366 - Epoch 26 starting...
+2024-11-22 16:11:07,534 - Train loss: 0.42694228887557983, train acc: 0.7922911311745596
+2024-11-22 16:11:08,709 - Validação Acc: 0.7891049356372865 -- Melhor Avaliação Acc: 0.8036203945165074 -- epoch 24
+2024-11-22 16:11:08,709 - Epoch 27 starting...
+2024-11-22 16:11:11,896 - Train loss: 0.46451497077941895, train acc: 0.7940312291496413
+2024-11-22 16:11:13,095 - Nova melhor conta de validação. Salvo... 26
+2024-11-22 16:11:13,095 - Validação Acc: 0.8061657880906775 -- Melhor Avaliação Acc: 0.8061657880906775 -- epoch 26
+2024-11-22 16:11:13,095 - Epoch 28 starting...
+2024-11-22 16:11:16,331 - Train loss: 0.42846035957336426, train acc: 0.7914276042933722
+2024-11-22 16:11:17,460 - Validação Acc: 0.8031412106368423 -- Melhor Avaliação Acc: 0.8061657880906775 -- epoch 26
+2024-11-22 16:11:17,460 - Epoch 29 starting...
+2024-11-22 16:11:20,725 - Train loss: 0.4199151396751404, train acc: 0.7977290460484623
+2024-11-22 16:11:21,835 - Validação Acc: 0.7873121120441092 -- Melhor Avaliação Acc: 0.8061657880906775 -- epoch 26
+2024-11-22 16:11:21,835 - Epoch 30 starting...
+2024-11-22 16:11:25,078 - Train loss: 0.418362557888031, train acc: 0.7997172014685174
+2024-11-22 16:11:26,258 - Nova melhor conta de validação. Salvo... 29
+2024-11-22 16:11:26,258 - Validação Acc: 0.8123132926734691 -- Melhor Avaliação Acc: 0.8123132926734691 -- epoch 29
+2024-11-22 16:11:26,258 - Epoch 31 starting...
+2024-11-22 16:11:29,442 - Train loss: 0.39422136545181274, train acc: 0.8009233563368024
+2024-11-22 16:11:29,698 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_30.png
+2024-11-22 16:11:29,775 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_30.png
+2024-11-22 16:11:30,031 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_30.png
+2024-11-22 16:11:30,104 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_30.png
+2024-11-22 16:11:30,338 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_30.png
+2024-11-22 16:11:30,419 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_30.png
+2024-11-22 16:11:30,676 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_30.png
+2024-11-22 16:11:30,743 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_30.png
+2024-11-22 16:11:30,996 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_30.png
+2024-11-22 16:11:31,077 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_30.png
+2024-11-22 16:11:31,327 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_30.png
+2024-11-22 16:11:31,402 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_30.png
+2024-11-22 16:11:31,673 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_30.png
+2024-11-22 16:11:31,753 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_30.png
+2024-11-22 16:11:32,031 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_30.png
+2024-11-22 16:11:32,100 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_30.png
+2024-11-22 16:11:32,383 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_30.png
+2024-11-22 16:11:32,453 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_30.png
+2024-11-22 16:11:32,721 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_30.png
+2024-11-22 16:11:32,808 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_30.png
+2024-11-22 16:11:32,860 - Nova melhor conta de validação. Salvo... 30
+2024-11-22 16:11:32,860 - Validação Acc: 0.814387301020627 -- Melhor Avaliação Acc: 0.814387301020627 -- epoch 30
+2024-11-22 16:11:32,860 - Epoch 32 starting...
+2024-11-22 16:11:36,302 - Train loss: 0.3910612165927887, train acc: 0.8057594981978333
+2024-11-22 16:11:37,461 - Nova melhor conta de validação. Salvo... 31
+2024-11-22 16:11:37,461 - Validação Acc: 0.8145484731754511 -- Melhor Avaliação Acc: 0.8145484731754511 -- epoch 31
+2024-11-22 16:11:37,461 - Epoch 33 starting...
+2024-11-22 16:11:40,640 - Train loss: 0.3812215328216553, train acc: 0.8100108245225112
+2024-11-22 16:11:41,767 - Validação Acc: 0.8142859185361409 -- Melhor Avaliação Acc: 0.8145484731754511 -- epoch 31
+2024-11-22 16:11:41,767 - Epoch 34 starting...
+2024-11-22 16:11:44,922 - Train loss: 0.38944029808044434, train acc: 0.8085087834293279
+2024-11-22 16:11:46,089 - Nova melhor conta de validação. Salvo... 33
+2024-11-22 16:11:46,089 - Validação Acc: 0.8157745946758599 -- Melhor Avaliação Acc: 0.8157745946758599 -- epoch 33
+2024-11-22 16:11:46,089 - Epoch 35 starting...
+2024-11-22 16:11:49,359 - Train loss: 0.3851454555988312, train acc: 0.8110219684108301
+2024-11-22 16:11:50,567 - Nova melhor conta de validação. Salvo... 34
+2024-11-22 16:11:50,567 - Validação Acc: 0.8165024689234524 -- Melhor Avaliação Acc: 0.8165024689234524 -- epoch 34
+2024-11-22 16:11:50,567 - Epoch 36 starting...
+2024-11-22 16:11:53,813 - Train loss: 0.38094303011894226, train acc: 0.8087505361714932
+2024-11-22 16:11:54,946 - Validação Acc: 0.8147295752203878 -- Melhor Avaliação Acc: 0.8165024689234524 -- epoch 34
+2024-11-22 16:11:54,946 - Epoch 37 starting...
+2024-11-22 16:11:58,160 - Train loss: 0.38037794828414917, train acc: 0.8127514136122012
+2024-11-22 16:11:59,290 - Validação Acc: 0.813503453719979 -- Melhor Avaliação Acc: 0.8165024689234524 -- epoch 34
+2024-11-22 16:11:59,292 - Epoch 38 starting...
+2024-11-22 16:12:02,452 - Train loss: 0.3729545772075653, train acc: 0.8161561705322103
+2024-11-22 16:12:03,684 - Nova melhor conta de validação. Salvo... 37
+2024-11-22 16:12:03,684 - Validação Acc: 0.8179798803426728 -- Melhor Avaliação Acc: 0.8179798803426728 -- epoch 37
+2024-11-22 16:12:03,684 - Epoch 39 starting...
+2024-11-22 16:12:06,859 - Train loss: 0.37142953276634216, train acc: 0.8142588897940123
+2024-11-22 16:12:07,972 - Validação Acc: 0.8108575441782842 -- Melhor Avaliação Acc: 0.8179798803426728 -- epoch 37
+2024-11-22 16:12:07,972 - Epoch 40 starting...
+2024-11-22 16:12:11,219 - Train loss: 0.37150734663009644, train acc: 0.808478129529467
+2024-11-22 16:12:12,380 - Validação Acc: 0.8179235567401805 -- Melhor Avaliação Acc: 0.8179798803426728 -- epoch 37
+2024-11-22 16:12:12,380 - Epoch 41 starting...
+2024-11-22 16:12:15,549 - Train loss: 0.37445786595344543, train acc: 0.808694228653309
+2024-11-22 16:12:15,828 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_40.png
+2024-11-22 16:12:15,907 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_40.png
+2024-11-22 16:12:16,145 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_40.png
+2024-11-22 16:12:16,220 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_40.png
+2024-11-22 16:12:16,459 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_40.png
+2024-11-22 16:12:16,520 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_40.png
+2024-11-22 16:12:16,786 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_40.png
+2024-11-22 16:12:16,847 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_40.png
+2024-11-22 16:12:17,099 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_40.png
+2024-11-22 16:12:17,163 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_40.png
+2024-11-22 16:12:17,454 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_40.png
+2024-11-22 16:12:17,632 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_40.png
+2024-11-22 16:12:17,914 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_40.png
+2024-11-22 16:12:17,993 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_40.png
+2024-11-22 16:12:18,277 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_40.png
+2024-11-22 16:12:18,352 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_40.png
+2024-11-22 16:12:18,636 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_40.png
+2024-11-22 16:12:18,715 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_40.png
+2024-11-22 16:12:19,012 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_40.png
+2024-11-22 16:12:19,075 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_40.png
+2024-11-22 16:12:19,075 - Validação Acc: 0.817961683486483 -- Melhor Avaliação Acc: 0.8179798803426728 -- epoch 37
+2024-11-22 16:12:19,075 - Epoch 42 starting...
+2024-11-22 16:12:22,465 - Train loss: 0.37601590156555176, train acc: 0.8066804196149305
+2024-11-22 16:12:23,626 - Nova melhor conta de validação. Salvo... 41
+2024-11-22 16:12:23,626 - Validação Acc: 0.818700822454574 -- Melhor Avaliação Acc: 0.818700822454574 -- epoch 41
+2024-11-22 16:12:23,626 - Epoch 43 starting...
+2024-11-22 16:12:26,836 - Train loss: 0.37616315484046936, train acc: 0.8112374153240367
+2024-11-22 16:12:28,061 - Nova melhor conta de validação. Salvo... 42
+2024-11-22 16:12:28,061 - Validação Acc: 0.8190266328320677 -- Melhor Avaliação Acc: 0.8190266328320677 -- epoch 42
+2024-11-22 16:12:28,061 - Epoch 44 starting...
+2024-11-22 16:12:31,251 - Train loss: 0.36801138520240784, train acc: 0.8109291370970669
+2024-11-22 16:12:32,379 - Validação Acc: 0.8133271175183301 -- Melhor Avaliação Acc: 0.8190266328320677 -- epoch 42
+2024-11-22 16:12:32,379 - Epoch 45 starting...
+2024-11-22 16:12:35,573 - Train loss: 0.36995694041252136, train acc: 0.8181580223756076
+2024-11-22 16:12:36,779 - Nova melhor conta de validação. Salvo... 44
+2024-11-22 16:12:36,779 - Validação Acc: 0.8199039812555051 -- Melhor Avaliação Acc: 0.8199039812555051 -- epoch 44
+2024-11-22 16:12:36,779 - Epoch 46 starting...
+2024-11-22 16:12:40,028 - Train loss: 0.3618754744529724, train acc: 0.8170036095510596
+2024-11-22 16:12:41,217 - Validação Acc: 0.8197389097743546 -- Melhor Avaliação Acc: 0.8199039812555051 -- epoch 44
+2024-11-22 16:12:41,217 - Epoch 47 starting...
+2024-11-22 16:12:44,413 - Train loss: 0.3665068447589874, train acc: 0.8168159902916273
+2024-11-22 16:12:45,498 - Validação Acc: 0.8187562795401048 -- Melhor Avaliação Acc: 0.8199039812555051 -- epoch 44
+2024-11-22 16:12:45,498 - Epoch 48 starting...
+2024-11-22 16:12:48,727 - Train loss: 0.36982277035713196, train acc: 0.8154889590522597
+2024-11-22 16:12:49,904 - Nova melhor conta de validação. Salvo... 47
+2024-11-22 16:12:49,904 - Validação Acc: 0.8209702303765319 -- Melhor Avaliação Acc: 0.8209702303765319 -- epoch 47
+2024-11-22 16:12:49,904 - Epoch 49 starting...
+2024-11-22 16:12:53,083 - Train loss: 0.36594119668006897, train acc: 0.8106212936771875
+2024-11-22 16:12:54,314 - Nova melhor conta de validação. Salvo... 48
+2024-11-22 16:12:54,314 - Validação Acc: 0.8212973405294679 -- Melhor Avaliação Acc: 0.8212973405294679 -- epoch 48
+2024-11-22 16:12:54,314 - Epoch 50 starting...
+2024-11-22 16:12:57,557 - Train loss: 0.36074358224868774, train acc: 0.8217023523715792
+2024-11-22 16:12:58,687 - Validação Acc: 0.8196136980734295 -- Melhor Avaliação Acc: 0.8212973405294679 -- epoch 48
+2024-11-22 16:12:58,687 - Epoch 51 starting...
+2024-11-22 16:13:01,870 - Train loss: 0.35997623205184937, train acc: 0.8160400770391203
+2024-11-22 16:13:02,131 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_50.png
+2024-11-22 16:13:02,206 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_50.png
+2024-11-22 16:13:02,467 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_50.png
+2024-11-22 16:13:02,546 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_50.png
+2024-11-22 16:13:02,800 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_50.png
+2024-11-22 16:13:02,873 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_50.png
+2024-11-22 16:13:03,135 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_50.png
+2024-11-22 16:13:03,211 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_50.png
+2024-11-22 16:13:03,454 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_50.png
+2024-11-22 16:13:03,528 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_50.png
+2024-11-22 16:13:03,785 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_50.png
+2024-11-22 16:13:03,868 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_50.png
+2024-11-22 16:13:04,145 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_50.png
+2024-11-22 16:13:04,224 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_50.png
+2024-11-22 16:13:04,520 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_50.png
+2024-11-22 16:13:04,583 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_50.png
+2024-11-22 16:13:04,900 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_50.png
+2024-11-22 16:13:04,976 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_50.png
+2024-11-22 16:13:05,255 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_50.png
+2024-11-22 16:13:05,322 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_50.png
+2024-11-22 16:13:05,322 - Validação Acc: 0.8210157225170065 -- Melhor Avaliação Acc: 0.8212973405294679 -- epoch 48
+2024-11-22 16:13:05,322 - Epoch 52 starting...
+2024-11-22 16:13:08,615 - Train loss: 0.35427817702293396, train acc: 0.8230350361031197
+2024-11-22 16:13:09,821 - Nova melhor conta de validação. Salvo... 51
+2024-11-22 16:13:09,821 - Validação Acc: 0.821659977877822 -- Melhor Avaliação Acc: 0.821659977877822 -- epoch 51
+2024-11-22 16:13:09,821 - Epoch 53 starting...
+2024-11-22 16:13:13,020 - Train loss: 0.3636326491832733, train acc: 0.8204796748338656
+2024-11-22 16:13:14,164 - Validação Acc: 0.8095278739009857 -- Melhor Avaliação Acc: 0.821659977877822 -- epoch 51
+2024-11-22 16:13:14,164 - Epoch 54 starting...
+2024-11-22 16:13:17,411 - Train loss: 0.35744720697402954, train acc: 0.8208642617051699
+2024-11-22 16:13:18,573 - Validação Acc: 0.8201483390386254 -- Melhor Avaliação Acc: 0.821659977877822 -- epoch 51
+2024-11-22 16:13:18,573 - Epoch 55 starting...
+2024-11-22 16:13:21,760 - Train loss: 0.34839320182800293, train acc: 0.8243083686668445
+2024-11-22 16:13:22,855 - Validação Acc: 0.8201245098221864 -- Melhor Avaliação Acc: 0.821659977877822 -- epoch 51
+2024-11-22 16:13:22,855 - Epoch 56 starting...
+2024-11-22 16:13:26,099 - Train loss: 0.3558870553970337, train acc: 0.8274539805610794
+2024-11-22 16:13:27,264 - Validação Acc: 0.8175570200655 -- Melhor Avaliação Acc: 0.821659977877822 -- epoch 51
+2024-11-22 16:13:27,264 - Epoch 57 starting...
+2024-11-22 16:13:30,402 - Train loss: 0.35016125440597534, train acc: 0.826796987047749
+2024-11-22 16:13:31,602 - Validação Acc: 0.816375957447085 -- Melhor Avaliação Acc: 0.821659977877822 -- epoch 51
+2024-11-22 16:13:31,602 - Epoch 58 starting...
+2024-11-22 16:13:34,770 - Train loss: 0.35629475116729736, train acc: 0.8203855390988318
+2024-11-22 16:13:36,001 - Nova melhor conta de validação. Salvo... 57
+2024-11-22 16:13:36,001 - Validação Acc: 0.8224849020250935 -- Melhor Avaliação Acc: 0.8224849020250935 -- epoch 57
+2024-11-22 16:13:36,001 - Epoch 59 starting...
+2024-11-22 16:13:39,193 - Train loss: 0.34782078862190247, train acc: 0.8247307837549984
+2024-11-22 16:13:40,400 - Nova melhor conta de validação. Salvo... 58
+2024-11-22 16:13:40,400 - Validação Acc: 0.8234211736019074 -- Melhor Avaliação Acc: 0.8234211736019074 -- epoch 58
+2024-11-22 16:13:40,400 - Epoch 60 starting...
+2024-11-22 16:13:43,554 - Train loss: 0.3406986594200134, train acc: 0.8286579613939132
+2024-11-22 16:13:44,724 - Validação Acc: 0.822808112851703 -- Melhor Avaliação Acc: 0.8234211736019074 -- epoch 58
+2024-11-22 16:13:44,724 - Epoch 61 starting...
+2024-11-22 16:13:47,927 - Train loss: 0.33977311849594116, train acc: 0.8301458712566643
+2024-11-22 16:13:48,178 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_60.png
+2024-11-22 16:13:48,262 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_60.png
+2024-11-22 16:13:48,524 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_60.png
+2024-11-22 16:13:48,603 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_60.png
+2024-11-22 16:13:48,857 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_60.png
+2024-11-22 16:13:48,936 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_60.png
+2024-11-22 16:13:49,184 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_60.png
+2024-11-22 16:13:49,263 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_60.png
+2024-11-22 16:13:49,527 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_60.png
+2024-11-22 16:13:49,596 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_60.png
+2024-11-22 16:13:49,888 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_60.png
+2024-11-22 16:13:49,958 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_60.png
+2024-11-22 16:13:50,239 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_60.png
+2024-11-22 16:13:50,312 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_60.png
+2024-11-22 16:13:50,710 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_60.png
+2024-11-22 16:13:50,785 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_60.png
+2024-11-22 16:13:51,096 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_60.png
+2024-11-22 16:13:51,174 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_60.png
+2024-11-22 16:13:51,459 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_60.png
+2024-11-22 16:13:51,550 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_60.png
+2024-11-22 16:13:51,557 - Validação Acc: 0.8228596706109075 -- Melhor Avaliação Acc: 0.8234211736019074 -- epoch 58
+2024-11-22 16:13:51,557 - Epoch 62 starting...
+2024-11-22 16:13:55,001 - Train loss: 0.34005188941955566, train acc: 0.8289981979420146
+2024-11-22 16:13:56,192 - Validação Acc: 0.8228146117289137 -- Melhor Avaliação Acc: 0.8234211736019074 -- epoch 58
+2024-11-22 16:13:56,192 - Epoch 63 starting...
+2024-11-22 16:13:59,383 - Train loss: 0.3380749821662903, train acc: 0.8302189188478221
+2024-11-22 16:14:00,589 - Validação Acc: 0.8227903492539939 -- Melhor Avaliação Acc: 0.8234211736019074 -- epoch 58
+2024-11-22 16:14:00,589 - Epoch 64 starting...
+2024-11-22 16:14:03,813 - Train loss: 0.34309500455856323, train acc: 0.8273950642003539
+2024-11-22 16:14:04,975 - Validação Acc: 0.8212093890578838 -- Melhor Avaliação Acc: 0.8234211736019074 -- epoch 58
+2024-11-22 16:14:04,975 - Epoch 65 starting...
+2024-11-22 16:14:08,200 - Train loss: 0.33722051978111267, train acc: 0.8314344220685469
+2024-11-22 16:14:09,347 - Validação Acc: 0.8232738657184661 -- Melhor Avaliação Acc: 0.8234211736019074 -- epoch 58
+2024-11-22 16:14:09,347 - Epoch 66 starting...
+2024-11-22 16:14:12,471 - Train loss: 0.3390277326107025, train acc: 0.82967454037086
+2024-11-22 16:14:13,685 - Validação Acc: 0.8231971789673804 -- Melhor Avaliação Acc: 0.8234211736019074 -- epoch 58
+2024-11-22 16:14:13,687 - Epoch 67 starting...
+2024-11-22 16:14:16,800 - Train loss: 0.33708518743515015, train acc: 0.8309106969283705
+2024-11-22 16:14:17,925 - Validação Acc: 0.823085831537838 -- Melhor Avaliação Acc: 0.8234211736019074 -- epoch 58
+2024-11-22 16:14:17,925 - Epoch 68 starting...
+2024-11-22 16:14:21,144 - Train loss: 0.33855655789375305, train acc: 0.8289997197668304
+2024-11-22 16:14:22,349 - Validação Acc: 0.8228505721828125 -- Melhor Avaliação Acc: 0.8234211736019074 -- epoch 58
+2024-11-22 16:14:22,349 - Epoch 69 starting...
+2024-11-22 16:14:25,627 - Train loss: 0.33823832869529724, train acc: 0.8305045871061001
+2024-11-22 16:14:26,788 - Nova melhor conta de validação. Salvo... 68
+2024-11-22 16:14:26,788 - Validação Acc: 0.8234974270945123 -- Melhor Avaliação Acc: 0.8234974270945123 -- epoch 68
+2024-11-22 16:14:26,788 - Epoch 70 starting...
+2024-11-22 16:14:30,009 - Train loss: 0.34165292978286743, train acc: 0.8258360633783511
+2024-11-22 16:14:31,153 - Validação Acc: 0.822554223382007 -- Melhor Avaliação Acc: 0.8234974270945123 -- epoch 68
+2024-11-22 16:14:31,153 - Epoch 71 starting...
+2024-11-22 16:14:34,302 - Train loss: 0.3360828757286072, train acc: 0.8315687774594265
+2024-11-22 16:14:34,581 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_70.png
+2024-11-22 16:14:34,666 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_70.png
+2024-11-22 16:14:34,930 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_70.png
+2024-11-22 16:14:35,006 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_70.png
+2024-11-22 16:14:35,268 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_70.png
+2024-11-22 16:14:35,335 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_70.png
+2024-11-22 16:14:35,572 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_70.png
+2024-11-22 16:14:35,653 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_70.png
+2024-11-22 16:14:35,918 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_70.png
+2024-11-22 16:14:35,997 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_70.png
+2024-11-22 16:14:36,260 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_70.png
+2024-11-22 16:14:36,363 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_70.png
+2024-11-22 16:14:36,641 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_70.png
+2024-11-22 16:14:36,713 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_70.png
+2024-11-22 16:14:37,013 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_70.png
+2024-11-22 16:14:37,080 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_70.png
+2024-11-22 16:14:37,382 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_70.png
+2024-11-22 16:14:37,453 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_70.png
+2024-11-22 16:14:37,733 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_70.png
+2024-11-22 16:14:37,812 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_70.png
+2024-11-22 16:14:37,812 - Validação Acc: 0.8228661694881181 -- Melhor Avaliação Acc: 0.8234974270945123 -- epoch 68
+2024-11-22 16:14:37,812 - Epoch 72 starting...
+2024-11-22 16:14:41,217 - Train loss: 0.33750084042549133, train acc: 0.8306128540715662
+2024-11-22 16:14:42,501 - Nova melhor conta de validação. Salvo... 71
+2024-11-22 16:14:42,501 - Validação Acc: 0.8237469839794012 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:14:42,501 - Epoch 73 starting...
+2024-11-22 16:14:45,699 - Train loss: 0.3372206687927246, train acc: 0.8292782137081196
+2024-11-22 16:14:46,892 - Validação Acc: 0.8230832319869538 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:14:46,908 - Epoch 74 starting...
+2024-11-22 16:14:50,154 - Train loss: 0.3382350206375122, train acc: 0.8299947757928109
+2024-11-22 16:14:51,269 - Validação Acc: 0.8234467358522692 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:14:51,269 - Epoch 75 starting...
+2024-11-22 16:14:54,514 - Train loss: 0.33633503317832947, train acc: 0.8313520261249492
+2024-11-22 16:14:55,675 - Validação Acc: 0.8232846971804838 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:14:55,675 - Epoch 76 starting...
+2024-11-22 16:14:58,890 - Train loss: 0.3349757194519043, train acc: 0.8318942305664602
+2024-11-22 16:15:00,001 - Validação Acc: 0.8227149622783504 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:15:00,002 - Epoch 77 starting...
+2024-11-22 16:15:03,263 - Train loss: 0.33520129323005676, train acc: 0.8317803111088211
+2024-11-22 16:15:04,377 - Validação Acc: 0.8228497056658511 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:15:04,377 - Epoch 78 starting...
+2024-11-22 16:15:07,561 - Train loss: 0.3351603150367737, train acc: 0.8317585707543098
+2024-11-22 16:15:08,785 - Validação Acc: 0.8230957964828943 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:15:08,785 - Epoch 79 starting...
+2024-11-22 16:15:11,954 - Train loss: 0.3343361020088196, train acc: 0.8316079100975468
+2024-11-22 16:15:13,082 - Validação Acc: 0.8234818297892067 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:15:13,082 - Epoch 80 starting...
+2024-11-22 16:15:16,258 - Train loss: 0.33680543303489685, train acc: 0.8299512950837884
+2024-11-22 16:15:17,431 - Validação Acc: 0.8224896678683813 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:15:17,431 - Epoch 81 starting...
+2024-11-22 16:15:20,611 - Train loss: 0.33376553654670715, train acc: 0.8324564361341215
+2024-11-22 16:15:20,875 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_80.png
+2024-11-22 16:15:20,938 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_80.png
+2024-11-22 16:15:21,188 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_80.png
+2024-11-22 16:15:21,269 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_80.png
+2024-11-22 16:15:21,504 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_80.png
+2024-11-22 16:15:21,583 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_80.png
+2024-11-22 16:15:21,852 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_80.png
+2024-11-22 16:15:21,927 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_80.png
+2024-11-22 16:15:22,174 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_80.png
+2024-11-22 16:15:22,250 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_80.png
+2024-11-22 16:15:22,475 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_80.png
+2024-11-22 16:15:22,553 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_80.png
+2024-11-22 16:15:22,818 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_80.png
+2024-11-22 16:15:22,897 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_80.png
+2024-11-22 16:15:23,189 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_80.png
+2024-11-22 16:15:23,260 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_80.png
+2024-11-22 16:15:23,557 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_80.png
+2024-11-22 16:15:23,628 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_80.png
+2024-11-22 16:15:23,916 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_80.png
+2024-11-22 16:15:23,995 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_80.png
+2024-11-22 16:15:23,995 - Validação Acc: 0.8231980454843418 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:15:23,995 - Epoch 82 starting...
+2024-11-22 16:15:27,399 - Train loss: 0.33737000823020935, train acc: 0.8303167504431228
+2024-11-22 16:15:28,529 - Validação Acc: 0.8236477677873186 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:15:28,529 - Epoch 83 starting...
+2024-11-22 16:15:31,723 - Train loss: 0.336432546377182, train acc: 0.8303452303075325
+2024-11-22 16:15:32,918 - Validação Acc: 0.8230892976056836 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:15:32,918 - Epoch 84 starting...
+2024-11-22 16:15:36,054 - Train loss: 0.3363448977470398, train acc: 0.829012546575992
+2024-11-22 16:15:37,168 - Validação Acc: 0.8226716364302794 -- Melhor Avaliação Acc: 0.8237469839794012 -- epoch 71
+2024-11-22 16:15:37,168 - Epoch 85 starting...
+2024-11-22 16:15:40,304 - Train loss: 0.3353356122970581, train acc: 0.8306085060006639
+2024-11-22 16:15:41,460 - Nova melhor conta de validação. Salvo... 84
+2024-11-22 16:15:41,460 - Validação Acc: 0.8238968914137268 -- Melhor Avaliação Acc: 0.8238968914137268 -- epoch 84
+2024-11-22 16:15:41,460 - Epoch 86 starting...
+2024-11-22 16:15:44,632 - Train loss: 0.3343665599822998, train acc: 0.832110112286757
+2024-11-22 16:15:45,776 - Nova melhor conta de validação. Salvo... 85
+2024-11-22 16:15:45,776 - Validação Acc: 0.824187607854283 -- Melhor Avaliação Acc: 0.824187607854283 -- epoch 85
+2024-11-22 16:15:45,776 - Epoch 87 starting...
+2024-11-22 16:15:48,980 - Train loss: 0.33727627992630005, train acc: 0.8292951711846385
+2024-11-22 16:15:50,135 - Validação Acc: 0.824133883802675 -- Melhor Avaliação Acc: 0.824187607854283 -- epoch 85
+2024-11-22 16:15:50,135 - Epoch 88 starting...
+2024-11-22 16:15:53,336 - Train loss: 0.3362964689731598, train acc: 0.8304211041447769
+2024-11-22 16:15:54,549 - Validação Acc: 0.8220165496074462 -- Melhor Avaliação Acc: 0.824187607854283 -- epoch 85
+2024-11-22 16:15:54,549 - Epoch 89 starting...
+2024-11-22 16:15:57,681 - Train loss: 0.33198967576026917, train acc: 0.8339754347038235
+2024-11-22 16:15:58,840 - Nova melhor conta de validação. Salvo... 88
+2024-11-22 16:15:58,840 - Validação Acc: 0.8242733930334636 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:15:58,840 - Epoch 90 starting...
+2024-11-22 16:16:02,070 - Train loss: 0.33187955617904663, train acc: 0.833426273348869
+2024-11-22 16:16:03,310 - Validação Acc: 0.8241195862728116 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:03,310 - Epoch 91 starting...
+2024-11-22 16:16:06,514 - Train loss: 0.3319372236728668, train acc: 0.833258220408497
+2024-11-22 16:16:06,933 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_90.png
+2024-11-22 16:16:07,015 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_90.png
+2024-11-22 16:16:07,285 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_90.png
+2024-11-22 16:16:07,356 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_90.png
+2024-11-22 16:16:07,614 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_90.png
+2024-11-22 16:16:07,687 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_90.png
+2024-11-22 16:16:07,937 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_90.png
+2024-11-22 16:16:08,019 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_90.png
+2024-11-22 16:16:08,284 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_90.png
+2024-11-22 16:16:08,359 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_90.png
+2024-11-22 16:16:08,668 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_90.png
+2024-11-22 16:16:08,743 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_90.png
+2024-11-22 16:16:09,017 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_90.png
+2024-11-22 16:16:09,096 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_90.png
+2024-11-22 16:16:09,380 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_90.png
+2024-11-22 16:16:09,456 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_90.png
+2024-11-22 16:16:09,739 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_90.png
+2024-11-22 16:16:09,819 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_90.png
+2024-11-22 16:16:10,132 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_90.png
+2024-11-22 16:16:10,195 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_90.png
+2024-11-22 16:16:10,211 - Validação Acc: 0.8236754963300841 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:10,211 - Epoch 92 starting...
+2024-11-22 16:16:13,394 - Train loss: 0.3313217759132385, train acc: 0.8333290939642036
+2024-11-22 16:16:14,557 - Validação Acc: 0.8237240212799235 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:14,557 - Epoch 93 starting...
+2024-11-22 16:16:17,834 - Train loss: 0.33140361309051514, train acc: 0.8331627802521925
+2024-11-22 16:16:18,968 - Validação Acc: 0.8238184716287182 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:18,968 - Epoch 94 starting...
+2024-11-22 16:16:22,159 - Train loss: 0.329672634601593, train acc: 0.8339045611481168
+2024-11-22 16:16:23,305 - Validação Acc: 0.8232885965068102 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:23,305 - Epoch 95 starting...
+2024-11-22 16:16:26,440 - Train loss: 0.33216363191604614, train acc: 0.8323686051018959
+2024-11-22 16:16:27,538 - Validação Acc: 0.8236131071088618 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:27,538 - Epoch 96 starting...
+2024-11-22 16:16:30,743 - Train loss: 0.3316311240196228, train acc: 0.8335232353299893
+2024-11-22 16:16:31,865 - Validação Acc: 0.8234865956324946 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:31,865 - Epoch 97 starting...
+2024-11-22 16:16:35,056 - Train loss: 0.3303822875022888, train acc: 0.8334238819098727
+2024-11-22 16:16:36,180 - Validação Acc: 0.82316035199652 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:36,180 - Epoch 98 starting...
+2024-11-22 16:16:39,401 - Train loss: 0.3317643702030182, train acc: 0.8330760362376926
+2024-11-22 16:16:40,538 - Validação Acc: 0.8238115394930269 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:40,538 - Epoch 99 starting...
+2024-11-22 16:16:43,684 - Train loss: 0.3308710753917694, train acc: 0.833403011169542
+2024-11-22 16:16:44,798 - Validação Acc: 0.8233527187619553 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:44,798 - Epoch 100 starting...
+2024-11-22 16:16:47,893 - Train loss: 0.33048999309539795, train acc: 0.8338523842972898
+2024-11-22 16:16:48,997 - Validação Acc: 0.8233353884227268 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:48,997 - Epoch 101 starting...
+2024-11-22 16:16:52,222 - Train loss: 0.3315408527851105, train acc: 0.8335201916803576
+2024-11-22 16:16:52,472 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_100.png
+2024-11-22 16:16:52,551 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_100.png
+2024-11-22 16:16:52,788 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_100.png
+2024-11-22 16:16:52,873 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_100.png
+2024-11-22 16:16:53,129 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_100.png
+2024-11-22 16:16:53,196 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_100.png
+2024-11-22 16:16:53,461 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_100.png
+2024-11-22 16:16:53,525 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_100.png
+2024-11-22 16:16:53,812 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_100.png
+2024-11-22 16:16:53,873 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_100.png
+2024-11-22 16:16:54,136 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_100.png
+2024-11-22 16:16:54,216 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_100.png
+2024-11-22 16:16:54,495 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_100.png
+2024-11-22 16:16:54,574 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_100.png
+2024-11-22 16:16:54,860 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_100.png
+2024-11-22 16:16:54,939 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_100.png
+2024-11-22 16:16:55,235 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_100.png
+2024-11-22 16:16:55,312 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_100.png
+2024-11-22 16:16:55,608 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_100.png
+2024-11-22 16:16:55,680 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_100.png
+2024-11-22 16:16:55,686 - Validação Acc: 0.8237305201571342 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:16:55,686 - Epoch 102 starting...
+2024-11-22 16:16:59,091 - Train loss: 0.3306381106376648, train acc: 0.8332334364043541
+2024-11-22 16:17:00,238 - Validação Acc: 0.8233882459573735 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:00,238 - Epoch 103 starting...
+2024-11-22 16:17:03,422 - Train loss: 0.33149421215057373, train acc: 0.8335945436927862
+2024-11-22 16:17:04,539 - Validação Acc: 0.8234185740510231 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:04,539 - Epoch 104 starting...
+2024-11-22 16:17:07,714 - Train loss: 0.3313247561454773, train acc: 0.8333193108046736
+2024-11-22 16:17:08,829 - Validação Acc: 0.8234016769702754 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:08,829 - Epoch 105 starting...
+2024-11-22 16:17:12,107 - Train loss: 0.330524742603302, train acc: 0.8334701888649817
+2024-11-22 16:17:13,259 - Validação Acc: 0.8236538334060486 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:13,259 - Epoch 106 starting...
+2024-11-22 16:17:16,488 - Train loss: 0.33029383420944214, train acc: 0.8341582710852633
+2024-11-22 16:17:17,645 - Validação Acc: 0.8235524509215625 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:17,645 - Epoch 107 starting...
+2024-11-22 16:17:20,827 - Train loss: 0.3325735926628113, train acc: 0.8329373327759106
+2024-11-22 16:17:21,987 - Validação Acc: 0.8233141587571721 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:21,987 - Epoch 108 starting...
+2024-11-22 16:17:25,166 - Train loss: 0.3304053843021393, train acc: 0.8340036971646881
+2024-11-22 16:17:26,297 - Validação Acc: 0.8232474369511428 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:26,297 - Epoch 109 starting...
+2024-11-22 16:17:29,544 - Train loss: 0.3316550850868225, train acc: 0.8331869120457
+2024-11-22 16:17:30,643 - Validação Acc: 0.8236196059860724 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:30,643 - Epoch 110 starting...
+2024-11-22 16:17:33,811 - Train loss: 0.33270999789237976, train acc: 0.8333717050590457
+2024-11-22 16:17:34,955 - Validação Acc: 0.8236222055369568 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:34,955 - Epoch 111 starting...
+2024-11-22 16:17:38,109 - Train loss: 0.33199137449264526, train acc: 0.8331621280415571
+2024-11-22 16:17:38,385 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_0_epoch_110.png
+2024-11-22 16:17:38,464 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_0_epoch_110.png
+2024-11-22 16:17:38,689 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_1_epoch_110.png
+2024-11-22 16:17:38,772 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_1_epoch_110.png
+2024-11-22 16:17:39,030 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_2_epoch_110.png
+2024-11-22 16:17:39,110 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_2_epoch_110.png
+2024-11-22 16:17:39,505 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_3_epoch_110.png
+2024-11-22 16:17:39,565 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_3_epoch_110.png
+2024-11-22 16:17:39,803 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_4_epoch_110.png
+2024-11-22 16:17:39,883 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_4_epoch_110.png
+2024-11-22 16:17:40,171 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_5_epoch_110.png
+2024-11-22 16:17:40,242 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_5_epoch_110.png
+2024-11-22 16:17:40,525 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_6_epoch_110.png
+2024-11-22 16:17:40,599 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_6_epoch_110.png
+2024-11-22 16:17:40,884 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_7_epoch_110.png
+2024-11-22 16:17:40,962 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_7_epoch_110.png
+2024-11-22 16:17:41,259 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_8_epoch_110.png
+2024-11-22 16:17:41,338 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_8_epoch_110.png
+2024-11-22 16:17:41,635 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\IMG_9_epoch_110.png
+2024-11-22 16:17:41,713 - Salvando imagem de validação: C:\git\image-segmentation\dataset\\images_segmentadas\\val\\GT_9_epoch_110.png
+2024-11-22 16:17:41,715 - Validação Acc: 0.8236139736258232 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:41,715 - Epoch 112 starting...
+2024-11-22 16:17:45,142 - Train loss: 0.33129099011421204, train acc: 0.8340687008246769
+2024-11-22 16:17:46,270 - Validação Acc: 0.8235463853028325 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:46,270 - Epoch 113 starting...
+2024-11-22 16:17:49,436 - Train loss: 0.329071044921875, train acc: 0.834198273337564
+2024-11-22 16:17:50,554 - Validação Acc: 0.8234627664160555 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:50,554 - Epoch 114 starting...
+2024-11-22 16:17:53,755 - Train loss: 0.329241007566452, train acc: 0.8339021697091206
+2024-11-22 16:17:54,870 - Validação Acc: 0.823657732732375 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:54,871 - Epoch 115 starting...
+2024-11-22 16:17:57,994 - Train loss: 0.3315540552139282, train acc: 0.8333138757160458
+2024-11-22 16:17:59,103 - Validação Acc: 0.823503925971723 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:17:59,103 - Epoch 116 starting...
+2024-11-22 16:18:02,211 - Train loss: 0.3304148316383362, train acc: 0.8330466867591023
+2024-11-22 16:18:03,344 - Validação Acc: 0.8232794980787153 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:18:03,344 - Epoch 117 starting...
+2024-11-22 16:18:06,511 - Train loss: 0.33003079891204834, train acc: 0.834117181815237
+2024-11-22 16:18:07,777 - Validação Acc: 0.8236070414901319 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:18:07,777 - Epoch 118 starting...
+2024-11-22 16:18:11,040 - Train loss: 0.3323820233345032, train acc: 0.8328275439856287
+2024-11-22 16:18:12,154 - Validação Acc: 0.8236915268938703 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:18:12,154 - Epoch 119 starting...
+2024-11-22 16:18:15,343 - Train loss: 0.3302447199821472, train acc: 0.8339108658509251
+2024-11-22 16:18:16,499 - Validação Acc: 0.8236850280166597 -- Melhor Avaliação Acc: 0.8242733930334636 -- epoch 88
+2024-11-22 16:18:16,499 - Epoch 120 starting...
+2024-11-22 16:18:19,722 - Train loss: 0.32936233282089233, train acc: 0.834047612680801
+2024-11-22 16:18:20,886 - Terminando o treinamento, melhor conta de validação 0.824273
+2024-11-22 16:18:21,055 - Salvando gráficos de perda e precisão: C:\git\image-segmentation\dataset\\result_UnetVgg_base\\result_model_segmentadas_unet_loss_accuracy.png
+2024-11-22 16:18:21,593 - Modelo carregado e pronto para uso.
+2024-11-22 16:18:21,599 - Imagens de teste: 10
+2024-11-22 16:18:21,881 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0052RESULT_INFERENCIA_IMG_.png
+2024-11-22 16:18:21,952 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0052RESULT_INFERENCIA_GT_.png
+2024-11-22 16:18:22,188 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0085RESULT_INFERENCIA_IMG_.png
+2024-11-22 16:18:22,271 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0085RESULT_INFERENCIA_GT_.png
+2024-11-22 16:18:22,538 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0107RESULT_INFERENCIA_IMG_.png
+2024-11-22 16:18:22,605 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0107RESULT_INFERENCIA_GT_.png
+2024-11-22 16:18:22,871 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0124RESULT_INFERENCIA_IMG_.png
+2024-11-22 16:18:22,948 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0124RESULT_INFERENCIA_GT_.png
+2024-11-22 16:18:23,193 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0163RESULT_INFERENCIA_IMG_.png
+2024-11-22 16:18:23,271 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0163RESULT_INFERENCIA_GT_.png
+2024-11-22 16:18:23,537 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0212RESULT_INFERENCIA_IMG_.png
+2024-11-22 16:18:23,616 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0212RESULT_INFERENCIA_GT_.png
+2024-11-22 16:18:23,884 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0215RESULT_INFERENCIA_IMG_.png
+2024-11-22 16:18:23,947 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0215RESULT_INFERENCIA_GT_.png
+2024-11-22 16:18:24,228 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0236RESULT_INFERENCIA_IMG_.png
+2024-11-22 16:18:24,307 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0236RESULT_INFERENCIA_GT_.png
+2024-11-22 16:18:24,587 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0251RESULT_INFERENCIA_IMG_.png
+2024-11-22 16:18:24,650 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0251RESULT_INFERENCIA_GT_.png
+2024-11-22 16:18:24,950 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0434RESULT_INFERENCIA_IMG_.png
+2024-11-22 16:18:25,013 - Salvando imagem de inferência: C:\git\image-segmentation\dataset\\images_segmentadas\\test\\DJI_0434RESULT_INFERENCIA_GT_.png

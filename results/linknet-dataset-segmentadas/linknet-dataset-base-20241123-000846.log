@@ -1,0 +1,334 @@
+2024-11-23 00:08:46,477 - Dispositivo: cuda:0
+2024-11-23 00:08:46,477 - Diretório do Projeto C:\git\image-segmentation\dataset.
+2024-11-23 00:08:46,478 - Resolução de Entrada: (800, 448).
+2024-11-23 00:08:46,580 - Patience: 30.
+2024-11-23 00:08:46,580 - Número Máximo de Épocas: 300.
+2024-11-23 00:08:46,580 - Mapeamento de Classes e Cores: {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folhas': (0, 255, 0)}.
+2024-11-23 00:08:46,580 - Mapeamento de Classes e IDs: {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}.
+2024-11-23 00:08:46,580 - Pesos de Classes: [1.0, 2.0, 3.0, 4.0].
+2024-11-23 00:08:46,580 - Número de amostras no dataset de treinamento: 189
+2024-11-23 00:08:46,580 - Arquivos no dataset de treinamento: ['DJI_0026.JPG', 'DJI_0026.json', 'DJI_0026_Doenca_0.JPG', 'DJI_0026_Doenca_0.json', 'DJI_0026_Saudavel_2.JPG', 'DJI_0026_Saudavel_2.json', 'DJI_0026_Saudavel_3.JPG', 'DJI_0026_Saudavel_3.json', 'DJI_0026_Saudavel_4.JPG', 'DJI_0026_Saudavel_4.json', 'DJI_0026_Solo_1.JPG', 'DJI_0026_Solo_1.json', 'DJI_0064.JPG', 'DJI_0064.json', 'DJI_0064_Doenca_0.JPG', 'DJI_0064_Doenca_0.json', 'DJI_0064_Saudavel_1.JPG', 'DJI_0064_Saudavel_1.json', 'DJI_0064_Saudavel_2.JPG', 'DJI_0064_Saudavel_2.json', 'DJI_0064_Saudavel_3.JPG', 'DJI_0064_Saudavel_3.json', 'DJI_0064_Saudavel_4.JPG', 'DJI_0064_Saudavel_4.json', 'DJI_0064_Saudavel_5.JPG', 'DJI_0064_Saudavel_5.json', 'DJI_0064_Saudavel_6.JPG', 'DJI_0064_Saudavel_6.json', 'DJI_0064_Solo_7.JPG', 'DJI_0064_Solo_7.json', 'DJI_0089.JPG', 'DJI_0089.json', 'DJI_0089_Doenca_0.JPG', 'DJI_0089_Doenca_0.json', 'DJI_0089_Saudavel_1.JPG', 'DJI_0089_Saudavel_1.json', 'DJI_0089_Saudavel_10.JPG', 'DJI_0089_Saudavel_10.json', 'DJI_0089_Saudavel_11.JPG', 'DJI_0089_Saudavel_11.json', 'DJI_0089_Saudavel_2.JPG', 'DJI_0089_Saudavel_2.json', 'DJI_0089_Saudavel_4.JPG', 'DJI_0089_Saudavel_4.json', 'DJI_0089_Saudavel_5.JPG', 'DJI_0089_Saudavel_5.json', 'DJI_0089_Saudavel_6.JPG', 'DJI_0089_Saudavel_6.json', 'DJI_0089_Saudavel_7.JPG', 'DJI_0089_Saudavel_7.json', 'DJI_0089_Saudavel_8.JPG', 'DJI_0089_Saudavel_8.json', 'DJI_0089_Saudavel_9.JPG', 'DJI_0089_Saudavel_9.json', 'DJI_0089_Solo_3.JPG', 'DJI_0089_Solo_3.json', 'DJI_0105.JPG', 'DJI_0105.json', 'DJI_0105_Doenca_0.JPG', 'DJI_0105_Doenca_0.json', 'DJI_0105_Doenca_5.JPG', 'DJI_0105_Doenca_5.json', 'DJI_0105_Saudavel_1.JPG', 'DJI_0105_Saudavel_1.json', 'DJI_0105_Saudavel_2.JPG', 'DJI_0105_Saudavel_2.json', 'DJI_0105_Saudavel_3.JPG', 'DJI_0105_Saudavel_3.json', 'DJI_0105_Saudavel_4.JPG', 'DJI_0105_Saudavel_4.json', 'DJI_0105_Saudavel_6.JPG', 'DJI_0105_Saudavel_6.json', 'DJI_0105_Solo_7.JPG', 'DJI_0105_Solo_7.json', 'DJI_0105_Solo_8.JPG', 'DJI_0105_Solo_8.json', 'DJI_0122.JPG', 'DJI_0122.json', 'DJI_0122_Doenca_0.JPG', 'DJI_0122_Doenca_0.json', 'DJI_0122_Doenca_1.JPG', 'DJI_0122_Doenca_1.json', 'DJI_0122_Saudavel_2.JPG', 'DJI_0122_Saudavel_2.json', 'DJI_0122_Saudavel_3.JPG', 'DJI_0122_Saudavel_3.json', 'DJI_0122_Saudavel_4.JPG', 'DJI_0122_Saudavel_4.json', 'DJI_0122_Saudavel_5.JPG', 'DJI_0122_Saudavel_5.json', 'DJI_0122_Saudavel_6.JPG', 'DJI_0122_Saudavel_6.json', 'DJI_0122_Saudavel_7.JPG', 'DJI_0122_Saudavel_7.json', 'DJI_0122_Saudavel_8.JPG', 'DJI_0122_Saudavel_8.json', 'DJI_0122_Saudavel_9.JPG', 'DJI_0122_Saudavel_9.json', 'DJI_0122_Solo_10.JPG', 'DJI_0122_Solo_10.json', 'DJI_0160.JPG', 'DJI_0160.json', 'DJI_0160_Doenca_0.JPG', 'DJI_0160_Doenca_0.json', 'DJI_0160_Doenca_1.JPG', 'DJI_0160_Doenca_1.json', 'DJI_0160_Doenca_2.JPG', 'DJI_0160_Doenca_2.json', 'DJI_0160_Doenca_7.JPG', 'DJI_0160_Doenca_7.json', 'DJI_0160_Doenca_8.JPG', 'DJI_0160_Doenca_8.json', 'DJI_0160_Doenca_9.JPG', 'DJI_0160_Doenca_9.json', 'DJI_0160_Saudavel_10.JPG', 'DJI_0160_Saudavel_10.json', 'DJI_0160_Saudavel_11.JPG', 'DJI_0160_Saudavel_11.json', 'DJI_0160_Saudavel_12.JPG', 'DJI_0160_Saudavel_12.json', 'DJI_0160_Saudavel_13.JPG', 'DJI_0160_Saudavel_13.json', 'DJI_0160_Saudavel_3.JPG', 'DJI_0160_Saudavel_3.json', 'DJI_0160_Solo_4.JPG', 'DJI_0160_Solo_4.json', 'DJI_0160_Solo_5.JPG', 'DJI_0160_Solo_5.json', 'DJI_0160_Solo_6.JPG', 'DJI_0160_Solo_6.json', 'DJI_0161.JPG', 'DJI_0161.json', 'DJI_0161_Doenca_0.JPG', 'DJI_0161_Doenca_0.json', 'DJI_0161_Doenca_1.JPG', 'DJI_0161_Doenca_1.json', 'DJI_0161_Doenca_10.JPG', 'DJI_0161_Doenca_10.json', 'DJI_0161_Doenca_4.JPG', 'DJI_0161_Doenca_4.json', 'DJI_0161_Doenca_6.JPG', 'DJI_0161_Doenca_6.json', 'DJI_0161_Doenca_7.JPG', 'DJI_0161_Doenca_7.json', 'DJI_0161_Doenca_8.JPG', 'DJI_0161_Doenca_8.json', 'DJI_0161_Doenca_9.JPG', 'DJI_0161_Doenca_9.json', 'DJI_0161_Saudavel_11.JPG', 'DJI_0161_Saudavel_11.json', 'DJI_0161_Saudavel_12.JPG', 'DJI_0161_Saudavel_12.json', 'DJI_0161_Saudavel_13.JPG', 'DJI_0161_Saudavel_13.json', 'DJI_0161_Saudavel_2.JPG', 'DJI_0161_Saudavel_2.json', 'DJI_0161_Saudavel_3.JPG', 'DJI_0161_Saudavel_3.json', 'DJI_0161_Saudavel_5.JPG', 'DJI_0161_Saudavel_5.json', 'DJI_0161_Solo_14.JPG', 'DJI_0161_Solo_14.json', 'DJI_0161_Solo_15.JPG', 'DJI_0161_Solo_15.json', 'DJI_0165.JPG', 'DJI_0165.json', 'DJI_0165_Doenca_2.JPG', 'DJI_0165_Doenca_2.json', 'DJI_0165_Doenca_3.JPG', 'DJI_0165_Doenca_3.json', 'DJI_0165_Saudavel_10.JPG', 'DJI_0165_Saudavel_10.json', 'DJI_0165_Saudavel_11.JPG', 'DJI_0165_Saudavel_11.json', 'DJI_0165_Saudavel_4.JPG', 'DJI_0165_Saudavel_4.json', 'DJI_0165_Saudavel_5.JPG', 'DJI_0165_Saudavel_5.json', 'DJI_0165_Saudavel_6.JPG', 'DJI_0165_Saudavel_6.json', 'DJI_0165_Saudavel_7.JPG', 'DJI_0165_Saudavel_7.json', 'DJI_0165_Saudavel_8.JPG', 'DJI_0165_Saudavel_8.json', 'DJI_0165_Saudavel_9.JPG', 'DJI_0165_Saudavel_9.json', 'DJI_0165_Solo_0.JPG', 'DJI_0165_Solo_0.json', 'DJI_0165_Solo_1.JPG', 'DJI_0165_Solo_1.json', 'DJI_0211.JPG', 'DJI_0211.json', 'DJI_0211_Doenca_1.JPG', 'DJI_0211_Doenca_1.json', 'DJI_0211_Doenca_2.JPG', 'DJI_0211_Doenca_2.json', 'DJI_0211_Saudavel_3.JPG', 'DJI_0211_Saudavel_3.json', 'DJI_0211_Saudavel_4.JPG', 'DJI_0211_Saudavel_4.json', 'DJI_0211_Saudavel_5.JPG', 'DJI_0211_Saudavel_5.json', 'DJI_0211_Saudavel_6.JPG', 'DJI_0211_Saudavel_6.json', 'DJI_0211_Solo_0.JPG', 'DJI_0211_Solo_0.json', 'DJI_0214.JPG', 'DJI_0214.json', 'DJI_0214_Doenca_0.JPG', 'DJI_0214_Doenca_0.json', 'DJI_0214_Doenca_3.JPG', 'DJI_0214_Doenca_3.json', 'DJI_0214_Doenca_4.JPG', 'DJI_0214_Doenca_4.json', 'DJI_0214_Doenca_5.JPG', 'DJI_0214_Doenca_5.json', 'DJI_0214_Saudavel_6.JPG', 'DJI_0214_Saudavel_6.json', 'DJI_0214_Saudavel_7.JPG', 'DJI_0214_Saudavel_7.json', 'DJI_0214_Saudavel_8.JPG', 'DJI_0214_Saudavel_8.json', 'DJI_0214_Saudavel_9.JPG', 'DJI_0214_Saudavel_9.json', 'DJI_0214_Solo_1.JPG', 'DJI_0214_Solo_1.json', 'DJI_0214_Solo_2.JPG', 'DJI_0214_Solo_2.json', 'DJI_0217.JPG', 'DJI_0217.json', 'DJI_0217_Doenca_0.JPG', 'DJI_0217_Doenca_0.json', 'DJI_0217_Doenca_3.JPG', 'DJI_0217_Doenca_3.json', 'DJI_0217_Doenca_4.JPG', 'DJI_0217_Doenca_4.json', 'DJI_0217_Doenca_5.JPG', 'DJI_0217_Doenca_5.json', 'DJI_0217_Doenca_6.JPG', 'DJI_0217_Doenca_6.json', 'DJI_0217_Doenca_7.JPG', 'DJI_0217_Doenca_7.json', 'DJI_0217_Doenca_8.JPG', 'DJI_0217_Doenca_8.json', 'DJI_0217_Saudavel_2.JPG', 'DJI_0217_Saudavel_2.json', 'DJI_0217_Solo_1.JPG', 'DJI_0217_Solo_1.json', 'DJI_0233.JPG', 'DJI_0233.json', 'DJI_0233_Doenca_0.JPG', 'DJI_0233_Doenca_0.json', 'DJI_0233_Doenca_1.JPG', 'DJI_0233_Doenca_1.json', 'DJI_0233_Doenca_2.JPG', 'DJI_0233_Doenca_2.json', 'DJI_0233_Doenca_3.JPG', 'DJI_0233_Doenca_3.json', 'DJI_0233_Doenca_4.JPG', 'DJI_0233_Doenca_4.json', 'DJI_0233_Solo_5.JPG', 'DJI_0233_Solo_5.json', 'DJI_0234.JPG', 'DJI_0234.json', 'DJI_0234_Doenca_0.JPG', 'DJI_0234_Doenca_0.json', 'DJI_0234_Doenca_1.JPG', 'DJI_0234_Doenca_1.json', 'DJI_0234_Doenca_2.JPG', 'DJI_0234_Doenca_2.json', 'DJI_0234_Doenca_3.JPG', 'DJI_0234_Doenca_3.json', 'DJI_0234_Solo_4.JPG', 'DJI_0234_Solo_4.json', 'DJI_0237.JPG', 'DJI_0237.json', 'DJI_0237_Doenca_0.JPG', 'DJI_0237_Doenca_0.json', 'DJI_0237_Saudavel_1.JPG', 'DJI_0237_Saudavel_1.json', 'DJI_0237_Saudavel_2.JPG', 'DJI_0237_Saudavel_2.json', 'DJI_0237_Solo_3.JPG', 'DJI_0237_Solo_3.json', 'DJI_0252.JPG', 'DJI_0252.json', 'DJI_0252_Doenca_0.JPG', 'DJI_0252_Doenca_0.json', 'DJI_0252_Doenca_1.JPG', 'DJI_0252_Doenca_1.json', 'DJI_0252_Doenca_2.JPG', 'DJI_0252_Doenca_2.json', 'DJI_0252_Doenca_3.JPG', 'DJI_0252_Doenca_3.json', 'DJI_0252_Doenca_4.JPG', 'DJI_0252_Doenca_4.json', 'DJI_0252_Solo_5.JPG', 'DJI_0252_Solo_5.json', 'DJI_0402.JPG', 'DJI_0402.json', 'DJI_0402_Doenca_0.JPG', 'DJI_0402_Doenca_0.json', 'DJI_0402_Doenca_1.JPG', 'DJI_0402_Doenca_1.json', 'DJI_0402_Saudavel_2.JPG', 'DJI_0402_Saudavel_2.json', 'DJI_0402_Saudavel_3.JPG', 'DJI_0402_Saudavel_3.json', 'DJI_0402_Solo_4.JPG', 'DJI_0402_Solo_4.json', 'DJI_0402_Solo_5.JPG', 'DJI_0402_Solo_5.json', 'DJI_0402_Solo_6.JPG', 'DJI_0402_Solo_6.json', 'DJI_0432.JPG', 'DJI_0432.json', 'DJI_0432_Doenca_0.JPG', 'DJI_0432_Doenca_0.json', 'DJI_0432_Saudavel_1.JPG', 'DJI_0432_Saudavel_1.json', 'DJI_0432_Saudavel_2.JPG', 'DJI_0432_Saudavel_2.json', 'DJI_0432_Solo_3.JPG', 'DJI_0432_Solo_3.json', 'DJI_0432_Solo_4.JPG', 'DJI_0432_Solo_4.json', 'DJI_0432_Solo_5.JPG', 'DJI_0432_Solo_5.json', 'DJI_0432_Solo_6.JPG', 'DJI_0432_Solo_6.json', 'DJI_0432_Solo_7.JPG', 'DJI_0432_Solo_7.json', 'DJI_0433.JPG', 'DJI_0433.json', 'DJI_0433_Doenca_5.JPG', 'DJI_0433_Doenca_5.json', 'DJI_0433_Doenca_6.JPG', 'DJI_0433_Doenca_6.json', 'DJI_0433_Saudavel_7.JPG', 'DJI_0433_Saudavel_7.json', 'DJI_0433_Saudavel_8.JPG', 'DJI_0433_Saudavel_8.json', 'DJI_0433_Solo_0.JPG', 'DJI_0433_Solo_0.json', 'DJI_0433_Solo_1.JPG', 'DJI_0433_Solo_1.json', 'DJI_0433_Solo_2.JPG', 'DJI_0433_Solo_2.json', 'DJI_0433_Solo_3.JPG', 'DJI_0433_Solo_3.json', 'DJI_0433_Solo_4.JPG', 'DJI_0433_Solo_4.json', 'DJI_0435.JPG', 'DJI_0435.json', 'DJI_0435_Doenca_2.JPG', 'DJI_0435_Doenca_2.json', 'DJI_0435_Doenca_5.JPG', 'DJI_0435_Doenca_5.json', 'DJI_0435_Saudavel_3.JPG', 'DJI_0435_Saudavel_3.json', 'DJI_0435_Solo_0.JPG', 'DJI_0435_Solo_0.json', 'DJI_0435_Solo_1.JPG', 'DJI_0435_Solo_1.json', 'DJI_0435_Solo_4.JPG', 'DJI_0435_Solo_4.json', 'DJI_0444.JPG', 'DJI_0444.json', 'DJI_0444_Doenca_2.JPG', 'DJI_0444_Doenca_2.json', 'DJI_0444_Saudavel_3.JPG', 'DJI_0444_Saudavel_3.json', 'DJI_0444_Saudavel_4.JPG', 'DJI_0444_Saudavel_4.json', 'DJI_0444_Solo_0.JPG', 'DJI_0444_Solo_0.json', 'DJI_0444_Solo_1.JPG', 'DJI_0444_Solo_1.json']
+2024-11-23 00:08:46,580 - Número de amostras no dataset de validação: 89
+2024-11-23 00:08:46,580 - Arquivos no dataset de validação: ['DJI_0052.JPG', 'DJI_0052.json', 'DJI_0052_Doenca_0.JPG', 'DJI_0052_Doenca_0.json', 'DJI_0052_Saudavel_1.JPG', 'DJI_0052_Saudavel_1.json', 'DJI_0052_Saudavel_2.JPG', 'DJI_0052_Saudavel_2.json', 'DJI_0052_Saudavel_3.JPG', 'DJI_0052_Saudavel_3.json', 'DJI_0052_Saudavel_4.JPG', 'DJI_0052_Saudavel_4.json', 'DJI_0052_Saudavel_5.JPG', 'DJI_0052_Saudavel_5.json', 'DJI_0052_Solo_6.JPG', 'DJI_0052_Solo_6.json', 'DJI_0085.JPG', 'DJI_0085.json', 'DJI_0085_Doenca_0.JPG', 'DJI_0085_Doenca_0.json', 'DJI_0085_Doenca_1.JPG', 'DJI_0085_Doenca_1.json', 'DJI_0085_Saudavel_4.JPG', 'DJI_0085_Saudavel_4.json', 'DJI_0085_Saudavel_5.JPG', 'DJI_0085_Saudavel_5.json', 'DJI_0085_Saudavel_6.JPG', 'DJI_0085_Saudavel_6.json', 'DJI_0085_Saudavel_7.JPG', 'DJI_0085_Saudavel_7.json', 'DJI_0085_Saudavel_8.JPG', 'DJI_0085_Saudavel_8.json', 'DJI_0085_Solo_2.JPG', 'DJI_0085_Solo_2.json', 'DJI_0085_Solo_3.JPG', 'DJI_0085_Solo_3.json', 'DJI_0107.JPG', 'DJI_0107.json', 'DJI_0107_Doenca_0.JPG', 'DJI_0107_Doenca_0.json', 'DJI_0107_Doenca_1.JPG', 'DJI_0107_Doenca_1.json', 'DJI_0107_Saudavel_2.JPG', 'DJI_0107_Saudavel_2.json', 'DJI_0107_Saudavel_3.JPG', 'DJI_0107_Saudavel_3.json', 'DJI_0107_Saudavel_4.JPG', 'DJI_0107_Saudavel_4.json', 'DJI_0107_Saudavel_5.JPG', 'DJI_0107_Saudavel_5.json', 'DJI_0107_Saudavel_6.JPG', 'DJI_0107_Saudavel_6.json', 'DJI_0107_Saudavel_7.JPG', 'DJI_0107_Saudavel_7.json', 'DJI_0107_Saudavel_8.JPG', 'DJI_0107_Saudavel_8.json', 'DJI_0107_Saudavel_9.JPG', 'DJI_0107_Saudavel_9.json', 'DJI_0107_Solo_10.JPG', 'DJI_0107_Solo_10.json', 'DJI_0107_Solo_11.JPG', 'DJI_0107_Solo_11.json', 'DJI_0124.JPG', 'DJI_0124.json', 'DJI_0124_Doenca_0.JPG', 'DJI_0124_Doenca_0.json', 'DJI_0124_Doenca_1.JPG', 'DJI_0124_Doenca_1.json', 'DJI_0124_Doenca_2.JPG', 'DJI_0124_Doenca_2.json', 'DJI_0124_Doenca_3.JPG', 'DJI_0124_Doenca_3.json', 'DJI_0124_Saudavel_4.JPG', 'DJI_0124_Saudavel_4.json', 'DJI_0124_Saudavel_5.JPG', 'DJI_0124_Saudavel_5.json', 'DJI_0124_Saudavel_6.JPG', 'DJI_0124_Saudavel_6.json', 'DJI_0124_Saudavel_7.JPG', 'DJI_0124_Saudavel_7.json', 'DJI_0124_Saudavel_8.JPG', 'DJI_0124_Saudavel_8.json', 'DJI_0124_Solo_9.JPG', 'DJI_0124_Solo_9.json', 'DJI_0163.JPG', 'DJI_0163.json', 'DJI_0163_Doenca_0.JPG', 'DJI_0163_Doenca_0.json', 'DJI_0163_Doenca_1.JPG', 'DJI_0163_Doenca_1.json', 'DJI_0163_Saudavel_2.JPG', 'DJI_0163_Saudavel_2.json', 'DJI_0163_Saudavel_3.JPG', 'DJI_0163_Saudavel_3.json', 'DJI_0163_Saudavel_4.JPG', 'DJI_0163_Saudavel_4.json', 'DJI_0163_Saudavel_5.JPG', 'DJI_0163_Saudavel_5.json', 'DJI_0163_Saudavel_6.JPG', 'DJI_0163_Saudavel_6.json', 'DJI_0163_Saudavel_7.JPG', 'DJI_0163_Saudavel_7.json', 'DJI_0163_Saudavel_8.JPG', 'DJI_0163_Saudavel_8.json', 'DJI_0163_Solo_9.JPG', 'DJI_0163_Solo_9.json', 'DJI_0212.JPG', 'DJI_0212.json', 'DJI_0212_Doenca_0.JPG', 'DJI_0212_Doenca_0.json', 'DJI_0212_Doenca_1.JPG', 'DJI_0212_Doenca_1.json', 'DJI_0212_Saudavel_2.JPG', 'DJI_0212_Saudavel_2.json', 'DJI_0212_Saudavel_3.JPG', 'DJI_0212_Saudavel_3.json', 'DJI_0212_Saudavel_4.JPG', 'DJI_0212_Saudavel_4.json', 'DJI_0212_Solo_5.JPG', 'DJI_0212_Solo_5.json', 'DJI_0215.JPG', 'DJI_0215.json', 'DJI_0215_Doenca_0.JPG', 'DJI_0215_Doenca_0.json', 'DJI_0215_Doenca_1.JPG', 'DJI_0215_Doenca_1.json', 'DJI_0215_Doenca_2.JPG', 'DJI_0215_Doenca_2.json', 'DJI_0215_Doenca_3.JPG', 'DJI_0215_Doenca_3.json', 'DJI_0215_Doenca_4.JPG', 'DJI_0215_Doenca_4.json', 'DJI_0215_Doenca_5.JPG', 'DJI_0215_Doenca_5.json', 'DJI_0215_Solo_6.JPG', 'DJI_0215_Solo_6.json', 'DJI_0236.JPG', 'DJI_0236.json', 'DJI_0236_Doenca_0.JPG', 'DJI_0236_Doenca_0.json', 'DJI_0236_Doenca_1.JPG', 'DJI_0236_Doenca_1.json', 'DJI_0236_Saudavel_2.JPG', 'DJI_0236_Saudavel_2.json', 'DJI_0236_Saudavel_3.JPG', 'DJI_0236_Saudavel_3.json', 'DJI_0236_Saudavel_4.JPG', 'DJI_0236_Saudavel_4.json', 'DJI_0236_Solo_5.JPG', 'DJI_0236_Solo_5.json', 'DJI_0251.JPG', 'DJI_0251.json', 'DJI_0251_Doenca_0.JPG', 'DJI_0251_Doenca_0.json', 'DJI_0251_Doenca_1.JPG', 'DJI_0251_Doenca_1.json', 'DJI_0251_Doenca_2.JPG', 'DJI_0251_Doenca_2.json', 'DJI_0251_Doenca_3.JPG', 'DJI_0251_Doenca_3.json', 'DJI_0251_Solo_4.JPG', 'DJI_0251_Solo_4.json', 'DJI_0434.JPG', 'DJI_0434.json', 'DJI_0434_Doenca_2.JPG', 'DJI_0434_Doenca_2.json', 'DJI_0434_Doenca_3.JPG', 'DJI_0434_Doenca_3.json', 'DJI_0434_Saudavel_4.JPG', 'DJI_0434_Saudavel_4.json', 'DJI_0434_Saudavel_5.JPG', 'DJI_0434_Saudavel_5.json', 'DJI_0434_Solo_0.JPG', 'DJI_0434_Solo_0.json', 'DJI_0434_Solo_1.JPG', 'DJI_0434_Solo_1.json', 'DJI_0434_Solo_6.JPG', 'DJI_0434_Solo_6.json']
+2024-11-23 00:09:20,222 - Input shape: torch.Size([1, 3, 448, 800]), Output shape: torch.Size([1, 4, 112, 200])
+2024-11-23 00:09:20,222 - Epoch 1 starting...
+2024-11-23 00:09:31,003 - Train loss: 1.307424, train acc: 0.437372
+2024-11-23 00:09:36,069 - Validação Acc: 0.326822 -- Melhor Avaliação Acc: 0.326822 -- epoch 0.
+2024-11-23 00:09:36,070 - Epoch 2 starting...
+2024-11-23 00:09:47,050 - Train loss: 1.209721, train acc: 0.438175
+2024-11-23 00:09:52,093 - Validação Acc: 0.326823 -- Melhor Avaliação Acc: 0.326823 -- epoch 1.
+2024-11-23 00:09:52,093 - Epoch 3 starting...
+2024-11-23 00:10:04,660 - Train loss: 1.173538, train acc: 0.438124
+2024-11-23 00:10:09,242 - Validação Acc: 0.326827 -- Melhor Avaliação Acc: 0.326827 -- epoch 2.
+2024-11-23 00:10:09,242 - Epoch 4 starting...
+2024-11-23 00:10:23,733 - Train loss: 1.153066, train acc: 0.427513
+2024-11-23 00:10:29,127 - Validação Acc: 0.328115 -- Melhor Avaliação Acc: 0.328115 -- epoch 3.
+2024-11-23 00:10:29,127 - Epoch 5 starting...
+2024-11-23 00:10:41,340 - Train loss: 1.136925, train acc: 0.412320
+2024-11-23 00:10:46,454 - Validação Acc: 0.422333 -- Melhor Avaliação Acc: 0.422333 -- epoch 4.
+2024-11-23 00:10:46,454 - Epoch 6 starting...
+2024-11-23 00:11:01,940 - Train loss: 1.127375, train acc: 0.401043
+2024-11-23 00:11:07,277 - Validação Acc: 0.445554 -- Melhor Avaliação Acc: 0.445554 -- epoch 5.
+2024-11-23 00:11:07,277 - Epoch 7 starting...
+2024-11-23 00:11:22,127 - Train loss: 1.123147, train acc: 0.370550
+2024-11-23 00:11:26,868 - Validação Acc: 0.437060 -- Melhor Avaliação Acc: 0.445554 -- epoch 5.
+2024-11-23 00:11:26,868 - Epoch 8 starting...
+2024-11-23 00:11:40,859 - Train loss: 1.119232, train acc: 0.364851
+2024-11-23 00:11:46,506 - Validação Acc: 0.428491 -- Melhor Avaliação Acc: 0.445554 -- epoch 5.
+2024-11-23 00:11:46,506 - Epoch 9 starting...
+2024-11-23 00:12:04,961 - Train loss: 1.115198, train acc: 0.374376
+2024-11-23 00:12:10,671 - Validação Acc: 0.424211 -- Melhor Avaliação Acc: 0.445554 -- epoch 5.
+2024-11-23 00:12:10,671 - Epoch 10 starting...
+2024-11-23 00:12:29,319 - Train loss: 1.114160, train acc: 0.392005
+2024-11-23 00:12:35,060 - Validação Acc: 0.439741 -- Melhor Avaliação Acc: 0.445554 -- epoch 5.
+2024-11-23 00:12:35,060 - Epoch 11 starting...
+2024-11-23 00:12:53,744 - Train loss: 1.111717, train acc: 0.400968
+2024-11-23 00:12:59,390 - Nova melhor conta de validação. Salvo... 10.000000
+2024-11-23 00:12:59,390 - Validação Acc: 0.449173 -- Melhor Avaliação Acc: 0.449173 -- epoch 10.
+2024-11-23 00:12:59,390 - Epoch 12 starting...
+2024-11-23 00:13:17,920 - Train loss: 1.110397, train acc: 0.383210
+2024-11-23 00:13:23,573 - Nova melhor conta de validação. Salvo... 11.000000
+2024-11-23 00:13:23,573 - Validação Acc: 0.453061 -- Melhor Avaliação Acc: 0.453061 -- epoch 11.
+2024-11-23 00:13:23,573 - Epoch 13 starting...
+2024-11-23 00:13:42,127 - Train loss: 1.106941, train acc: 0.380767
+2024-11-23 00:13:47,779 - Validação Acc: 0.445578 -- Melhor Avaliação Acc: 0.453061 -- epoch 11.
+2024-11-23 00:13:47,779 - Epoch 14 starting...
+2024-11-23 00:14:06,418 - Train loss: 1.106624, train acc: 0.384995
+2024-11-23 00:14:12,133 - Validação Acc: 0.449096 -- Melhor Avaliação Acc: 0.453061 -- epoch 11.
+2024-11-23 00:14:12,133 - Epoch 15 starting...
+2024-11-23 00:14:30,705 - Train loss: 1.103666, train acc: 0.393280
+2024-11-23 00:14:36,452 - Nova melhor conta de validação. Salvo... 14.000000
+2024-11-23 00:14:36,452 - Validação Acc: 0.456194 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:14:36,452 - Epoch 16 starting...
+2024-11-23 00:14:55,219 - Train loss: 1.103372, train acc: 0.379907
+2024-11-23 00:15:00,747 - Validação Acc: 0.452263 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:15:00,747 - Epoch 17 starting...
+2024-11-23 00:15:19,246 - Train loss: 1.102840, train acc: 0.388649
+2024-11-23 00:15:24,864 - Validação Acc: 0.453688 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:15:24,864 - Epoch 18 starting...
+2024-11-23 00:15:43,476 - Train loss: 1.102081, train acc: 0.388402
+2024-11-23 00:15:49,211 - Validação Acc: 0.454724 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:15:49,211 - Epoch 19 starting...
+2024-11-23 00:16:07,871 - Train loss: 1.101187, train acc: 0.389489
+2024-11-23 00:16:13,571 - Validação Acc: 0.454387 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:16:13,571 - Epoch 20 starting...
+2024-11-23 00:16:32,287 - Train loss: 1.099890, train acc: 0.388961
+2024-11-23 00:16:38,000 - Validação Acc: 0.451523 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:16:38,000 - Epoch 21 starting...
+2024-11-23 00:16:56,696 - Train loss: 1.099183, train acc: 0.414217
+2024-11-23 00:17:02,364 - Validação Acc: 0.455733 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:17:02,364 - Epoch 22 starting...
+2024-11-23 00:17:21,189 - Train loss: 1.098826, train acc: 0.387475
+2024-11-23 00:17:26,884 - Validação Acc: 0.454148 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:17:26,884 - Epoch 23 starting...
+2024-11-23 00:17:45,543 - Train loss: 1.098728, train acc: 0.391543
+2024-11-23 00:17:51,296 - Validação Acc: 0.454524 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:17:51,296 - Epoch 24 starting...
+2024-11-23 00:18:09,886 - Train loss: 1.096643, train acc: 0.388221
+2024-11-23 00:18:15,529 - Validação Acc: 0.449986 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:18:15,529 - Epoch 25 starting...
+2024-11-23 00:18:34,318 - Train loss: 1.097491, train acc: 0.391825
+2024-11-23 00:18:40,092 - Validação Acc: 0.454230 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:18:40,092 - Epoch 26 starting...
+2024-11-23 00:18:58,952 - Train loss: 1.094349, train acc: 0.395227
+2024-11-23 00:19:04,661 - Validação Acc: 0.455102 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:19:04,661 - Epoch 27 starting...
+2024-11-23 00:19:23,284 - Train loss: 1.094059, train acc: 0.385851
+2024-11-23 00:19:28,890 - Validação Acc: 0.454346 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:19:28,890 - Epoch 28 starting...
+2024-11-23 00:19:47,588 - Train loss: 1.094696, train acc: 0.392291
+2024-11-23 00:19:53,262 - Validação Acc: 0.454466 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:19:53,262 - Epoch 29 starting...
+2024-11-23 00:20:11,980 - Train loss: 1.094216, train acc: 0.391265
+2024-11-23 00:20:17,712 - Validação Acc: 0.452171 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:20:17,712 - Epoch 30 starting...
+2024-11-23 00:20:36,378 - Train loss: 1.090964, train acc: 0.400847
+2024-11-23 00:20:42,161 - Validação Acc: 0.453100 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:20:42,161 - Epoch 31 starting...
+2024-11-23 00:21:00,774 - Train loss: 1.090757, train acc: 0.398830
+2024-11-23 00:21:06,353 - Validação Acc: 0.453535 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:21:06,353 - Epoch 32 starting...
+2024-11-23 00:21:25,072 - Train loss: 1.090514, train acc: 0.398916
+2024-11-23 00:21:30,658 - Validação Acc: 0.453752 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:21:30,658 - Epoch 33 starting...
+2024-11-23 00:21:49,438 - Train loss: 1.090378, train acc: 0.397276
+2024-11-23 00:21:55,128 - Validação Acc: 0.453795 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:21:55,128 - Epoch 34 starting...
+2024-11-23 00:22:13,889 - Train loss: 1.090302, train acc: 0.395773
+2024-11-23 00:22:19,520 - Validação Acc: 0.453875 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:22:19,520 - Epoch 35 starting...
+2024-11-23 00:22:38,134 - Train loss: 1.090083, train acc: 0.396580
+2024-11-23 00:22:43,827 - Validação Acc: 0.453914 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:22:43,827 - Epoch 36 starting...
+2024-11-23 00:23:02,563 - Train loss: 1.090034, train acc: 0.395738
+2024-11-23 00:23:08,299 - Validação Acc: 0.454098 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:23:08,299 - Epoch 37 starting...
+2024-11-23 00:23:26,969 - Train loss: 1.089939, train acc: 0.395576
+2024-11-23 00:23:32,753 - Validação Acc: 0.454190 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:23:32,753 - Epoch 38 starting...
+2024-11-23 00:23:51,614 - Train loss: 1.089950, train acc: 0.394545
+2024-11-23 00:23:57,222 - Validação Acc: 0.454073 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:23:57,222 - Epoch 39 starting...
+2024-11-23 00:24:15,810 - Train loss: 1.089742, train acc: 0.395155
+2024-11-23 00:24:21,491 - Validação Acc: 0.454269 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:24:21,491 - Epoch 40 starting...
+2024-11-23 00:24:40,137 - Train loss: 1.089698, train acc: 0.395295
+2024-11-23 00:24:45,788 - Validação Acc: 0.454530 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:24:45,788 - Epoch 41 starting...
+2024-11-23 00:25:04,503 - Train loss: 1.089550, train acc: 0.397865
+2024-11-23 00:25:10,168 - Validação Acc: 0.454448 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:25:10,168 - Epoch 42 starting...
+2024-11-23 00:25:28,879 - Train loss: 1.089539, train acc: 0.395361
+2024-11-23 00:25:34,502 - Validação Acc: 0.454510 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:25:34,502 - Epoch 43 starting...
+2024-11-23 00:25:53,204 - Train loss: 1.089395, train acc: 0.394599
+2024-11-23 00:25:58,986 - Validação Acc: 0.454400 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:25:58,986 - Epoch 44 starting...
+2024-11-23 00:26:17,883 - Train loss: 1.089176, train acc: 0.396740
+2024-11-23 00:26:23,519 - Validação Acc: 0.454497 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:26:23,519 - Epoch 45 starting...
+2024-11-23 00:26:42,151 - Train loss: 1.089188, train acc: 0.393503
+2024-11-23 00:26:47,658 - Validação Acc: 0.454371 -- Melhor Avaliação Acc: 0.456194 -- epoch 14.
+2024-11-23 00:26:47,658 - Epoch 46 starting...
+2024-11-23 00:27:06,400 - Train loss: 1.089162, train acc: 0.397947
+2024-11-23 00:27:12,002 - Terminando o treinamento, melhor conta de validação 0.456194
+2024-11-23 00:27:12,123 - Gráficos salvos: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\result_model_segmentadas_linknet_loss_accuracy.png
+2024-11-23 00:27:12,139 - Modelo carregado e pronto para uso.
+2024-11-23 00:27:12,352 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:12,400 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:12,511 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Doenca_0RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:12,559 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Doenca_0RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:12,678 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Saudavel_1RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:12,726 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Saudavel_1RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:12,844 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Saudavel_2RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:12,892 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Saudavel_2RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:13,015 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Saudavel_3RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:13,062 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Saudavel_3RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:13,181 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Saudavel_4RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:13,229 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Saudavel_4RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:13,352 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Saudavel_5RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:13,400 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Saudavel_5RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:13,521 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Solo_6RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:13,561 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0052_Solo_6RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:13,750 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:13,796 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:13,908 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Doenca_0RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:13,955 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Doenca_0RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:14,071 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Doenca_1RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:14,114 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Doenca_1RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:14,225 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Saudavel_4RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:14,273 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Saudavel_4RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:14,400 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Saudavel_5RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:14,447 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Saudavel_5RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:14,558 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Saudavel_6RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:14,605 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Saudavel_6RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:14,838 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Saudavel_7RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:14,886 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Saudavel_7RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:15,000 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Saudavel_8RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:15,051 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Saudavel_8RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:15,166 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Solo_2RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:15,211 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Solo_2RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:15,328 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Solo_3RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:15,369 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0085_Solo_3RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:15,558 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:15,605 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:15,719 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Doenca_0RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:15,766 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Doenca_0RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:15,881 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Doenca_1RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:15,926 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Doenca_1RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:16,040 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_2RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:16,086 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_2RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:16,202 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_3RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:16,249 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_3RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:16,365 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_4RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:16,414 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_4RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:16,529 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_5RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:16,581 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_5RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:16,699 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_6RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:16,746 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_6RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:16,863 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_7RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:16,908 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_7RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:17,050 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_8RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:17,097 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_8RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:17,213 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_9RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:17,259 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Saudavel_9RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:17,380 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Solo_10RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:17,425 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Solo_10RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:17,544 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Solo_11RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:17,589 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0107_Solo_11RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:17,760 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:17,819 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:17,936 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Doenca_0RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:17,982 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Doenca_0RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:18,202 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Doenca_1RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:18,247 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Doenca_1RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:18,362 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Doenca_2RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:18,410 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Doenca_2RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:18,526 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Doenca_3RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:18,572 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Doenca_3RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:18,687 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Saudavel_4RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:18,736 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Saudavel_4RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:18,852 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Saudavel_5RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:18,904 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Saudavel_5RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:19,020 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Saudavel_6RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:19,058 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Saudavel_6RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:19,185 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Saudavel_7RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:19,230 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Saudavel_7RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:19,348 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Saudavel_8RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:19,395 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Saudavel_8RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:19,510 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Solo_9RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:19,557 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0124_Solo_9RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:19,742 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:19,789 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:19,911 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Doenca_0RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:19,963 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Doenca_0RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:20,076 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Doenca_1RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:20,125 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Doenca_1RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:20,238 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_2RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:20,284 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_2RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:20,397 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_3RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:20,447 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_3RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:20,562 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_4RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:20,607 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_4RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:20,725 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_5RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:20,770 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_5RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:20,887 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_6RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:20,940 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_6RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:21,045 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_7RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:21,103 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_7RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:21,219 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_8RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:21,267 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Saudavel_8RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:21,491 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Solo_9RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:21,536 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0163_Solo_9RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:21,725 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:21,770 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:21,881 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Doenca_0RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:21,929 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Doenca_0RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:22,039 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Doenca_1RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:22,087 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Doenca_1RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:22,199 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Saudavel_2RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:22,245 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Saudavel_2RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:22,366 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Saudavel_3RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:22,414 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Saudavel_3RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:22,529 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Saudavel_4RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:22,576 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Saudavel_4RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:22,694 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Solo_5RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:22,740 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0212_Solo_5RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:22,925 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:22,972 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:23,091 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_0RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:23,141 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_0RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:23,255 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_1RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:23,302 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_1RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:23,418 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_2RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:23,465 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_2RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:23,570 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_3RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:23,618 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_3RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:23,743 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_4RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:23,788 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_4RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:23,906 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_5RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:23,951 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Doenca_5RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:24,070 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Solo_6RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:24,107 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0215_Solo_6RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:24,301 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:24,344 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:24,455 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Doenca_0RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:24,501 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Doenca_0RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:24,612 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Doenca_1RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:24,659 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Doenca_1RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:24,865 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Saudavel_2RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:24,912 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Saudavel_2RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:25,040 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Saudavel_3RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:25,086 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Saudavel_3RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:25,204 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Saudavel_4RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:25,250 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Saudavel_4RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:25,370 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Solo_5RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:25,416 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0236_Solo_5RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:25,608 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:25,654 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:25,768 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251_Doenca_0RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:25,816 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251_Doenca_0RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:25,929 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251_Doenca_1RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:25,976 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251_Doenca_1RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:26,092 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251_Doenca_2RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:26,142 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251_Doenca_2RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:26,254 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251_Doenca_3RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:26,302 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251_Doenca_3RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:26,418 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251_Solo_4RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:26,466 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0251_Solo_4RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:26,655 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:26,700 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:26,815 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Doenca_2RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:26,863 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Doenca_2RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:26,979 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Doenca_3RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:27,026 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Doenca_3RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:27,141 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Saudavel_4RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:27,188 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Saudavel_4RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:27,303 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Saudavel_5RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:27,348 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Saudavel_5RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:27,469 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Solo_0RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:27,514 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Solo_0RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:27,633 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Solo_1RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:27,678 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Solo_1RESULT_INFERENCIA_GT_.png
+2024-11-23 00:27:27,793 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Solo_6RESULT_INFERENCIA_IMG_.png
+2024-11-23 00:27:27,838 - Imagem salva: C:\git\image-segmentation\dataset\\result_linknet_base_segmentadas\\DJI_0434_Solo_6RESULT_INFERENCIA_GT_.png

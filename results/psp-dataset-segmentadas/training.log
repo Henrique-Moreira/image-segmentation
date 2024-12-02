@@ -1,0 +1,1004 @@
+2024-11-22 18:52:57,936 - CUDA disponível: True
+2024-11-22 18:52:57,936 - Nome da GPU: NVIDIA GeForce RTX 4070
+2024-11-22 18:52:57,936 - VRAM Total: 11.99 GB
+2024-11-22 18:52:57,936 - Diretório do Projeto C:\git\image-segmentation\dataset
+2024-11-22 18:52:57,936 - Modelo será salvo em: C:\git\image-segmentation\dataset\\result_PSPNET_Segmentadas\\model_PSPNET_segmentadas.pth
+2024-11-22 18:52:57,936 - Resolução de entrada: (640, 480)
+2024-11-22 18:52:57,936 - Patience: 30
+2024-11-22 18:52:57,936 - Número máximo de épocas: 300
+2024-11-22 18:52:57,936 - Mapeamento de classes para cores: {'Doenca': (255, 0, 0), 'Solo': (0, 0, 255), 'Saudavel': (0, 255, 255), 'Folhas': (0, 255, 0)}
+2024-11-22 18:52:57,936 - Mapeamento de classes para IDs: {'Doenca': 0, 'Solo': 1, 'Saudavel': 2, 'Folhas': 3}
+2024-11-22 18:52:57,952 - Pesos de classes: [1, 1, 1, 1]
+2024-11-22 18:52:57,952 - Número de amostras no dataset de treinamento: 189
+2024-11-22 18:52:57,952 - Arquivos no dataset de treinamento: ['DJI_0026.JPG', 'DJI_0026.json', 'DJI_0026_Doenca_0.JPG', 'DJI_0026_Doenca_0.json', 'DJI_0026_Saudavel_2.JPG', 'DJI_0026_Saudavel_2.json', 'DJI_0026_Saudavel_3.JPG', 'DJI_0026_Saudavel_3.json', 'DJI_0026_Saudavel_4.JPG', 'DJI_0026_Saudavel_4.json', 'DJI_0026_Solo_1.JPG', 'DJI_0026_Solo_1.json', 'DJI_0064.JPG', 'DJI_0064.json', 'DJI_0064_Doenca_0.JPG', 'DJI_0064_Doenca_0.json', 'DJI_0064_Saudavel_1.JPG', 'DJI_0064_Saudavel_1.json', 'DJI_0064_Saudavel_2.JPG', 'DJI_0064_Saudavel_2.json', 'DJI_0064_Saudavel_3.JPG', 'DJI_0064_Saudavel_3.json', 'DJI_0064_Saudavel_4.JPG', 'DJI_0064_Saudavel_4.json', 'DJI_0064_Saudavel_5.JPG', 'DJI_0064_Saudavel_5.json', 'DJI_0064_Saudavel_6.JPG', 'DJI_0064_Saudavel_6.json', 'DJI_0064_Solo_7.JPG', 'DJI_0064_Solo_7.json', 'DJI_0089.JPG', 'DJI_0089.json', 'DJI_0089_Doenca_0.JPG', 'DJI_0089_Doenca_0.json', 'DJI_0089_Saudavel_1.JPG', 'DJI_0089_Saudavel_1.json', 'DJI_0089_Saudavel_10.JPG', 'DJI_0089_Saudavel_10.json', 'DJI_0089_Saudavel_11.JPG', 'DJI_0089_Saudavel_11.json', 'DJI_0089_Saudavel_2.JPG', 'DJI_0089_Saudavel_2.json', 'DJI_0089_Saudavel_4.JPG', 'DJI_0089_Saudavel_4.json', 'DJI_0089_Saudavel_5.JPG', 'DJI_0089_Saudavel_5.json', 'DJI_0089_Saudavel_6.JPG', 'DJI_0089_Saudavel_6.json', 'DJI_0089_Saudavel_7.JPG', 'DJI_0089_Saudavel_7.json', 'DJI_0089_Saudavel_8.JPG', 'DJI_0089_Saudavel_8.json', 'DJI_0089_Saudavel_9.JPG', 'DJI_0089_Saudavel_9.json', 'DJI_0089_Solo_3.JPG', 'DJI_0089_Solo_3.json', 'DJI_0105.JPG', 'DJI_0105.json', 'DJI_0105_Doenca_0.JPG', 'DJI_0105_Doenca_0.json', 'DJI_0105_Doenca_5.JPG', 'DJI_0105_Doenca_5.json', 'DJI_0105_Saudavel_1.JPG', 'DJI_0105_Saudavel_1.json', 'DJI_0105_Saudavel_2.JPG', 'DJI_0105_Saudavel_2.json', 'DJI_0105_Saudavel_3.JPG', 'DJI_0105_Saudavel_3.json', 'DJI_0105_Saudavel_4.JPG', 'DJI_0105_Saudavel_4.json', 'DJI_0105_Saudavel_6.JPG', 'DJI_0105_Saudavel_6.json', 'DJI_0105_Solo_7.JPG', 'DJI_0105_Solo_7.json', 'DJI_0105_Solo_8.JPG', 'DJI_0105_Solo_8.json', 'DJI_0122.JPG', 'DJI_0122.json', 'DJI_0122_Doenca_0.JPG', 'DJI_0122_Doenca_0.json', 'DJI_0122_Doenca_1.JPG', 'DJI_0122_Doenca_1.json', 'DJI_0122_Saudavel_2.JPG', 'DJI_0122_Saudavel_2.json', 'DJI_0122_Saudavel_3.JPG', 'DJI_0122_Saudavel_3.json', 'DJI_0122_Saudavel_4.JPG', 'DJI_0122_Saudavel_4.json', 'DJI_0122_Saudavel_5.JPG', 'DJI_0122_Saudavel_5.json', 'DJI_0122_Saudavel_6.JPG', 'DJI_0122_Saudavel_6.json', 'DJI_0122_Saudavel_7.JPG', 'DJI_0122_Saudavel_7.json', 'DJI_0122_Saudavel_8.JPG', 'DJI_0122_Saudavel_8.json', 'DJI_0122_Saudavel_9.JPG', 'DJI_0122_Saudavel_9.json', 'DJI_0122_Solo_10.JPG', 'DJI_0122_Solo_10.json', 'DJI_0160.JPG', 'DJI_0160.json', 'DJI_0160_Doenca_0.JPG', 'DJI_0160_Doenca_0.json', 'DJI_0160_Doenca_1.JPG', 'DJI_0160_Doenca_1.json', 'DJI_0160_Doenca_2.JPG', 'DJI_0160_Doenca_2.json', 'DJI_0160_Doenca_7.JPG', 'DJI_0160_Doenca_7.json', 'DJI_0160_Doenca_8.JPG', 'DJI_0160_Doenca_8.json', 'DJI_0160_Doenca_9.JPG', 'DJI_0160_Doenca_9.json', 'DJI_0160_Saudavel_10.JPG', 'DJI_0160_Saudavel_10.json', 'DJI_0160_Saudavel_11.JPG', 'DJI_0160_Saudavel_11.json', 'DJI_0160_Saudavel_12.JPG', 'DJI_0160_Saudavel_12.json', 'DJI_0160_Saudavel_13.JPG', 'DJI_0160_Saudavel_13.json', 'DJI_0160_Saudavel_3.JPG', 'DJI_0160_Saudavel_3.json', 'DJI_0160_Solo_4.JPG', 'DJI_0160_Solo_4.json', 'DJI_0160_Solo_5.JPG', 'DJI_0160_Solo_5.json', 'DJI_0160_Solo_6.JPG', 'DJI_0160_Solo_6.json', 'DJI_0161.JPG', 'DJI_0161.json', 'DJI_0161_Doenca_0.JPG', 'DJI_0161_Doenca_0.json', 'DJI_0161_Doenca_1.JPG', 'DJI_0161_Doenca_1.json', 'DJI_0161_Doenca_10.JPG', 'DJI_0161_Doenca_10.json', 'DJI_0161_Doenca_4.JPG', 'DJI_0161_Doenca_4.json', 'DJI_0161_Doenca_6.JPG', 'DJI_0161_Doenca_6.json', 'DJI_0161_Doenca_7.JPG', 'DJI_0161_Doenca_7.json', 'DJI_0161_Doenca_8.JPG', 'DJI_0161_Doenca_8.json', 'DJI_0161_Doenca_9.JPG', 'DJI_0161_Doenca_9.json', 'DJI_0161_Saudavel_11.JPG', 'DJI_0161_Saudavel_11.json', 'DJI_0161_Saudavel_12.JPG', 'DJI_0161_Saudavel_12.json', 'DJI_0161_Saudavel_13.JPG', 'DJI_0161_Saudavel_13.json', 'DJI_0161_Saudavel_2.JPG', 'DJI_0161_Saudavel_2.json', 'DJI_0161_Saudavel_3.JPG', 'DJI_0161_Saudavel_3.json', 'DJI_0161_Saudavel_5.JPG', 'DJI_0161_Saudavel_5.json', 'DJI_0161_Solo_14.JPG', 'DJI_0161_Solo_14.json', 'DJI_0161_Solo_15.JPG', 'DJI_0161_Solo_15.json', 'DJI_0165.JPG', 'DJI_0165.json', 'DJI_0165_Doenca_2.JPG', 'DJI_0165_Doenca_2.json', 'DJI_0165_Doenca_3.JPG', 'DJI_0165_Doenca_3.json', 'DJI_0165_Saudavel_10.JPG', 'DJI_0165_Saudavel_10.json', 'DJI_0165_Saudavel_11.JPG', 'DJI_0165_Saudavel_11.json', 'DJI_0165_Saudavel_4.JPG', 'DJI_0165_Saudavel_4.json', 'DJI_0165_Saudavel_5.JPG', 'DJI_0165_Saudavel_5.json', 'DJI_0165_Saudavel_6.JPG', 'DJI_0165_Saudavel_6.json', 'DJI_0165_Saudavel_7.JPG', 'DJI_0165_Saudavel_7.json', 'DJI_0165_Saudavel_8.JPG', 'DJI_0165_Saudavel_8.json', 'DJI_0165_Saudavel_9.JPG', 'DJI_0165_Saudavel_9.json', 'DJI_0165_Solo_0.JPG', 'DJI_0165_Solo_0.json', 'DJI_0165_Solo_1.JPG', 'DJI_0165_Solo_1.json', 'DJI_0211.JPG', 'DJI_0211.json', 'DJI_0211_Doenca_1.JPG', 'DJI_0211_Doenca_1.json', 'DJI_0211_Doenca_2.JPG', 'DJI_0211_Doenca_2.json', 'DJI_0211_Saudavel_3.JPG', 'DJI_0211_Saudavel_3.json', 'DJI_0211_Saudavel_4.JPG', 'DJI_0211_Saudavel_4.json', 'DJI_0211_Saudavel_5.JPG', 'DJI_0211_Saudavel_5.json', 'DJI_0211_Saudavel_6.JPG', 'DJI_0211_Saudavel_6.json', 'DJI_0211_Solo_0.JPG', 'DJI_0211_Solo_0.json', 'DJI_0214.JPG', 'DJI_0214.json', 'DJI_0214_Doenca_0.JPG', 'DJI_0214_Doenca_0.json', 'DJI_0214_Doenca_3.JPG', 'DJI_0214_Doenca_3.json', 'DJI_0214_Doenca_4.JPG', 'DJI_0214_Doenca_4.json', 'DJI_0214_Doenca_5.JPG', 'DJI_0214_Doenca_5.json', 'DJI_0214_Saudavel_6.JPG', 'DJI_0214_Saudavel_6.json', 'DJI_0214_Saudavel_7.JPG', 'DJI_0214_Saudavel_7.json', 'DJI_0214_Saudavel_8.JPG', 'DJI_0214_Saudavel_8.json', 'DJI_0214_Saudavel_9.JPG', 'DJI_0214_Saudavel_9.json', 'DJI_0214_Solo_1.JPG', 'DJI_0214_Solo_1.json', 'DJI_0214_Solo_2.JPG', 'DJI_0214_Solo_2.json', 'DJI_0217.JPG', 'DJI_0217.json', 'DJI_0217_Doenca_0.JPG', 'DJI_0217_Doenca_0.json', 'DJI_0217_Doenca_3.JPG', 'DJI_0217_Doenca_3.json', 'DJI_0217_Doenca_4.JPG', 'DJI_0217_Doenca_4.json', 'DJI_0217_Doenca_5.JPG', 'DJI_0217_Doenca_5.json', 'DJI_0217_Doenca_6.JPG', 'DJI_0217_Doenca_6.json', 'DJI_0217_Doenca_7.JPG', 'DJI_0217_Doenca_7.json', 'DJI_0217_Doenca_8.JPG', 'DJI_0217_Doenca_8.json', 'DJI_0217_Saudavel_2.JPG', 'DJI_0217_Saudavel_2.json', 'DJI_0217_Solo_1.JPG', 'DJI_0217_Solo_1.json', 'DJI_0233.JPG', 'DJI_0233.json', 'DJI_0233_Doenca_0.JPG', 'DJI_0233_Doenca_0.json', 'DJI_0233_Doenca_1.JPG', 'DJI_0233_Doenca_1.json', 'DJI_0233_Doenca_2.JPG', 'DJI_0233_Doenca_2.json', 'DJI_0233_Doenca_3.JPG', 'DJI_0233_Doenca_3.json', 'DJI_0233_Doenca_4.JPG', 'DJI_0233_Doenca_4.json', 'DJI_0233_Solo_5.JPG', 'DJI_0233_Solo_5.json', 'DJI_0234.JPG', 'DJI_0234.json', 'DJI_0234_Doenca_0.JPG', 'DJI_0234_Doenca_0.json', 'DJI_0234_Doenca_1.JPG', 'DJI_0234_Doenca_1.json', 'DJI_0234_Doenca_2.JPG', 'DJI_0234_Doenca_2.json', 'DJI_0234_Doenca_3.JPG', 'DJI_0234_Doenca_3.json', 'DJI_0234_Solo_4.JPG', 'DJI_0234_Solo_4.json', 'DJI_0237.JPG', 'DJI_0237.json', 'DJI_0237_Doenca_0.JPG', 'DJI_0237_Doenca_0.json', 'DJI_0237_Saudavel_1.JPG', 'DJI_0237_Saudavel_1.json', 'DJI_0237_Saudavel_2.JPG', 'DJI_0237_Saudavel_2.json', 'DJI_0237_Solo_3.JPG', 'DJI_0237_Solo_3.json', 'DJI_0252.JPG', 'DJI_0252.json', 'DJI_0252_Doenca_0.JPG', 'DJI_0252_Doenca_0.json', 'DJI_0252_Doenca_1.JPG', 'DJI_0252_Doenca_1.json', 'DJI_0252_Doenca_2.JPG', 'DJI_0252_Doenca_2.json', 'DJI_0252_Doenca_3.JPG', 'DJI_0252_Doenca_3.json', 'DJI_0252_Doenca_4.JPG', 'DJI_0252_Doenca_4.json', 'DJI_0252_Solo_5.JPG', 'DJI_0252_Solo_5.json', 'DJI_0402.JPG', 'DJI_0402.json', 'DJI_0402_Doenca_0.JPG', 'DJI_0402_Doenca_0.json', 'DJI_0402_Doenca_1.JPG', 'DJI_0402_Doenca_1.json', 'DJI_0402_Saudavel_2.JPG', 'DJI_0402_Saudavel_2.json', 'DJI_0402_Saudavel_3.JPG', 'DJI_0402_Saudavel_3.json', 'DJI_0402_Solo_4.JPG', 'DJI_0402_Solo_4.json', 'DJI_0402_Solo_5.JPG', 'DJI_0402_Solo_5.json', 'DJI_0402_Solo_6.JPG', 'DJI_0402_Solo_6.json', 'DJI_0432.JPG', 'DJI_0432.json', 'DJI_0432_Doenca_0.JPG', 'DJI_0432_Doenca_0.json', 'DJI_0432_Saudavel_1.JPG', 'DJI_0432_Saudavel_1.json', 'DJI_0432_Saudavel_2.JPG', 'DJI_0432_Saudavel_2.json', 'DJI_0432_Solo_3.JPG', 'DJI_0432_Solo_3.json', 'DJI_0432_Solo_4.JPG', 'DJI_0432_Solo_4.json', 'DJI_0432_Solo_5.JPG', 'DJI_0432_Solo_5.json', 'DJI_0432_Solo_6.JPG', 'DJI_0432_Solo_6.json', 'DJI_0432_Solo_7.JPG', 'DJI_0432_Solo_7.json', 'DJI_0433.JPG', 'DJI_0433.json', 'DJI_0433_Doenca_5.JPG', 'DJI_0433_Doenca_5.json', 'DJI_0433_Doenca_6.JPG', 'DJI_0433_Doenca_6.json', 'DJI_0433_Saudavel_7.JPG', 'DJI_0433_Saudavel_7.json', 'DJI_0433_Saudavel_8.JPG', 'DJI_0433_Saudavel_8.json', 'DJI_0433_Solo_0.JPG', 'DJI_0433_Solo_0.json', 'DJI_0433_Solo_1.JPG', 'DJI_0433_Solo_1.json', 'DJI_0433_Solo_2.JPG', 'DJI_0433_Solo_2.json', 'DJI_0433_Solo_3.JPG', 'DJI_0433_Solo_3.json', 'DJI_0433_Solo_4.JPG', 'DJI_0433_Solo_4.json', 'DJI_0435.JPG', 'DJI_0435.json', 'DJI_0435_Doenca_2.JPG', 'DJI_0435_Doenca_2.json', 'DJI_0435_Doenca_5.JPG', 'DJI_0435_Doenca_5.json', 'DJI_0435_Saudavel_3.JPG', 'DJI_0435_Saudavel_3.json', 'DJI_0435_Solo_0.JPG', 'DJI_0435_Solo_0.json', 'DJI_0435_Solo_1.JPG', 'DJI_0435_Solo_1.json', 'DJI_0435_Solo_4.JPG', 'DJI_0435_Solo_4.json', 'DJI_0444.JPG', 'DJI_0444.json', 'DJI_0444_Doenca_2.JPG', 'DJI_0444_Doenca_2.json', 'DJI_0444_Saudavel_3.JPG', 'DJI_0444_Saudavel_3.json', 'DJI_0444_Saudavel_4.JPG', 'DJI_0444_Saudavel_4.json', 'DJI_0444_Solo_0.JPG', 'DJI_0444_Solo_0.json', 'DJI_0444_Solo_1.JPG', 'DJI_0444_Solo_1.json']
+2024-11-22 18:52:57,952 - Número de amostras no dataset de validação: 89
+2024-11-22 18:52:57,952 - Arquivos no dataset de validação: ['DJI_0052.JPG', 'DJI_0052.json', 'DJI_0052_Doenca_0.JPG', 'DJI_0052_Doenca_0.json', 'DJI_0052_Saudavel_1.JPG', 'DJI_0052_Saudavel_1.json', 'DJI_0052_Saudavel_2.JPG', 'DJI_0052_Saudavel_2.json', 'DJI_0052_Saudavel_3.JPG', 'DJI_0052_Saudavel_3.json', 'DJI_0052_Saudavel_4.JPG', 'DJI_0052_Saudavel_4.json', 'DJI_0052_Saudavel_5.JPG', 'DJI_0052_Saudavel_5.json', 'DJI_0052_Solo_6.JPG', 'DJI_0052_Solo_6.json', 'DJI_0085.JPG', 'DJI_0085.json', 'DJI_0085_Doenca_0.JPG', 'DJI_0085_Doenca_0.json', 'DJI_0085_Doenca_1.JPG', 'DJI_0085_Doenca_1.json', 'DJI_0085_Saudavel_4.JPG', 'DJI_0085_Saudavel_4.json', 'DJI_0085_Saudavel_5.JPG', 'DJI_0085_Saudavel_5.json', 'DJI_0085_Saudavel_6.JPG', 'DJI_0085_Saudavel_6.json', 'DJI_0085_Saudavel_7.JPG', 'DJI_0085_Saudavel_7.json', 'DJI_0085_Saudavel_8.JPG', 'DJI_0085_Saudavel_8.json', 'DJI_0085_Solo_2.JPG', 'DJI_0085_Solo_2.json', 'DJI_0085_Solo_3.JPG', 'DJI_0085_Solo_3.json', 'DJI_0107.JPG', 'DJI_0107.json', 'DJI_0107_Doenca_0.JPG', 'DJI_0107_Doenca_0.json', 'DJI_0107_Doenca_1.JPG', 'DJI_0107_Doenca_1.json', 'DJI_0107_Saudavel_2.JPG', 'DJI_0107_Saudavel_2.json', 'DJI_0107_Saudavel_3.JPG', 'DJI_0107_Saudavel_3.json', 'DJI_0107_Saudavel_4.JPG', 'DJI_0107_Saudavel_4.json', 'DJI_0107_Saudavel_5.JPG', 'DJI_0107_Saudavel_5.json', 'DJI_0107_Saudavel_6.JPG', 'DJI_0107_Saudavel_6.json', 'DJI_0107_Saudavel_7.JPG', 'DJI_0107_Saudavel_7.json', 'DJI_0107_Saudavel_8.JPG', 'DJI_0107_Saudavel_8.json', 'DJI_0107_Saudavel_9.JPG', 'DJI_0107_Saudavel_9.json', 'DJI_0107_Solo_10.JPG', 'DJI_0107_Solo_10.json', 'DJI_0107_Solo_11.JPG', 'DJI_0107_Solo_11.json', 'DJI_0124.JPG', 'DJI_0124.json', 'DJI_0124_Doenca_0.JPG', 'DJI_0124_Doenca_0.json', 'DJI_0124_Doenca_1.JPG', 'DJI_0124_Doenca_1.json', 'DJI_0124_Doenca_2.JPG', 'DJI_0124_Doenca_2.json', 'DJI_0124_Doenca_3.JPG', 'DJI_0124_Doenca_3.json', 'DJI_0124_Saudavel_4.JPG', 'DJI_0124_Saudavel_4.json', 'DJI_0124_Saudavel_5.JPG', 'DJI_0124_Saudavel_5.json', 'DJI_0124_Saudavel_6.JPG', 'DJI_0124_Saudavel_6.json', 'DJI_0124_Saudavel_7.JPG', 'DJI_0124_Saudavel_7.json', 'DJI_0124_Saudavel_8.JPG', 'DJI_0124_Saudavel_8.json', 'DJI_0124_Solo_9.JPG', 'DJI_0124_Solo_9.json', 'DJI_0163.JPG', 'DJI_0163.json', 'DJI_0163_Doenca_0.JPG', 'DJI_0163_Doenca_0.json', 'DJI_0163_Doenca_1.JPG', 'DJI_0163_Doenca_1.json', 'DJI_0163_Saudavel_2.JPG', 'DJI_0163_Saudavel_2.json', 'DJI_0163_Saudavel_3.JPG', 'DJI_0163_Saudavel_3.json', 'DJI_0163_Saudavel_4.JPG', 'DJI_0163_Saudavel_4.json', 'DJI_0163_Saudavel_5.JPG', 'DJI_0163_Saudavel_5.json', 'DJI_0163_Saudavel_6.JPG', 'DJI_0163_Saudavel_6.json', 'DJI_0163_Saudavel_7.JPG', 'DJI_0163_Saudavel_7.json', 'DJI_0163_Saudavel_8.JPG', 'DJI_0163_Saudavel_8.json', 'DJI_0163_Solo_9.JPG', 'DJI_0163_Solo_9.json', 'DJI_0212.JPG', 'DJI_0212.json', 'DJI_0212_Doenca_0.JPG', 'DJI_0212_Doenca_0.json', 'DJI_0212_Doenca_1.JPG', 'DJI_0212_Doenca_1.json', 'DJI_0212_Saudavel_2.JPG', 'DJI_0212_Saudavel_2.json', 'DJI_0212_Saudavel_3.JPG', 'DJI_0212_Saudavel_3.json', 'DJI_0212_Saudavel_4.JPG', 'DJI_0212_Saudavel_4.json', 'DJI_0212_Solo_5.JPG', 'DJI_0212_Solo_5.json', 'DJI_0215.JPG', 'DJI_0215.json', 'DJI_0215_Doenca_0.JPG', 'DJI_0215_Doenca_0.json', 'DJI_0215_Doenca_1.JPG', 'DJI_0215_Doenca_1.json', 'DJI_0215_Doenca_2.JPG', 'DJI_0215_Doenca_2.json', 'DJI_0215_Doenca_3.JPG', 'DJI_0215_Doenca_3.json', 'DJI_0215_Doenca_4.JPG', 'DJI_0215_Doenca_4.json', 'DJI_0215_Doenca_5.JPG', 'DJI_0215_Doenca_5.json', 'DJI_0215_Solo_6.JPG', 'DJI_0215_Solo_6.json', 'DJI_0236.JPG', 'DJI_0236.json', 'DJI_0236_Doenca_0.JPG', 'DJI_0236_Doenca_0.json', 'DJI_0236_Doenca_1.JPG', 'DJI_0236_Doenca_1.json', 'DJI_0236_Saudavel_2.JPG', 'DJI_0236_Saudavel_2.json', 'DJI_0236_Saudavel_3.JPG', 'DJI_0236_Saudavel_3.json', 'DJI_0236_Saudavel_4.JPG', 'DJI_0236_Saudavel_4.json', 'DJI_0236_Solo_5.JPG', 'DJI_0236_Solo_5.json', 'DJI_0251.JPG', 'DJI_0251.json', 'DJI_0251_Doenca_0.JPG', 'DJI_0251_Doenca_0.json', 'DJI_0251_Doenca_1.JPG', 'DJI_0251_Doenca_1.json', 'DJI_0251_Doenca_2.JPG', 'DJI_0251_Doenca_2.json', 'DJI_0251_Doenca_3.JPG', 'DJI_0251_Doenca_3.json', 'DJI_0251_Solo_4.JPG', 'DJI_0251_Solo_4.json', 'DJI_0434.JPG', 'DJI_0434.json', 'DJI_0434_Doenca_2.JPG', 'DJI_0434_Doenca_2.json', 'DJI_0434_Doenca_3.JPG', 'DJI_0434_Doenca_3.json', 'DJI_0434_Saudavel_4.JPG', 'DJI_0434_Saudavel_4.json', 'DJI_0434_Saudavel_5.JPG', 'DJI_0434_Saudavel_5.json', 'DJI_0434_Solo_0.JPG', 'DJI_0434_Solo_0.json', 'DJI_0434_Solo_1.JPG', 'DJI_0434_Solo_1.json', 'DJI_0434_Solo_6.JPG', 'DJI_0434_Solo_6.json']
+2024-11-22 18:52:58,335 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_0_max_epochs_300.png
+2024-11-22 18:52:58,412 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_0_max_epochs_300.png
+2024-11-22 18:52:58,536 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_1_max_epochs_300.png
+2024-11-22 18:52:58,616 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_1_max_epochs_300.png
+2024-11-22 18:52:58,737 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_2_max_epochs_300.png
+2024-11-22 18:52:58,802 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_2_max_epochs_300.png
+2024-11-22 18:52:58,952 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_3_max_epochs_300.png
+2024-11-22 18:52:59,041 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_3_max_epochs_300.png
+2024-11-22 18:52:59,188 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_4_max_epochs_300.png
+2024-11-22 18:52:59,269 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_4_max_epochs_300.png
+2024-11-22 18:52:59,402 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_5_max_epochs_300.png
+2024-11-22 18:52:59,469 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_5_max_epochs_300.png
+2024-11-22 18:52:59,602 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_6_max_epochs_300.png
+2024-11-22 18:52:59,685 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_6_max_epochs_300.png
+2024-11-22 18:52:59,819 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_7_max_epochs_300.png
+2024-11-22 18:52:59,902 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_7_max_epochs_300.png
+2024-11-22 18:53:00,053 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_8_max_epochs_300.png
+2024-11-22 18:53:00,116 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_8_max_epochs_300.png
+2024-11-22 18:53:00,353 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_9_max_epochs_300.png
+2024-11-22 18:53:00,432 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_9_max_epochs_300.png
+2024-11-22 18:53:00,574 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_10_max_epochs_300.png
+2024-11-22 18:53:00,653 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_10_max_epochs_300.png
+2024-11-22 18:53:00,795 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_11_max_epochs_300.png
+2024-11-22 18:53:00,874 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_11_max_epochs_300.png
+2024-11-22 18:53:01,026 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_12_max_epochs_300.png
+2024-11-22 18:53:01,101 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_12_max_epochs_300.png
+2024-11-22 18:53:01,221 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_13_max_epochs_300.png
+2024-11-22 18:53:01,305 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_13_max_epochs_300.png
+2024-11-22 18:53:01,436 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_14_max_epochs_300.png
+2024-11-22 18:53:01,507 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_14_max_epochs_300.png
+2024-11-22 18:53:01,635 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_15_max_epochs_300.png
+2024-11-22 18:53:01,712 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_15_max_epochs_300.png
+2024-11-22 18:53:01,841 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_16_max_epochs_300.png
+2024-11-22 18:53:01,931 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_16_max_epochs_300.png
+2024-11-22 18:53:02,072 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_17_max_epochs_300.png
+2024-11-22 18:53:02,167 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_17_max_epochs_300.png
+2024-11-22 18:53:02,294 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_18_max_epochs_300.png
+2024-11-22 18:53:02,377 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_18_max_epochs_300.png
+2024-11-22 18:53:02,515 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_19_max_epochs_300.png
+2024-11-22 18:53:02,578 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_19_max_epochs_300.png
+2024-11-22 18:53:02,830 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_20_max_epochs_300.png
+2024-11-22 18:53:02,894 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_20_max_epochs_300.png
+2024-11-22 18:53:03,037 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_21_max_epochs_300.png
+2024-11-22 18:53:03,117 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_21_max_epochs_300.png
+2024-11-22 18:53:03,259 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_22_max_epochs_300.png
+2024-11-22 18:53:03,339 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_22_max_epochs_300.png
+2024-11-22 18:53:03,489 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_23_max_epochs_300.png
+2024-11-22 18:53:03,578 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_23_max_epochs_300.png
+2024-11-22 18:53:03,701 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_24_max_epochs_300.png
+2024-11-22 18:53:03,780 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_24_max_epochs_300.png
+2024-11-22 18:53:03,922 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_25_max_epochs_300.png
+2024-11-22 18:53:04,007 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_25_max_epochs_300.png
+2024-11-22 18:53:04,129 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_26_max_epochs_300.png
+2024-11-22 18:53:04,208 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_26_max_epochs_300.png
+2024-11-22 18:53:04,334 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_27_max_epochs_300.png
+2024-11-22 18:53:04,412 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_27_max_epochs_300.png
+2024-11-22 18:53:04,554 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_28_max_epochs_300.png
+2024-11-22 18:53:04,633 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_28_max_epochs_300.png
+2024-11-22 18:53:04,760 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_29_max_epochs_300.png
+2024-11-22 18:53:04,840 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_29_max_epochs_300.png
+2024-11-22 18:53:04,966 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_30_max_epochs_300.png
+2024-11-22 18:53:05,045 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_30_max_epochs_300.png
+2024-11-22 18:53:05,172 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_31_max_epochs_300.png
+2024-11-22 18:53:05,251 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_31_max_epochs_300.png
+2024-11-22 18:53:05,488 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_32_max_epochs_300.png
+2024-11-22 18:53:05,568 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_32_max_epochs_300.png
+2024-11-22 18:53:05,821 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_33_max_epochs_300.png
+2024-11-22 18:53:05,900 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_33_max_epochs_300.png
+2024-11-22 18:53:06,074 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_34_max_epochs_300.png
+2024-11-22 18:53:06,158 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_34_max_epochs_300.png
+2024-11-22 18:53:06,306 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_35_max_epochs_300.png
+2024-11-22 18:53:06,389 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_35_max_epochs_300.png
+2024-11-22 18:53:06,550 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_36_max_epochs_300.png
+2024-11-22 18:53:06,629 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_36_max_epochs_300.png
+2024-11-22 18:53:06,796 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_37_max_epochs_300.png
+2024-11-22 18:53:06,882 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_37_max_epochs_300.png
+2024-11-22 18:53:07,041 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_38_max_epochs_300.png
+2024-11-22 18:53:07,121 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_38_max_epochs_300.png
+2024-11-22 18:53:07,263 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_39_max_epochs_300.png
+2024-11-22 18:53:07,361 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_39_max_epochs_300.png
+2024-11-22 18:53:07,579 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_40_max_epochs_300.png
+2024-11-22 18:53:07,674 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_40_max_epochs_300.png
+2024-11-22 18:53:07,817 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_41_max_epochs_300.png
+2024-11-22 18:53:08,023 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_41_max_epochs_300.png
+2024-11-22 18:53:08,181 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_42_max_epochs_300.png
+2024-11-22 18:53:08,275 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_42_max_epochs_300.png
+2024-11-22 18:53:08,418 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_43_max_epochs_300.png
+2024-11-22 18:53:08,513 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_43_max_epochs_300.png
+2024-11-22 18:53:08,767 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_44_max_epochs_300.png
+2024-11-22 18:53:08,846 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_44_max_epochs_300.png
+2024-11-22 18:53:09,020 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_45_max_epochs_300.png
+2024-11-22 18:53:09,099 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_45_max_epochs_300.png
+2024-11-22 18:53:09,337 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_46_max_epochs_300.png
+2024-11-22 18:53:09,433 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_46_max_epochs_300.png
+2024-11-22 18:53:09,592 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_47_max_epochs_300.png
+2024-11-22 18:53:09,687 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_47_max_epochs_300.png
+2024-11-22 18:53:09,829 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_48_max_epochs_300.png
+2024-11-22 18:53:09,909 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_48_max_epochs_300.png
+2024-11-22 18:53:10,066 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_49_max_epochs_300.png
+2024-11-22 18:53:10,161 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_49_max_epochs_300.png
+2024-11-22 18:53:10,319 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_50_max_epochs_300.png
+2024-11-22 18:53:10,414 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_50_max_epochs_300.png
+2024-11-22 18:53:10,668 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_51_max_epochs_300.png
+2024-11-22 18:53:10,747 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_51_max_epochs_300.png
+2024-11-22 18:53:10,906 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_52_max_epochs_300.png
+2024-11-22 18:53:11,002 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_52_max_epochs_300.png
+2024-11-22 18:53:11,160 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_53_max_epochs_300.png
+2024-11-22 18:53:11,256 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_53_max_epochs_300.png
+2024-11-22 18:53:11,399 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_54_max_epochs_300.png
+2024-11-22 18:53:11,478 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_54_max_epochs_300.png
+2024-11-22 18:53:11,636 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_55_max_epochs_300.png
+2024-11-22 18:53:11,732 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_55_max_epochs_300.png
+2024-11-22 18:53:11,891 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_56_max_epochs_300.png
+2024-11-22 18:53:11,986 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_56_max_epochs_300.png
+2024-11-22 18:53:12,145 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_57_max_epochs_300.png
+2024-11-22 18:53:12,232 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_57_max_epochs_300.png
+2024-11-22 18:53:12,384 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_58_max_epochs_300.png
+2024-11-22 18:53:12,463 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_58_max_epochs_300.png
+2024-11-22 18:53:12,622 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_59_max_epochs_300.png
+2024-11-22 18:53:12,717 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_59_max_epochs_300.png
+2024-11-22 18:53:12,875 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_60_max_epochs_300.png
+2024-11-22 18:53:12,970 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_60_max_epochs_300.png
+2024-11-22 18:53:13,114 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_61_max_epochs_300.png
+2024-11-22 18:53:13,209 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_61_max_epochs_300.png
+2024-11-22 18:53:13,336 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_62_max_epochs_300.png
+2024-11-22 18:53:13,432 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_62_max_epochs_300.png
+2024-11-22 18:53:13,574 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_63_max_epochs_300.png
+2024-11-22 18:53:13,669 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_63_max_epochs_300.png
+2024-11-22 18:53:13,824 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_64_max_epochs_300.png
+2024-11-22 18:53:14,035 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_64_max_epochs_300.png
+2024-11-22 18:53:14,178 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_65_max_epochs_300.png
+2024-11-22 18:53:14,273 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_65_max_epochs_300.png
+2024-11-22 18:53:14,420 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_66_max_epochs_300.png
+2024-11-22 18:53:14,496 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_66_max_epochs_300.png
+2024-11-22 18:53:14,670 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_67_max_epochs_300.png
+2024-11-22 18:53:14,749 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_67_max_epochs_300.png
+2024-11-22 18:53:14,908 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_68_max_epochs_300.png
+2024-11-22 18:53:15,004 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_68_max_epochs_300.png
+2024-11-22 18:53:15,147 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_69_max_epochs_300.png
+2024-11-22 18:53:15,242 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_69_max_epochs_300.png
+2024-11-22 18:53:15,386 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_70_max_epochs_300.png
+2024-11-22 18:53:15,465 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_70_max_epochs_300.png
+2024-11-22 18:53:15,624 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_71_max_epochs_300.png
+2024-11-22 18:53:15,704 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_71_max_epochs_300.png
+2024-11-22 18:53:15,862 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_72_max_epochs_300.png
+2024-11-22 18:53:15,957 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_72_max_epochs_300.png
+2024-11-22 18:53:16,109 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_73_max_epochs_300.png
+2024-11-22 18:53:16,194 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_73_max_epochs_300.png
+2024-11-22 18:53:16,351 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_74_max_epochs_300.png
+2024-11-22 18:53:16,431 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_74_max_epochs_300.png
+2024-11-22 18:53:16,573 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_75_max_epochs_300.png
+2024-11-22 18:53:16,680 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_75_max_epochs_300.png
+2024-11-22 18:53:16,833 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_76_max_epochs_300.png
+2024-11-22 18:53:16,921 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_76_max_epochs_300.png
+2024-11-22 18:53:17,063 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_77_max_epochs_300.png
+2024-11-22 18:53:17,174 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_77_max_epochs_300.png
+2024-11-22 18:53:17,412 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_78_max_epochs_300.png
+2024-11-22 18:53:17,506 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_78_max_epochs_300.png
+2024-11-22 18:53:17,664 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_79_max_epochs_300.png
+2024-11-22 18:53:17,755 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_79_max_epochs_300.png
+2024-11-22 18:53:17,918 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_80_max_epochs_300.png
+2024-11-22 18:53:18,002 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_80_max_epochs_300.png
+2024-11-22 18:53:18,158 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_81_max_epochs_300.png
+2024-11-22 18:53:18,251 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_81_max_epochs_300.png
+2024-11-22 18:53:18,415 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_82_max_epochs_300.png
+2024-11-22 18:53:18,498 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_82_max_epochs_300.png
+2024-11-22 18:53:18,644 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_83_max_epochs_300.png
+2024-11-22 18:53:18,725 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_83_max_epochs_300.png
+2024-11-22 18:53:18,889 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_84_max_epochs_300.png
+2024-11-22 18:53:18,979 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_84_max_epochs_300.png
+2024-11-22 18:53:19,136 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_85_max_epochs_300.png
+2024-11-22 18:53:19,232 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_85_max_epochs_300.png
+2024-11-22 18:53:19,381 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_86_max_epochs_300.png
+2024-11-22 18:53:19,472 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_86_max_epochs_300.png
+2024-11-22 18:53:19,622 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_87_max_epochs_300.png
+2024-11-22 18:53:19,828 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_87_max_epochs_300.png
+2024-11-22 18:53:19,992 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_88_max_epochs_300.png
+2024-11-22 18:53:20,083 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_88_max_epochs_300.png
+2024-11-22 18:53:20,329 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_89_max_epochs_300.png
+2024-11-22 18:53:20,413 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_89_max_epochs_300.png
+2024-11-22 18:53:20,678 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_90_max_epochs_300.png
+2024-11-22 18:53:20,745 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_90_max_epochs_300.png
+2024-11-22 18:53:20,936 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_91_max_epochs_300.png
+2024-11-22 18:53:21,013 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_91_max_epochs_300.png
+2024-11-22 18:53:21,249 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_92_max_epochs_300.png
+2024-11-22 18:53:21,329 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_92_max_epochs_300.png
+2024-11-22 18:53:21,486 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_93_max_epochs_300.png
+2024-11-22 18:53:21,582 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_93_max_epochs_300.png
+2024-11-22 18:53:21,773 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_94_max_epochs_300.png
+2024-11-22 18:53:21,852 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_94_max_epochs_300.png
+2024-11-22 18:53:22,122 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_95_max_epochs_300.png
+2024-11-22 18:53:22,202 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_95_max_epochs_300.png
+2024-11-22 18:53:22,363 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_96_max_epochs_300.png
+2024-11-22 18:53:22,455 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_96_max_epochs_300.png
+2024-11-22 18:53:22,598 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_97_max_epochs_300.png
+2024-11-22 18:53:22,693 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_97_max_epochs_300.png
+2024-11-22 18:53:22,837 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_98_max_epochs_300.png
+2024-11-22 18:53:22,932 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_98_max_epochs_300.png
+2024-11-22 18:53:23,088 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_99_max_epochs_300.png
+2024-11-22 18:53:23,183 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_99_max_epochs_300.png
+2024-11-22 18:53:23,345 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_100_max_epochs_300.png
+2024-11-22 18:53:23,436 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_100_max_epochs_300.png
+2024-11-22 18:53:23,593 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_101_max_epochs_300.png
+2024-11-22 18:53:23,683 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_101_max_epochs_300.png
+2024-11-22 18:53:23,833 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_102_max_epochs_300.png
+2024-11-22 18:53:23,924 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_102_max_epochs_300.png
+2024-11-22 18:53:24,067 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_103_max_epochs_300.png
+2024-11-22 18:53:24,174 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_103_max_epochs_300.png
+2024-11-22 18:53:24,344 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_104_max_epochs_300.png
+2024-11-22 18:53:24,431 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_104_max_epochs_300.png
+2024-11-22 18:53:24,685 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_105_max_epochs_300.png
+2024-11-22 18:53:24,766 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_105_max_epochs_300.png
+2024-11-22 18:53:24,924 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_106_max_epochs_300.png
+2024-11-22 18:53:25,001 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_106_max_epochs_300.png
+2024-11-22 18:53:25,166 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_107_max_epochs_300.png
+2024-11-22 18:53:25,257 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_107_max_epochs_300.png
+2024-11-22 18:53:25,412 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_108_max_epochs_300.png
+2024-11-22 18:53:25,507 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_108_max_epochs_300.png
+2024-11-22 18:53:25,655 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_109_max_epochs_300.png
+2024-11-22 18:53:25,746 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_109_max_epochs_300.png
+2024-11-22 18:53:25,889 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_110_max_epochs_300.png
+2024-11-22 18:53:26,080 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_110_max_epochs_300.png
+2024-11-22 18:53:26,238 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_111_max_epochs_300.png
+2024-11-22 18:53:26,333 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_111_max_epochs_300.png
+2024-11-22 18:53:26,476 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_112_max_epochs_300.png
+2024-11-22 18:53:26,572 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_112_max_epochs_300.png
+2024-11-22 18:53:26,722 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_113_max_epochs_300.png
+2024-11-22 18:53:26,825 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_113_max_epochs_300.png
+2024-11-22 18:53:26,984 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_114_max_epochs_300.png
+2024-11-22 18:53:27,072 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_114_max_epochs_300.png
+2024-11-22 18:53:27,235 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_115_max_epochs_300.png
+2024-11-22 18:53:27,325 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_115_max_epochs_300.png
+2024-11-22 18:53:27,474 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_116_max_epochs_300.png
+2024-11-22 18:53:27,552 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_116_max_epochs_300.png
+2024-11-22 18:53:27,711 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_117_max_epochs_300.png
+2024-11-22 18:53:27,790 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_117_max_epochs_300.png
+2024-11-22 18:53:27,934 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_118_max_epochs_300.png
+2024-11-22 18:53:28,029 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_118_max_epochs_300.png
+2024-11-22 18:53:28,188 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_119_max_epochs_300.png
+2024-11-22 18:53:28,267 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_119_max_epochs_300.png
+2024-11-22 18:53:28,428 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_120_max_epochs_300.png
+2024-11-22 18:53:28,526 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_120_max_epochs_300.png
+2024-11-22 18:53:28,679 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_121_max_epochs_300.png
+2024-11-22 18:53:28,779 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_121_max_epochs_300.png
+2024-11-22 18:53:29,010 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_122_max_epochs_300.png
+2024-11-22 18:53:29,105 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_122_max_epochs_300.png
+2024-11-22 18:53:29,247 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_123_max_epochs_300.png
+2024-11-22 18:53:29,327 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_123_max_epochs_300.png
+2024-11-22 18:53:29,485 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_124_max_epochs_300.png
+2024-11-22 18:53:29,564 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_124_max_epochs_300.png
+2024-11-22 18:53:29,738 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_125_max_epochs_300.png
+2024-11-22 18:53:29,829 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_125_max_epochs_300.png
+2024-11-22 18:53:29,993 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_126_max_epochs_300.png
+2024-11-22 18:53:30,086 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_126_max_epochs_300.png
+2024-11-22 18:53:30,243 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_127_max_epochs_300.png
+2024-11-22 18:53:30,338 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_127_max_epochs_300.png
+2024-11-22 18:53:30,513 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_128_max_epochs_300.png
+2024-11-22 18:53:30,609 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_128_max_epochs_300.png
+2024-11-22 18:53:30,767 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_129_max_epochs_300.png
+2024-11-22 18:53:30,863 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_129_max_epochs_300.png
+2024-11-22 18:53:31,017 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_130_max_epochs_300.png
+2024-11-22 18:53:31,117 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_130_max_epochs_300.png
+2024-11-22 18:53:31,260 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_131_max_epochs_300.png
+2024-11-22 18:53:31,358 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_131_max_epochs_300.png
+2024-11-22 18:53:31,504 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_132_max_epochs_300.png
+2024-11-22 18:53:31,597 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_132_max_epochs_300.png
+2024-11-22 18:53:31,749 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_133_max_epochs_300.png
+2024-11-22 18:53:31,971 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_133_max_epochs_300.png
+2024-11-22 18:53:32,239 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_134_max_epochs_300.png
+2024-11-22 18:53:32,318 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_134_max_epochs_300.png
+2024-11-22 18:53:32,477 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_135_max_epochs_300.png
+2024-11-22 18:53:32,572 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_135_max_epochs_300.png
+2024-11-22 18:53:32,730 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_136_max_epochs_300.png
+2024-11-22 18:53:32,809 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_136_max_epochs_300.png
+2024-11-22 18:53:32,983 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_137_max_epochs_300.png
+2024-11-22 18:53:33,063 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_137_max_epochs_300.png
+2024-11-22 18:53:33,225 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_138_max_epochs_300.png
+2024-11-22 18:53:33,321 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_138_max_epochs_300.png
+2024-11-22 18:53:33,478 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_139_max_epochs_300.png
+2024-11-22 18:53:33,553 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_139_max_epochs_300.png
+2024-11-22 18:53:33,727 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_140_max_epochs_300.png
+2024-11-22 18:53:33,822 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_140_max_epochs_300.png
+2024-11-22 18:53:33,966 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_141_max_epochs_300.png
+2024-11-22 18:53:34,058 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_141_max_epochs_300.png
+2024-11-22 18:53:34,213 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_142_max_epochs_300.png
+2024-11-22 18:53:34,296 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_142_max_epochs_300.png
+2024-11-22 18:53:34,451 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_143_max_epochs_300.png
+2024-11-22 18:53:34,543 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_143_max_epochs_300.png
+2024-11-22 18:53:34,691 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_144_max_epochs_300.png
+2024-11-22 18:53:34,787 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_144_max_epochs_300.png
+2024-11-22 18:53:34,945 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_145_max_epochs_300.png
+2024-11-22 18:53:35,046 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_145_max_epochs_300.png
+2024-11-22 18:53:35,198 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_146_max_epochs_300.png
+2024-11-22 18:53:35,278 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_146_max_epochs_300.png
+2024-11-22 18:53:35,427 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_147_max_epochs_300.png
+2024-11-22 18:53:35,500 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_147_max_epochs_300.png
+2024-11-22 18:53:35,659 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_148_max_epochs_300.png
+2024-11-22 18:53:35,753 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_148_max_epochs_300.png
+2024-11-22 18:53:35,912 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_149_max_epochs_300.png
+2024-11-22 18:53:36,008 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_149_max_epochs_300.png
+2024-11-22 18:53:36,267 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_150_max_epochs_300.png
+2024-11-22 18:53:36,338 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_150_max_epochs_300.png
+2024-11-22 18:53:36,497 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_151_max_epochs_300.png
+2024-11-22 18:53:36,574 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_151_max_epochs_300.png
+2024-11-22 18:53:36,830 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_152_max_epochs_300.png
+2024-11-22 18:53:36,905 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_152_max_epochs_300.png
+2024-11-22 18:53:37,069 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_153_max_epochs_300.png
+2024-11-22 18:53:37,159 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_153_max_epochs_300.png
+2024-11-22 18:53:37,307 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_154_max_epochs_300.png
+2024-11-22 18:53:37,401 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_154_max_epochs_300.png
+2024-11-22 18:53:37,551 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_155_max_epochs_300.png
+2024-11-22 18:53:37,645 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_155_max_epochs_300.png
+2024-11-22 18:53:37,803 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_156_max_epochs_300.png
+2024-11-22 18:53:38,039 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_156_max_epochs_300.png
+2024-11-22 18:53:38,203 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_157_max_epochs_300.png
+2024-11-22 18:53:38,293 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_157_max_epochs_300.png
+2024-11-22 18:53:38,450 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_158_max_epochs_300.png
+2024-11-22 18:53:38,545 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_158_max_epochs_300.png
+2024-11-22 18:53:38,687 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_159_max_epochs_300.png
+2024-11-22 18:53:38,782 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_159_max_epochs_300.png
+2024-11-22 18:53:38,956 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_160_max_epochs_300.png
+2024-11-22 18:53:39,051 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_160_max_epochs_300.png
+2024-11-22 18:53:39,209 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_161_max_epochs_300.png
+2024-11-22 18:53:39,303 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_161_max_epochs_300.png
+2024-11-22 18:53:39,539 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_162_max_epochs_300.png
+2024-11-22 18:53:39,638 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_162_max_epochs_300.png
+2024-11-22 18:53:39,791 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_163_max_epochs_300.png
+2024-11-22 18:53:39,871 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_163_max_epochs_300.png
+2024-11-22 18:53:40,037 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_164_max_epochs_300.png
+2024-11-22 18:53:40,126 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_164_max_epochs_300.png
+2024-11-22 18:53:40,280 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_165_max_epochs_300.png
+2024-11-22 18:53:40,369 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_165_max_epochs_300.png
+2024-11-22 18:53:40,613 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_166_max_epochs_300.png
+2024-11-22 18:53:40,692 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_166_max_epochs_300.png
+2024-11-22 18:53:40,853 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_167_max_epochs_300.png
+2024-11-22 18:53:40,943 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_167_max_epochs_300.png
+2024-11-22 18:53:41,102 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_168_max_epochs_300.png
+2024-11-22 18:53:41,181 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_168_max_epochs_300.png
+2024-11-22 18:53:41,338 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_169_max_epochs_300.png
+2024-11-22 18:53:41,449 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_169_max_epochs_300.png
+2024-11-22 18:53:41,592 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_170_max_epochs_300.png
+2024-11-22 18:53:41,687 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_170_max_epochs_300.png
+2024-11-22 18:53:41,845 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_171_max_epochs_300.png
+2024-11-22 18:53:41,930 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_171_max_epochs_300.png
+2024-11-22 18:53:42,090 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_172_max_epochs_300.png
+2024-11-22 18:53:42,180 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_172_max_epochs_300.png
+2024-11-22 18:53:42,332 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_173_max_epochs_300.png
+2024-11-22 18:53:42,421 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_173_max_epochs_300.png
+2024-11-22 18:53:42,573 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_174_max_epochs_300.png
+2024-11-22 18:53:42,652 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_174_max_epochs_300.png
+2024-11-22 18:53:42,904 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_175_max_epochs_300.png
+2024-11-22 18:53:42,999 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_175_max_epochs_300.png
+2024-11-22 18:53:43,158 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_176_max_epochs_300.png
+2024-11-22 18:53:43,237 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_176_max_epochs_300.png
+2024-11-22 18:53:43,396 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_177_max_epochs_300.png
+2024-11-22 18:53:43,491 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_177_max_epochs_300.png
+2024-11-22 18:53:43,633 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_178_max_epochs_300.png
+2024-11-22 18:53:43,728 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_178_max_epochs_300.png
+2024-11-22 18:53:43,879 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_179_max_epochs_300.png
+2024-11-22 18:53:44,109 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_179_max_epochs_300.png
+2024-11-22 18:53:44,263 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_180_max_epochs_300.png
+2024-11-22 18:53:44,353 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_180_max_epochs_300.png
+2024-11-22 18:53:44,520 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_181_max_epochs_300.png
+2024-11-22 18:53:44,615 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_181_max_epochs_300.png
+2024-11-22 18:53:44,775 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_182_max_epochs_300.png
+2024-11-22 18:53:44,865 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_182_max_epochs_300.png
+2024-11-22 18:53:45,022 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_183_max_epochs_300.png
+2024-11-22 18:53:45,098 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_183_max_epochs_300.png
+2024-11-22 18:53:45,255 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_184_max_epochs_300.png
+2024-11-22 18:53:45,345 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_184_max_epochs_300.png
+2024-11-22 18:53:45,492 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_185_max_epochs_300.png
+2024-11-22 18:53:45,572 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_185_max_epochs_300.png
+2024-11-22 18:53:45,714 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_186_max_epochs_300.png
+2024-11-22 18:53:45,811 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_186_max_epochs_300.png
+2024-11-22 18:53:45,958 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_187_max_epochs_300.png
+2024-11-22 18:53:46,045 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_187_max_epochs_300.png
+2024-11-22 18:53:46,201 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\IMG_188_max_epochs_300.png
+2024-11-22 18:53:46,282 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\train\\GT_188_max_epochs_300.png
+2024-11-22 18:53:46,835 - Epoch 1 starting...
+2024-11-22 18:54:22,704 - Train loss: 1.267613, train acc: 0.371785
+2024-11-22 18:54:22,897 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_0_epoch_0.png
+2024-11-22 18:54:22,968 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_0_epoch_0.png
+2024-11-22 18:54:23,189 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_1_epoch_0.png
+2024-11-22 18:54:23,269 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_1_epoch_0.png
+2024-11-22 18:54:23,477 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_2_epoch_0.png
+2024-11-22 18:54:23,554 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_2_epoch_0.png
+2024-11-22 18:54:23,766 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_3_epoch_0.png
+2024-11-22 18:54:23,838 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_3_epoch_0.png
+2024-11-22 18:54:24,146 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_4_epoch_0.png
+2024-11-22 18:54:24,210 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_4_epoch_0.png
+2024-11-22 18:54:24,395 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_5_epoch_0.png
+2024-11-22 18:54:24,475 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_5_epoch_0.png
+2024-11-22 18:54:24,677 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_6_epoch_0.png
+2024-11-22 18:54:24,776 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_6_epoch_0.png
+2024-11-22 18:54:25,080 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_7_epoch_0.png
+2024-11-22 18:54:25,161 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_7_epoch_0.png
+2024-11-22 18:54:25,377 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_8_epoch_0.png
+2024-11-22 18:54:25,446 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_8_epoch_0.png
+2024-11-22 18:54:25,678 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_9_epoch_0.png
+2024-11-22 18:54:25,760 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_9_epoch_0.png
+2024-11-22 18:54:26,016 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_10_epoch_0.png
+2024-11-22 18:54:26,227 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_10_epoch_0.png
+2024-11-22 18:54:26,491 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_11_epoch_0.png
+2024-11-22 18:54:26,558 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_11_epoch_0.png
+2024-11-22 18:54:26,808 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_12_epoch_0.png
+2024-11-22 18:54:26,875 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_12_epoch_0.png
+2024-11-22 18:54:27,148 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_13_epoch_0.png
+2024-11-22 18:54:27,227 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_13_epoch_0.png
+2024-11-22 18:54:27,464 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_14_epoch_0.png
+2024-11-22 18:54:27,531 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_14_epoch_0.png
+2024-11-22 18:54:27,795 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_15_epoch_0.png
+2024-11-22 18:54:27,861 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_15_epoch_0.png
+2024-11-22 18:54:28,191 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_16_epoch_0.png
+2024-11-22 18:54:28,264 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_16_epoch_0.png
+2024-11-22 18:54:28,512 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_17_epoch_0.png
+2024-11-22 18:54:28,586 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_17_epoch_0.png
+2024-11-22 18:54:28,814 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_18_epoch_0.png
+2024-11-22 18:54:28,894 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_18_epoch_0.png
+2024-11-22 18:54:29,138 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_19_epoch_0.png
+2024-11-22 18:54:29,201 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_19_epoch_0.png
+2024-11-22 18:54:29,454 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_20_epoch_0.png
+2024-11-22 18:54:29,527 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_20_epoch_0.png
+2024-11-22 18:54:29,749 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_21_epoch_0.png
+2024-11-22 18:54:29,823 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_21_epoch_0.png
+2024-11-22 18:54:30,069 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_22_epoch_0.png
+2024-11-22 18:54:30,142 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_22_epoch_0.png
+2024-11-22 18:54:30,461 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_23_epoch_0.png
+2024-11-22 18:54:30,540 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_23_epoch_0.png
+2024-11-22 18:54:30,781 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_24_epoch_0.png
+2024-11-22 18:54:30,857 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_24_epoch_0.png
+2024-11-22 18:54:31,087 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_25_epoch_0.png
+2024-11-22 18:54:31,154 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_25_epoch_0.png
+2024-11-22 18:54:31,427 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_26_epoch_0.png
+2024-11-22 18:54:31,493 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_26_epoch_0.png
+2024-11-22 18:54:31,715 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_27_epoch_0.png
+2024-11-22 18:54:31,803 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_27_epoch_0.png
+2024-11-22 18:54:32,024 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_28_epoch_0.png
+2024-11-22 18:54:32,104 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_28_epoch_0.png
+2024-11-22 18:54:32,328 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_29_epoch_0.png
+2024-11-22 18:54:32,403 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_29_epoch_0.png
+2024-11-22 18:54:32,640 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_30_epoch_0.png
+2024-11-22 18:54:32,703 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_30_epoch_0.png
+2024-11-22 18:54:33,027 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_31_epoch_0.png
+2024-11-22 18:54:33,112 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_31_epoch_0.png
+2024-11-22 18:54:33,317 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_32_epoch_0.png
+2024-11-22 18:54:33,406 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_32_epoch_0.png
+2024-11-22 18:54:33,650 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_33_epoch_0.png
+2024-11-22 18:54:33,724 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_33_epoch_0.png
+2024-11-22 18:54:33,975 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_34_epoch_0.png
+2024-11-22 18:54:34,171 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_34_epoch_0.png
+2024-11-22 18:54:34,376 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_35_epoch_0.png
+2024-11-22 18:54:34,455 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_35_epoch_0.png
+2024-11-22 18:54:34,685 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_36_epoch_0.png
+2024-11-22 18:54:34,756 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_36_epoch_0.png
+2024-11-22 18:54:34,981 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_37_epoch_0.png
+2024-11-22 18:54:35,060 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_37_epoch_0.png
+2024-11-22 18:54:35,279 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_38_epoch_0.png
+2024-11-22 18:54:35,357 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_38_epoch_0.png
+2024-11-22 18:54:35,601 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_39_epoch_0.png
+2024-11-22 18:54:35,680 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_39_epoch_0.png
+2024-11-22 18:54:35,915 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_40_epoch_0.png
+2024-11-22 18:54:35,992 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_40_epoch_0.png
+2024-11-22 18:54:36,238 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_41_epoch_0.png
+2024-11-22 18:54:36,309 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_41_epoch_0.png
+2024-11-22 18:54:36,548 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_42_epoch_0.png
+2024-11-22 18:54:36,620 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_42_epoch_0.png
+2024-11-22 18:54:36,843 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_43_epoch_0.png
+2024-11-22 18:54:36,925 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_43_epoch_0.png
+2024-11-22 18:54:37,243 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_44_epoch_0.png
+2024-11-22 18:54:37,324 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_44_epoch_0.png
+2024-11-22 18:54:37,552 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_45_epoch_0.png
+2024-11-22 18:54:37,621 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_45_epoch_0.png
+2024-11-22 18:54:37,850 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_46_epoch_0.png
+2024-11-22 18:54:37,909 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_46_epoch_0.png
+2024-11-22 18:54:38,150 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_47_epoch_0.png
+2024-11-22 18:54:38,231 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_47_epoch_0.png
+2024-11-22 18:54:38,448 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_48_epoch_0.png
+2024-11-22 18:54:38,511 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_48_epoch_0.png
+2024-11-22 18:54:38,765 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_49_epoch_0.png
+2024-11-22 18:54:38,829 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_49_epoch_0.png
+2024-11-22 18:54:39,051 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_50_epoch_0.png
+2024-11-22 18:54:39,130 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_50_epoch_0.png
+2024-11-22 18:54:39,372 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_51_epoch_0.png
+2024-11-22 18:54:39,431 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_51_epoch_0.png
+2024-11-22 18:54:39,691 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_52_epoch_0.png
+2024-11-22 18:54:39,765 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_52_epoch_0.png
+2024-11-22 18:54:40,004 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_53_epoch_0.png
+2024-11-22 18:54:40,079 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_53_epoch_0.png
+2024-11-22 18:54:40,320 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_54_epoch_0.png
+2024-11-22 18:54:40,396 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_54_epoch_0.png
+2024-11-22 18:54:40,640 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_55_epoch_0.png
+2024-11-22 18:54:40,712 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_55_epoch_0.png
+2024-11-22 18:54:41,028 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_56_epoch_0.png
+2024-11-22 18:54:41,119 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_56_epoch_0.png
+2024-11-22 18:54:41,329 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_57_epoch_0.png
+2024-11-22 18:54:41,424 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_57_epoch_0.png
+2024-11-22 18:54:41,645 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_58_epoch_0.png
+2024-11-22 18:54:41,862 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_58_epoch_0.png
+2024-11-22 18:54:42,177 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_59_epoch_0.png
+2024-11-22 18:54:42,256 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_59_epoch_0.png
+2024-11-22 18:54:42,462 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_60_epoch_0.png
+2024-11-22 18:54:42,551 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_60_epoch_0.png
+2024-11-22 18:54:42,791 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_61_epoch_0.png
+2024-11-22 18:54:42,862 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_61_epoch_0.png
+2024-11-22 18:54:43,099 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_62_epoch_0.png
+2024-11-22 18:54:43,183 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_62_epoch_0.png
+2024-11-22 18:54:43,513 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_63_epoch_0.png
+2024-11-22 18:54:43,580 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_63_epoch_0.png
+2024-11-22 18:54:43,813 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_64_epoch_0.png
+2024-11-22 18:54:43,896 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_64_epoch_0.png
+2024-11-22 18:54:44,129 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_65_epoch_0.png
+2024-11-22 18:54:44,196 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_65_epoch_0.png
+2024-11-22 18:54:44,430 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_66_epoch_0.png
+2024-11-22 18:54:44,513 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_66_epoch_0.png
+2024-11-22 18:54:44,745 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_67_epoch_0.png
+2024-11-22 18:54:44,812 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_67_epoch_0.png
+2024-11-22 18:54:45,069 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_68_epoch_0.png
+2024-11-22 18:54:45,145 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_68_epoch_0.png
+2024-11-22 18:54:45,402 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_69_epoch_0.png
+2024-11-22 18:54:45,479 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_69_epoch_0.png
+2024-11-22 18:54:45,712 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_70_epoch_0.png
+2024-11-22 18:54:45,797 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_70_epoch_0.png
+2024-11-22 18:54:46,047 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_71_epoch_0.png
+2024-11-22 18:54:46,129 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_71_epoch_0.png
+2024-11-22 18:54:46,368 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_72_epoch_0.png
+2024-11-22 18:54:46,447 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_72_epoch_0.png
+2024-11-22 18:54:46,762 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_73_epoch_0.png
+2024-11-22 18:54:46,846 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_73_epoch_0.png
+2024-11-22 18:54:47,101 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_74_epoch_0.png
+2024-11-22 18:54:47,179 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_74_epoch_0.png
+2024-11-22 18:54:47,431 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_75_epoch_0.png
+2024-11-22 18:54:47,496 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_75_epoch_0.png
+2024-11-22 18:54:47,746 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_76_epoch_0.png
+2024-11-22 18:54:47,812 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_76_epoch_0.png
+2024-11-22 18:54:48,046 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_77_epoch_0.png
+2024-11-22 18:54:48,112 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_77_epoch_0.png
+2024-11-22 18:54:48,345 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_78_epoch_0.png
+2024-11-22 18:54:48,413 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_78_epoch_0.png
+2024-11-22 18:54:48,671 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_79_epoch_0.png
+2024-11-22 18:54:48,746 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_79_epoch_0.png
+2024-11-22 18:54:48,983 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_80_epoch_0.png
+2024-11-22 18:54:49,046 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_80_epoch_0.png
+2024-11-22 18:54:49,312 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_81_epoch_0.png
+2024-11-22 18:54:49,379 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_81_epoch_0.png
+2024-11-22 18:54:49,562 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_82_epoch_0.png
+2024-11-22 18:54:49,646 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_82_epoch_0.png
+2024-11-22 18:54:49,965 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_83_epoch_0.png
+2024-11-22 18:54:50,036 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_83_epoch_0.png
+2024-11-22 18:54:50,211 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_84_epoch_0.png
+2024-11-22 18:54:50,289 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_84_epoch_0.png
+2024-11-22 18:54:50,478 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_85_epoch_0.png
+2024-11-22 18:54:50,558 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_85_epoch_0.png
+2024-11-22 18:54:50,731 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_86_epoch_0.png
+2024-11-22 18:54:50,816 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_86_epoch_0.png
+2024-11-22 18:54:50,985 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_87_epoch_0.png
+2024-11-22 18:54:51,064 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_87_epoch_0.png
+2024-11-22 18:54:51,254 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\IMG_88_epoch_0.png
+2024-11-22 18:54:51,333 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\val\\GT_88_epoch_0.png
+2024-11-22 18:54:51,333 - Validação Acc: 0.453745 -- Melhor Avaliação Acc: 0.453745 -- epoch 0.
+2024-11-22 18:54:51,333 - Epoch 2 starting...
+2024-11-22 18:55:26,015 - Train loss: 1.061800, train acc: 0.439824
+2024-11-22 18:55:34,202 - Validação Acc: 0.525636 -- Melhor Avaliação Acc: 0.525636 -- epoch 1.
+2024-11-22 18:55:34,202 - Epoch 3 starting...
+2024-11-22 18:56:09,272 - Train loss: 0.935584, train acc: 0.554064
+2024-11-22 18:56:17,582 - Validação Acc: 0.469694 -- Melhor Avaliação Acc: 0.525636 -- epoch 1.
+2024-11-22 18:56:17,582 - Epoch 4 starting...
+2024-11-22 18:56:52,787 - Train loss: 0.841205, train acc: 0.584120
+2024-11-22 18:57:01,034 - Validação Acc: 0.624167 -- Melhor Avaliação Acc: 0.624167 -- epoch 3.
+2024-11-22 18:57:01,034 - Epoch 5 starting...
+2024-11-22 18:57:36,183 - Train loss: 0.787028, train acc: 0.609119
+2024-11-22 18:57:44,456 - Validação Acc: 0.611780 -- Melhor Avaliação Acc: 0.624167 -- epoch 3.
+2024-11-22 18:57:44,456 - Epoch 6 starting...
+2024-11-22 18:58:19,586 - Train loss: 0.711759, train acc: 0.657504
+2024-11-22 18:58:27,852 - Validação Acc: 0.661759 -- Melhor Avaliação Acc: 0.661759 -- epoch 5.
+2024-11-22 18:58:27,853 - Epoch 7 starting...
+2024-11-22 18:59:02,904 - Train loss: 0.709939, train acc: 0.656332
+2024-11-22 18:59:11,093 - Validação Acc: 0.656094 -- Melhor Avaliação Acc: 0.661759 -- epoch 5.
+2024-11-22 18:59:11,093 - Epoch 8 starting...
+2024-11-22 18:59:46,208 - Train loss: 0.537097, train acc: 0.736349
+2024-11-22 18:59:54,479 - Validação Acc: 0.679004 -- Melhor Avaliação Acc: 0.679004 -- epoch 7.
+2024-11-22 18:59:54,479 - Epoch 9 starting...
+2024-11-22 19:00:29,767 - Train loss: 0.686858, train acc: 0.685288
+2024-11-22 19:00:38,043 - Validação Acc: 0.643926 -- Melhor Avaliação Acc: 0.679004 -- epoch 7.
+2024-11-22 19:00:38,043 - Epoch 10 starting...
+2024-11-22 19:01:13,013 - Train loss: 0.720075, train acc: 0.659148
+2024-11-22 19:01:21,224 - Validação Acc: 0.625447 -- Melhor Avaliação Acc: 0.679004 -- epoch 7.
+2024-11-22 19:01:21,224 - Epoch 11 starting...
+2024-11-22 19:01:56,357 - Train loss: 0.623159, train acc: 0.694341
+2024-11-22 19:02:04,858 - Nova melhor conta de validação. Salvo... 10.000000
+2024-11-22 19:02:04,858 - Validação Acc: 0.718143 -- Melhor Avaliação Acc: 0.718143 -- epoch 10.
+2024-11-22 19:02:04,858 - Epoch 12 starting...
+2024-11-22 19:02:39,969 - Train loss: 0.532205, train acc: 0.755101
+2024-11-22 19:02:48,308 - Validação Acc: 0.705780 -- Melhor Avaliação Acc: 0.718143 -- epoch 10.
+2024-11-22 19:02:48,308 - Epoch 13 starting...
+2024-11-22 19:03:23,350 - Train loss: 0.429229, train acc: 0.792305
+2024-11-22 19:03:31,689 - Validação Acc: 0.646842 -- Melhor Avaliação Acc: 0.718143 -- epoch 10.
+2024-11-22 19:03:31,689 - Epoch 14 starting...
+2024-11-22 19:04:06,734 - Train loss: 0.512779, train acc: 0.771466
+2024-11-22 19:04:15,053 - Validação Acc: 0.625810 -- Melhor Avaliação Acc: 0.718143 -- epoch 10.
+2024-11-22 19:04:15,053 - Epoch 15 starting...
+2024-11-22 19:04:50,304 - Train loss: 0.468729, train acc: 0.793566
+2024-11-22 19:04:58,723 - Validação Acc: 0.712428 -- Melhor Avaliação Acc: 0.718143 -- epoch 10.
+2024-11-22 19:04:58,723 - Epoch 16 starting...
+2024-11-22 19:05:33,969 - Train loss: 0.418018, train acc: 0.809237
+2024-11-22 19:05:42,258 - Validação Acc: 0.714239 -- Melhor Avaliação Acc: 0.718143 -- epoch 10.
+2024-11-22 19:05:42,258 - Epoch 17 starting...
+2024-11-22 19:06:17,247 - Train loss: 0.420263, train acc: 0.828499
+2024-11-22 19:06:25,801 - Nova melhor conta de validação. Salvo... 16.000000
+2024-11-22 19:06:25,801 - Validação Acc: 0.718699 -- Melhor Avaliação Acc: 0.718699 -- epoch 16.
+2024-11-22 19:06:25,801 - Epoch 18 starting...
+2024-11-22 19:07:01,015 - Train loss: 0.304450, train acc: 0.863000
+2024-11-22 19:07:09,520 - Nova melhor conta de validação. Salvo... 17.000000
+2024-11-22 19:07:09,520 - Validação Acc: 0.734787 -- Melhor Avaliação Acc: 0.734787 -- epoch 17.
+2024-11-22 19:07:09,520 - Epoch 19 starting...
+2024-11-22 19:07:44,648 - Train loss: 0.329028, train acc: 0.852529
+2024-11-22 19:07:53,019 - Validação Acc: 0.733317 -- Melhor Avaliação Acc: 0.734787 -- epoch 17.
+2024-11-22 19:07:53,019 - Epoch 20 starting...
+2024-11-22 19:08:28,295 - Train loss: 0.286676, train acc: 0.877371
+2024-11-22 19:08:36,684 - Validação Acc: 0.708085 -- Melhor Avaliação Acc: 0.734787 -- epoch 17.
+2024-11-22 19:08:36,684 - Epoch 21 starting...
+2024-11-22 19:09:11,879 - Train loss: 0.551676, train acc: 0.766606
+2024-11-22 19:09:20,019 - Validação Acc: 0.719251 -- Melhor Avaliação Acc: 0.734787 -- epoch 17.
+2024-11-22 19:09:20,019 - Epoch 22 starting...
+2024-11-22 19:09:55,284 - Train loss: 0.327226, train acc: 0.848664
+2024-11-22 19:10:03,528 - Validação Acc: 0.711463 -- Melhor Avaliação Acc: 0.734787 -- epoch 17.
+2024-11-22 19:10:03,528 - Epoch 23 starting...
+2024-11-22 19:10:38,659 - Train loss: 0.284104, train acc: 0.870705
+2024-11-22 19:10:46,871 - Validação Acc: 0.733589 -- Melhor Avaliação Acc: 0.734787 -- epoch 17.
+2024-11-22 19:10:46,871 - Epoch 24 starting...
+2024-11-22 19:11:22,122 - Train loss: 0.234504, train acc: 0.890090
+2024-11-22 19:11:30,310 - Validação Acc: 0.727145 -- Melhor Avaliação Acc: 0.734787 -- epoch 17.
+2024-11-22 19:11:30,310 - Epoch 25 starting...
+2024-11-22 19:12:05,502 - Train loss: 0.602469, train acc: 0.748383
+2024-11-22 19:12:13,724 - Validação Acc: 0.661155 -- Melhor Avaliação Acc: 0.734787 -- epoch 17.
+2024-11-22 19:12:13,724 - Epoch 26 starting...
+2024-11-22 19:12:48,753 - Train loss: 0.482740, train acc: 0.765803
+2024-11-22 19:12:57,053 - Validação Acc: 0.690368 -- Melhor Avaliação Acc: 0.734787 -- epoch 17.
+2024-11-22 19:12:57,053 - Epoch 27 starting...
+2024-11-22 19:13:32,255 - Train loss: 0.378193, train acc: 0.831526
+2024-11-22 19:13:40,557 - Validação Acc: 0.716118 -- Melhor Avaliação Acc: 0.734787 -- epoch 17.
+2024-11-22 19:13:40,557 - Epoch 28 starting...
+2024-11-22 19:14:15,601 - Train loss: 0.280083, train acc: 0.869245
+2024-11-22 19:14:24,154 - Nova melhor conta de validação. Salvo... 27.000000
+2024-11-22 19:14:24,154 - Validação Acc: 0.741468 -- Melhor Avaliação Acc: 0.741468 -- epoch 27.
+2024-11-22 19:14:24,154 - Epoch 29 starting...
+2024-11-22 19:14:59,346 - Train loss: 0.272176, train acc: 0.883103
+2024-11-22 19:15:07,654 - Validação Acc: 0.732933 -- Melhor Avaliação Acc: 0.741468 -- epoch 27.
+2024-11-22 19:15:07,654 - Epoch 30 starting...
+2024-11-22 19:15:42,779 - Train loss: 0.162673, train acc: 0.924704
+2024-11-22 19:15:51,017 - Validação Acc: 0.739688 -- Melhor Avaliação Acc: 0.741468 -- epoch 27.
+2024-11-22 19:15:51,019 - Epoch 31 starting...
+2024-11-22 19:16:26,205 - Train loss: 0.143172, train acc: 0.936278
+2024-11-22 19:16:34,661 - Nova melhor conta de validação. Salvo... 30.000000
+2024-11-22 19:16:34,661 - Validação Acc: 0.751811 -- Melhor Avaliação Acc: 0.751811 -- epoch 30.
+2024-11-22 19:16:34,661 - Epoch 32 starting...
+2024-11-22 19:17:09,726 - Train loss: 0.130042, train acc: 0.945662
+2024-11-22 19:17:18,026 - Nova melhor conta de validação. Salvo... 31.000000
+2024-11-22 19:17:18,026 - Validação Acc: 0.755815 -- Melhor Avaliação Acc: 0.755815 -- epoch 31.
+2024-11-22 19:17:18,026 - Epoch 33 starting...
+2024-11-22 19:17:53,086 - Train loss: 0.117067, train acc: 0.946003
+2024-11-22 19:18:01,244 - Validação Acc: 0.751331 -- Melhor Avaliação Acc: 0.755815 -- epoch 31.
+2024-11-22 19:18:01,244 - Epoch 34 starting...
+2024-11-22 19:18:36,356 - Train loss: 0.102354, train acc: 0.950434
+2024-11-22 19:18:44,570 - Validação Acc: 0.744633 -- Melhor Avaliação Acc: 0.755815 -- epoch 31.
+2024-11-22 19:18:44,570 - Epoch 35 starting...
+2024-11-22 19:19:19,694 - Train loss: 0.082215, train acc: 0.960794
+2024-11-22 19:19:28,253 - Nova melhor conta de validação. Salvo... 34.000000
+2024-11-22 19:19:28,253 - Validação Acc: 0.756174 -- Melhor Avaliação Acc: 0.756174 -- epoch 34.
+2024-11-22 19:19:28,253 - Epoch 36 starting...
+2024-11-22 19:20:03,401 - Train loss: 0.088903, train acc: 0.959600
+2024-11-22 19:20:11,703 - Validação Acc: 0.755374 -- Melhor Avaliação Acc: 0.756174 -- epoch 34.
+2024-11-22 19:20:11,703 - Epoch 37 starting...
+2024-11-22 19:20:46,723 - Train loss: 0.072354, train acc: 0.965733
+2024-11-22 19:20:55,040 - Validação Acc: 0.754487 -- Melhor Avaliação Acc: 0.756174 -- epoch 34.
+2024-11-22 19:20:55,040 - Epoch 38 starting...
+2024-11-22 19:21:30,088 - Train loss: 0.064608, train acc: 0.968670
+2024-11-22 19:21:38,426 - Validação Acc: 0.753549 -- Melhor Avaliação Acc: 0.756174 -- epoch 34.
+2024-11-22 19:21:38,426 - Epoch 39 starting...
+2024-11-22 19:22:13,529 - Train loss: 0.052849, train acc: 0.973931
+2024-11-22 19:22:22,166 - Nova melhor conta de validação. Salvo... 38.000000
+2024-11-22 19:22:22,166 - Validação Acc: 0.757329 -- Melhor Avaliação Acc: 0.757329 -- epoch 38.
+2024-11-22 19:22:22,166 - Epoch 40 starting...
+2024-11-22 19:22:57,268 - Train loss: 0.052343, train acc: 0.974163
+2024-11-22 19:23:05,475 - Validação Acc: 0.748390 -- Melhor Avaliação Acc: 0.757329 -- epoch 38.
+2024-11-22 19:23:05,475 - Epoch 41 starting...
+2024-11-22 19:23:40,467 - Train loss: 0.045812, train acc: 0.978157
+2024-11-22 19:23:49,013 - Nova melhor conta de validação. Salvo... 40.000000
+2024-11-22 19:23:49,013 - Validação Acc: 0.757636 -- Melhor Avaliação Acc: 0.757636 -- epoch 40.
+2024-11-22 19:23:49,013 - Epoch 42 starting...
+2024-11-22 19:24:24,260 - Train loss: 0.043420, train acc: 0.978498
+2024-11-22 19:24:32,612 - Validação Acc: 0.750261 -- Melhor Avaliação Acc: 0.757636 -- epoch 40.
+2024-11-22 19:24:32,612 - Epoch 43 starting...
+2024-11-22 19:25:07,777 - Train loss: 0.040895, train acc: 0.980016
+2024-11-22 19:25:16,055 - Validação Acc: 0.751807 -- Melhor Avaliação Acc: 0.757636 -- epoch 40.
+2024-11-22 19:25:16,055 - Epoch 44 starting...
+2024-11-22 19:25:51,180 - Train loss: 0.035319, train acc: 0.983089
+2024-11-22 19:25:59,684 - Nova melhor conta de validação. Salvo... 43.000000
+2024-11-22 19:25:59,684 - Validação Acc: 0.758357 -- Melhor Avaliação Acc: 0.758357 -- epoch 43.
+2024-11-22 19:25:59,684 - Epoch 45 starting...
+2024-11-22 19:26:34,705 - Train loss: 0.032863, train acc: 0.984067
+2024-11-22 19:26:42,984 - Validação Acc: 0.756273 -- Melhor Avaliação Acc: 0.758357 -- epoch 43.
+2024-11-22 19:26:42,984 - Epoch 46 starting...
+2024-11-22 19:27:18,183 - Train loss: 0.032248, train acc: 0.984403
+2024-11-22 19:27:26,417 - Validação Acc: 0.757427 -- Melhor Avaliação Acc: 0.758357 -- epoch 43.
+2024-11-22 19:27:26,417 - Epoch 47 starting...
+2024-11-22 19:28:01,482 - Train loss: 0.027366, train acc: 0.987357
+2024-11-22 19:28:10,005 - Nova melhor conta de validação. Salvo... 46.000000
+2024-11-22 19:28:10,005 - Validação Acc: 0.759399 -- Melhor Avaliação Acc: 0.759399 -- epoch 46.
+2024-11-22 19:28:10,005 - Epoch 48 starting...
+2024-11-22 19:28:45,090 - Train loss: 0.024303, train acc: 0.988879
+2024-11-22 19:28:53,382 - Validação Acc: 0.755844 -- Melhor Avaliação Acc: 0.759399 -- epoch 46.
+2024-11-22 19:28:53,384 - Epoch 49 starting...
+2024-11-22 19:29:28,634 - Train loss: 0.023814, train acc: 0.989278
+2024-11-22 19:29:37,129 - Nova melhor conta de validação. Salvo... 48.000000
+2024-11-22 19:29:37,129 - Validação Acc: 0.759501 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:29:37,129 - Epoch 50 starting...
+2024-11-22 19:30:12,235 - Train loss: 0.023215, train acc: 0.989008
+2024-11-22 19:30:20,583 - Validação Acc: 0.755773 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:30:20,583 - Epoch 51 starting...
+2024-11-22 19:30:55,776 - Train loss: 0.022699, train acc: 0.989532
+2024-11-22 19:31:04,138 - Validação Acc: 0.756934 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:31:04,138 - Epoch 52 starting...
+2024-11-22 19:31:39,335 - Train loss: 0.022167, train acc: 0.989520
+2024-11-22 19:31:47,572 - Validação Acc: 0.759017 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:31:47,572 - Epoch 53 starting...
+2024-11-22 19:32:22,783 - Train loss: 0.019067, train acc: 0.990952
+2024-11-22 19:32:31,203 - Validação Acc: 0.754764 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:32:31,203 - Epoch 54 starting...
+2024-11-22 19:33:06,360 - Train loss: 0.017809, train acc: 0.991749
+2024-11-22 19:33:14,706 - Validação Acc: 0.756006 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:33:14,708 - Epoch 55 starting...
+2024-11-22 19:33:49,722 - Train loss: 0.017337, train acc: 0.992011
+2024-11-22 19:33:58,049 - Validação Acc: 0.754797 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:33:58,049 - Epoch 56 starting...
+2024-11-22 19:34:33,193 - Train loss: 0.015936, train acc: 0.992573
+2024-11-22 19:34:41,381 - Validação Acc: 0.753813 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:34:41,381 - Epoch 57 starting...
+2024-11-22 19:35:16,457 - Train loss: 0.016072, train acc: 0.992478
+2024-11-22 19:35:24,671 - Validação Acc: 0.752951 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:35:24,673 - Epoch 58 starting...
+2024-11-22 19:35:59,838 - Train loss: 0.015353, train acc: 0.992485
+2024-11-22 19:36:08,282 - Validação Acc: 0.751023 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:36:08,282 - Epoch 59 starting...
+2024-11-22 19:36:43,499 - Train loss: 0.014981, train acc: 0.992697
+2024-11-22 19:36:51,896 - Validação Acc: 0.752536 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:36:51,896 - Epoch 60 starting...
+2024-11-22 19:37:27,172 - Train loss: 0.013929, train acc: 0.993401
+2024-11-22 19:37:35,566 - Validação Acc: 0.752796 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:37:35,566 - Epoch 61 starting...
+2024-11-22 19:38:10,692 - Train loss: 0.013579, train acc: 0.993493
+2024-11-22 19:38:19,086 - Validação Acc: 0.753327 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:38:19,086 - Epoch 62 starting...
+2024-11-22 19:38:54,478 - Train loss: 0.012868, train acc: 0.994032
+2024-11-22 19:39:02,715 - Validação Acc: 0.753551 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:39:02,715 - Epoch 63 starting...
+2024-11-22 19:39:37,987 - Train loss: 0.012919, train acc: 0.993945
+2024-11-22 19:39:46,247 - Validação Acc: 0.753189 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:39:46,247 - Epoch 64 starting...
+2024-11-22 19:40:21,483 - Train loss: 0.013754, train acc: 0.993344
+2024-11-22 19:40:29,856 - Validação Acc: 0.753654 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:40:29,856 - Epoch 65 starting...
+2024-11-22 19:41:04,986 - Train loss: 0.012869, train acc: 0.993816
+2024-11-22 19:41:13,107 - Validação Acc: 0.753617 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:41:13,107 - Epoch 66 starting...
+2024-11-22 19:41:48,283 - Train loss: 0.012282, train acc: 0.994155
+2024-11-22 19:41:56,613 - Validação Acc: 0.753320 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:41:56,613 - Epoch 67 starting...
+2024-11-22 19:42:31,895 - Train loss: 0.012397, train acc: 0.994031
+2024-11-22 19:42:40,121 - Validação Acc: 0.752902 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:42:40,121 - Epoch 68 starting...
+2024-11-22 19:43:15,372 - Train loss: 0.011995, train acc: 0.994360
+2024-11-22 19:43:23,728 - Validação Acc: 0.752873 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:43:23,728 - Epoch 69 starting...
+2024-11-22 19:43:59,032 - Train loss: 0.012236, train acc: 0.994181
+2024-11-22 19:44:07,267 - Validação Acc: 0.753393 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:44:07,269 - Epoch 70 starting...
+2024-11-22 19:44:42,492 - Train loss: 0.012535, train acc: 0.994054
+2024-11-22 19:44:50,978 - Validação Acc: 0.753030 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:44:50,978 - Epoch 71 starting...
+2024-11-22 19:45:26,356 - Train loss: 0.011948, train acc: 0.994387
+2024-11-22 19:45:34,725 - Validação Acc: 0.753040 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:45:34,725 - Epoch 72 starting...
+2024-11-22 19:46:10,122 - Train loss: 0.011949, train acc: 0.994451
+2024-11-22 19:46:18,406 - Validação Acc: 0.752894 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:46:18,406 - Epoch 73 starting...
+2024-11-22 19:46:53,622 - Train loss: 0.012316, train acc: 0.994092
+2024-11-22 19:47:01,966 - Validação Acc: 0.752338 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:47:01,966 - Epoch 74 starting...
+2024-11-22 19:47:37,299 - Train loss: 0.011666, train acc: 0.994321
+2024-11-22 19:47:45,603 - Validação Acc: 0.752661 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:47:45,603 - Epoch 75 starting...
+2024-11-22 19:48:20,907 - Train loss: 0.011836, train acc: 0.994266
+2024-11-22 19:48:29,365 - Validação Acc: 0.752901 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:48:29,365 - Epoch 76 starting...
+2024-11-22 19:49:04,676 - Train loss: 0.011551, train acc: 0.994474
+2024-11-22 19:49:13,102 - Validação Acc: 0.752440 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:49:13,102 - Epoch 77 starting...
+2024-11-22 19:49:48,416 - Train loss: 0.011536, train acc: 0.994550
+2024-11-22 19:49:56,774 - Validação Acc: 0.752191 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:49:56,774 - Epoch 78 starting...
+2024-11-22 19:50:31,986 - Train loss: 0.011517, train acc: 0.994345
+2024-11-22 19:50:40,290 - Validação Acc: 0.752089 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:50:40,290 - Epoch 79 starting...
+2024-11-22 19:51:15,577 - Train loss: 0.011192, train acc: 0.994554
+2024-11-22 19:51:23,920 - Validação Acc: 0.752622 -- Melhor Avaliação Acc: 0.759501 -- epoch 48.
+2024-11-22 19:51:23,922 - Epoch 80 starting...
+2024-11-22 19:51:59,250 - Train loss: 0.010982, train acc: 0.994752
+2024-11-22 19:52:07,521 - Terminando o treinamento, melhor conta de validação 0.759501
+2024-11-22 19:52:07,715 - Imagem salva em: C:\git\image-segmentation\dataset\\result_PSPNET_Segmentadas\\result_model_segmentadas_unet_loss_accuracy.png
+2024-11-22 19:52:08,277 - Modelo carregado e pronto para uso.
+2024-11-22 19:52:08,306 - Imagens de teste: 89
+2024-11-22 19:52:08,543 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:08,622 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:08,780 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:08,865 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:09,048 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:09,124 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:09,317 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:09,391 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:09,577 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:09,654 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:09,830 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:09,909 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:10,099 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:10,174 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:10,368 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:10,447 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:10,826 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:10,889 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:11,102 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:11,157 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:11,363 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:11,442 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:11,647 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:11,726 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:11,931 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:12,010 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:12,216 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:12,295 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:12,501 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:12,580 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:12,786 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:12,864 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:13,069 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:13,148 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:13,353 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:13,432 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:13,717 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:13,796 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:14,001 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:14,080 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:14,285 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:14,364 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:14,569 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:14,648 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:14,869 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:14,932 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:15,153 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:15,217 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:15,437 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:15,518 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:15,722 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:15,801 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:16,006 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:16,085 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:16,290 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:16,369 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:16,574 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:16,653 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:16,875 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:16,938 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:17,160 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:17,224 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:17,524 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:17,603 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:17,949 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:18,013 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:18,219 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:18,298 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:18,503 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:18,582 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:18,789 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:18,867 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:19,074 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:19,153 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:19,360 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:19,424 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:19,646 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:19,726 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:19,931 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:20,010 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:20,232 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:20,296 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:20,519 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:20,582 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:20,881 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:20,944 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:21,150 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:21,229 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:21,435 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:21,514 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:21,719 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:21,783 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:22,006 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:22,069 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:22,292 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:22,355 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:22,560 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:22,639 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:22,861 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:22,925 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:23,146 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:23,225 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:23,430 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:23,494 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:23,714 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:23,794 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:24,092 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:24,159 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:24,364 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:24,443 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:24,648 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:24,727 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:24,932 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:25,136 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:25,358 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:25,437 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:25,669 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:25,737 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:25,957 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:26,020 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:26,322 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:26,386 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:26,608 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:26,672 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:26,878 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:26,958 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:27,178 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:27,241 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:27,463 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:27,526 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:27,746 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:27,810 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:28,032 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:28,095 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:28,316 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:28,390 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:28,694 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:28,758 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:28,978 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:29,041 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:29,261 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:29,325 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:29,529 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:29,608 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:29,814 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:29,893 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:30,098 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:30,176 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:30,382 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:30,461 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:30,763 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:30,826 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:31,032 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:31,111 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:31,318 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:31,397 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:31,602 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:31,681 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:31,886 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:32,107 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:32,311 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:32,374 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:32,674 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:32,759 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:32,958 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:33,037 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:33,243 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:33,322 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:33,528 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:33,606 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:33,828 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:33,891 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:34,112 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:34,175 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:34,381 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:34,461 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
+2024-11-22 19:52:34,667 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_IMG_.png
+2024-11-22 19:52:34,745 - Imagem salva em: C:\git\image-segmentation\dataset\\segmentadas_pspnet\\test\\RESULT_INFERENCIA_GT_.png
